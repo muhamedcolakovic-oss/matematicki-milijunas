@@ -509,7 +509,7 @@ body.light-mode .prize-active {
 
 
 .netflix-title {
-  font-size: clamp(18px, 2.5vw, 38px);
+font-size: clamp(22px, 3.5vw, 38px);
   font-weight: 900;
   text-align: center;
   letter-spacing: 0.06em;
@@ -523,6 +523,7 @@ body.light-mode .prize-active {
 
   animation: titleIn 1s ease-out both;
 }
+
 
 /* 🎬 CLEAN INTRO (less blur, more premium) */
 @keyframes titleIn {
@@ -752,7 +753,7 @@ position: relative;
 
 .intro-content {
   text-align: center;
-  animation: introZoom 3.5s ease forwards;
+  animation: introZoom 2.5s ease forwards;
 }
 
 .intro-logo {
@@ -902,7 +903,7 @@ position: relative;
 
     <h1 class="intro-title">Matematički Milijunaš</h1>
 
-    <div class="intro-sub">Who Wants to Be a Millionaire — Math Edition</div>
+    <div class="intro-sub">Uči, čitaj, u ime Gospodara tvoga, Koji stvara! (El-Alek, 1.)</div>
 
   </div>
 </div>
@@ -1654,15 +1655,12 @@ history: {
 hard: [
     { question: "Normal. Koliko je 2^30 približno?", answers: { A: "1.07×10^9", B: "1.07×10^8", C: "1.07×10^10", D: "1.07×10^7" }, correct: "A" },
     { question: "Normal. Ko je uveo simbol za beskonačno?", answers: { A: "Isaac Newton", B: "Leonhard Euler", C: "John Wallis", D: "René Descartes" }, correct: "C" },
-   { question: "Normal. Ko je prvi definisao negativne brojeve kao 'manje od nule'?", answers: { A: "Pitagora", B: "Brahmagupta", C: "Euklid", D: "Tales" }, correct: "B" },
     { question: "Normal. Ko je prvi upotrijebio decimalni zapis u matematici?", answers: { A: "Fibonacci", B: "Al-Khwarizmi", C: "Simon Stevin", D: "Descartes" }, correct: "C" },
-    { question: "Normal. Ko je uveo simbol '0' kao broj, a ne samo kao oznaku praznine?", answers: { A: "Arhimed", B: "Brahmagupta", C: "Newton", D: "Euclid" }, correct: "B" },
     { question: "Normal. Koji je broj Ludolph van Ceulen izračunavao do 35 decimala?", answers: {  A: "e", B: "π", C: "φ", D: "√2"  }, correct: "B" },
     { question: "Normal. Kako je Carl Friedrich Gauss bio poznat po nadimku?", answers: { A: "Kralj matematike", B: "Otac algebre", C: "Princ matematike", D: "Genije brojeva" }, correct: "C" },
 { question: "Normal. Ko je izumio logaritme?", answers: { A: "Gottfried Leibniz", B: "Isaac Newton", C: "Leonhard Euler", D: "John Napier" }, correct: "D" },
     { question: "Normal. Ko je prvi koristio negativne brojeve u matematici?", answers: { A: "Kinezi", B: "Grci", C: "Rimljani", D: "Egipćani" }, correct: "A" },
     { question: "Normal. Ko je formalno definisao funkciju?", answers: { A: "Descartes", B: "Fermat", C: "Euler", D: "Leibniz" }, correct: "C" },
-    { question: "Normal. Ko je prvi koristio decimalni zapis brojeva?", answers: { A: "Indijci", B: "Arapi", C: "Kinezi", D: "Rimljani" }, correct: "A" },
     { question: "Normal. Ko je poznat kao 'otac geometrije'?", answers: { A: "Pitagora", B: "Euklid", C: "Arhimed", D: "Platon" }, correct: "B", explanation: "Euklid iz Aleksandrije (oko 300. p.n.e.) napisao je 'Elemente', najuticajniju matematičku knjigu svih vremena koja sistematizuje geometriju.", commonMistake: "Ljudi često misle na Pitagoru jer je poznatiji, ali Pitagora je 'otac trigonometrije', ne geometrije." },
     { question: "Normal. U kojoj državi je nastao arapski brojčani sistem?", answers: { A: "Arabija", B: "Egipat", C: "Indija", D: "Kina" }, correct: "C" },
     { question: "Normal. Koji simbol se koristi za beskonačnost?", answers: { A: "α", B: "∞", C: "Ω", D: "π" }, correct: "B" },
@@ -1681,22 +1679,18 @@ hard: [
   hardest: [
     { question: "Hard. Ko je dokazao nekompletnost formalnih sistema (Gödelove teoreme)?", answers: { A: "Kurt Gödel", B: "Alan Turing", C: "David Hilbert", D: "John von Neumann" }, correct: "A" },
     { question: "Hard. Ko je uveo pojam 'grupa' u algebri?", answers: { A: "Galois", B: "Noether", C: "Lagrange", D: "Cayley" }, correct: "A" },
-    { question: "Hard. Ko je otkrio teoriju vjerojatnoće u modernom obliku?", answers: { A: "Pascal", B: "Bernoulli", C: "Laplace", D: "Kolmogorov" }, correct: "A" },
     { question: "Hard. Ko je uveo notaciju za integral ∫?", answers: { A: "Leibniz", B: "Newton", C: "Euler", D: "Riemann" }, correct: "A" },
     { question: "Hard. Ko je prvi upotrijebio znak '=' za jednakost?", answers: { A: "Descartes", B: "Robert Recorde", C: "Leibniz", D: "Newton" }, correct: "B" },
     { question: "Hard. Kada je objavljena Euklidova knjiga 'Elementi'?", answers: { A: "500. p.n.e.", B: "300. p.n.e.", C: "100. p.n.e.", D: "100. n.e." }, correct: "B" },
-    { question: "Hard. Ko je razvio analitičku geometriju?", answers: { A: "Fermat", B: "Pascal", C: "Descartes", D: "Leibniz" }, correct: "C" },
     { question: "Hard. U kojem vijeku je nastao matematički kalkulus?", answers: { A: "15. vijek", B: "16. vijek", C: "17. vijek", D: "18. vijek" }, correct: "C" },
     { question: "Hard. Ko je prvi dokazao da su postoje beskonačno prosti brojevi?", answers: { A: "Euclid", B: "Euler", C: "Gauss", D: "Cantor" }, correct: "A" },
     { question: "Hard. Ko je prvi populizirao simbol 'i' za imaginarni broj?", answers: { A: "Euler", B: "Gauss", C: "Descartes", D: "Cauchy" }, correct: "A" },
     { question: "Hard. Ko je uveo pojam 'kompleksnih brojeva' u modernoj matematici?", answers: { A: "Caspar Wessel", B: "Euler", C: "Gauss", D: "Descartes" }, correct: "A" },
     { question: "Hard. Ko je prvi definisao pojam 'topologija'?", answers: { A: "Riemann", B: "Poincaré", C: "Euler", D: "Cantor" }, correct: "B" },
-    { question: "Hard. Ko je uveo koncept 'matematičke analize' u 18. vijeku?", answers: { A: "Cauchy", B: "Newton", C: "Leibniz", D: "Euler" }, correct: "D" },
     { question: "Hard. Ko je formulirao Hilbertove probleme 1900. godine?", answers: { A: "David Hilbert", B: "Felix Klein", C: "Hermann Minkowski", D: "Bernhard Riemann" }, correct: "A" },
     { question: "Hard. Ko je dokazao Fermatovu veliku teoremu?", answers: { A: "Andrew Wiles", B: "Grigori Perelman", C: "Terence Tao", D: "Paul Erdős" }, correct: "A" },
     { question: "Hard. U kojoj godini je Gauss objavio 'Disquisitiones Arithmeticae'?", answers: { A: "1791", B: "1801", C: "1811", D: "1821" }, correct: "B" },
-    { question: "Hard. Ko je prvi matematički dokazao postojanje transcendentnih brojeva?", answers: { A: "Cantor", B: "Liouville", C: "Hermite", D: "Lindemann" }, correct: "B" },
- 	 { question: "Hard. Koliko rješenja ima jednačina x^2 = -1 u realnim brojevima?", answers: { A: "2", B: "1", C: "0", D: "Beskonačno" }, correct: "C" },
+{ question: "Hard. Koliko rješenja ima jednačina x^2 = -1 u realnim brojevima?", answers: { A: "2", B: "1", C: "0", D: "Beskonačno" }, correct: "C" },
     { question: "Hard. Ko je riješio Poincareovu hipotezu?", answers: { A: "Andrew Wiles", B: "Terence Tao", C: "Grigori Perelman", D: "John Nash" }, correct: "C" },
     { question: "Hard. U kojoj godini je Emmy Noether objavila svoju čuvenu teoremu?", answers: { A: "1905", B: "1915", C: "1918", D: "1925" }, correct: "C" },
     { question: "Hard. Ko je uveo koncept matematičke rigoroznosti u analizi (ε-δ definicija limita)?", answers: { A: "Cauchy", B: "Weierstrass", C: "Riemann", D: "Bolzano" }, correct: "B" },
@@ -1718,10 +1712,9 @@ geography: {
     { question: "Easy. Kako se zove oblik sa 8 strana?", answers: { A: "Heksagon", B: "Oktagon", C: "Dekagon", D: "Tetraedr" }, correct: "B" },
     { question: "Easy. Kako se zove čuveni paradoks sa beskonačnim koracima gdje Ahil ne može sustići kornjaču?", answers: { A: "Paradox smrti", B: "Paradox Zena", C: "Simpsonov paradoks", D: "Galilejev paradoks" }, correct: "B" },
     { question: "Easy. Koliki je kubni korijen iz 27?", answers: { A: "3", B: "9", C: "27", D: "6" }, correct: "A" },
-    { question: "Easy U kojoj zemlji se nalazi najveća matematička biblioteka (Bibliothèque de mathématiques)?", answers: { A: "Francuska", B: "Njemačka", C: "SAD", D: "Italija" }, correct: "A" },
     { question: "Easy. U kojoj zemlji je rođen matematičar Gauss?", answers: { A: "Njemačka", B: "Švicarska", C: "Austrija", D: "Francuska" }, correct: "A" },
     { question: "Easy. U kojoj zemlji je rođen matematičar Fermat?", answers: { A: "Italija", B: "Španija", C: "Francuska", D: "Engleska" }, correct: "C" },
-    { question: "Easy. U kojem gradu je rođen matematičar Pascal?", answers: { A: "Pariz", B: "Lyon", C: "Marseille", D: "Nice" }, correct: "B" },
+    { question: "Easy. U kojem gradu je rođen matematičar Pascal?", answers: { A: "Pariz", B: " Clermont-Ferrand", C: "Marseille", D: "Nice" }, correct: "B" },
     { question: "Easy. U kojoj zemlji je rođen matematičar Newton?", answers: { A: "Škotska", B: "Engleska", C: "Irska", D: "Wales" }, correct: "B" },
 { question: "Easy. Koji je rimski znak za broj 50?", answers: { A: "L", B: "C", C: "V", D: "X" }, correct: "A" },
     { question: "Easy. Koji je rimski znak za broj 100?", answers: { A: "D", B: "L", C: "C", D: "X" }, correct: "C" },
@@ -1736,6 +1729,7 @@ geography: {
   hard: [
     { question: "Normal. U kojem gradu je osnovan Institut Clay Mathematics?", answers: { A: "New York", B: "Cambridge", C: "San Francisco", D: "Seattle" }, correct: "B" },
     { question: "Normal. Gdje se nalazi 'Eulerova soba' u čast Leonharda Eulera?", answers: { A: "Bern", B: "Zürich", C: "Basel", D: "Berlin" }, correct: "C" },
+    { question: "Normal. U kojoj zemlji se nalazi najveća matematička biblioteka (Bibliothèque de mathématiques)?", answers: { A: "Francuska", B: "Njemačka", C: "SAD", D: "Italija" }, correct: "A" },
     { question: "Normal. Gdje se nalazi najveći matematički muzej na svijetu (Museum of Mathematics)?", answers: { A: "New York", B: "London", C: "Berlin", D: "Tokyo" }, correct: "A" },
     { question: "Normal. U kojem gradu se nalazi 'Københavns Universitet' gdje je radio Niels Bohr?", answers: { A: "Stockholm", B: "Kopenhagen", C: "Oslo", D: "Helsinki" }, correct: "B" },
     { question: "Normal. Koja je prva civilizacija razvila metodu rješavanja kvadratnih jednačina?", answers: { A: "Egipćani", B: "Babilonci", C: "Grci", D: "Kinezi" }, correct: "B" },
@@ -1753,34 +1747,31 @@ geography: {
     { question: "Normal. Koja država je rodno mjesto Renea Descartesa, poznatog po analitičkoj geometriji?", answers: { A: "Belgija", B: "Francuska", C: "Švicarska", D: "Holandija" }, correct: "B" },
     { question: "Normal. U kojem evropskom gradu se nalazi čuveni Institut Henri Poincaré, poznat po matematičkoj fizici i teoriji haosa?", answers: { A: "Pariz", B: "Berlin", C: "London", D: "Madrid" }, correct: "A" },
     { question: "Normal. Koja azijska zemlja je doprinijela razvoju negativnih brojeva u ranoj matematici?", answers: { A: "Kina", B: "Indija", C: "Japan", D: "Arabija" }, correct: "A" },
-    { question: "Normal. Gdje se nalazi najveća akademija nauka u Evropi (Academia Europaea)?", answers: { A: "London", B: "Oxford", C: "Cambridge", D: "Paris" }, correct: "A" },
     { question: "Normal. U kojoj zemlji je rođen matematičar Riemann?", answers: { A: "Francuska", B: "Austrija", C: "Švicarska", D: "Njemačka" }, correct: "D" },
     { question: "Normal. U kojoj zemlji je rođen matematičar Hilbert?", answers: { A: "Njemačka", B: "Poljska", C: "Češka", D: "Austrija" }, correct: "A" },
     { question: "Normal. U kojoj zemlji je rođen matematičar Kolmogorov?", answers: { A: "Rusija", B: "Ukrajina", C: "Poljska", D: "Bjelorusija" }, correct: "A" },
     { question: "Normal. U kojoj zemlji je rođen matematičar Noether?", answers: { A: "Njemačka", B: "Austrija", C: "Švicarska", D: "Italija" }, correct: "A" },
-    { question: "Normal. U kojoj zemlji je rođen matematičar Cantor?", answers: { A: "Njemačka", B: "Švedska", C: "Danska", D: "Nizozemska" }, correct: "A" },
+    { question: "Normal. U kojoj zemlji je rođen matematičar Cantor?", answers: { A: "Rusija", B: "Švedska", C: "Danska", D: "Nizozemska" }, correct: "A" },
     { question: "Normal. U kojem gradu se održava Međunarodni matematički kongres svake 4 godine?", answers: { A: "Uvijek u istom", B: "Rotira se po svijetu", C: "Samo u Evropi", D: "Samo u USA" }, correct: "B" },
     { question: "Normal. Gdje se nalazi Matematički institut Steklov?", answers: { A: "Sankt Peterburg", B: "Moskva", C: "Kijev", D: "Minsk" }, correct: "B" },
     { question: "Normal. U kojem gradu je Al-Khwarizmi pisao svoje radove o algebri?", answers: { A: "Bagdad", B: "Damask", C: "Kairo", D: "Medina" }, correct: "A" },
     { question: "Normal. Ko se smatra prvom poznatom matematičarkom?", answers: { A: "Ada Lovelace", B: "Emmy Noether", C: "Hypatia", D: "Marie Curie" }, correct: "C" },
     { question: "Normal. Kako se rimskim brojevima piše 2026?", answers: { A: "MMXXVI", B: "MMXVI", C: "MCMXXVI", D: "MMXXIV" }, correct: "A" },
     { question: "Normal. Kako se zove mnogougao sa 12 strana?", answers: { A: "Dekagon", B: "Dodekagon", C: "Hendekagon", D: "Oktagon" }, correct: "B" },
-    { question: "Normal. Ko je otkrio zlatni presjek?", answers: { A: "Euklid", B: "Newton", C: "Euler", D: "Gauss" }, correct: "A" }
+    { question: "Normal. Ko je prvi matematički opisao zlatni presjek?", answers: { A: "Euklid", B: "Newton", C: "Euler", D: "Gauss" }, correct: "A" }
   ],
   hardest: [
-    { question: "Hard. Gdje se nalazi Institut za matematičke nauke u Bangaloreu (TIFR)?", answers: { A: "Indija", B: "Japan", C: "Kina", D: "Koreja" }, correct: "A" },
     { question: "Hard. U kojem gradu se nalazi Institut Max Planck za matematiku?", answers: { A: "Berlin", B: "Bonn", C: "Munich", D: "Hamburg" }, correct: "B" },
     { question: "Hard. Gdje se nalazi 'Mathematical Sciences Research Institute' (MSRI)?", answers: { A: "Berkeley", B: "Stanford", C: "Princeton", D: "Harvard" }, correct: "A" },
     { question: "Hard. U kojem gradu je osnovan 'Institut für Mathematik' u Göttingenu?", answers: { A: "Berlin", B: "Göttingen", C: "Munich", D: "Frankfurt" }, correct: "B" },
-    { question: "Hard. U kojoj zemlji je rođen matematičar Grothendieck?", answers: { A: "Njemačka", B: "Francuska", C: "Švicarska", D: "Belgija" }, correct: "B" },
+    { question: "Hard. U kojoj zemlji je rođen matematičar Grothendieck?", answers: { A: "Njemačka", B: "Francuska", C: "Švicarska", D: "Belgija" }, correct: "A" },
     { question: "Hard. U kojoj zemlji je rođen matematičar Gödel?", answers: { A: "Austrija", B: "Češka", C: "Njemačka", D: "Švicarska" }, correct: "B" },
     { question: "Hard. U kojoj zemlji je rođen matematičar Turing?", answers: { A: "Engleska", B: "Škotska", C: "Irska", D: "Wales" }, correct: "A" },
     { question: "Hard. U kojoj zemlji je rođen matematičar Perelman?", answers: { A: "Rusija", B: "Ukrajina", C: "Bjelorusija", D: "Litvanija" }, correct: "A" },
     { question: "Hard. U kojoj zemlji je rođen matematičar Wiles?", answers: { A: "Engleska", B: "SAD", C: "Kanada", D: "Australija" }, correct: "A" },
-    { question: "Hard. Koji univerzitet ima najstariji kontinuirano aktivni matematički departman?", answers: { A: "Oxford", B: "Cambridge", C: "Sorbonne", D: "Bologna" }, correct: "A" },
     { question: "Hard. U kom gradu se nalazi Institut Henri Poincaré?", answers: { A: "Lyon", B: "Marseille", C: "Pariz", D: "Toulouse" }, correct: "C" },
     { question: "Hard. Gdje je osnovana prva Akademija nauka (uključujući matematiku)?", answers: { A: "London", B: "Pariz", C: "Berlin", D: "Firence" }, correct: "D" },
-    { question: "Hard. U kojoj zemlji se nalazi Tata Institut za fundamentalna istraživanja?", answers: { A: "Indija", B: "Japan", C: "Kina", D: "Koreja" }, correct: "A" },
+    { question: "Hard. Gdje se nalazi Tata Institute of Fundamental Research (TIFR)", answers: { A: "Indija", B: "Japan", C: "Kina", D: "Koreja" }, correct: "A" },
     { question: "Hard. Gdje je održan prvi Internacionalni matematički kongres (1897)?", answers: { A: "Berlin", B: "Pariz", C: "Zürich", D: "London" }, correct: "C" }
   ]
 },
@@ -1816,9 +1807,7 @@ funFacts: {
     { question: "Easy. Koliko puta dnevno se poklope kazaljke na satu?", answers: { A: "12", B: "22", C: "24", D: "48" }, correct: "B" },
     { question: "Easy. Koji od ponuđenih brojeva zadovoljava uslov da je jednak zbiru svojih cifara pomnoženih sa 3?", answers: { A: "12", B: "18", C: "27", D: "36" }, correct: "C" },
     { question: "Easy. Ako se broj poveća za 20% pa smanji za 20%, rezultat je:", answers: { A: "Veći", B: "Manji", C: "Isti", D: "Zavisi" }, correct: "B" },
-    { question: "Easy. Koji broj ima najviše djelitelja među 1–10?", answers: { A: "6", B: "8", C: "10", D: "9" }, correct: "A" },
     { question: "Easy. Koliko dijagonala ima kvadrat?", answers: { A: "1", B: "2", C: "4", D: "6" }, correct: "B" },
-    { question: "Easy. Koji broj ostaje isti kada mu se dodaju nule na kraju u dekadnom sistemu vrijednosti?", answers: { A: "0", B: "1", C: "10", D: "100" }, correct: "A" },
     { question: "Easy. Ako baciš novčić 3 puta, koliko je mogućih ishoda?", answers: { A: "6", B: "8", C: "4", D: "3" }, correct: "B" },
     { question: "Easy. Koji je najmanji broj koji je djeljiv sa svim brojevima od 1 do 5?", answers: { A: "20", B: "60", C: "30", D: "120" }, correct: "B" },
     { question: "Easy. Koji broj je palindrom?", answers: { A: "123", B: "121", C: "132", D: "231" }, correct: "B" },
@@ -1830,7 +1819,6 @@ funFacts: {
   hard: [
     { question: "Normal. Koliko je 2^10 + 2^10?", answers: { A: "1024", B: "2048", C: "4096", D: "512" }, correct: "B" },
     { question: "Normal. Koliko je √2 na 2 decimale?", answers: { A: "1.41", B: "1.42", C: "1.43", D: "1.44" }, correct: "A" },
-    { question: "Normal. Koliko trouglova vidiš u zvijezdi Davidovoj?", answers: { A: "6", B: "8", C: "12", D: "18" }, correct: "D" },
     { question: "Normal. Koji je najmanji broj koji je djeljiv sa 1 do 10?", answers: { A: "2520", B: "5040", C: "720", D: "360" }, correct: "A" },
     { question: "Normal. Koja je vrijednost 2^5?", answers: { A: "16", B: "32", C: "64", D: "128" }, correct: "B" },
     { question: "Normal. Koliko je maksimalan broj boja potreban za bojenje bilo koje mape?", answers: { A: "3", B: "4", C: "5", D: "6" }, correct: "B" },
@@ -1845,7 +1833,6 @@ funFacts: {
     { question: "Normal. Rimski broj XC u arapskom zapisu je?", answers: { A: "90", B: "110", C: "80", D: "100" }, correct: "A" }
   ],
   hardest: [
-    { question: "Hard. Koji broj se pojavljuje najčešće u Fibonaccijevom nizu kao ostatak pri dijeljenju sa 10?", answers: { A: "1", B: "3", C: "5", D: "Svi jednako" }, correct: "D" },
     { question: "Hard. Koliki je najmanji zajednički sadržalac brojeva 15 i 20?", answers: { A: "45", B: "30", C: "75", D: "60" }, correct: "D" },
     { question: "Hard. Koliko je √2 približno (na 3 decimale)?", answers: { A: "1.415", B: "1.416", C: "1.417", D: "1.414" }, correct: "D" },
     { question: "Hard. Koliko je log10(1000)?", answers: { A: "2", B: "1", C: "4", D: "3" }, correct: "D" },
@@ -1874,14 +1861,14 @@ interestingFacts: {
     { question: "Easy. Ko je otkrio zakon gravitacije?", answers: { A: "Galileo", B: "Newton", C: "Einstein", D: "Kepler" }, correct: "B" },
     { question: "Easy. Koliki je treći ugao u trouglu ako su druga dva 50° i 60°?", answers: { A: "70°", B: "65°", C: "80°", D: "75°" }, correct: "A" },
     { question: "Easy. Ako se na svako sljedeće polje šahovske table broj zrna riže udvostručuje počevši od 1, koliko zrna ima na 64. polju?", answers: { A: "Oko 100 kg riže", B: "Jedan kamion riže", C: "Više nego ukupna proizvodnja riže na Zemlji", D: "Nemoguće izračunati" }, correct: "C" },
-  { question: "Easy. Koliko puta maksimalno možeš presaviti papir bilo kojih dimenzija (teorijski)?", answers: { A: "7 puta", B: "12 puta", C: "67", D: "Beskonačno" }, correct: "A" },
+  { question: "Easy. Koliko puta se papir može presaviti u praksi?", answers: { A: "7 puta", B: "10 puta", C: "67", D: "Beskonačno" }, correct: "A" },
     { question: "Easy. Koliko pravih se može provući kroz 4 različite tačke (u opštem slučaju)?", answers: { A: "3", B: "4", C: "6", D: "Neodređeno" }, correct: "C" },
     { question: "Easy. Šta su kolinearne tačke?", answers: { A: "Tačke na istoj kružnici", B: "Tačke na istoj pravoj", C: "Tačke u ravni", D: "Nasumične tačke" }, correct: "B" },
     { question: "Easy. Šta su nekolinearne tačke?", answers: { A: "Tačke na istoj pravoj", B: "Tačke koje leže na kružnici", C: "Tačke koje ne leže na istoj pravoj", D: "Tačke u istom centru" }, correct: "C" },
     { question: "Easy. Koji su osnovni pojmovi u geometriji koji se ne definišu?", answers: { A: "Tačka, prava, ravnina", B: "Ugao, duž, krug", C: "Tijelo, volumen, površina", D: "Vektor, matrica, funkcija" }, correct: "A" },
     { question: "Easy. Kako se zvala grčka škola gdje je otkrivena iracionalnost brojeva?", answers: { A: "Platonova akademija", B: "Pitagorejska škola", C: "Aristotelova škola", D: "Euklidova škola" }, correct: "B" },
     { question: "Easy. Koji umjetnik je koristio matematičke proporcije i zlatni rez u 'Posljednjoj večeri'?", answers: { A: "Michelangelo", B: "Leonardo da Vinci", C: "Raphael", D: "Donatello" }, correct: "B" },
-    { question: "Easy. Gdje se u prirodi može pronaći Fibonacci niz?", answers: { A: "Samo u drveću", B: "U pahuljama i školjkama", C: "U ljudskim kostima", D: "U svim navedenim primjerima" }, correct: "D" },
+    { question: "Easy. Gdje se u prirodi može pronaći Fibonacci niz?", answers: { A: "Cjetovima", B: "U pahuljama i školjkama", C: "Spiralim oblicima", D: "U svim navedenim primjerima" }, correct: "D" },
     { question: "Easy. Kako se naziva četverougao čije su sve stranice jednake dužine, ali uglovi nisu pravi?", answers: { A: "Kvadrat", B: "Pravougaonik", C: "Romb", D: "Paralelogram" }, correct: "C" }
   ],
   hard: [
@@ -1889,10 +1876,10 @@ interestingFacts: {
  { question: "Normal. 74. Ko je otac modernog računarstva?", answers: { A: "Ada Lovelace", B: "Alan Turing", C: "John von Neumann", D: "Charles Babbage" }, correct: "B" },
     { question: "Normal. Ko je uveo simbol π?", answers: { A: "Euler", B: "Gauss", C: "Newton", D: "Wiliam Jones" }, correct: "D" },
     { question: "Normal. Ko je osnovao modernu teoriju vjerojatnosti?", answers: { A: "Pascal", B: "Bernoulli", C: "Laplace", D: "Kolmogorov" }, correct: "D" },
-    { question: "Normal. Ko je poznat kao 'otac moderne logike'?", answers: { A: "Aristotel", B: "Gödel", C: "Frege", D: "Boole" }, correct: "D" },
+    { question: "Normal. Ko je poznat kao 'otac moderne logike'?", answers: { A: "Aristotel", B: "Gödel", C: "Frege", D: "Boole" }, correct: "C" },
     { question: "Normal. Koji je matematičar postavio teorem koji je ostao neriješen više od 350 godina, sve do 1994. godine?", answers: { A: "Isaac Newton", B: "Pierre de Fermat", C: "Leonhard Euler", D: "Carl Friedrich Gauss" }, correct: "B" },
     { question: "Normal. Koji je broj poznat kao 'najmanji Armstrong broj'?", answers: { A: "370", B: "371", C: "407", D: "153" }, correct: "D" },
-    { question: "Normal. Koji broj je i kvadrat i kub istovremeno?", answers: { A: "1 i 64", B: "0 i 1", C: "1 i 729", D: "4 i 8" }, correct: "A" },
+    { question: "Normal. Koji od ponuđenih brojeva je i kvadrat i kub?", answers: { A: "1 i 64", B: "0 i 1", C: "1 i 729", D: "4 i 8" }, correct: "A" },
     { question: "Normal. Koliko je e^(iπ) + 1?", answers: { A: "0", B: "1", C: "i", D: "-1" }, correct: "A" },
     { question: "Normal. Koliko je maksimalan broj tačaka preseka n krugova?", answers: { A: "n²", B: "n(n-1)", C: "2n", D: "n!" }, correct: "B" },
     { question: "Normal. Koji je prvi Carmichael broj?", answers: { A: "341", B: "451", C: "561", D: "671" }, correct: "C" },
@@ -1916,7 +1903,6 @@ interestingFacts: {
     { question: "Hard. Koji je najmanji netrivijalni triperfect broj?", answers: { A: "120", B: "672", C: "523776", D: "Nepoznato" }, correct: "C" },
     { question: "Hard. Koliko dimenzija ima Leech rešetka?", answers: { A: "8", B: "16", C: "24", D: "32" }, correct: "C" },
     { question: "Hard. Koliko je 0.999... (beskonačno ponavljanje) u decimalnom obliku?", answers: { A: "0.9", B: "0.99", C: "Nedefinisano", D: "1" }, correct: "D" },
-    { question: "Hard. Koliki je najmanji broj koji je jednak zbiru svojih cifara na kvadrat (npr. 1^2+2^2...)?", answers: { A: "9", B: "130", C: "0", D: "1" }, correct: "D" },
     { question: "Hard. Koliko je 2^10 + 2^9?", answers: { A: "1024", B: "2048", C: "512", D: "1536" }, correct: "D" }
   ]
 },
@@ -1962,17 +1948,13 @@ numbers: {
     { question: "Normal. Koliko je zlatni presek φ na 3 decimale?", answers: { A: "1.414", B: "1.618", C: "1.732", D: "2.236" }, correct: "B" },
     { question: "Normal. Ko je razvio teoriju skupova?", answers: { A: "Dedekind", B: "Cantor", C: "Hilbert", D: "Frege" }, correct: "B" },
     { question: "Normal. Ko je riješio kubnu jednačinu u 16. vijeku?", answers: { A: "Cardano", B: "Tartaglia", C: "Ferrari", D: "Viète" }, correct: "A" },
-    { question: "Normal. Ko je napravio prvu mehaničku kalkulatorsku mašinu?", answers: { A: "Babbage", B: "Pascal", C: "Leibniz", D: "Schickard" }, correct: "D" },
     { question: "Normal. Ko je dokazao da je e transcendentan?", answers: { A: "Hermite", B: "Lindemann", C: "Cantor", D: "Weierstrass" }, correct: "A" },
     { question: "Normal. Ko je otkrio neEuklidsku geometriju?", answers: { A: "Gauss", B: "Bolyai", C: "Lobačevski", D: "Svi navedeni" }, correct: "D" },
     { question: "Normal. Ko je razvio teoriju grupa u modernom obliku?", answers: { A: "Noether", B: "Jordan", C: "Lagrange", D: "Galois" }, correct: "D" },
     { question: "Normal. Ko je uveo simbol ∑ za sumu?", answers: { A: "Gauss", B: "Leibniz", C: "Bernoulli", D: "Euler" }, correct: "D" },
-    { question: "Normal. Ko je otkrio teoriju linearne algebre?", answers: { A: "Gauss", B: "Euler", C: "Hilbert", D: "Cayley" }, correct: "D" },
     { question: "Normal. Ko je dokazao da je set realnih brojeva neprenumerabilan?", answers: { A: "Gödel", B: "Hilbert", C: "Dedekind", D: "Cantor" }, correct: "D" },
-    { question: "Normal. Ko je uveo pojam 'operator' u matematici?", answers: { A: "Heisenberg", B: "Dirac", C: "von Neumann", D: "Hilbert" }, correct: "D" },
     { question: "Normal. Hotel sa beskonačno soba je pun. Dolazi nova osoba. Može li se smjestiti?", answers: { A: "Ne", B: "Da", C: "Samo u hodniku", D: "Zavisi od sobe" }, correct: "B" },
     { question: "Normal. Monty Hall problem: mijenjate vrata?", answers: { A: "Da", B: "Ne", C: "Svejedno", D: "Zavisi" }, correct: "A" },
-    { question: "Normal. Koliko je 1/∞?", answers: { A: "0", B: "∞", C: "Nedefinisano", D: "Beskonačno malo" }, correct: "C" },
     { question: "Normal. Birthday paradox: Koliko ljudi treba da je 50% šansa da dvoje dijele rođendan?", answers: { A: "183", B: "100", C: "50", D: "23" }, correct: "D" },
     { question: "Normal. Koliko je 2 + 2 × 2 - 2 / 2?", answers: { A: "5", B: "7", C: "4", D: "6" }, correct: "A" },
     { question: "Normal. Koji je broj 3 puta veći od 1/3?", answers: { A: "2", B: "3", C: "4", D: "1" }, correct: "D" },
@@ -1982,7 +1964,6 @@ numbers: {
     { question: "Hard. Koja je vrijednost Apéry konstante ζ(3) na 2 decimale?", answers: { A: "1.20", B: "1.50", C: "1.80", D: "2.10" }, correct: "A" },
     { question: "Hard. Koliko znamenaka ima Googolplex?", answers: { A: "10^100", B: "10^(10^100)", C: "10^1000", D: "10^10000" }, correct: "B" },
     { question: "Hard. Koji je Graham's broj G1?", answers: { A: "3↑↑3", B: "3↑↑↑↑3", C: "3→3→3", D: "3^(3^27)" }, correct: "B" },
-    { question: "Hard. Šta je TREE(3)?", answers: { A: "Broj veći od Graham's broja", B: "Broj manji od googolplexa", C: "Broj jednak ackermann(4,4)", D: "27" }, correct: "A" },
     { question: "Hard. Mersenneovi brojevi su posebna klasa prostih brojeva. Koja organizacija je prvenstveno odgovorna za otkrivanje najvećih poznatih prostih brojeva?", answers: { A: "NASA", B: "GIMPS", C: "CERN", D: "MIT" }, correct: "B" },
     { question: "Hard. Ko je dokazao Taniyama-Shimura hipotezu za polustavne eliptičke krivulje?", answers: { A: "Andrew Wiles", B: "Richard Taylor", C: "Goro Shimura", D: "Yutaka Taniyama" }, correct: "A" },
     { question: "Hard. Ko je dobio Fields medalju 2014. za rad na dinamičkim sistemima?", answers: { A: "Maryam Mirzakhani", B: "Manjul Bhargava", C: "Artur Avila", D: "Martin Hairer" }, correct: "C" },
@@ -2040,9 +2021,6 @@ easy: [
 hard: [ 
 { question: "Normal. How much is 2^30 approximately?", answers: { A: "1.07×10^9", B: "1.07×10^8", C: "1.07×10^10", D: "1.07×10^7" }, correct: "A" }, 
 { question: "Normal. Who introduced the symbol for infinity?", answers: { A: "Isaac Newton", B: "Leonhard Euler", C: "John Wallis", D: "René Descartes" }, correct: "C" },
-{ question: "Normal. Who first defined negative numbers as 'less than zero'?", answers: { A: "Pythagoras", B: "Brahmagupta", C: "Euclid", D: "Thales" }, correct: "B" },
-{ question: "Normal. Who first used decimal notation in mathematics?", answers: { A: "Fibonacci", B: "Al-Khwarizmi", C: "Simon Stevin", D: "Descartes" }, correct: "C" },
-{ question: "Normal. Who introduced the symbol '0' as a number, and not just as a symbol for emptiness?", answers: { A: "Archimedes", B: "Brahmagupta", C: "Newton", D: "Euclid" }, correct: "B" },
 { question: "Normal. What number did Ludolph van Ceulen calculate to 35 decimal places?", answers: { A: "e", B: "π", C: "φ", D: "√2" }, correct: "B" },
 { question: "Normal. What was Carl Friedrich Gauss known by his nickname?", answers: { A: "King of Mathematics", B: "Father of Algebra", C: "Prince of Mathematics", D: "Genius of Numbers" }, correct: "C" },
 { question: "Normal. Who invented logarithms?", answers: { A: "Gottfried Leibniz", B: "Isaac Newton", C: "Leonhard Euler", D: "John Napier" }, correct: "D" },
@@ -2067,14 +2045,12 @@ hard: [
 hardest: [
 { question: "Hard. Who proved the incompleteness of formal systems (Gödel's theorems)?", answers: { A: "Kurt Gödel", B: "Alan Turing", C: "David Hilbert", D: "John von Neumann" }, correct: "A" },
 { question: "Hard. Who introduced the concept of 'group' in algebra?", answers: { A: "Galois", B: "Noether", C: "Lagrange", D: "Cayley" }, correct: "A" },
-{ question: "Hard. Who discovered the theory of probability in its modern form?", answers: { A: "Pascal", B: "Bernoulli", C: "Laplace", D: "Kolmogorov" }, correct: "A" },
 { question: "Hard. Who introduced the notation for the integral ∫?", answers: { A: "Leibniz", B: "Newton", C: "Euler", D: "Riemann" }, correct: "A" },
 { question: "Hard. Who first used the '=' sign for equality?", answers: { A: "Descartes", B: "Robert Recorde", C: "Leibniz", D: "Newton" }, correct: "B" },
 { question: "Hard. When was Euclid's book 'Elements' published?", answers: { A: "500 BC", B: "300 BC", C: "100 BC", D: "100 AD." }, correct: "B" },
 { question: "Hard. Who developed analytic geometry?", answers: { A: "Fermat", B: "Pascal", C: "Descartes", D: "Leibniz" }, correct: "C" },
 { question: "Hard. In which century did mathematical calculus arise?", answers: { A: "15th century", B: "16th century", C: "17th century", D: "18th century" }, correct: "C" },
 { question: "Hard. Who was the first to prove that infinitely prime numbers exist?", answers: { A: "Euclid", B: "Euler", C: "Gauss", D: "Cantor" }, correct: "A" },
-{ question: "Hard. Who was the first to popularize the symbol 'i' for the imaginary number?", answers: { A: "Euler", B: "Gauss", C: "Descartes", D: "Cauchy" }, correct: "A" }, 
 { question: "Hard. Who introduced the concept of 'complex numbers' in modern mathematics?", answers: { A: "Caspar Wessel", B: "Euler", C: "Gauss", D: "Descartes" }, correct: "A" }, 
 { question: "Hard. Who first defined the term 'topology'?", answers: { A: "Riemann", B: "Poincaré", C: "Euler", D: "Cantor" }, correct: "B" }, 
 { question: "Hard. Who introduced the concept of 'mathematical analysis' in the 18th century?", answers: { A: "Cauchy", B: "Newton", C: "Leibniz", D: "Euler" }, correct: "D" },
@@ -2099,16 +2075,14 @@ easy: [
 { question: "Easy. What shape has 10 sides?", answers: { A: "Octagon", B: "Decagon", C: "Hendecagon", D: "Hexagon" }, correct: "B" },
 { question: "Easy. What is 2 to the fifth?", answers: { A: "32", B: "16", C: "25", D: "64" }, correct: "A" },
 { question: "Easy. What is the closest square to 1000?", answers: { A: "30²", B: "32²", C: "31²", D: "33²" }, correct: "B" },
-{ question: "Easy. What is a fraction called when the numerator is greater than the denominator?", answers: { A: "Incomplete fraction", B: "Mixed number", C: "Uncorrected fraction", D: "Irregular fraction" }, correct: "D" },
 { question: "Easy. The sequence: 2, 6, 12, 20, 30, ... What is the next term?", answers: { A: "36", B: "40", C: "42", D: "56" }, correct: "C" },
 { question: "Easy. Rene Descartes is known for his famous saying:", answers: { A: "'I think, therefore I am'", B: "'Knowledge is power'", C: "'Eureka!'", D: "'Everything is relative'" }, correct: "A" },
 { question: "Easy. What is the name of a shape with 8 sides?", answers: { A: "Hexagon", B: "Octagon", C: "Decagon", D: "Tetrahedron" }, correct: "B" },
-{ question: "Easy. What is the name of the famous paradox with infinite steps where Achilles cannot catch up with the tortoise?", answers: { A: "Death Paradox", B: "Zena's Paradox", C: "Simpson's Paradox", D: "Galileo's Paradox" }, correct: "B" },
+{ question: "Easy. What is the name of the famous paradox with infinite steps where Achilles cannot catch up with the tortoise?", answers: { A: "Death Paradox", B: "Zeno's Paradox", C: "Simpson's Paradox", D: "Galileo's Paradox" }, correct: "B" },
 { question: "Easy. What is the cube root of 27?", answers: { A: "3", B: "9", C: "27", D: "6" }, correct: "A" },
 { question: "Easy. In which country is the largest mathematical library (Bibliothèque de mathématiques) located?", answers: { A: "France", B: "Germany", C: "USA", D: "Italy" }, correct: "A" },
 { question: "Easy. In which country was the mathematician Gauss born?", answers: { A: "Germany", B: "Switzerland", C: "Austria", D: "France" }, correct: "A" },
 { question: "Easy. In which country was the mathematician Fermat born?", answers: { A: "Italy", B: "Spain", C: "France", D: "England" }, correct: "C" },
-{ question: "Easy. In which city was the mathematician Pascal born?", answers: { A: "Paris", B: "Lyon", C: "Marseille", D: "Nice" }, correct: "B" },
 { question: "Easy. In which country was the mathematician Newton born?", answers: { A: "Scotland", B: "England", C: "Ireland", D: "Wales" }, correct: "B" },
 { question: "Easy. What is the Roman numeral for the number 50?", answers: { A: "L", B: "C", C: "V", D: "X" }, correct: "A" },
 { question: "Easy. What is the Roman numeral for 100?", answers: { A: "D", B: "L", C: "C", D: "X" }, correct: "C" },
@@ -2121,7 +2095,7 @@ easy: [
 { question: "Easy. What is the last letter of the Greek alphabet?", answers: { A: "Sigma", B: "Omega", C: "Psi", D: "Theta" }, correct: "B" }
 ],
 hard: [
-{ question: "Normal. In which city was the Clay Mathematics Institute founded?", answers: { A: "New York", B: "Cambridge", C: "San Francisco", D: "Seattle" }, correct: "B" },
+{ question: "Normal. In which city was the mathematician Pascal born?", answers: { A: "Paris", B: "Clermont-Ferrand", C: "Marseille", D: "Nice" }, correct: "B" },
 { question: "Normal. Where is the 'Euler Room' in honor of Leonhard Euler located?", answers: { A: "Bern", B: "Zürich", C: "Basel", D: "Berlin" }, correct: "C" },
 { question: "Normal. Where is the largest mathematics museum in the world (Museum of Mathematics) located?", answers: { A: "New York", B: "London", C: "Berlin", D: "Tokyo" }, correct: "A" },
 { question: "Normal. In which city is the 'Københavns Universitet' where Niels Bohr worked?", answers: { A: "Stockholm", B: "Copenhagen", C: "Oslo", D: "Helsinki" }, correct: "B" }, 
@@ -2205,21 +2179,16 @@ easy: [
 { question: "Easy. How many times a day do the clock hands coincide?", answers: { A: "12", B: "22", C: "24", D: "48" }, correct: "B" }, 
 { question: "Easy. Which of the offered numbers satisfies the condition that it is equal to the sum of its digits multiplied by 3?", answers: { A: "12", B: "18", C: "27", D: "36" }, correct: "C" }, 
 { question: "Easy. If the number increases by 20% and decreases by 20%, the result is:", answers: { A: "Bigger", B: "Smaller", C: "Same", D: "Depends" }, correct: "B" },
-{ question: "Easy. Which number has the most divisors among 1–10?", answers: { A: "6", B: "8", C: "10", D: "9" }, correct: "A" },
 { question: "Easy. How many diagonals does a square have?", answers: { A: "1", B: "2", C: "4", D: "6" }, correct: "B" },
-{ question: "Easy. Which number remains the same when zeros are added to the end in the decimal value system?", answers: { A: "0", B: "1", C: "10", D: "100" }, correct: "A" },
 { question: "Easy. If you flip a coin 3 times, how many possible outcomes are there?", answers: { A: "6", B: "8", C: "4", D: "3" }, correct: "B" },
 { question: "Easy. What is the smallest number that is divisible by all the numbers from 1 to 5?", answers: { A: "20", B: "60", C: "30", D: "120" }, correct: "B" },
 { question: "Easy. What number is a palindrome?", answers: { A: "123", B: "121", C: "132", D: "231" }, correct: "B" },
 { question: "Easy. What is the sum of the infinite series 1/2 + 1/4 + 1/8 + ...?", answers: { A: "1", B: "2", C: "∞", D: "1/2" }, correct: "A" },
-{ question: "Easy. If you have 5 different books, how many ways can you arrange them?", answers: { A: "25", B: "120", C: "60", D: "100" }, correct: "B" },
-{ question: "Easy. What number is a square?", answers: { A: "361", B: "256", C: "121", D: "All of the above" }, correct: "D" },
-{ question: "Easy. If it takes 5 machines 5 minutes to make 5 products, how many machines would it take to make 100 products?", answers: { A: "100 min", B: "5 min", C: "50 min", D: "1 min" }, correct: "B" }
+{ question: "Easy. If you have 5 different books, how many ways can you arrange them?", answers: { A: "25", B: "120", C: "60", D: "100" }, correct: "B" }
 ],
 hard: [
 { question: "Normal. What is 2^10 + 2^10?", answers: { A: "1024", B: "2048", C: "4096", D: "512" }, correct: "B" },
-{ question: "Normal. What is √2 to 2 decimal places?", answers: { A: "1.41", B: "1.42", C: "1.43", D: "1.44" }, correct: "A" },
-{ question: "Normal. How many triangles do you see in the Star of David?", answers: { A: "6", B: "8", C: "12", D: "18" }, correct: "D" },
+{ question: "Normal. What is √2 to 2 decimal places?", answers: { A: "1.41", B: "1.42", C: "1.43", D: "1.44" }, correct: "A" }
 { question: "Normal. What is the smallest number that is divisible by 1 to 10?", answers: { A: "2520", B: "5040", C: "720", D: "360" }, correct: "A" },
 { question: "Normal. What is the value of 2^5?", answers: { A: "16", B: "32", C: "64", D: "128" }, correct: "B" },
 { question: "Normal. What is the maximum number of colors needed to color any map?", answers: { A: "3", B: "4", C: "5", D: "6" }, correct: "B" },
@@ -2234,11 +2203,9 @@ hard: [
 { question: "Normal. The Roman numeral XC in Arabic notation is?", answers: { A: "90", B: "110", C: "80", D: "100" }, correct: "A" } 
 ], 
 hardest: [ 
-{ question: "Hard. Which number appears most often in the Fibonacci sequence as a remainder when dividing by 10?", answers: { A: "1", B: "3", C: "5", D: "All the same" }, correct: "D" }, 
 { question: "Hard. What is the smallest common factor of numbers 15 and 20?", answers: { A: "45", B: "30", C: "75", D: "60" }, correct: "D" }, 
 { question: "Hard. What is √2 approximately (to 3 decimal places)?", answers: { A: "1.415", B: "1.416", C: "1.417", D: "1.414" }, correct: "D" },
-{ question: "Hard. What is log10(1000)?", answers: { A: "2", B: "1", C: "4", D: "3" }, correct: "D" },
-{ question: "Hard. If you get this question, the correct answer is not under A. and C.", answers: { A: "A", B: "B", C: "C", D: "D" }, correct: "B" },
+{ question: "Hard. What is log10(1000)?", answers: { A: "2", B: "1", C: "4", D: "3" }, correct: "D" }
 ]
 },
  
@@ -2282,7 +2249,6 @@ hard: [
 { question: "Normal. What is e^(iπ) + 1?", answers: { A: "0", B: "1", C: "i", D: "-1" }, correct: "A" },
 { question: "Normal. What is the maximum number of points of intersection of n circles?", answers: { A: "n²", B: "n(n-1)", C: "2n", D: "n!" }, correct: "B" },
 { question: "Normal. What is the first Carmichael number?", answers: { A: "341", B: "451", C: "561", D: "671" }, correct: "C" },
-{ question: "Normal. What is the number known as the 'least multiple perfect number'?", answers: { A: "120", B: "30240", C: "8128", D: "672" }, correct: "D" },
 { question: "Normal. What is the number 2^8?", answers: { A: "512", B: "128", C: "1024", D: "256" }, correct: "D" },
 { question: "Normal. What is the value of sin(90°)?", answers: { A: "0", B: "0.5", C: "√2/2", D: "1" }, correct: "D" },
 { question: "Normal. The product of an odd and an even number is always?", answers: { A: "Odd", B: "Even", C: "Negative", D: "0" }, correct: "B" },
@@ -2291,18 +2257,15 @@ hard: [
 { question: "Normal. The product of two negative numbers is?", answers: { A: "Negative", B: "0", C: "Positive", D: "Undetermined" }, correct: "C" }, 
 { question: "Normal. What is the name of the average value of a set of data?", answers: { A: "Median", B: "Mode", C: "Arithmetic mean", D: "Variance" }, correct: "C" }, 
 { question: "Normal. What are the names of two angles whose sum is 90°?", answers: { A: "Supplementary", B: "Complementary", C: "Vertical", D: "Adjacent" }, correct: "B" }, 
-{ question: "Normal. What are the names of two angles whose sum is 180°?", answers: { A: "Complementary", B: "Vertical", C: "Supplementary", D: "Parallel" }, correct: "C" }, 
-{ question: "Normal. What is the major life achievement of a person who lives to be 114 years old (Okawa from Japan)?", answers: { A: "50000 days of life", B: "10000 weeks of life", C: "Over a million hours of life", D: "All of the above" }, correct: "D" },
-{ question: "Normal. If you get this question, the correct answer is under C.", answers: { A: "A", B: "B", C: "C", D: "D" }, correct: "C" }
+{ question: "Normal. What are the names of two angles whose sum is 180°?", answers: { A: "Complementary", B: "Vertical", C: "Supplementary", D: "Parallel" }, correct: "C" }
 ],
 hardest: [
-{ question: "Hard. How many solutions does the equation x³ + y³ = z³ have for natural numbers?", answers: { A: "Infinite", B: "1729", C: "0", D: "Unknown" }, correct: "C" },
+{ question: "Hard. How many solutions in set of Natural numbers does the equation x³ + y³ = z³ have for natural numbers?", answers: { A: "Infinite", B: "1729", C: "0", D: "Unknown" }, correct: "C" },
 { question: "Hard. What is the density of primes at n?", answers: { A: "1/n", B: "1/ln(n)", C: "1/√n", D: "1/n²" }, correct: "B" },
 { question: "Hard. What is the Catalan constant G to 2 decimal places?", answers: { A: "0.85", B: "0.92", C: "1.08", D: "1.15" }, correct: "B" },
 { question: "Hard. What is the smallest non-trivial triperfect number?", answers: { A: "120", B: "672", C: "523776", D: "Unknown" }, correct: "C" },
 { question: "Hard. How many dimensions does a Leech lattice have?", answers: { A: "8", B: "16", C: "24", D: "32" }, correct: "C" },
 { question: "Hard. What is 0.999... (infinite repetition) in decimal form?", answers: { A: "0.9", B: "0.99", C: "Undefined", D: "1" }, correct: "D" }, 
-{ question: "Hard. What is the smallest number that is equal to the sum of its digits squared (eg 1^2+2^2...)?", answers: { A: "9", B: "130", C: "0", D: "1" }, correct: "D" }, 
 { question: "Hard. How much is 2^10 + 2^9?", answers: { A: "1024", B: "2048", C: "512", D: "1536" }, correct: "D" } 
 ]
 },
@@ -2333,7 +2296,6 @@ easy: [
 { question: "Easy. What is the third digit of π (after the decimal point)?", answers: { A: "3", B: "1", C: "4", D: "5" }, correct: "B" },
 { question: "Easy. What is the square root of 361?", answers: { A: "19", B: "20", C: "18", D: "21" }, correct: "A" },
 { question: "Easy. Which of these numbers is prime?", answers: { A: "21", B: "29", C: "39", D: "51" }, correct: "B" },
-{ question: "Easy. What is the sum of the interior angles of a pentagon?", answers: { A: "360°", B: "540°", C: "720°", D: "450°" }, correct: "B" },
 { question: "Easy. What is the square of 21?", answers: { A: "441", B: "420", C: "400", D: "4410" }, correct: "A" },
 { question: "Easy. What is π to 2 decimal places?", answers: { A: "3.12", B: "3.14", C: "3.16", D: "3.18" }, correct: "B" }
 ],
@@ -2342,7 +2304,6 @@ hard: [
 { question: "Normal. What is e (Euler's constant) to 2 decimals?", answers: { A: "2.52", B: "2.62", C: "2.72", D: "2.82" }, correct: "C" },
 { question: "Normal. Who discovered the law of gravity?", answers: { A: "Galileo", B: "Newton", C: "Einstein", D: "Kepler" }, correct: "B" },
 { question: "Normal. Who is famous for the theory of relativity?", answers: { A: "Newton", B: "Planck", C: "Bohr", D: "Einstein" }, correct: "D" },
-{ question: "Normal. Who is the father of modern computing?", answers: { A: "Ada Lovelace", B: "Alan Turing", C: "John von Neumann", D: "Charles Babbage" }, correct: "B" },
 { question: "Normal. Who introduced the symbol π?", answers: { A: "Euler", B: "Gauss", C: "Newton", D: "William Jones" }, correct: "D" },
 { question: "Normal. Who founded the modern theory of probability?", answers: { A: "Pascal", B: "Bernoulli", C: "Laplace", D: "Kolmogorov" }, correct: "D" },
 { question: "Normal. Who is known as the 'father of modern logic'?", answers: { A: "Aristotle", B: "Gödel", C: "Frege", D: "Boole" }, correct: "D" },
@@ -2359,17 +2320,15 @@ hard: [
 { question: "Normal. Who introduced the concept of 'operator' in mathematics?", answers: { A: "Heisenberg", B: "Dirac", C: "von Neumann", D: "Hilbert" }, correct: "D" },
 { question: "Normal. A hotel with infinite rooms is full. A new person arrives. Can it fit?", answers: { A: "No", B: "Yes", C: "Only in the hallway", D: "Depends on the room" }, correct: "B" },
 { question: "Normal. Monty Hall problem: do you change the door?", answers: { A: "Yes", B: "No", C: "Anyway", D: "Depends" }, correct: "A" },
-{ question: "Normal. How much is 1/∞?", answers: { A: "0", B: "∞", C: "Undefined", D: "Infinitely small" }, correct: "C" },
 { question: "Normal. Birthday paradox: How many people does it take for there to be a 50% chance that two people share a birthday?", answers: { A: "183", B: "100", C: "50", D: "23" }, correct: "D" },
 { question: "Normal. What is 2 + 2 × 2 - 2 / 2?", answers: { A: "5", B: "7", C: "4", D: "6" }, correct: "A" },
 { question: "Normal. What number is 3 times greater than 1/3?", answers: { A: "2", B: "3", C: "4", D: "1" }, correct: "D" },
-{ question: "Normal. If x = 2 and y = 3, what is x^y?", answers: { A: "6", B: "9", C: "8", D: "27" }, correct: "D" }
+{ question: "Normal. If x = 2 and y = 3, what is x^y?", answers: { A: "6", B: "9", C: "8", D: "27" }, correct: "C" }
 ],
 hardest: [
 { question: "Hard. What is the value of the Apéry constant ζ(3) to 2 decimal places?", answers: { A: "1.20", B: "1.50", C: "1.80", D: "2.10" }, correct: "A" },
 { question: "Hard. How many digits does Googolplex have?", answers: { A: "10^100", B: "10^(10^100)", C: "10^1000", D: "10^10000" }, correct: "B" },
 { question: "Hard. What is Graham's number G1?", answers: { A: "3↑↑3", B: "3↑↑↑↑3", C: "3→3→3", D: "3^(3^27)" }, correct: "B" },
-{ question: "Hard. What is TREE(3)?", answers: { A: "Number greater than Graham's number", B: "Number less than googolplex", C: "Number equal to ackermann(4,4)", D: "27" }, correct: "A" }, 
 { question: "Hard. Mersenne numbers are a special class of prime numbers. Which organization is primarily responsible for discovering the largest known prime numbers?", answers: { A: "NASA", B: "GIMPS", C: "CERN", D: "MIT" }, correct: "B" }, 
 { question: "Hard. Who proved the Taniyama-Shimura hypothesis for semistationary elliptic curves?", answers: { A: "Andrew Wiles", B: "Richard Taylor", C: "Goro Shimura", D: "Yutaka Taniyama" }, correct: "A" }, 
 { question: "Hard. Who won the 2014 Fields Medal for work on dynamical systems?", answers: { A: "Maryam Mirzakhani", B: "Manjul Bhargava", C: "Artur Avila", D: "Martin Hairer" }, correct: "C" },
@@ -2403,7 +2362,6 @@ easy: [
   { question: "Koje su boje dva slova G u Googleovom logu?", answers: { A: "Plave", B: "Crvene", C: "Žute", D: "Zelene" }, correct: "A" },
   { question: "Koji je reper glavni lik u polu-autobiografskom filmu „8 milja“?", answers: { A: "Drake", B: "50 Cent", C: "Snoop Dogg", D: "Eminem" }, correct: "D" },
   { question: "Koja se mjerna jedinica SI sistema može nazvati i kilogram-metar u sekundi na kvadrat?", answers: { A: "Džul", B: "Njutn", C: "Paskal", D: "Vat" }, correct: "B" },
-  { question: "Kako se,u crtiću „Hugo“, zove zla vještica koja je zarobila Hugolinu i njezinu djecu?", answers: { A: "Hugići", B: "Morgana", C: "Hugolina", D: "Mordana" }, correct: "D" },
   { question: "Otac kojeg je dramskog junaka ubijen za popodnevnog drijemeža otrovom ulivenim u uho?", answers: { A: "Fortinbrasa", B: "Laerta", C: "Hamleta", D: "Othella" }, correct: "C" },
   { question: "Koja dvoslovna kratica u Velikoj Britaniji označava vrijeme prije podneva?", answers: { A: "GMT", B: "PM", C: "AM", D: "UTC" }, correct: "C" },
   { question: "U kojem je od 5 njujorških upravnih područja smješten Greenwich village?", answers: { A: "Brooklynu", B: "Manhattanu", C: "Queensu", D: "Bronxu" }, correct: "B" },
@@ -2636,7 +2594,6 @@ easy: [
   { question: "Kako se, kod trougla, zove dužina koja spaja vrh trokuta s polovištem suprotne stranice?", answers: { A: "Simetrala", B: "Težišnica", C: "Visina", D: "Medijana" }, correct: "B" },
   { question: "U logu koje se internetske enciklopedije nalazi nedovršena kugla od puzzli?", answers: { A: "Britannica", B: "WikiLeaks", C: "ChatGPT", D: "Wikipedia" }, correct: "D" },
   { question: "Kako se zove glavni grad Pakistana iz čijeg imena možemo zaključiti koja je većinska religija njegovih stanovnika?", answers: { A: "Karachi", B: "Lahore", C: "Islamabad", D: "Peshawar" }, correct: "C" },
-  { question: "Kako se, u likovnim umjetnostima, zove omjer u kojem se mali dio odnosi prema većem kao veći prema ukupnom?", answers: { A: "Zlatni presjek", B: "Proporcija", C: "Simetrija", D: "Zlatni rez" }, correct: "D" },
  { question: "Koji je grad domaćin automobilističke Velike nagrade Australije i teniskog Australian opena?", answers: { A: "Sydney", B: "Brisbane", C: "Melbourne", D: "Perth" }, correct: "C" },
   { question: "Kako jednom riječju nazivamo zemlje sjeverozapadne Afrike Alžir, Maroko, Libiju i Tunis?", answers: { A: "Levant", B: "Magreb", C: "Sahel", D: "Sahara" }, correct: "B" },
   { question: "U kojem su gradu sjedište Europske svemirske agencije, OECD-a i UNESCO-a?", answers: { A: "Ženevi", B: "Bruxellesu", C: "Parizu", D: "Berlinu" }, correct: "C" },
@@ -2729,7 +2686,7 @@ easy: [
   { question: "S kojom državom Rusija ima najkraću kopnenu granicu, dugu samo 18 km?", answers: { A: "Norveškom", B: "Kinom", C: "Sjevernom Korejom", D: "Finskom" }, correct: "C" },
   { question: "Koja je mitološka junakinja imala kćeri Profasis i Metameliju, odnosno Ispriku i Žaljenje?", answers: { A: "Pandora", B: "Hera", C: "Atena", D: "Artemida" }, correct: "A" },
   { question: "Za zametak se koristi grčki naziv embrij, a za plod koji grčki naziv?", answers: { A: "Zigot", B: "Fetus", C: "Larva", D: "Blastula" }, correct: "B" },
-  { question: "Kojoj je državi 1773 Velika Britanija preotela Kanadu?", answers: { A: "Španiji", B: "Francuskoj", C: "Portugalu", D: "Nizozemskoj" }, correct: "B" },
+  { question: "Kojoj je državi 1763 Velika Britanija preotela Kanadu?", answers: { A: "Španiji", B: "Francuskoj", C: "Portugalu", D: "Nizozemskoj" }, correct: "B" },
   { question: "U kojem je gradu 1348 osnovano najstarije sveučilište u slavenskim zemljama?", answers: { A: "Prag", B: "Krakow", C: "Beograd", D: "Sofija" }, correct: "A" },
   { question: "Prije koliko je godina Einstein objavio članak „Temelji opće teorije relativnosti“?", answers: { A: "1905", B: "1915", C: "1916", D: "1920" }, correct: "C" },
   { question: "Za veliku nagradu koje se države vozi Formula 1 na stazi u Silverstoneu?", answers: { A: "Italije", B: "Velike Britanije", C: "Njemačke", D: "Francuske" }, correct: "B" },
