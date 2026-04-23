@@ -28,24 +28,25 @@
     
     /* Floating money symbols */
     .quiz-background::before {
-      content: '💰💵💎💸⭐🏆 π ∑ ∫ √ ∞ ≠ ≈ ± × ÷ ² ³ ∛ ∆ Ω φ θ α💰💵💎💸⭐🏆 π ∑ ∫ √ ∞ ≠ ≈ ± × ÷ ² ³ ∛ ∆ Ω φ θ α💰💵💎💸⭐🏆 π ∑ ∫ √ ∞ ≠ ≈ ± × ÷ ² ³ ∛ ∆ Ω φ θ α💰💵💎💸⭐🏆 π ∑ ∫ √ ∞ ≠ ≈ ± × ÷ ² ³ ∛ ∆ Ω φ θ α💰💵💎💸⭐🏆 π ∑ ∫ √ ∞ ≠ ≈ ± × ÷ ² ³ ∛ ∆ Ω φ θ α';
+      content: '📊 📈 🧮 📐 🔬 🧪 🧬 📚 ✏️ 🎓 💰 💎 ⭐ π ∑ ∫ √ ∞ ≠ ≈ ± × ÷ ² ³ ∛ ∆ Ω φ θ α 📊 📈 📉 🧮 📐 📏 📌 📍 ✏️ 🖊️ 🖋️ 📓 📒 📚 π ∑ ∫ √ ∞ ≠ ≈ ± × ÷ ² ³ ∛ ∆ Ω φ θ α 🧠 🧑‍🏫 🎓 🏫 🧪 ⚗️ 🔬 🔭 💡 🧾 📄 📑 🗂️ 📎 π ∑ ∫ √ ∞ ≠ ≈ ± × ÷ ² ³ ∛ ∆ Ω φ θ α 🧷 🧠 💻 🖥️ ⌨️ 🖱️ 🔢 💯 💰 💵 💎 💸 ⭐ 🏆 π ∑ ∫ √ ∞ ≠ ≈ ± × ÷ ² ³ ∛ ∆ Ω φ θ α 📊 📈 🧮 📐 🔬 🧪 🧬 📚 ✏️ 🎓 💰 💎 ⭐';
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
+      height: 200%;
       font-size: 42px;
       opacity: 0.08;
       animation: floatSymbols 35s linear infinite;
       letter-spacing: 60px;
+	  will-change: transform;
       line-height: 100px;
       word-spacing: 40px;
     }
     
-    @keyframes floatSymbols {
-      0% { transform: translateY(100%) rotate(0deg); }
-      100% { transform: translateY(-100%) rotate(360deg); }
-    }
+@keyframes floatSymbols {
+  0% { transform: translateY(0%) rotate(0deg); }
+  100% { transform: translateY(-50%) rotate(360deg); }
+}
     
     /* Additional mathematical formulas layer */
     .math-formulas {
@@ -138,18 +139,19 @@
 #questionBox h1,
 #questionBox h2,
 #questionBox {
-  font-size: 1.5rem;
-  line-height: 1.4;
-  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 0.2px;
 }
     /* Title glow animation */
     .title-glow {
       text-shadow: 
-        0 0 10px rgba(251, 191, 36, 0.8),
-        0 0 20px rgba(251, 191, 36, 0.6),
-        0 0 30px rgba(251, 191, 36, 0.4),
-        0 0 40px rgba(251, 191, 36, 0.2);
-      animation: titlePulse 2s ease-in-out infinite;
+    0 0 6px rgba(251, 191, 36, 0.5),
+    0 0 14px rgba(251, 191, 36, 0.35),
+    0 0 24px rgba(251, 191, 36, 0.2);
+
+  animation: titlePulse 3s ease-in-out infinite;
     }
     
     @keyframes titlePulse {
@@ -164,10 +166,9 @@
     }
 
 .pulse-active {
-  animation: pulseGlow 1.2s infinite;
-  box-shadow: 0 0 15px gold;
+  animation: pulseGlow 2.2s ease-in-out infinite;
+  box-shadow: 0 0 18px rgba(255, 215, 0, 0.6);
   border: 2px solid gold !important;
-  transform: scale(1.03);
 }
 
 @keyframes pulseGlow {
@@ -193,8 +194,9 @@
   top: -10px;
   border-radius: 2px;
   z-index: 9999;
-  animation: confetti-fall linear forwards;
+  animation: confetti-fall 3s linear forwards;
   opacity: 1;
+  transform-origin: center;
 }
     
     /* Lock animation */
@@ -227,22 +229,17 @@
     }
     
   .shake {
-  animation: none !important;
+  animation: shake 0.4s ease;
 }
     
     /* Dark mode styles */
     body.dark-mode {
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  background: linear-gradient(135deg, #050505 0%, #111827 50%, #0b1324 100%);
     }
     
 /* =========================
    MILLIONAIRE LIGHT MODE
 ========================= */
-
-body.light-mode {
-background: url("pozadinskaslika.jpg") center/cover no-repeat fixed;
-position: relative;
-}
 
 /* blur overlay da ne bude prenapadno */
 body.light-mode::before {
@@ -254,39 +251,9 @@ body.light-mode::before {
   -webkit-backdrop-filter: blur(8px);
   z-index: -1;
 }
-/* QUESTION BOX */
-body.light-mode .question-box {
-  background: rgba(15, 18, 35, 0.85);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
 
-  border: 2px solid rgba(255, 215, 0, 0.25);
 
-  color: #ffffff;
 
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.6),
-    inset 0 0 30px rgba(255, 215, 0, 0.05);
-}
-
-/* QUESTION TEXT */
-body.light-mode #questionText {
-  color: #ffffff;
-  font-weight: 700;
-}
-
-/* ANSWERS */
-body.light-mode .answer-btn {
-  background: linear-gradient(135deg, #1f2440 0%, #151a33 100%);
-  border: 2px solid rgba(255, 215, 0, 0.15);
-  color: #ffffff;
-}
-
-/* HOVER */
-body.light-mode .answer-btn:hover:not(:disabled) {
-  background: linear-gradient(135deg, #2a3158 0%, #1f2440 100%);
-  border-color: rgba(255, 215, 0, 0.35);
-}
 
 /* SELECTED (orange lock) */
 body.light-mode .answer-btn.selected {
@@ -298,9 +265,8 @@ body.light-mode .answer-btn.selected {
 
 /* CORRECT */
 body.light-mode .answer-btn.correct {
-  background: linear-gradient(135deg, #22c55e, #16a34a) !important;
-  border-color: #22c55e !important;
-  color: #fff !important;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  box-shadow: 0 0 25px rgba(34,197,94,0.5);
 }
 
 /* WRONG */
@@ -326,42 +292,12 @@ body.light-mode .prize-active {
 }
 
 
-/* QUESTION BOX - tamniji glass */
-body.light-mode .question-box {
-  background: rgba(20, 25, 45, 0.85);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
-  border: 2px solid rgba(120, 150, 255, 0.25);
-
-  color: #ffffff;
-
-  box-shadow:
-    0 12px 35px rgba(0, 0, 0, 0.25),
-    inset 0 0 25px rgba(255, 255, 255, 0.05);
-}
-
 /* QUESTION TEXT */
 body.light-mode #questionText {
   color: #ffffff;
   font-weight: 700;
 }
 
-/* ANSWERS - manje bijelo, više premium */
-body.light-mode .answer-btn {
-  background: linear-gradient(135deg, #2a335a 0%, #1f2747 100%);
-  border: 2px solid rgba(120, 150, 255, 0.25);
-  color: #ffffff;
-
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
-}
-
-body.light-mode .answer-btn:hover:not(:disabled) {
-  background: linear-gradient(135deg, #35406f 0%, #2a335a 100%);
-  border-color: rgba(120, 150, 255, 0.4);
-}
-
-/* SELECTED (orange lock) */
 body.light-mode .answer-btn.selected {
   background: linear-gradient(135deg, #f59e0b, #d97706) !important;
   border-color: #f59e0b !important;
@@ -369,34 +305,19 @@ body.light-mode .answer-btn.selected {
   box-shadow: 0 0 22px rgba(245, 158, 11, 0.5);
 }
 
-/* CORRECT */
 body.light-mode .answer-btn.correct {
   background: linear-gradient(135deg, #22c55e, #16a34a) !important;
   border-color: #22c55e !important;
   color: #ffffff !important;
 }
 
-/* WRONG */
 body.light-mode .answer-btn.wrong {
   background: linear-gradient(135deg, #ef4444, #b91c1c) !important;
   border-color: #ef4444 !important;
   color: #ffffff !important;
 }
 
-/* PRIZE LADDER */
-body.light-mode .prize-item {
-  background: rgba(25, 30, 55, 0.75);
-  border: 1px solid rgba(120, 150, 255, 0.15);
-  color: #ffffff;
-  backdrop-filter: blur(10px);
-}
 
-/* ACTIVE PRIZE */
-body.light-mode .prize-active {
-  background: linear-gradient(135deg, #f59e0b, #fbbf24) !important;
-  color: #111827 !important;
-  box-shadow: 0 0 18px rgba(245, 158, 11, 0.35);
-}
 
     
     /* School logo */
@@ -455,43 +376,58 @@ body.light-mode .prize-active {
       cursor: not-allowed;
       filter: grayscale(100%);
     }
-    
+   .question-box,
+.answer-btn {
+  transition: all 0.25s ease;
+  margin: 2px;
+  padding: 3px 3px;
+
+} 
 .answer-btn {
   position: relative;
-  background: linear-gradient(90deg, #1b1b2f, #16213e);
-  border: 2px solid #3a3a5a;
-  padding-left: 40px;
-  padding-right: 20px;
-  clip-path: polygon(
-    10px 0%, 
-    100% 0%, 
-    calc(100% - 10px) 50%, 
-    100% 100%, 
-    10px 100%, 
-    0% 50%
-  );
+
+  background: rgba(25, 30, 55, 0.65);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+
+  padding: 14px 18px;
+  color: #fff;
+
   transition: all 0.2s ease;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transform-origin: center;
+  will-change: transform;
 }
-    
-.answer-btn:hover {
-  background: linear-gradient(90deg, #2b2b4f, #1a1a3a);
-  box-shadow: 0 0 15px rgba(0, 200, 255, 0.2);
-  transform: scale(1.01);
+
+.answer-btn:hover:not(:disabled) {
+  transform: translateY(-2px) scale(1.01);
+
+  border-color: rgba(251, 191, 36, 0.45);
+
+  box-shadow:
+    0 0 8px rgba(251, 191, 36, 0.25),
+    0 0 18px rgba(251, 191, 36, 0.18);
 }
     
 .answer-btn.correct {
-  background: linear-gradient(90deg, #22c55e, #16a34a);
+  background: linear-gradient(135deg, #22c55e, #16a34a);
   border-color: #22c55e;
-  box-shadow: 0 0 18px rgba(34, 197, 94, 0.6);
+  color: #fff;
+  box-shadow: 0 0 18px rgba(34, 197, 94, 0.5);
 }
-    
+
 .answer-btn.wrong {
-  background: linear-gradient(90deg, #ef4444, #b91c1c);
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
   border-color: #ef4444;
-  box-shadow: 0 0 18px rgba(239, 68, 68, 0.6);
+  color: #fff;
+  box-shadow: 0 0 18px rgba(239, 68, 68, 0.5);
 }
-.answer-btn:active {
-  transform: scale(0.98);
+body.dark-mode {
+  background: radial-gradient(circle at top, #0a0f2c, #05060f);
+
 }
 
 #barA, #barB, #barC, #barD {
@@ -545,10 +481,7 @@ font-size: clamp(22px, 3.5vw, 38px);
 .netflix-title::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: -80%;
-  width: 60%;
-  height: 100%;
+  inset: 0;
 
   background: linear-gradient(
     120deg,
@@ -557,9 +490,10 @@ font-size: clamp(22px, 3.5vw, 38px);
     transparent
   );
 
-  transform: skewX(-20deg);
-  animation: shine 4.5s infinite ease-in-out;
+  transform: translateX(-100%) skewX(-20deg);
+  animation: shine 2s ease;
 }
+
 
 @keyframes shine {
   0% { left: -80%; opacity: 0; }
@@ -570,12 +504,14 @@ font-size: clamp(22px, 3.5vw, 38px);
 
 
 .answer-btn.selected {
-  background: linear-gradient(90deg, #f59e0b, #d97706) !important;
-  border-color: #f59e0b !important;
-  box-shadow: 0 0 20px rgba(245, 158, 11, 0.7);
-  transform: scale(1.03);
-}
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #111827 !important;
 
+  border-color: #fbbf24 !important;
+  box-shadow: 0 0 25px rgba(251, 191, 36, 0.6);
+
+  transform: scale(1.02);
+}
 
     .audience-bar {
       transition: height 0.5s ease-in-out;
@@ -583,17 +519,21 @@ font-size: clamp(22px, 3.5vw, 38px);
     }
     
 .prize-item {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgba(15, 25, 50, 0.35);
+  border: 1px solid rgba(120, 170, 255, 0.12);
+  transition: all 0.25s ease, transform 0.2s ease;
+
+  margin: 6px 0;
+  padding: 8px 12px;
+
   border-radius: 10px;
-  margin: 4px 0;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: 0.3s ease;
 }
     
     .prize-item::before {
       content: '';
+	    display: none;
+
       position: absolute;
       left: 0;
       top: 0;
@@ -605,17 +545,19 @@ font-size: clamp(22px, 3.5vw, 38px);
 
 .question-box {
   position: relative;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(15, 18, 35, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 
-  border: 2px solid rgba(59, 130, 246, 0.4);
-  border-radius: 18px;
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: 20px;
 
-  padding: 20px;
-  margin: 15px 0;
+  margin: 24px 0;
+  padding: 28px;
 
-  box-shadow: 0 0 25px rgba(59, 130, 246, 0.25);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.45),
+    inset 0 0 25px rgba(255, 255, 255, 0.03);
 
   animation: popIn 0.35s ease;
 }
@@ -632,9 +574,10 @@ font-size: clamp(22px, 3.5vw, 38px);
 }
 
     .prize-active {
-      background: linear-gradient(135deg, #ea580c 0%, #f59e0b 50%, #fbbf24 100%) !important;
-      border: 3px solid #fbbf24 !important;
-      box-shadow: 0 0 30px rgba(251, 191, 36, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.3) !important;
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #111;
+
+  box-shadow: 0 0 25px rgba(251,191,36,0.4);
     }
     
     .prize-milestone {
@@ -646,11 +589,22 @@ font-size: clamp(22px, 3.5vw, 38px);
   box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
 }
     .question-box {
-      background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
-      border: 3px solid #4a4a8a;
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(74, 74, 138, 0.3);
-      overflow: hidden;
+  position: relative;
+  background: rgba(15, 18, 35, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: 20px;
+
+  padding: 22px;
+  margin: 15px 0;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.45),
+    inset 0 0 25px rgba(255, 255, 255, 0.03);
+
+  animation: popIn 0.35s ease;
     }
     
     .question-box .bg-black {
@@ -685,10 +639,7 @@ body.light-mode {
 background: url("pozadinskaslika.jpg") center/cover no-repeat fixed;
 position: relative;
 }
-    .live-badge {
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.25);
-  animation: liveGlow 2s infinite ease-in-out;
-}
+
 
 @keyframes liveGlow {
   0%, 100% { box-shadow: 0 0 10px rgba(255,0,0,0.2); }
@@ -747,13 +698,13 @@ position: relative;
   justify-content: center;
   z-index: 99999;
 
-  animation: introFadeOut 4.5s ease forwards;
-  animation-delay: 3.5s;
+  animation: introFadeOut 1.5s ease forwards;
+  animation-delay: 1.5s;
 }
 
 .intro-content {
   text-align: center;
-  animation: introZoom 2.5s ease forwards;
+  animation: introZoom 1.0s ease forwards;
 }
 
 .intro-logo {
@@ -1031,7 +982,7 @@ Filozofski fakultet Univerziteta u Zenici
 
 
 <p class="text-xs text-gray-400 mt-4 text-center leading-relaxed">
-  © <span id="year"></span> Matematički Milijunaš. All rights reserved • v1.0
+  © <span id="year"></span> Matematički Milijunaš. All rights reserved • v2.1
   <br>
   <span class="text-gray-300"></span>
   <br>
@@ -1365,7 +1316,7 @@ Filozofski fakultet Univerziteta u Zenici
         phoneTitle: "📞 Phone a Friend",
         audienceTitle: "👥 Ask the Audience",
         audienceResults: "Rezultati glasanja publike:",
-        friendSays: "Vaš prijatelj misli da je odgovor",
+        friendSays: "",
         calling: "Zovem prijatelja...",
         explanation: "Objašnjenje",
         commonMistake: "Najčešća greška",
@@ -1391,7 +1342,7 @@ Filozofski fakultet Univerziteta u Zenici
         phoneTitle: "📞 Phone a Friend",
         audienceTitle: "👥 Ask the Audience",
         audienceResults: "Rezultati glasanja publike:",
-        friendSays: "Vaš prijatelj misli da je odgovor",
+        friendSays: "",
         calling: "Zovem prijatelja...",
         explanation: "Objašnjenje",
         commonMistake: "Najčešća greška",
@@ -1417,7 +1368,7 @@ Filozofski fakultet Univerziteta u Zenici
         phoneTitle: "📞 Phone a Friend",
         audienceTitle: "👥 Ask the Audience",
         audienceResults: "Audience Poll Results:",
-        friendSays: "Your friend thinks the answer is",
+        friendSays: "",
         calling: "Calling friend...",
         explanation: "Explanation",
         commonMistake: "Common Mistake",
@@ -1658,7 +1609,7 @@ hard: [
     { question: "Normal. Ko je prvi upotrijebio decimalni zapis u matematici?", answers: { A: "Fibonacci", B: "Al-Khwarizmi", C: "Simon Stevin", D: "Descartes" }, correct: "C" },
     { question: "Normal. Koji je broj Ludolph van Ceulen izračunavao do 35 decimala?", answers: {  A: "e", B: "π", C: "φ", D: "√2"  }, correct: "B" },
     { question: "Normal. Kako je Carl Friedrich Gauss bio poznat po nadimku?", answers: { A: "Kralj matematike", B: "Otac algebre", C: "Princ matematike", D: "Genije brojeva" }, correct: "C" },
-{ question: "Normal. Ko je izumio logaritme?", answers: { A: "Gottfried Leibniz", B: "Isaac Newton", C: "Leonhard Euler", D: "John Napier" }, correct: "D" },
+    { question: "Normal. Ko je izumio logaritme?", answers: { A: "Gottfried Leibniz", B: "Isaac Newton", C: "Leonhard Euler", D: "John Napier" }, correct: "D" },
     { question: "Normal. Ko je prvi koristio negativne brojeve u matematici?", answers: { A: "Kinezi", B: "Grci", C: "Rimljani", D: "Egipćani" }, correct: "A" },
     { question: "Normal. Ko je formalno definisao funkciju?", answers: { A: "Descartes", B: "Fermat", C: "Euler", D: "Leibniz" }, correct: "C" },
     { question: "Normal. Ko je poznat kao 'otac geometrije'?", answers: { A: "Pitagora", B: "Euklid", C: "Arhimed", D: "Platon" }, correct: "B", explanation: "Euklid iz Aleksandrije (oko 300. p.n.e.) napisao je 'Elemente', najuticajniju matematičku knjigu svih vremena koja sistematizuje geometriju.", commonMistake: "Ljudi često misle na Pitagoru jer je poznatiji, ali Pitagora je 'otac trigonometrije', ne geometrije." },
@@ -1690,7 +1641,7 @@ hard: [
     { question: "Hard. Ko je formulirao Hilbertove probleme 1900. godine?", answers: { A: "David Hilbert", B: "Felix Klein", C: "Hermann Minkowski", D: "Bernhard Riemann" }, correct: "A" },
     { question: "Hard. Ko je dokazao Fermatovu veliku teoremu?", answers: { A: "Andrew Wiles", B: "Grigori Perelman", C: "Terence Tao", D: "Paul Erdős" }, correct: "A" },
     { question: "Hard. U kojoj godini je Gauss objavio 'Disquisitiones Arithmeticae'?", answers: { A: "1791", B: "1801", C: "1811", D: "1821" }, correct: "B" },
-{ question: "Hard. Koliko rješenja ima jednačina x^2 = -1 u realnim brojevima?", answers: { A: "2", B: "1", C: "0", D: "Beskonačno" }, correct: "C" },
+    { question: "Hard. Koliko rješenja ima jednačina x^2 = -1 u realnim brojevima?", answers: { A: "2", B: "1", C: "0", D: "Beskonačno" }, correct: "C" },
     { question: "Hard. Ko je riješio Poincareovu hipotezu?", answers: { A: "Andrew Wiles", B: "Terence Tao", C: "Grigori Perelman", D: "John Nash" }, correct: "C" },
     { question: "Hard. U kojoj godini je Emmy Noether objavila svoju čuvenu teoremu?", answers: { A: "1905", B: "1915", C: "1918", D: "1925" }, correct: "C" },
     { question: "Hard. Ko je uveo koncept matematičke rigoroznosti u analizi (ε-δ definicija limita)?", answers: { A: "Cauchy", B: "Weierstrass", C: "Riemann", D: "Bolzano" }, correct: "B" },
@@ -1861,7 +1812,7 @@ interestingFacts: {
     { question: "Easy. Ko je otkrio zakon gravitacije?", answers: { A: "Galileo", B: "Newton", C: "Einstein", D: "Kepler" }, correct: "B" },
     { question: "Easy. Koliki je treći ugao u trouglu ako su druga dva 50° i 60°?", answers: { A: "70°", B: "65°", C: "80°", D: "75°" }, correct: "A" },
     { question: "Easy. Ako se na svako sljedeće polje šahovske table broj zrna riže udvostručuje počevši od 1, koliko zrna ima na 64. polju?", answers: { A: "Oko 100 kg riže", B: "Jedan kamion riže", C: "Više nego ukupna proizvodnja riže na Zemlji", D: "Nemoguće izračunati" }, correct: "C" },
-  { question: "Easy. Koliko puta se papir može presaviti u praksi?", answers: { A: "7 puta", B: "10 puta", C: "67", D: "Beskonačno" }, correct: "A" },
+    { question: "Easy. Koliko puta se papir može presaviti u praksi?", answers: { A: "7 puta", B: "10 puta", C: "67", D: "Beskonačno" }, correct: "A" },
     { question: "Easy. Koliko pravih se može provući kroz 4 različite tačke (u opštem slučaju)?", answers: { A: "3", B: "4", C: "6", D: "Neodređeno" }, correct: "C" },
     { question: "Easy. Šta su kolinearne tačke?", answers: { A: "Tačke na istoj kružnici", B: "Tačke na istoj pravoj", C: "Tačke u ravni", D: "Nasumične tačke" }, correct: "B" },
     { question: "Easy. Šta su nekolinearne tačke?", answers: { A: "Tačke na istoj pravoj", B: "Tačke koje leže na kružnici", C: "Tačke koje ne leže na istoj pravoj", D: "Tačke u istom centru" }, correct: "C" },
@@ -1922,7 +1873,7 @@ numbers: {
     { question: "Easy. Koliko je 2 + 2 * 2?", answers: { A: "4", B: "10", C: "8", D: "6" }, correct: "D" },
     { question: "Easy. Koliko je 20% od 100?", answers: { A: "10", B: "30", C: "40", D: "20" }, correct: "D" },
     { question: "Easy. Ako je 1/2 + 1/3 + 1/6 = ?", answers: { A: "2", B: "3", C: "0.5", D: "1" }, correct: "D" },
-  { question: "Easy. Ako je 5x = 25, koliko je x?", answers: { A: "10", B: "15", C: "20", D: "5" }, correct: "D" },
+    { question: "Easy. Ako je 5x = 25, koliko je x?", answers: { A: "10", B: "15", C: "20", D: "5" }, correct: "D" },
     { question: "Easy. Koliko je 1/2 od 1/2?", answers: { A: "1/2", B: "1", C: "2", D: "1/4" }, correct: "D" },
     { question: "Easy. Ako je danas srijeda, koji dan je za 100 dana?", answers: { A: "Petak", B: "Subota", C: "Nedjelja", D: "Četvrtak" }, correct: "A" },
     { question: "Easy. Koliko ima načina da se baci kocka i dobije paran broj?", answers: { A: "2", B: "3", C: "4", D: "5" }, correct: "B" },
@@ -2399,6 +2350,13 @@ easy: [
   { question: "Na kojem kontinentu ne rastu paprati?", answers: { A: "Antarktici", B: "Arktiku", C: "Australiji", D: "Africi" }, correct: "A" },
   { question: "Kako Nijemci zovu svoju najveću saveznu zemlju?", answers: { A: "Bayern", B: "Sachsen", C: "Hessen", D: "NRW" }, correct: "A" },
   { question: "Koja je pruga u sjevernoj Bosni izgrađena u omladinskoj akciji neposredno nakon završetka 2. svj. rata?", answers: { A: "Sarajevo–Mostar", B: "Brčko–Banovići", C: "Doboj–Tuzla", D: "Bihać–Knin" }, correct: "B" },
+  { question: "Koji je najstariji univerzitet na svijetu koji i danas radi?", answers: { A: "Oxford", B: "Sorbonne", C: "Al-Qarawiyyin", D: "Bologna" }, correct: "C" },
+  { question: "Koji je grčki filozof bio učitelj Aleksandra Velikog?", answers: { A: "Sokrat", B: "Platon", C: "Aristotel", D: "Diogen" }, correct: "C" },
+  { question: "Koji je najstariji pisani ep na svijetu?", answers: { A: "Ilijada", B: "Odiseja", C: "", D: "Ep o Gilgamešu" }, correct: "D" },
+  { question: "Koja planeta ima najviše poznatih prirodnih satelita?", answers: { A: "Jupiter", B: "Saturn", C: "Uran", D: "Neptun" }, correct: "B" },
+  { question: "Koji dio ljudskog mozga je odgovoran za ravnotežu i koordinaciju?", answers: { A: "Veliki mozak", B: "Mali mozak", C: "Produžena moždina", D: "Hipotalamus" }, correct: "B" },
+  { question: "Koji vitamin je ključan za zgrušavanje krvi?", answers: { A: "Vitamin A", B: "Vitamin B12", C: "Vitamin C", D: "Vitamin K" }, correct: "D" },
+  { question: "Koji organ u ljudskom tijelu proizvodi inzulin?", answers: { A: "Gušterača", B: "Jetra", C: "Bubrezi", D: "Slezena" }, correct: "A" },
   { question: "Trgovac delicijama Richard Hellman postigao je bogatstvo prodajom kojeg dodatka jelima?", answers: { A: "Kečap", B: "Ajvar", C: "Senf", D: "Majoneza" }, correct: "D" },
   { question: "U kojem su Lovrakovu romanu glavni likovi 3 đaka iz Jabukovca koji pohađaju 4. razred?", answers: { A: "Družba Pere Kvržice", B: "Nevidljiva Iva", C: "Max i Maestral", D: "Vlak u snijegu" }, correct: "D" }
 ],
@@ -2408,7 +2366,7 @@ hard: [
   { question: "Kako se zove popis književnih djela koja su učenici, prema nastavnom planu obavezni pročitati?", answers: { A: "Syllabus", B: "Lektira", C: "Kanon", D: "Plan čitanja" }, correct: "B" },
   { question: "Ono što je u Sloveniji korenje, a u Srbiji šargarepa, u Hrvatskoj je-što?", answers: { A: "Mrkva", B: "Peršun", C: "Celer", D: "Repa" }, correct: "A" },
   { question: "Koju je igraću konzolu i konkurent Sonyjevu PlayStationu tvrtka Microsoft predstavila 2001?", answers: { A: "Sega Dreamcast", B: "Nintendo 64", C: "Xbox", D: "Atari" }, correct: "C" },
- { question: "Koji je grad, po popisu iz 1982 bio treći najveći grad u Jugoslaviji s gotovo pola milijuna stanovnika?", answers: { A: "Beograd", B: "Sarajevo", C: "Zagreb", D: "Skoplje" }, correct: "D" },
+  { question: "Koji je grad, po popisu iz 1982 bio treći najveći grad u Jugoslaviji s gotovo pola milijuna stanovnika?", answers: { A: "Beograd", B: "Sarajevo", C: "Zagreb", D: "Skoplje" }, correct: "D" },
   { question: "Naziv kojih se orijentalnih širokih hlača krije u anagramu riječi „mediji“?", answers: { A: "Dimije", B: "Šalvare", C: "Sarong", D: "Kaftan" }, correct: "A" },
   { question: "13-dnevno zaoštravanje odnosa SSSR-a i SAD-a 1962 poznato je kao kakva „kriza“?", answers: { A: "Iranska", B: "Ruska", C: "Kubanska", D: "Vijetnamska" }, correct: "C" },
   { question: "Kako se zove medicinska pretraga mjerenja plućnog volumena i kapaciteta pluća?", answers: { A: "Kardiologija", B: "Bronhoskopija", C: "Elektrokardiografija", D: "Spirometrija" }, correct: "D" },
@@ -2458,7 +2416,11 @@ hardest: [
 /* Questions 2, 7 and 12 */
 geography: {
 easy: [
-{ question: "Najdublje jezero na svijetu je?", answers: { A: "Kaspijsko", B: "Viktorijino", C: "Balkajsko", D: "Boračko" }, correct: "C" },
+  { question: "Najdublje jezero na svijetu je?", answers: { A: "Kaspijsko", B: "Viktorijino", C: "Balkajsko", D: "Boračko" }, correct: "C" },
+  { question: "Koji je naziv za eksplozivnu smrt zvijezde?", answers: { A: "Nova", B: "Supernova", C: "Kvazar", D: "Pulsar" }, correct: "B" },
+  { question: "Koji je glavni grad Norveške?", answers: { A: "Stockholm", B: "Oslo", C: "Kopenhagen", D: "Reykjavik" }, correct: "B" },
+  { question: "Koji grad je poznat kao 'Grad kanala'?", answers: { A: "Amsterdam", B: "Venecija", C: "Brugge", D: "Kopenhagen" }, correct: "B" },
+  { question: "Koji je naziv za 'lažne' memorije koje mozak može stvoriti?", answers: { A: "Amnezija", B: "Halucinacija", C: "Konfabulacija", D: "Iluzija" }, correct: "C" },
   { question: "Koji je najveći grad na svijetu u smislu gustine naseljenosti?", answers: { A: "Peking", B: "Manila", C: "Mumbai", D: "New York" }, correct: "B" },
   { question: "Koji od ovih gradova ima najviše stanovnika?", answers: { A: "New Delhi", B: "Tokio", C: "Shanghai", D: "Sao Paulo" }, correct: "B" },
   { question: "Iz kog lučkog grada u Engleskoj je Titanik otišao 1912.?", answers: { A: "Dover", B: "Liverpool", C: "Southampton", D: "Grimsby" }, correct: "C" },
@@ -2506,7 +2468,7 @@ easy: [
   { question: "Koji grad nudi lokaciju za izmišljeno sletanje kraljeva u GOT?", answers: { A: "Split", B: "New York", C: "Zagreb", D: "Dubrovnik" }, correct: "D" }
 ],
 hard: [
-{ question: "Ko je naslikao sliku pod nazivom “Gernika”?", answers: { A: "Salvador Dali", B: "Claude Monet", C: "Vincent van Gogh", D: "Pablo Picasso" }, correct: "D" },
+  { question: "Ko je naslikao sliku pod nazivom “Gernika”?", answers: { A: "Salvador Dali", B: "Claude Monet", C: "Vincent van Gogh", D: "Pablo Picasso" }, correct: "D" },
   { question: "Ko je rekao “Veni, vidi, vici” (Dođoh, vidjeh, pobjedih)?", answers: { A: "Augustus", B: "Julije Cezar", C: "Neron", D: "Marko Antonije" }, correct: "B" },
   { question: "Koja žlijezda luči hormon rasta?", answers: { A: "Hipofiza", B: "Nadbubrežna žlijezda", C: "Štitna žlijezda", D: "Gušterača" }, correct: "A" },
   { question: "Hemijska oznaka za srebro je?", answers: { A: "Ag", B: "Au", C: "Si", D: "Sr" }, correct: "A" },
@@ -2572,6 +2534,9 @@ easy: [
   { question: "19 i 21 nazivi su prva 2 albuma pjevačice Adele,a treći se zove-kako?", answers: { A: "20", B: "22", C: "24", D: "25" }, correct: "D" },
   { question: "Odontologija je naziv za ukupno znanje o-kojim organima?", answers: { A: "Kostima", B: "Desnima", C: "Ustima", D: "Zubima" }, correct: "D" },
   { question: "Kojeg je informatičara 2013 glumio Ashton Kutcher,a 2015 Michael Fassbender?", answers: { A: "Steve Jobs", B: "Bill Gates", C: "Elon Musk", D: "Mark Zuckerberg" }, correct: "A" },
+  { question: "Koja životinja može spavati i do 22 sata dnevno?", answers: { A: "Mačka", B: "Koala", C: "Lenjivac", D: "Panda" }, correct: "B" },
+  { question: "Koji je prvi film koji je osvojio Oscara za najbolji film?", answers: { A: "Casablanca", B: "Gone with the Wind", C: "Wings", D: "Citizen Kane" }, correct: "C" },
+  { question: "Koji je glavni sastojak japanskog jela miso supa?", answers: { A: "Soja pasta", B: "Riža", C: "Alge", D: "Riba" }, correct: "A" },
   { question: "U koju porodicu insekata ubrajamo ljutog stršljena latinskog naziva „vespa crabro“?", answers: { A: "Pčele", B: "Muhe", C: "Ose", D: "Mrave" }, correct: "C" },
   { question: "Koja je službena kombinacija boja na dresovima „Newcastlea“,“Udinesea“ i „PAOK“-a?", answers: { A: "Crveno-plava", B: "Crno-crvena", C: "Crno-bijela", D: "Plavo-žuta" }, correct: "C" },
   { question: "Ko je napisao i prvi izvodio Claptonov hit I shot the seriff?", answers: { A: "Bob Dylan", B: "Bob Marley", C: "Elvis Presley", D: "Eric Clapton" }, correct: "B" },
@@ -2580,7 +2545,14 @@ easy: [
   { question: "U kojem je gradu 632. umro poslanik Muhamed s.a.w.s?", answers: { A: "Medini", B: "Meki", C: "Jerusalemu", D: "Damasku" }, correct: "A" },
   { question: "Kako zovemo gornji sloj ceste od pravilno složenih kamenih kocki koji su u naše krajeve donijeli Turci?", answers: { A: "Asfalt", B: "Kaldrma", C: "Šljunak", D: "Beton" }, correct: "B" },
   { question: "Ko se Polifernu predstavio riječima „Moje ime je niko...“?", answers: { A: "Ahil", B: "Odisej", C: "Hektor", D: "Persej" }, correct: "B" },
-
+  { question: "Koji je dio oka odgovoran za regulaciju količine svjetlosti?", answers: { A: "Rožnjača", B: "Mrežnjača", C: "Zjenica", D: "Očna leća" }, correct: "C" },
+  { question: "Koji je naziv za crnu rupu u centru naše galaksije?", answers: { A: "Andromeda X", B: "Sagittarius A*", C: "Cygnus X-1", D: "Orion Core" }, correct: "B" },
+  { question: "Koji hormon je poznat kao 'hormon stresa'?", answers: { A: "Adrenalin", B: "Serotonin", C: "Melatonin", D: "Insulin" }, correct: "A" },
+  { question: "Koji planet ima najkraći dan (najbržu rotaciju)?", answers: { A: "Mars", B: "Jupiter", C: "Merkur", D: "Saturn" }, correct: "B" },
+  { question: "Koji dio ljudskog tijela nema direktan dotok krvi?", answers: { A: "Rožnjača oka", B: "Jezik", C: "Uho", D: "Mozak" }, correct: "A" },
+  { question: "Koja zvijezda je najbliža Zemlji nakon Sunca?", answers: { A: "Proxima Centauri", B: "Sirius", C: "Betelgeuse", D: "Vega" }, correct: "A" },
+  { question: "Koliko kostiju ima odrasla ljudska ruka (uključujući šaku)?", answers: { A: "27", B: "33", C: "37", D: "41" }, correct: "A" },
+  { question: "Koji je jedini organ koji se može regenerirati u velikoj mjeri?", answers: { A: "Srce", B: "Mozak", C: "Jetra", D: "Pluća" }, correct: "C" },
   { question: "Kako se zove divovski štakor,učitelj Nindža kornjača?", answers: { A: "Splinter", B: "Shredder", C: "Master Rat", D: "Karai" }, correct: "A" },
   { question: "Slovenac Peter Prevc prvi je skijaš-skakač koji je letio-koliko metara?", answers: { A: "230 m", B: "240 m", C: "250 m", D: "260 m" }, correct: "C" },
   { question: "Koja se abeceda sastoji od 6 ispupčenih točaka koje se mogu kombinirati u različitim oblicima?", answers: { A: "Morseova", B: "Brailleova", C: "Latinska", D: "Grčka" }, correct: "B" },
@@ -2594,7 +2566,7 @@ easy: [
   { question: "Kako se, kod trougla, zove dužina koja spaja vrh trokuta s polovištem suprotne stranice?", answers: { A: "Simetrala", B: "Težišnica", C: "Visina", D: "Medijana" }, correct: "B" },
   { question: "U logu koje se internetske enciklopedije nalazi nedovršena kugla od puzzli?", answers: { A: "Britannica", B: "WikiLeaks", C: "ChatGPT", D: "Wikipedia" }, correct: "D" },
   { question: "Kako se zove glavni grad Pakistana iz čijeg imena možemo zaključiti koja je većinska religija njegovih stanovnika?", answers: { A: "Karachi", B: "Lahore", C: "Islamabad", D: "Peshawar" }, correct: "C" },
- { question: "Koji je grad domaćin automobilističke Velike nagrade Australije i teniskog Australian opena?", answers: { A: "Sydney", B: "Brisbane", C: "Melbourne", D: "Perth" }, correct: "C" },
+  { question: "Koji je grad domaćin automobilističke Velike nagrade Australije i teniskog Australian opena?", answers: { A: "Sydney", B: "Brisbane", C: "Melbourne", D: "Perth" }, correct: "C" },
   { question: "Kako jednom riječju nazivamo zemlje sjeverozapadne Afrike Alžir, Maroko, Libiju i Tunis?", answers: { A: "Levant", B: "Magreb", C: "Sahel", D: "Sahara" }, correct: "B" },
   { question: "U kojem su gradu sjedište Europske svemirske agencije, OECD-a i UNESCO-a?", answers: { A: "Ženevi", B: "Bruxellesu", C: "Parizu", D: "Berlinu" }, correct: "C" },
   { question: "Koji je reper 1999. osnovao diskografsku kuću Shady Records?", answers: { A: "Dr. Dre", B: "Eminem", C: "50 Cent", D: "Snoop Dogg" }, correct: "B" },
@@ -2671,8 +2643,17 @@ hardest: [
 /* Questions 4, 9 and 14 */
 interestingFacts: {
 easy: [
-
   { question: "Koja je pješačka vojska Osmanskog carstva ukinuta 1826.?", answers: { A: "Spahije", B: "Janjičari", C: "Mamluci", D: "Sipahi" }, correct: "B" },
+  { question: "Koji je najprodavaniji gaming konzol u historiji?", answers: { A: "PlayStation 2", B: "PS5", C: "Xbox 360", D: "Nintendo Switch" }, correct: "A" },
+  { question: "Koji grad ima metro koji radi bez vozača (prvi u svijetu)?", answers: { A: "London", B: "Dubai", C: "Tokio", D: "Pariz" }, correct: "D" },
+  { question: "Koja država ima najviše aktivnih vulkana?", answers: { A: "Japan", B: "Indonezija", C: "Island", D: "Italija" }, correct: "B" },
+  { question: "Koji je prvi film koji je zaradio preko 1 milijarde dolara?", answers: { A: "Titanic", B: "Avatar", C: "Avatar 2", D: "Ratovi zvijezda" }, correct: "A" },
+  { question: "Koja je najbrža životinja na planeti?", answers: { A: "Gepard", B: "Sivi sokol", C: "Lav", D: "Antilopa" }, correct: "B" },
+  { question: "Koja država je prva legalizovala bitcoin kao zakonito sredstvo plaćanja?", answers: { A: "El Salvador", B: "Japan", C: "Švicarska", D: "Njemačka" }, correct: "A" },
+  { question: "Koji je najgledaniji YouTube video svih vremena?", answers: { A: "Baby Shark", B: "Despacito", C: "Gangnam Style", D: "Shape of You" }, correct: "A" },
+  { question: "Koja igra je najigranija video igra svih vremena?", answers: { A: "Minecraft", B: "GTA V", C: "Tetris", D: "Fortnite" }, correct: "C" },
+  { question: "Koja knjiga je najviše puta prevedena na svijetu nakon Biblije?", answers: { A: "Mali princ", B: "Don Kihot", C: "Harry Potter", D: "Alkemičar" }, correct: "A" },
+  { question: "Koja država ima najviše piramida?", answers: { A: "Egipat", B: "Sudan", C: "Meksiko", D: "Peru" }, correct: "B" },
   { question: "Picasso i Braque najvažniji su predstavnici slikarskog pravca nazvanog po kojem geometrijskom tijelu?", answers: { A: "Kugli", B: "Piramidi", C: "Kocki", D: "Valjku" }, correct: "C" },
   { question: "Koja je naljepnica dokaz o plaćenoj vožnji autocestama?", answers: { A: "Vinjeta", B: "Toll pass", C: "Sticker pass", D: "Cestarina ACC" }, correct: "A" },
   { question: "Koji naziv dijele azijska kraljevina i alkan s 4 atoma ugljika?", answers: { A: "Butan", B: "Propan", C: "Pentan", D: "Etan" }, correct: "A" },
@@ -2718,6 +2699,8 @@ easy: [
 hard: [
 { question: "Koja je podvrsta breskve nazvana po slatkom cvjetnom soku?", answers: { A: "Šljiva", B: "Kajsija", C: "Klementina", D: "Nektarina" }, correct: "D" },
   { question: "Koji germanizam može označavati pobunu i svežanj?", answers: { A: "Sturm", B: "Ustanak", C: "Kampf", D: "Bunt" }, correct: "D" },
+  { question: "Koji fenomen uzrokuje da GPS mora stalno da se koriguje?", answers: { A: "Relativnost vremena", B: "Magnetizam", C: "Sunčeve oluje", D: "Gravitacija Mjeseca" }, correct: "A" },
+  { question: "Koji algoritam stoji iza Google pretrage (osnova rankanja)?", answers: { A: "PageRank", B: "SortNet", C: "SearchFlow", D: "RankBoost" }, correct: "A" },
   { question: "Koja je europska država 2001. legalizirala eutanaziju?", answers: { A: "Nizozemska", B: "Švicarska", C: "Njemačka", D: "Danska" }, correct: "A" },
   { question: "Koji polisaharid često nazivaju životinjskim škrobom?", answers: { A: "Celuloza", B: "Glikogen", C: "Skrob", D: "Lignin" }, correct: "B" },
   { question: "Nobelovu nagradu za mir 1917, 1944 i 1963. nije dobio pojedinac nego koja organizacija?", answers: { A: "UNICEF", B: "UNESCO", C: "Crveni križ", D: "WHO" }, correct: "C" },
@@ -2733,7 +2716,7 @@ hard: [
   { question: "Koje je sveučilište pohađao Mark Zuckerberg kad je osmišljen Facebook?", answers: { A: "MIT", B: "Stanford", C: "Harvard", D: "Yale" }, correct: "C" },
   { question: "Koji je britanski prekomorski posjed nazvan po vojskovođi Tariku ibn-Ziyadu?", answers: { A: "Malta", B: "Gibraltar", C: "Cyprus", D: "Bermuda" }, correct: "B" },
   { question: "Koje se limfne žlijezde u čovjekovu ždrijelu odstranjuju?", answers: { A: "Limfni čvorovi", B: "Krajnici", C: "Timus", D: "Slezena" }, correct: "B" },
- { question: "Koji grecizam označava specijalno odijelo za ronioce, pilote i astronaute?", answers: { A: "Kombinezon", B: "Skafander", C: "Aerosuit", D: "Diver suit" }, correct: "B" },
+  { question: "Koji grecizam označava specijalno odijelo za ronioce, pilote i astronaute?", answers: { A: "Kombinezon", B: "Skafander", C: "Aerosuit", D: "Diver suit" }, correct: "B" },
   { question: "Koji je HR mladi inovator najpoznatiji po konstrukciji električnih automobila?", answers: { A: "Davor Šuker", B: "Ivan Mrvoš", C: "Mate Rimac", D: "Nikola Tesla" }, correct: "C" },
   { question: "Kako se preziva mladi karizmatični tajkun iz „50 nijansi sive“?", answers: { A: "Grey", B: "Black", C: "White", D: "Stone" }, correct: "A" },
   { question: "Kojim latinizmom nazivamo oblikovanje reljefa razaranjem zemljine kore pomoću vode ili leda?", answers: { A: "Erozija", B: "Sedimentacija", C: "Korozija", D: "Deformacija" }, correct: "A" },
@@ -2780,6 +2763,16 @@ hardest: [
 numbers: {
 easy: [
 { question: "Koja je najveća planeta Sunčevog sistema?", answers: { A: "Zemlja", B: "Saturn", C: "Jupiter", D: "Mars" }, correct: "C" },
+{ question: "Koji je prvi video koji je ikad postavljen na YouTube?", answers: { A: "Me at the zoo", B: "Hello world", C: "First upload", D: "Intro video" }, correct: "A" },
+{ question: "Koji objekt u svemiru ima gravitaciju toliko jaku da čak ni svjetlost ne može pobjeći?", answers: { A: "Crna rupa", B: "Neutron zvijezda", C: "Supernova", D: "Kvazar" }, correct: "A" },
+{ question: "Koji je jedini kontinent bez mrava?", answers: { A: "Afrika", B: "Antarktika", C: "Australija", D: "Evropa" }, correct: "B" },
+{ question: "Koji je najskuplji izgrađeni predmet u historiji čovječanstva?", answers: { A: "ISS (Međunarodna svemirska stanica)", B: "Burj Khalifa", C: "Titanic", D: "LHC akcelerator" }, correct: "A" },
+{ question: "Koja životinja ima najduži zabilježen životni vijek?", answers: { A: "Kornjača", B: "Kit", C: "Meduza Turritopsis", D: "Slon" }, correct: "C" },
+{ question: "Koji grad je prvi na svijetu imao milijun stanovnika?", answers: { A: "Kairo", B: "Bagdad", C: "London", D: "Rim" }, correct: "D" },
+{ question: "Koji je prvi web sajt ikad napravljen?", answers: { A: "info.cern.ch", B: "google.com", C: "apple.com", D: "yahoo.com" }, correct: "A" },
+{ question: "Koja životinja može da regeneriše cijelo tijelo iz jednog dijela?", answers: { A: "Planarija", B: "Zmija", C: "Riba", D: "Žaba" }, correct: "A" },
+{ question: "Koja životinja ima najveći mozak u odnosu na tijelo?", answers: { A: "Kit", B: "Mrav", C: "Delfin", D: "Slon" }, correct: "B" },
+{ question: "Koji je najprodavaniji telefon svih vremena?", answers: { A: "iPhone 5S", B: "Nokia 1100", C: "Samsung S3", D: "iPhone 14 Pro Max" }, correct: "B" },
 { question: "Koji je glavni grad Kanade?", answers: { A: "Toronto", B: "Vancouver", C: "Montreal", D: "Ottawa" }, correct: "D" },
 { question: "Koji je hemijski simbol za zlato?", answers: { A: "Au", B: "Ag", C: "Go", D: "Zl" }, correct: "A" },
 { question: "Koliko dana ima prestupna godina?", answers: { A: "365", B: "366", C: "364", D: "367" }, correct: "B" },
@@ -3292,29 +3285,54 @@ function usePhoneAFriend() {
     timeLeft--;
     document.getElementById('timerValue').textContent = timeLeft;
 
-    if (timeLeft === 18) {
+    // 🎯 KAD “PRIJATELJ JAVI”
+    if (timeLeft === 21) {
       const q = selectedQuestions[currentQuestion];
-      const isCorrect = Math.random() < 0.85;
+      const rand = Math.random();
 
-      const friendAnswer = isCorrect
-        ? q.correct
-        : ['A', 'B', 'C', 'D']
-            .filter(a => a !== q.correct)
-            [Math.floor(Math.random() * 3)];
+      let friendAnswer = "";
+      let friendMessage = "";
+
+      // 80% TAČNO
+      if (rand < 0.80) {
+        friendAnswer = q.correct;
+        friendMessage = " Mislim da je tačan odgovor pod: " + friendAnswer;
+
+      // 10% NE ZNA (HUMOR)
+      } else if (rand < 0.90) {
+        const jokes = [
+          "Izvini batice, stvarno ne znam ovo pitanje... puno sreće 🍀",
+          "Brate ovo je preteško, ne bih da te slažem 😅",
+          "Ovo nisam nikad čuo, žao mi je.. "
+        ];
+        friendAnswer = q.correct;
+        friendMessage = jokes[Math.floor(Math.random() * jokes.length)];
+
+      // 5% POGRIJEŠI
+      } else if (rand < 0.95) {
+        const wrongOptions = ['A', 'B', 'C', 'D'].filter(a => a !== q.correct);
+        friendAnswer = wrongOptions[Math.floor(Math.random() * wrongOptions.length)];
+        friendMessage = `🤔 Nisam siguran... ali mislim da je: ${friendAnswer} (Nemoj me držati za riječ.. 😬)`;
+
+      // 5% “100% SIGURAN”
+      } else {
+        friendAnswer = q.correct;
+        friendMessage = `100% sam siguran! Tačan odgovor je pod: ${friendAnswer} nema greške, siuuu! 🔥`;
+      }
 
       document.getElementById('lifelineMessage').textContent =
-        `${t.friendSays} ${friendAnswer}`;
+        `${t.friendSays} ${friendMessage}`;
     }
 
+    // ⏱ STOP
     if (timeLeft <= 0) {
       clearInterval(phoneTimer);
       document.getElementById('timerCircle').classList.add('hidden');
-
-      // 📞 STOP SOUND kad završi
       phoneSound.pause();
     }
   }, 1000);
 
+  // 🚫 disable lifeline
   lifelines.phoneAFriend = false;
   document.getElementById('phoneAFriend').classList.add('lifeline-used');
   document.getElementById('joker2').style.opacity = '0.3';
@@ -3333,23 +3351,43 @@ function useAskAudience() {
   }
 
   const q = selectedQuestions[currentQuestion];
+  const correct = q.correct;
 
   let percentages = { A: 0, B: 0, C: 0, D: 0 };
 
-  // 🔥 tačan odgovor dobija prednost
-  percentages[q.correct] = 40 + Math.random() * 40;
+  // 🎯 tačan odgovor (realan, ali ne prejak)
+  percentages[correct] = 35 + Math.random() * 28; // 35–63%
 
-  let remaining = 100 - percentages[q.correct];
+  let remaining = 100 - percentages[correct];
 
-  const others = ['A', 'B', 'C', 'D'].filter(a => a !== q.correct);
+  const others = ['A', 'B', 'C', 'D'].filter(a => a !== correct);
 
+  // 📊 “ljudska” raspodjela (ne savršena matematika)
   others.forEach((letter, index) => {
-    if (index < others.length - 1) {
-      percentages[letter] = Math.random() * remaining * 0.6;
-      remaining -= percentages[letter];
+    let value = 0;
+
+    if (index === 0) {
+      value = Math.random() * remaining * 0.5;
+    } else if (index === 1) {
+      value = Math.random() * remaining * 0.3;
     } else {
-      percentages[letter] = remaining;
+      value = remaining;
     }
+
+    percentages[letter] = value;
+    remaining -= value;
+  });
+
+  // 🎲 cleanup (da nema 0 i glupih vrijednosti)
+  Object.keys(percentages).forEach(k => {
+    percentages[k] = Math.max(3, Math.round(percentages[k]));
+  });
+
+  // 🔧 normalize na 100%
+  let sum = Object.values(percentages).reduce((a, b) => a + b, 0);
+
+  Object.keys(percentages).forEach(k => {
+    percentages[k] = Math.round((percentages[k] / sum) * 100);
   });
 
   showAudienceGraph(percentages);
@@ -3359,7 +3397,6 @@ function useAskAudience() {
   document.getElementById('joker3').style.opacity = '0.3';
   document.getElementById('joker3').classList.add('joker-crossed');
 }
-
 function showAudienceGraph(percentages) {
   document.getElementById('lifelineTitle').textContent =
     translations[currentLanguage].audienceTitle;
@@ -3373,23 +3410,24 @@ function showAudienceGraph(percentages) {
     Object.keys(percentages).forEach((letter, i) => {
       const bar = document.getElementById(`bar${letter}`);
       const percent = document.getElementById(`percent${letter}`);
-      const target = Math.round(percentages[letter]);
+      const target = percentages[letter];
 
       let current = 0;
 
       setTimeout(() => {
         const interval = setInterval(() => {
-          if (current < target) {
-            current += 1; // 👈 brzina rasta (1% po ticku)
-            bar.style.height = current + "%";
-            percent.textContent = current + "%";
-          } else {
+          current++;
+
+          bar.style.height = current + "%";
+          percent.textContent = current + "%";
+
+          if (current >= target) {
             clearInterval(interval);
           }
-        }, 15); // 👈 brzina animacije
-      }, i * 200); // 👈 jedan po jedan bar
+        }, 12);
+      }, i * 180);
     });
-  }, 300);
+  }, 250);
 }
 
     function resetLifelines() {
@@ -3793,27 +3831,24 @@ function showAudienceGraph(percentages) {
 
 
 let viewers = 0;
-let baseViewers = 50;
+const baseViewers = 50;
+const MAX_VIEWERS = 10000;
 
 function updateViewers() {
   const el = document.getElementById("viewers");
 
-  // steady growth prema progresu pitanja
-  const progressionBoost = currentQuestion * 20;
+  const progressionBoost = currentQuestion * 60; // jači rast po pitanju
+  const fluctuation = (Math.random() - 0.5) * 80; // real TV varijacija
 
-  // mali random fluctuation (real TV)
-  const fluctuation = Math.floor(Math.random() * 30) - 12;
-
-  viewers += (progressionBoost / 10) + fluctuation;
+  viewers += progressionBoost * 0.05 + fluctuation;
 
   // granice
-  if (viewers < 0) viewers = 0;
-  if (viewers > 1500) viewers = 67676767;
+  if (viewers < 20) viewers = 20;
+  if (viewers > MAX_VIEWERS) viewers = MAX_VIEWERS;
 
   el.textContent = Math.floor(viewers).toLocaleString();
 
-  // spor update
-  setTimeout(updateViewers, Math.random() * 2000 + 1500);
+  setTimeout(updateViewers, 1500 + Math.random() * 1000);
 }
 
 // start
