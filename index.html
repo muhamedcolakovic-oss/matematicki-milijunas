@@ -226,7 +226,6 @@
   0% { transform: scale(0.9); opacity: 0.4; }
   50% { transform: scale(1.1); opacity: 0.8; }
   100% { transform: scale(0.9); opacity: 0.4; }
-} { transform: scale(1.5); }
 }
 #questionText,
 #questionBox h1,
@@ -369,20 +368,8 @@ body.light-mode .answer-btn.wrong {
   color: #fff !important;
 }
 
-/* PRIZE LADDER */
-body.light-mode .prize-item {
-  background: rgba(10, 12, 25, 0.75);
-  border: 1px solid rgba(255, 215, 0, 0.12);
-  color: #ffffff;
-  backdrop-filter: blur(10px);
-}
 
-/* ACTIVE PRIZE */
-body.light-mode .prize-active {
-  background: linear-gradient(135deg, #f59e0b, #fbbf24) !important;
-  color: #111827 !important;
-  box-shadow: 0 0 20px rgba(255, 184, 0, 0.35);
-}
+
 
 
 /* QUESTION TEXT */
@@ -437,7 +424,7 @@ body.light-mode .answer-btn.wrong {
     }
     
     .header-logo {
-      max-width: 100px;
+      max-width: 125px;
       height: auto;
       filter: drop-shadow(0 2px 4px rgba(251, 191, 36, 0.4));
     }
@@ -632,30 +619,57 @@ body.dark-mode {
     }
     
 .prize-item {
-  background: rgba(15, 25, 50, 0.35);
-  border: 1px solid rgba(120, 170, 255, 0.12);
-  transition: all 0.25s ease, transform 0.2s ease;
+  position: relative;
 
+  display: grid;
+  grid-template-columns: 40px 1fr 24px;
+  align-items: center;
+
+  padding: 10px 14px;
   margin: 6px 0;
-  padding: 8px 12px;
 
-  border-radius: 10px;
-  transition: 0.3s ease;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.85);
+
+  transition: all 0.25s ease;
+  overflow: hidden;
 }
-    
-    .prize-item::before {
-      content: '';
-	    display: none;
 
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100%;
-      width: 4px;
-      background: linear-gradient(to bottom, transparent, #f59e0b, transparent);
-    }
-    
+/* hover premium glow */
+.prize-item:hover {
+  transform: translateX(-4px);
+  border-color: rgba(251, 191, 36, 0.35);
+  box-shadow: 0 0 18px rgba(251, 191, 36, 0.15);
+}
 
+/* soft light sweep effect */
+.prize-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.06),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: 0.6s;
+}
+
+.prize-item:hover::before {
+  left: 140%;
+}
 .question-box {
   position: relative;
 
@@ -716,18 +730,45 @@ body.dark-mode {
   font-weight: 700;
   letter-spacing: 0.3px;
 }
-    .prize-active {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
-  color: #111;
+.prize-active {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 215, 0, 0.25),
+    rgba(245, 158, 11, 0.15)
+  );
 
-  box-shadow: 0 0 25px rgba(251,191,36,0.4);
-    }
+  border: 1px solid rgba(251, 191, 36, 0.6);
+
+  color: #fff;
+
+  box-shadow:
+    0 0 20px rgba(251, 191, 36, 0.35),
+    inset 0 0 10px rgba(251, 191, 36, 0.15);
+
+  transform: scale(1.03);
+
+  animation: prizePulse 1.6s infinite ease-in-out;
+}
+
+@keyframes prizePulse {
+  0% { box-shadow: 0 0 10px rgba(251,191,36,0.2); }
+  50% { box-shadow: 0 0 28px rgba(251,191,36,0.5); }
+  100% { box-shadow: 0 0 10px rgba(251,191,36,0.2); }
+}
+
+
     
     .prize-milestone {
       border: 2px solid #f59e0b !important;
       background: linear-gradient(135deg, #1a1a2e 0%, #2d1b00 100%);
   border-left: 3px solid #22c55e;
     }
+	
+	
+	
+	
+	
+	
     .live-badge {
   box-shadow: 0 0 12px rgba(255, 0, 0, 0.4);
 }
@@ -1028,6 +1069,19 @@ position: relative;
     border-radius: 14px !important;
   }
 }
+.prize-item span:first-child {
+  justify-self: start;
+  text-align: left;
+}
+.prize-item span:nth-child(2) {
+  justify-self: center;
+  text-align: center;
+}
+.prize-item span.text-orange-400,
+.prize-item .diamond {
+  justify-self: end;
+  text-align: right;
+}
 
 @media (max-width: 768px) {
   .tv-header {
@@ -1039,7 +1093,7 @@ position: relative;
   }
 
   .header-logo {
-    max-width: 60px !important;
+    max-width: 70px !important;
   }
 }
 @media (max-width: 768px) {
