@@ -1,5 +1,14 @@
 <!doctype html>
 <html lang="sr" class="h-full">
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -134,8 +143,91 @@
       50% { transform: translate(20%, 20%) scale(1.2); }
     }
     
+@media (max-width: 1024px) {
+  #mobileProgressContainer {
+    display: block !important;
+  }
+}
 
+@media (min-width: 1025px) {
+  #mobileProgressContainer {
+    display: none !important;
+  }
+}
+.step-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, #4b5563, #111827);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: all 0.25s ease;
+  position: relative;
+  box-shadow: inset 0 0 4px rgba(0,0,0,0.6);
+  opacity: 0.7;
+}
 
+/* ACTIVE (trenutno pitanje) */
+.step-circle.active {
+  background: radial-gradient(circle at 30% 30%, #fde047, #f59e0b);
+  border: 1px solid #facc15;
+  transform: scale(1.35);
+  opacity: 1;
+  box-shadow:
+    0 0 10px rgba(250,204,21,0.8),
+    0 0 25px rgba(250,204,21,0.4);
+}
+
+/* DONE (tačno odgovoreno) */
+.step-circle.done {
+  background: radial-gradient(circle at 30% 30%, #22c55e, #15803d);
+  border: 1px solid #4ade80;
+  opacity: 1;
+  box-shadow:
+    0 0 8px rgba(34,197,94,0.6);
+}
+
+/* MILSTONE (5,10,15) */
+.step-circle.milestone {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #fbbf24;
+  background: transparent;
+  position: relative;
+  opacity: 1;
+}
+
+/* zlatni ring efekat */
+.step-circle.milestone::after {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 999px;
+  border: 1px solid rgba(251,191,36,0.4);
+  animation: glowRing 1.8s infinite ease-in-out;
+}
+
+/* active milestone */
+.step-circle.milestone.active {
+  background: #fbbf24;
+  box-shadow:
+    0 0 12px rgba(251,191,36,0.9),
+    0 0 30px rgba(251,191,36,0.4);
+  transform: scale(1.4);
+}
+
+/* DONE milestone */
+.step-circle.milestone.done {
+  background: #22c55e;
+  border-color: #22c55e;
+  box-shadow: 0 0 10px rgba(34,197,94,0.8);
+}
+
+@keyframes glowRing {
+  0% { transform: scale(0.9); opacity: 0.4; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(0.9); opacity: 0.4; }
+} { transform: scale(1.5); }
+}
 #questionText,
 #questionBox h1,
 #questionBox h2,
@@ -816,7 +908,22 @@ position: relative;
   transform: skewX(-20deg);
   animation: shine 2.8s ease-in-out;
 }
+#mobileProgressContainer {
+  display: none;
+    pointer-events: none;
 
+
+}
+
+@media (max-width: 1024px) {
+  #mobileProgressContainer {
+    display: block !important;
+  }
+}
+#mobileProgressContainer {
+  position: relative;
+  z-index: 20;
+}
 .intro-sub {
   margin-top: 8px;
   font-size: 12px;
@@ -994,6 +1101,17 @@ position: relative;
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
  </head>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 <body class="h-full text-white font-sans overflow-auto bg-cover bg-center bg-no-repeat"
       style="background-image: url('pozadinskaslika.jpg');">
 
@@ -1192,6 +1310,20 @@ shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
 </div>
 
 </header>
+<!-- MOBILE PROGRESS (ispod headera) -->
+<div id="mobileProgressContainer" class="lg:hidden fixed top-[2px] left-0 w-full px-3 py-2 z-40 hidden"">
+
+  <div class="relative flex justify-between items-center">
+
+    <!-- pozadinska linija -->
+    <div class="absolute top-1/2 left-0 w-full h-[4px] bg-gray-700 rounded-full -translate-y-1/2"></div>
+
+    <!-- 15 krugova -->
+    <div id="stepsWrapper" class="flex justify-between w-full relative z-10"></div>
+
+  </div>
+
+</div>
 <main class="flex-1 flex flex-col lg:flex-row p-2 sm:p-4 gap-2 overflow-hidden max-w-[1800px] mx-auto w-full"><!-- Left Side - Question and Answers -->
     <div class="flex-1 flex flex-col gap-2 overflow-y-auto max-w-5xl mx-auto w-full"><!-- Question Box -->
      <div class="question-box p-4 flex-shrink-0">
@@ -1434,6 +1566,12 @@ shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
     </div>
    </div>
   </div>
+  
+  
+  
+  
+  
+  
   <script>
     let currentLanguage = 'bs';
     let phoneTimer = null;
@@ -1721,9 +1859,6 @@ shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
     
     const questionBank = {
       bs: {
-
-
-
 /* 1., 6. i 11. pitanje */
 history: {
   easy: [
@@ -3311,6 +3446,7 @@ btn.style.cursor = 'pointer'; //
   });
 
   renderPrizeLadder();
+  updateMobileProgress();
 }
 function checkAnswer(selectedAnswer) {
   const q = selectedQuestions[currentQuestion];
@@ -3597,6 +3733,42 @@ function usePhoneAFriend() {
   document.getElementById('joker2').classList.add('joker-crossed');
 }
 
+function updateMobileProgress() {
+  const wrapper = document.getElementById("stepsWrapper");
+  if (!wrapper) return;
+
+  const milestones = [4, 9, 14]; // 5,10,15 (0-based)
+
+  // prvi put kreiraj krugove
+  if (wrapper.children.length === 0) {
+    for (let i = 0; i < 15; i++) {
+      const step = document.createElement("div");
+      step.className = "step-circle";
+
+      if (milestones.includes(i)) {
+        step.classList.add("milestone");
+      }
+
+      step.dataset.index = i;
+      wrapper.appendChild(step);
+    }
+  }
+
+  // update stanja
+  const steps = document.querySelectorAll(".step-circle");
+
+  steps.forEach((step, i) => {
+    step.classList.remove("active", "done");
+
+    if (i < currentQuestion) {
+      step.classList.add("done");
+    }
+
+    if (i === currentQuestion) {
+      step.classList.add("active");
+    }
+  });
+}
 function useAskAudience() {
   if (!lifelines.askAudience) return;
 
