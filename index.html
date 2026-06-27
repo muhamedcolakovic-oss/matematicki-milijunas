@@ -12,8 +12,6 @@
   <script defer src="tailwind.js"></script> 
  </head>
  
- 
- 
 <body class="h-full text-white font-sans overflow-auto bg-cover bg-center bg-no-repeat"
       style="background-image: url('pozadinskaslika.jpg');">
 
@@ -31,7 +29,7 @@
 <div class="fixed inset-0 bg-black/60 backdrop-blur-sm -z-10"></div>
   <audio id="backgroundMusic" autoplay loop><source src="muzika.mp3" type="audio/mpeg">
   </audio><!-- Sound Effects -->
-  <audio id="correctSound" preload="auto"><source src="correct.mp3" type="audio/wav">
+  <audio id="correctSound" preload="auto"><source src="correct.mp3" type="audio/mpeg">
   </audio>
 <audio id="phoneFriendSound" preload="auto">
   <source src="phone.mp3" type="audio/mpeg">
@@ -106,36 +104,23 @@
     <!-- GRID -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
 
-      
+      <!-- LEFT (desktop only) -->
       <div class="hidden md:block text-center space-y-2 text-[12px] text-white/50">
-<!-- LEFT (HIDDEN ON MOBILE) 
-        <p>
-          <a href="https://rps.edu.ba/" target="_blank" class="hover:text-white transition">
-            Richmond Park International Secondary School Sarajevo
-          </a>
-        </p>
 
-        <p>
-          <a href="https://sarajevo.rps.edu.ba/" target="_blank" class="hover:text-white transition">
-            Gimnazija Richmond Park College Sarajevo
-          </a>
-        </p>
+        <!-- ako želiš, ovdje vrati linkove -->
+        <!--
+        <p><a href="#" class="hover:text-white transition">Link 1</a></p>
+        <p><a href="#" class="hover:text-white transition">Link 2</a></p>
+        -->
 
-        <p>
-          <a href="https://ff.unze.ba/" target="_blank" class="hover:text-white transition">
-            Filozofski fakultet Univerziteta u Zenici
-          </a>
-        </p>
--->
       </div>
 
       <!-- CENTER -->
       <div class="text-center">
 
         <p class="text-[11px] tracking-[0.35em] text-yellow-300 uppercase mb-3">
-          Powered by
+          Powered by:
         </p>
-
         <a href="https://www.linkedin.com/in/muhamed-colakovic/" target="_blank"
            class="text-white text-xl md:text-2xl font-medium tracking-wide transition hover:text-yellow-300"
            style="font-family: 'Allura', cursive;">
@@ -145,24 +130,29 @@
       </div>
 
       <!-- RIGHT -->
-<div class="flex flex-col items-center md:items-end mt-0 md:mt-0">
+      <div class="flex flex-col items-center md:items-end">
+
         <div class="flex gap-4 items-center">
-        <a href="https://www.linkedin.com/in/muhamed-colakovic/" target="_blank">
-		  <img src="linkedin.png" class="w-14 h-14 opacity-80 hover:opacity-100 transition">
-		</a> 
-		<a href="https://www.paypal.com/paypalme/muhamedcolakovic96" target="_blank">        
-			<img src="paypal.jpeg" class="w-14 h-14 opacity-80 hover:opacity-100 transition">
-        </a>    
+
+          <a href="https://www.linkedin.com/in/muhamed-colakovic/" target="_blank">
+            <img src="linkedin.png" class="w-14 h-14 opacity-80 hover:opacity-100 transition">
+          </a>
+
+          <a href="https://www.paypal.com/paypalme/muhamedcolakovic96" target="_blank">
+            <img src="paypal.jpeg" class="w-14 h-14 opacity-80 hover:opacity-100 transition">
+          </a>
+
         </div>
-    
+
       </div>
 
     </div>
 
-    <!-- MOBILE SOCIAL + ICONS -->
-    <div class="flex flex-col items-center gap-4 mt-6">
+    <!-- MOBILE SOCIAL -->
+    <div class="flex flex-col items-center gap-4 mt-6 md:hidden">
 
       <div class="flex gap-6">
+
         <a href="https://www.facebook.com/muhamedcolakovic96/" target="_blank">
           <img src="fb.png" class="w-6 opacity-60 hover:opacity-100 transition">
         </a>
@@ -174,6 +164,7 @@
         <a href="https://www.linkedin.com/in/muhamed-colakovic/" target="_blank">
           <img src="in.jpg" class="w-6 opacity-60 hover:opacity-100 transition">
         </a>
+
       </div>
 
     </div>
@@ -181,8 +172,9 @@
   </div>
 
 </footer>
+
         <p class="text-[10px] text-white/30 mt-4">
-          © <span id="year"></span> Matematički Milijunaš v 6.0
+          © <span id="year"></span> Matematički Milijunaš v 7.1
         </p>
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
@@ -453,22 +445,34 @@ shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
    <div class="max-w-7xl mx-auto"><!-- Header -->
     <div class="bg-black bg-opacity-50 rounded-lg p-6 mb-6 border-4 border-yellow-500">
      <div class="flex justify-between items-center">
-      <h1 class="text-4xl font-bold text-yellow-400">📚 Admin Panel - Question Manager</h1><button onclick="logoutAdmin()" class="bg-red-600 hover:bg-red-500 px-6 py-3 rounded-lg font-bold border-2 border-red-400"> Logout </button>
+      <h1 class="text-4xl font-bold text-yellow-400">📚 Admin Panel: Question Manager</h1><button onclick="logoutAdmin()" class="bg-red-600 hover:bg-red-500 px-6 py-3 rounded-lg font-bold border-2 border-red-400"> Logout </button>
      </div>
     </div><!-- Language Selection -->
     <div class="bg-black bg-opacity-50 rounded-lg p-6 mb-6 border-2 border-blue-500">
-     <h2 class="text-2xl font-bold text-yellow-400 mb-4">Select Language / Odaberi Jezik:</h2>
+     <h2 class="text-2xl font-bold text-yellow-400 mb-4">Select quiz / Odaberite kviz:</h2>
      <div class="flex gap-4"><button id="adminLangBs" onclick="setAdminLanguage('bs')" class="bg-blue-600 hover:bg-blue-500 px-8 py-3 rounded-lg font-bold border-2 border-blue-400"> Matematika </button> <button id="adminLangEn" onclick="setAdminLanguage('en')" class="bg-gray-600 hover:bg-gray-500 px-8 py-3 rounded-lg font-bold border-2 border-gray-400"> Maths </button>
 <button id="adminLangGe" onclick="setAdminLanguage('ge')" class="bg-gray-600 hover:bg-gray-500 px-8 py-3 rounded-lg font-bold border-2 border-gray-400"> Opšte znanje </button>
 <button id="adminLangGe" onclick="setAdminLanguage('gk')" class="bg-gray-600 hover:bg-gray-500 px-8 py-3 rounded-lg font-bold border-2 border-gray-400"> General knowledge </button>
      </div>
     </div><!-- Category Tabs -->
     <div class="bg-black bg-opacity-50 rounded-lg p-6 mb-6 border-2 border-green-500">
-     <h2 class="text-2xl font-bold text-yellow-400 mb-4">Categories:</h2>
-     <div class="flex flex-wrap gap-3"><button class="category-tab bg-green-600 hover:bg-green-500 px-4 py-2 rounded-lg font-bold border-2 border-green-400" onclick="showCategory('history')"> 📜 History </button> <button class="category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400" onclick="showCategory('geography')"> 🌍 Geography </button> <button class="category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400" onclick="showCategory('funFacts')"> 🎉 Fun Facts </button> <button class="category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400" onclick="showCategory('interestingFacts')"> 💡 Interesting Facts </button> <button class="category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400" onclick="showCategory('numbers')"> 🔢 Numbers </button>
+     <h2 class="text-2xl font-bold text-yellow-400 mb-4">Kategorije pitanja:</h2>
+     <div class="flex flex-wrap gap-3"><button class="category-tab bg-green-600 hover:bg-green-500 px-4 py-2 rounded-lg font-bold border-2 border-green-400" onclick="showCategory('history')"> 📜 Historija matematike </button> <button class="category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400" onclick="showCategory('geography')"> 🌍 Geografija matematike </button> <button class="category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400" onclick="showCategory('funFacts')"> 🎉 Zanimljive činjenice </button> <button class="category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400" onclick="showCategory('interestingFacts')"> 💡 Matematičari </button> <button class="category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400" onclick="showCategory('numbers')"> 🔢 Brojevi </button>
      </div>
+
     </div><!-- Add New Question Button -->
-    <div class="mb-6 text-center"><button onclick="showAddQuestion()" class="bg-green-600 hover:bg-green-500 px-8 py-4 rounded-lg font-bold text-xl border-4 border-green-400 transition-all transform hover:scale-105"> ➕ Add New Question </button>
+<div class="mb-6 text-center flex justify-center gap-4 flex-wrap">
+
+    <button onclick="showAddQuestion()"
+        class="bg-green-600 hover:bg-green-500 px-8 py-4 rounded-lg font-bold text-xl border-4 border-green-400 transition-all transform hover:scale-105">
+        ➕ Dodaj novo pitanje
+    </button>
+
+    <button onclick="exportQuestionBank()"
+        class="bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-lg font-bold text-xl border-4 border-blue-400 transition-all transform hover:scale-105">
+        💾 Ažuriraj bazu podataka pitanja
+    </button>
+
     </div><!-- Questions List -->
     <div id="questionsList" class="bg-black bg-opacity-50 rounded-lg p-6 border-2 border-yellow-500"><!-- Questions will be loaded here -->
     </div>
@@ -476,28 +480,28 @@ shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
   </div><!-- Edit/Add Question Modal -->
   <div id="editQuestionModal" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-6 z-50 overflow-y-auto">
    <div class="bg-gradient-to-br from-purple-900 to-blue-900 rounded-lg p-8 max-w-3xl w-full border-4 border-purple-500 my-8">
-    <h2 id="editModalTitle" class="text-3xl font-bold text-yellow-400 mb-6 text-center">Add New Question</h2>
+    <h2 id="editModalTitle" class="text-3xl font-bold text-yellow-400 mb-6 text-center"> Dodaj novo pitanje </h2>
     <div class="grid grid-cols-2 gap-4 mb-4">
-     <div><label class="block text-white mb-2 font-bold">Category:</label> <select id="editCategory" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none"> <option value="history">History</option> <option value="geography">Geography</option> <option value="funFacts">Fun Facts</option> <option value="interestingFacts">Interesting Facts</option> <option value="numbers">Numbers</option> </select>
+     <div><label class="block text-white mb-2 font-bold">Kategorija:</label> <select id="editCategory" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none"> <option value="history">Historija matematike</option> <option value="geography">Geografija matematike</option> <option value="funFacts">Zanimljive činjenice</option> <option value="interestingFacts">Poznati matematičari</option> <option value="numbers">Brojevi</option> </select>
      </div>
-     <div><label class="block text-white mb-2 font-bold">Difficulty:</label> <select id="editDifficulty" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none"> <option value="easy">Easy</option> <option value="hard">Hard</option> <option value="hardest">Hardest</option> </select>
+     <div><label class="block text-white mb-2 font-bold">Težina:</label> <select id="editDifficulty" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none"> <option value="easy">Lako</option> <option value="hard">Srednje</option> <option value="hardest">Teško</option> </select>
      </div>
     </div>
-    <div class="mb-4"><label class="block text-white mb-2 font-bold">Question:</label> <textarea id="editQuestion" rows="3" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none" placeholder="Enter question..."></textarea>
+    <div class="mb-4"><label class="block text-white mb-2 font-bold">Pitanje:</label> <textarea id="editQuestion" rows="3" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none" placeholder="Unesite pitanje..."></textarea>
     </div>
     <div class="grid grid-cols-2 gap-4 mb-4">
-     <div><label class="block text-white mb-2 font-bold">Answer A:</label> <input type="text" id="editAnswerA" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none" placeholder="Answer A">
+     <div><label class="block text-white mb-2 font-bold">Odgovor A:</label> <input type="text" id="editAnswerA" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none" placeholder="Odgovor A">
      </div>
-     <div><label class="block text-white mb-2 font-bold">Answer B:</label> <input type="text" id="editAnswerB" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none" placeholder="Answer B">
+     <div><label class="block text-white mb-2 font-bold">Odgovor B:</label> <input type="text" id="editAnswerB" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none" placeholder="Odgovor B">
      </div>
-     <div><label class="block text-white mb-2 font-bold">Answer C:</label> <input type="text" id="editAnswerC" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none" placeholder="Answer C">
+     <div><label class="block text-white mb-2 font-bold">Odgovor C:</label> <input type="text" id="editAnswerC" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none" placeholder="Odgovor C">
      </div>
-     <div><label class="block text-white mb-2 font-bold">Answer D:</label> <input type="text" id="editAnswerD" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:outline-none" placeholder="Answer D">
+     <div><label class="block text-white mb-2 font-bold">Odgovor D:</label> <input type="text" id="editAnswerD" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:outline-none" placeholder="Odgovor D">
      </div>
     </div>
-    <div class="mb-6"><label class="block text-white mb-2 font-bold">Correct Answer:</label> <select id="editCorrect" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none"> <option value="A">A</option> <option value="B">B</option> <option value="C">C</option> <option value="D">D</option> </select>
+    <div class="mb-6"><label class="block text-white mb-2 font-bold">Tačan Odgovor:</label> <select id="editCorrect" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none"> <option value="A">A</option> <option value="B">B</option> <option value="C">C</option> <option value="D">D</option> </select>
     </div>
-    <div class="flex gap-4"><button onclick="saveQuestion()" class="flex-1 bg-green-600 hover:bg-green-500 px-6 py-3 rounded-lg font-bold border-2 border-green-400"> 💾 Save </button> <button onclick="closeEditModal()" class="flex-1 bg-gray-600 hover:bg-gray-500 px-6 py-3 rounded-lg font-bold border-2 border-gray-400"> Cancel </button>
+    <div class="flex gap-4"><button onclick="saveQuestion()" class="flex-1 bg-green-600 hover:bg-green-500 px-6 py-3 rounded-lg font-bold border-2 border-green-400"> 💾 Spremi </button> <button onclick="closeEditModal()" class="flex-1 bg-gray-600 hover:bg-gray-500 px-6 py-3 rounded-lg font-bold border-2 border-gray-400"> Poništi </button>
     </div>
    </div>
   </div>
@@ -509,5 +513,11 @@ shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
   <script defer src="app.js"></script>  
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
   <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
+  <!-- Floating Chat Button -->
+<a href="mathgpt/home.html" class="chat-fab" target="_blank" aria-label="Chat pomoć">
+  <svg viewBox="0 0 24 24">
+    <path d="M20 2H4C2.9 2 2 2.9 2 4v14c0 1.1.9 2 2 2h3v4l4-4h9c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+  </svg>
+</a>
 </body>
 </html>
