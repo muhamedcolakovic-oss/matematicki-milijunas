@@ -100,30 +100,30 @@ function saveSeenQuestion(id) {
         share: "Podijeli"
       },
 	 gk: {
-        question: "Pitanje",
-        of: "od",
-        congratulations: "Čestitamo!",
-        gameOver: "Kraj Igre",
-        youWon: "Osvojili ste",
-        wrongAnswer: "Nažalost, pogrešan odgovor.",
-        incredible: "Nevjerovatno! Osvojili ste milion!",
-        playAgain: "Igraj Ponovo",
-        close: "Zatvori",
+     question: "Question",
+        of: "of",
+        congratulations: "Congratulations!",
+        gameOver: "Game Over",
+        youWon: "You won",
+        wrongAnswer: "Unfortunately, wrong answer.",
+        incredible: "Incredible! You won a million!",
+        playAgain: "Play Again",
+        close: "Close",
         phoneTitle: "📞 Phone a Friend",
         audienceTitle: "👥 Ask the Audience",
-        audienceResults: "Rezultati glasanja publike:",
+        audienceResults: "Audience Poll Results:",
         friendSays: "",
-        calling: "Zovem prijatelja...",
-        explanation: "Objašnjenje",
-        commonMistake: "Najčešća greška",
-        correctAnswer: "Tačan odgovor",
-        statistics: "Statistika",
-        totalGames: "Ukupno igara",
-        avgScore: "Prosječan rezultat",
-        bestScore: "Najbolji rezultat",
-        currentStreak: "Trenutni niz",
-        badges: "Bedževi",
-        share: "Podijeli"
+        calling: "Calling friend...",
+        explanation: "Explanation",
+        commonMistake: "Common Mistake",
+        correctAnswer: "Correct Answer",
+        statistics: "Statistics",
+        totalGames: "Total Games",
+        avgScore: "Average Score",
+        bestScore: "Best Score",
+        currentStreak: "Current Streak",
+        badges: "Badges",
+        share: "Share"
       },  
 	  
       en: {
@@ -358,11 +358,12 @@ function selectLanguage(lang) {
   initGame();
 }
     
-    const questionBank = {
+    let questionBank = {
 bs: {
 history: {
 easy: [
 { question: "Šta je 'Apsolutna vrijednost' broja -15?", answers: { A: "0", B: "-15", C: "15", D: "1" }, correct: "C" },
+{ question: "Šta je 'Apsolutna vrijednost' broja 27?", answers: { A: "27", B: "-27", C: "0", D: "1" }, correct: "A" },
 { question: "Koji je simbol za skup cijelih brojeva?", answers: { A: "N", B: "Q", C: "Z", D: "R" }, correct: "C" },
 { question: "Kako se zove linija koja spaja dva nesusjedna vrha mnogougla?", answers: { A: "Dijagonala", B: "Stranica", C: "Tetiva", D: "Visina" }, correct: "A" },
 { question: "Kako se naziva broj koji se može podijeliti samo sa 1 i sa samim sobom?", answers: { A: "Složen broj", B: "Prost broj", C: "Parni broj", D: "Savršen broj" }, correct: "B" },
@@ -458,6 +459,25 @@ hard: [
 { question: "Kako se zove geometrijski oblik koji izgleda kao krofna?", answers: { A: "Sfera", B: "Torus", C: "Cilindar", D: "Elipsa" }, correct: "B" },
 { question: "Koji je jedini broj koji je ujedno i prost i paran?", answers: { A: "2", B: "4", C: "1", D: "0" }, correct: "A" },
 { question: "Koliko iznosi kvadratni korijen iz broja 0.25?", answers: { A: "0.05", B: "0.1", C: "0.2", D: "0.5" }, correct: "D" },
+{ question: "Šta je to što najviše zna a najmanje govori?", answers: { A: "Knjiga", B: "Učitelj", C: "Telefon", D: "Novine" }, correct: "A" },
+{ question: "Gdje se uliva Dunav?", answers: { A: "Jadransko more", B: "Egejsko more", C: "Crno more", D: "Sredozemno more" }, correct: "C" },
+{ question: "Kako se zove krilati konj iz grčke mitologije?", answers: { A: "Pegaz", B: "Arion", C: "Minosaur", D: "Belerofont" }, correct: "A" },
+{ question: "Gdje se nalazi arheološko nalazište Maču Pikču?", answers: { A: "Bolivija", B: "Peru", C: "Ekvador", D: "Kolumbija" }, correct: "B" },
+{ question: "Šta znači latinska riječ 'nivea'?", answers: { A: "Krema za ruke", B: "Snježna zemlja", C: "Sniježno bijelo", D: "Ledeni vrh" }, correct: "C" },
+{ question: "Ko je glumio Laru Croft (2001)?", answers: { A: "Mila Jovovich", B: "Kate Beckinsale", C: "Charlize Theron", D: "Angelina Jolie" }, correct: "D" },
+{ question: "Kako se zove pola čovjek, pola konj?", answers: { A: "Satir", B: "Pegaz", C: "Faun", D: "Kentaur" }, correct: "D" },
+{ question: "Gdje su prema mitologiji živjeli grčki bogovi?", answers: { A: "Delphi", B: "Olimp", C: "Atos", D: "Kreta" }, correct: "B" },
+{ question: "Šta je monsun?", answers: { A: "Pustinjski vjetar", B: "Tropska oluja", C: "Sezonski vjetar", D: "Planinski vjetar" }, correct: "C" },
+{ question: "Šta je otkrio Alfred Nobel?", answers: { A: "Nitroglicerin", B: "Barut", C: "Dinamit", D: "Nobelovu nagradu" }, correct: "C" },
+{ question: "Kako se zove kratak sadržaj radnje romana?", answers: { A: "Motiv", B: "Fabula", C: "Tema", D: "Struktura" }, correct: "B" },
+{ question: "Kako se na španskom kaže 'zdravo'?", answers: { A: "Ciao", B: "Ola", C: "Buenos", D: "Hi" }, correct: "B" },
+{ question: "Koju zemlju zovu Nipon?", answers: { A: "Kina", B: "Japan", C: "Južna Koreja", D: "Tajvan" }, correct: "B" },
+{ question: "Kako se zove priča sa životinjama koje govore?", answers: { A: "Legenda", B: "Bajka", C: "Basna", D: "Saga" }, correct: "C" },
+{ question: "Iz koje biljke dolazi vanila?", answers: { A: "Lotos", B: "Orhideja", C: "Palma", D: "Kaktus" }, correct: "B" },
+{ question: "Kako se zove ptica koja se rađa iz pepela?", answers: { A: "Simurg", B: "Rok", C: "Grifon", D: "Feniks" }, correct: "D" },
+{ question: "Koliko iznosi maratonska staza?", answers: { A: "42195 m", B: "41195 m", C: "40195 m", D: "39196 m" }, correct: "A" },
+{ question: "Kada je najkraći dan u godini?", answers: { A: "21. juni", B: "1. januar", C: "21. decembar", D: "1. mart" }, correct: "C" },
+{ question: "Glavni grad Kalifornije je?", answers: { A: "Sacramento", B: "Los Angeles", C: "San Diego", D: "San Francisco" }, correct: "A" },
 { question: "Kako se naziva poligon (mnogougao) sa deset stranica?", answers: { A: "Heksagon", B: "Heptagon", C: "Dekagon", D: "Nonagon" }, correct: "C" },
 { question: "Koji je rimski simbol za broj 50?", answers: { A: "C", B: "D", C: "L", D: "M" }, correct: "C" },
 { question: "Koliko nula ima broj trilion (na evropskoj skali)?", answers: { A: "12", B: "9", C: "15", D: "18" }, correct: "A" },
@@ -866,7 +886,7 @@ easy: [
 { question: "Koji su osnovni pojmovi u geometriji koji se ne definišu?", answers: { A: "Tačka, prava, ravnina", B: "Ugao, duž, krug", C: "Tijelo, volumen, površina", D: "Vektor, matrica, funkcija" }, correct: "A" },
 { question: "Kako se zvala grčka škola gdje je otkrivena iracionalnost brojeva?", answers: { A: "Platonova akademija", B: "Pitagorejska škola", C: "Aristotelova škola", D: "Euklidova škola" }, correct: "B" },
 { question: "Koji umjetnik je koristio matematičke proporcije i zlatni rez u 'Posljednjoj večeri'?", answers: { A: "Michelangelo", B: "Leonardo da Vinci", C: "Raphael", D: "Donatello" }, correct: "B" },
-{ question: "Gdje se u prirodi može pronaći Fibonacci niz?", answers: { A: "Cjetovima", B: "U pahuljama i školjkama", C: "Spiralim oblicima", D: "U svim navedenim primjerima" }, correct: "D" },
+{ question: "Gdje se u prirodi može pronaći Fibonacci niz?", answers: { A: "Cvjetovima", B: "U pahuljama i školjkama", C: "Spiralim oblicima", D: "U svim navedenim primjerima" }, correct: "D" },
 { question: "Kako se naziva četverougao čije su sve stranice jednake dužine, ali uglovi nisu pravi?", answers: { A: "Kvadrat", B: "Pravougaonik", C: "Romb", D: "Paralelogram" }, correct: "C" },
 { question: "Koliko je najmanji savršen broj?", answers: { A: "1", B: "6", C: "28", D: "496" }, correct: "B" },
 { question: "Ko je otac modernog računarstva?", answers: { A: "Ada Lovelace", B: "Alan Turing", C: "John von Neumann", D: "Charles Babbage" }, correct: "B" },
@@ -972,7 +992,6 @@ hardest: [
 
 numbers: {
   easy: [
-{ question: "Koliko je e^(iπ) + 1?", answers: { A: "0", B: "1", C: "i", D: "-1" }, correct: "A" },
 { question: "Koji je broj 2^8?", answers: { A: "512", B: "128", C: "1024", D: "256" }, correct: "D" },
 { question: "Koja je vrijednost sin(90°)?", answers: { A: "0", B: "0.5", C: "√2/2", D: "1" }, correct: "D" },
 { question: "Proizvod neparnog i parnog broja je uvijek?", answers: { A: "Neparan", B: "Paran", C: "Negativan", D: "0" }, correct: "B" },
@@ -1007,7 +1026,7 @@ numbers: {
 { question: "Ako je danas srijeda, koji dan je za 100 dana?", answers: { A: "Petak", B: "Subota", C: "Nedjelja", D: "Četvrtak" }, correct: "A" },
 { question: "Koliko ima načina da se baci kocka i dobije paran broj?", answers: { A: "2", B: "3", C: "4", D: "5" }, correct: "B" },
 { question: "Koji broj ima tačno 3 djelitelja?", answers: { A: "4", B: "6", C: "8", D: "12" }, correct: "A" },
-{ question: "Koji broj ima najviše djelitelja među 1–20?", answers: { A: "12", B: "18", C: "20", D: "16" }, correct: "A" },
+{ question: "Koji broj ima najmanje djelitelja među 1–20?", answers: { A: "12", B: "18", C: "20", D: "16" }, correct: "D" },
 { question: "Koji broj slijedi u Fibonaccijevom nizu nakon 0, 1, 1, 2, 3?", answers: { A: "4", B: "5", C: "6", D: "8" }, correct: "B" },
 { question: "Koji pojam opisuje beskonačan skup koji se može prebrojati?", answers: { A: "Neprebrojiv", B: "Konačan", C: "Gust", D: "Prebrojiv" }, correct: "D" },
 { question: "Koja je treća cifra broja π (nakon decimalnog zareza)?", answers: { A: "3", B: "1", C: "4", D: "5" }, correct: "B" },
@@ -1049,7 +1068,6 @@ numbers: {
 { question: "Koliko iznosi 0,1 + 0,01 + 0,001?", answers: { A: "0,3", B: "0,111", C: "0,011", D: "1,11" }, correct: "B" },
 { question: "Koliko iznosi 10% od 10% od 100?", answers: { A: "10", B: "0.01", C: "0.1", D: "1" }, correct: "D" },
 { question: "Kako se zove četverougao čije su sve stranice jednake i svi uglovi pravi?", answers: { A: "Pravougaonik", B: "Romb", C: "Kvadrat", D: "Trapez" }, correct: "C" },
-{ question: "Zagonetka: Imao si 5 jabuka, uzeo si 3. Koliko jabuka imaš?", answers: { A: "3", B: "2", C: "5", D: "8" }, correct: "A" },
 { question: "Koliko sekundi ima u 12 minuta?", answers: { A: "600", B: "1200", C: "360", D: "720" }, correct: "D" },
 { question: "Kako se naziva broj koji se dobije množenjem broja samim sobom?", answers: { A: "Kub", B: "Faktorijel", C: "Faktor", D: "Kvadrat" }, correct: "D" },
 { question: "Koji je sljedeći broj u nizu: 5, 10, 20, 40, ...?", answers: { A: "60", B: "50", C: "80", D: "100" }, correct: "C" },
@@ -1141,6 +1159,7 @@ numbers: {
 { question: "Koji je matematičar izumio 'logaritamski linijar'?", answers: { A: "Napier", B: "Briggs", C: "William Oughtred", D: "Gunter" }, correct: "C" },
 { question: "Koji je matematičar bio poznat po proučavanju 'Konusa' (kupe)?", answers: { A: "Arhimed", B: "Euklid", C: "Pitagora", D: "Apolonije" }, correct: "D" },
 { question: "Koji je matematičar autor djela 'Ars Magna'?", answers: { A: "Gerolamo Cardano", B: "Pacioli", C: "Tartaglia", D: "Ferrari" }, correct: "A" },
+{ question: "Koliko je e^(iπ) + 1?", answers: { A: "0", B: "1", C: "i", D: "-1" }, correct: "A" },
 { question: "Koji je matematičar (i genetičar) razvio zakone nasljeđivanja?", answers: { A: "Darwin", B: "Galton", C: "Gregor Mendel", D: "Fisher" }, correct: "C" },
 { question: "Koji je matematičar prvi dokazao da postoji beskonačno mnogo prostih brojeva?", answers: { A: "Arhimed", B: "Pitagora", C: "Tales", D: "Euklid" }, correct: "D" },
 { question: "Koji je matematičar autor knjige 'Godel, Escher, Bach'?", answers: { A: "Douglas Hofstadter", B: "John Conway", C: "Martin Gardner", D: "Benoit Mandelbrot" }, correct: "A" },
@@ -1499,7 +1518,7 @@ easy: [
 { question: "If today is Wednesday, what day will it be in 100 days?", answers: { A: "Friday", B: "Saturday", C: "Sunday", D: "Thursday" }, correct: "A" },
 { question: "How many ways are there to roll a die and get an even number?", answers: { A: "2", B: "3", C: "4", D: "5" }, correct: "B" },
 { question: "Which number has exactly 3 divisors?", answers: { A: "4", B: "6", C: "8", D: "12" }, correct: "A" },
-{ question: "Which number has the most divisors between 1 and 20?", answers: { A: "12", B: "18", C: "20", D: "16" }, correct: "A" },
+{ question: "Which number has the least divisors between 1 and 20?", answers: { A: "12", B: "18", C: "20", D: "16" }, correct: "D" },
 { question: "Which number follows 0, 1, 1, 2, 3 in the Fibonacci sequence?", answers: { A: "4", B: "5", C: "6", D: "8" }, correct: "B" },
 { question: "Which term describes an infinite set that can be counted?", answers: { A: "Uncountable", B: "Finite", C: "Dense", D: "Countable" }, correct: "D" },
 { question: "What is the third digit of π (after the decimal point)?", answers: { A: "3", B: "1", C: "4", D: "5" }, correct: "B" },
@@ -1607,7 +1626,6 @@ easy: [
 { question: "Into which sea do the Vistula, Odra, and Neva rivers flow?", answers: { A: "Baltic", B: "Black", C: "North", D: "Aegean" }, correct: "A" },
 { question: "Which was the first planet discovered by telescope and the only one named after a Greek rather than a Roman god?", answers: { A: "Uranus", B: "Neptune", C: "Pluto", D: "Saturn" }, correct: "A" },
 { question: "Which African country did Napoleon I conquer in 1798?", answers: { A: "Algeria", B: "Egypt", C: "Libya", D: "Morocco" }, correct: "B" },
-{ question: "Which is the only planet in the solar system whose name begins and ends with the same letter?", answers: { A: "Neptune", B: "Uranus", C: "Saturn", D: "Venus" }, correct: "A" },
 { question: "The Pennine Alps are located in Switzerland and Italy, but the Pennines are in which country?", answers: { A: "Great Britain", B: "Ireland", C: "Norway", D: "Scotland" }, correct: "A" },
 { question: "Which Italian fashion company's logo features a stylized image of the mythological Medusa?", answers: { A: "Gucci", B: "Versace", C: "Prada", D: "Armani" }, correct: "B" },
 { question: "How many countries have access to the Adriatic Sea?", answers: { A: "5", B: "6", C: "7", D: "8" }, correct: "B" },
@@ -1671,7 +1689,6 @@ hard: [
 { question: "Which country joined the NATO alliance in 1999 along with Poland and the Czech Republic?", answers: { A: "Romania", B: "Slovakia", C: "Slovenia", D: "Hungary" }, correct: "D" },
 { question: "Which game console and competitor to Sony's PlayStation did Microsoft introduce in 2001?", answers: { A: "Sega Dreamcast", B: "Nintendo 64", C: "Xbox", D: "Atari" }, correct: "C" },
 { question: "According to the 1982 census, which city was the third largest in Yugoslavia with nearly half a million inhabitants?", answers: { A: "Belgrade", B: "Sarajevo", C: "Zagreb", D: "Skopje" }, correct: "D" },
-{ question: "The name of which oriental wide trousers is hidden in an anagram of the word 'mediji'?", answers: { A: "Dimije", B: "Shalwar", C: "Sarong", D: "Kaftan" }, correct: "A" },
 { question: "The 13-day escalation of relations between the USSR and the USA in 1962 is known as what 'crisis'?", answers: { A: "Iranian", B: "Russian", C: "Cuban", D: "Vietnam" }, correct: "C" },
 { question: "What is the name of the medical test for measuring lung volume and capacity?", answers: { A: "Cardiology", B: "Bronchoscopy", C: "Electrocardiography", D: "Spirometry" }, correct: "D" },
 { question: "Which noble gas used to fill lighting fixtures has atomic number 10?", answers: { A: "Helium", B: "Argon", C: "Neon", D: "Nitrogen" }, correct: "C" },
@@ -2738,7 +2755,6 @@ hard: [
 { question: "Koja država je 1999. zajedno s Poljskom i Češkom ušla u NATO savez?", answers: { A: "Rumunija", B: "Slovačka", C: "Slovenija", D: "Mađarska" }, correct: "D" },
 { question: "Koju je igraću konzolu i konkurent Sonyjevu PlayStationu tvrtka Microsoft predstavila 2001?", answers: { A: "Sega Dreamcast", B: "Nintendo 64", C: "Xbox", D: "Atari" }, correct: "C" },
 { question: "Koji je grad, po popisu iz 1982 bio treći najveći grad u Jugoslaviji s gotovo pola milijuna stanovnika?", answers: { A: "Beograd", B: "Sarajevo", C: "Zagreb", D: "Skoplje" }, correct: "D" },
-{ question: "Naziv kojih se orijentalnih širokih hlača krije u anagramu riječi „mediji“?", answers: { A: "Dimije", B: "Šalvare", C: "Sarong", D: "Kaftan" }, correct: "A" },
 { question: "13-dnevno zaoštravanje odnosa SSSR-a i SAD-a 1962 poznato je kao kakva „kriza“?", answers: { A: "Iranska", B: "Ruska", C: "Kubanska", D: "Vijetnamska" }, correct: "C" },
 { question: "Kako se zove medicinska pretraga mjerenja plućnog volumena i kapaciteta pluća?", answers: { A: "Kardiologija", B: "Bronhoskopija", C: "Elektrokardiografija", D: "Spirometrija" }, correct: "D" },
 { question: "Koji plemeniti plin kojim se pune rasvjetna tijela ima atomski broj 10?", answers: { A: "Helij", B: "Argon", C: "Neon", D: "Azot" }, correct: "C" },
@@ -3688,7 +3704,44 @@ hardest: [
 
 };
 
+const savedBank = localStorage.getItem("questionBank");
 
+if (savedBank) {
+  try {
+    questionBank = JSON.parse(savedBank);
+  } catch (e) {
+    console.log(e);
+  }
+}
+const saved = localStorage.getItem("questionBank");
+
+if (saved) {
+  questionBank = JSON.parse(saved);
+}
+if (!questionBank.bs) questionBank.bs = {};
+if (!questionBank.en) questionBank.en = {};
+if (!questionBank.gk) questionBank.gk = {};
+if (!questionBank.ge) questionBank.ge = {};
+
+
+
+
+function exportQuestionBank() {
+  const data = JSON.stringify(questionBank, null, 2);
+
+  const blob = new Blob([data], {
+    type: "application/json"
+  });
+
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "questionBank.json";
+  a.click();
+
+  URL.revokeObjectURL(url);
+}
 let selectedQuestions = [];
 
 const prizes = [
@@ -4109,46 +4162,75 @@ function usePhoneAFriend() {
     timeLeft--;
     document.getElementById('timerValue').textContent = timeLeft;
 
-    // 🎯 KAD “PRIJATELJ JAVI”
-    if (timeLeft === 21) {
-      const q = selectedQuestions[currentQuestion];
-      const rand = Math.random();
+  // 🎯 KAD “PRIJATELJ JAVI”
+// 🎯 KAD “PRIJATELJ JAVI”
+if (timeLeft === 21) {
+  const q = selectedQuestions[currentQuestion];
+  const rand = Math.random();
 
-      let friendAnswer = "";
-      let friendMessage = "";
+  let friendAnswer = "";
+  let friendMessage = "";
 
-      // 80% TAČNO
-      if (rand < 0.80) {
-        friendAnswer = q.correct;
-        friendMessage = "Mislim da je tačan odgovor pod: " + friendAnswer;
+  // 🎯 REALISTIČNA TAČNOST PO TEŽINI
+  let accuracy = 0.65;
 
-      // 10% NE ZNA (HUMOR)
-      } else if (rand < 0.90) {
-        const jokes = [
-          "Izvini batice, stvarno ne znam ovo pitanje.. puno sreće 🍀",
-          "Brate ovo je preteško, ne bih da te slažem 😅",
-          "Ovo nisam nikad čuo, žao mi je.. ",
-		  "Birani korisnik je nedostupan. Ostavite poruku poslije zvučnog signala..",
-		  "Ne znam stvarno ali ako ne znaš idi pod C, pa kud puklo da puklo.. "
-        ];
-        friendAnswer = q.correct;
-        friendMessage = jokes[Math.floor(Math.random() * jokes.length)];
+  if (q._difficulty === "easy") accuracy = 0.78;
+  if (q._difficulty === "hard") accuracy = 0.55;
+  if (q._difficulty === "hardest") accuracy = 0.40;
 
-      // 5% POGRIJEŠI
-      } else if (rand < 0.95) {
-        const wrongOptions = ['A', 'B', 'C', 'D'].filter(a => a !== q.correct);
-        friendAnswer = wrongOptions[Math.floor(Math.random() * wrongOptions.length)];
-        friendMessage = `🤔 Nisam siguran... ali mislim da je: ${friendAnswer} Nemoj me držati za riječ.. 😬`;
+  // malo ljudske greške (ne predvidivo)
+  accuracy += (Math.random() - 0.5) * 0.10;
 
-      // 5% “100% SIGURAN”
-      } else {
-        friendAnswer = q.correct;
-        friendMessage = `100% sam siguran! Tačan odgovor je pod: ${friendAnswer}🔥`;
-      }
+  // clamp (da ne ode ispod ili iznad granica)
+  if (accuracy < 0.25) accuracy = 0.25;
+  if (accuracy > 0.90) accuracy = 0.90;
 
-      document.getElementById('lifelineMessage').textContent =
-        `${t.friendSays} ${friendMessage}`;
-    }
+  // 🟢 odluka TAČAN / NETAČAN (odvojeno od teksta)
+  let isCorrect = Math.random() < accuracy;
+
+  if (isCorrect) {
+    friendAnswer = q.correct;
+
+    const correctLines = [
+      "Mislim da je tačan odgovor pod: " + friendAnswer,
+      "Ovo mi izgleda kao da je tačan odgovor pod: " + friendAnswer,
+      "Prilično sam siguran da je odgovor pod: " + friendAnswer,
+      friendAnswer + " to mi djeluje najlogičnije"
+    ];
+
+    friendMessage = correctLines[Math.floor(Math.random() * correctLines.length)];
+
+  } else {
+    const wrongOptions = ['A', 'B', 'C', 'D'].filter(a => a !== q.correct);
+    friendAnswer = wrongOptions[Math.floor(Math.random() * wrongOptions.length)];
+
+    const wrongLines = [
+      "Nisam siguran, ali rekao bih da je tačan odgovor pod: " + friendAnswer,
+      "Možda je odgovor pod: " + friendAnswer + ", ali nemoj rizikovati",
+	  "Žao mi je, ne znam odgovor na to pitanje",
+	  "Ne znam stvarno, baš je teško pitanje",
+      "Ovo je teško... Mislim da je tačan odgovor pod: " + friendAnswer,
+      friendAnswer + " to mi djeluje kao tačan odgovor"
+    ];
+
+    friendMessage = wrongLines[Math.floor(Math.random() * wrongLines.length)];
+  }
+
+  // 🤡 RARE TROLL (ne otkriva ništa sigurno)
+  if (Math.random() > 0.94) {
+    const troll = [
+      "Brate klikni šta hoćeš, ja bih bježao 😭",
+      "Ovo ni Google ne zna 😂",
+      "Tačan odgovor je pod: A. Ako pogriješiš, ja nisam ništa rekao 😏",
+      "Zovi 112, možda oni znaju 😂"
+    ];
+
+    friendMessage = troll[Math.floor(Math.random() * troll.length)];
+  }
+
+  document.getElementById('lifelineMessage').textContent =
+    `${t.friendSays} ${friendMessage}`;
+}
 
     // ⏱ STOP
     if (timeLeft <= 0) {
@@ -4457,22 +4539,6 @@ window.addEventListener("load", hideIntro);
       }
     }, { once: true });
 
-function toggleTheme() {
-  if (currentTheme === 'dark') {
-    currentTheme = 'light';
-    document.body.classList.remove('dark-mode');
-    document.body.classList.add('light-mode');
-    document.getElementById('themeToggle').textContent = '☀️';
-  } else {
-    currentTheme = 'dark';
-    document.body.classList.remove('light-mode');
-    document.body.classList.add('dark-mode');
-    document.getElementById('themeToggle').textContent = '🌙';
-  }
-
-  localStorage.setItem('theme', currentTheme);
-}
-
 
     // Admin Panel Functions
     function showAdminLogin() {
@@ -4515,14 +4581,21 @@ function toggleTheme() {
       loadAdminQuestions();
     }
 
-    function showCategory(category) {
-      currentAdminCategory = category;
-      document.querySelectorAll('.category-tab').forEach(btn => {
-        btn.className = 'category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400';
-      });
-      event.target.className = 'category-tab bg-green-600 hover:bg-green-500 px-4 py-2 rounded-lg font-bold border-2 border-green-400';
-      loadAdminQuestions();
-    }
+function showCategory(category, event) {
+  currentAdminCategory = category;
+
+  document.querySelectorAll('.category-tab').forEach(btn => {
+    btn.className =
+      'category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400';
+  });
+
+  if (event && event.target) {
+    event.target.className =
+      'category-tab bg-green-600 hover:bg-green-500 px-4 py-2 rounded-lg font-bold border-2 border-green-400';
+  }
+
+  loadAdminQuestions();
+}
 
     function loadAdminQuestions() {
       const container = document.getElementById('questionsList');
@@ -4602,127 +4675,163 @@ function toggleTheme() {
       document.getElementById('editQuestionModal').classList.remove('hidden');
     }
 
-    function deleteQuestion(category, difficulty, index) {
-      if (confirm('Are you sure you want to delete this question?')) {
-        questionBank[adminLanguage][category][difficulty].splice(index, 1);
-        loadAdminQuestions();
-      }
-    }
+function deleteQuestion(category, difficulty, index) {
+  if (confirm('Are you sure you want to delete this question?')) {
 
+    // 1. briše iz memorije
+    questionBank[adminLanguage][category][difficulty].splice(index, 1);
 
+    // 2. 🔥 SNIMA u localStorage (KLJUČNO)
+    localStorage.setItem("questionBank", JSON.stringify(questionBank));
 
+    // 3. refresh admin liste
+    loadAdminQuestions();
+  }
+}
 
-    function saveQuestion() {
-      const category = document.getElementById('editCategory').value;
-      const difficulty = document.getElementById('editDifficulty').value;
-      const question = document.getElementById('editQuestion').value;
-      const answerA = document.getElementById('editAnswerA').value;
-      const answerB = document.getElementById('editAnswerB').value;
-      const answerC = document.getElementById('editAnswerC').value;
-      const answerD = document.getElementById('editAnswerD').value;
-      const correct = document.getElementById('editCorrect').value;
-      
-      if (!question || !answerA || !answerB || !answerC || !answerD) {
-        alert('Please fill in all fields!');
-        return;
-      }
-      
-      const newQuestion = {
-        question: question,
-        answers: {
-          A: answerA,
-          B: answerB,
-          C: answerC,
-          D: answerD
-        },
-        correct: correct
-      };
-      
-      if (editingQuestionIndex) {
-        // Update existing question
-        questionBank[adminLanguage][editingQuestionIndex.category][editingQuestionIndex.difficulty][editingQuestionIndex.index] = newQuestion;
-      } else {
-        // Add new question
-        if (!questionBank[adminLanguage][category]) {
-          questionBank[adminLanguage][category] = { easy: [], hard: [], hardest: [] };
-        }
-        if (!questionBank[adminLanguage][category][difficulty]) {
-          questionBank[adminLanguage][category][difficulty] = [];
-        }
-        questionBank[adminLanguage][category][difficulty].push(newQuestion);
-      }
-      
-      closeEditModal();
-      currentAdminCategory = category;
-      loadAdminQuestions();
-      
-      // Update category tab selection
-      document.querySelectorAll('.category-tab').forEach(btn => {
-        if (btn.textContent.toLowerCase().includes(category.toLowerCase())) {
-          btn.className = 'category-tab bg-green-600 hover:bg-green-500 px-4 py-2 rounded-lg font-bold border-2 border-green-400';
-        } else {
-          btn.className = 'category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400';
-        }
-      });
-    }
+   function saveQuestion() {
+  const category = document.getElementById('editCategory').value;
+  const difficulty = document.getElementById('editDifficulty').value;
+  const question = document.getElementById('editQuestion').value;
+  const answerA = document.getElementById('editAnswerA').value;
+  const answerB = document.getElementById('editAnswerB').value;
+  const answerC = document.getElementById('editAnswerC').value;
+  const answerD = document.getElementById('editAnswerD').value;
+  const correct = document.getElementById('editCorrect').value;
 
-    function closeEditModal() {
-      document.getElementById('editQuestionModal').classList.add('hidden');
-    }
+  if (!question || !answerA || !answerB || !answerC || !answerD) {
+    alert('Please fill in all fields!');
+    return;
+  }
 
-    // Allow Enter key to submit login
-    document.getElementById('adminPassword').addEventListener('keypress', (e) => {
-      if (e.key === 'Enter') {
-        adminLogin();
-      }
-    });
-    
-    // Confirm return to home
-    function confirmReturnHome() {
-      const message = currentLanguage === 'bs' 
-        ? 'Da li ste sigurni da želite napustiti igru? Napredak neće biti sačuvan.'
-        : 'Are you sure you want to leave the game? Progress will not be saved.';
+  const newQuestion = {
+    question,
+    answers: {
+      A: answerA,
+      B: answerB,
+      C: answerC,
+      D: answerD
+    },
+    correct
+  };
+
+  // 🔥 SAFETY CHECK (DA NE PUKNE)
+  if (!questionBank[adminLanguage]) {
+    questionBank[adminLanguage] = {};
+  }
+
+  if (!questionBank[adminLanguage][category]) {
+    questionBank[adminLanguage][category] = { easy: [], hard: [], hardest: [] };
+  }
+
+  if (!questionBank[adminLanguage][category][difficulty]) {
+    questionBank[adminLanguage][category][difficulty] = [];
+  }
+
+  // 🔥 ADD / UPDATE
+  if (editingQuestionIndex) {
+    questionBank[adminLanguage]
+      [editingQuestionIndex.category]
+      [editingQuestionIndex.difficulty]
+      [editingQuestionIndex.index] = newQuestion;
+  } else {
+    questionBank[adminLanguage][category][difficulty].push(newQuestion);
+  }
+
+  // 🔥 SAVE TO LOCAL STORAGE
+  localStorage.setItem("questionBank", JSON.stringify(questionBank));
+
+  closeEditModal();
+  currentAdminCategory = category;
+  loadAdminQuestions();
+
+  // update tabs
+  document.querySelectorAll('.category-tab').forEach(btn => {
+    btn.className =
+      'category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400';
+  });
+
+  const activeBtn = [...document.querySelectorAll('.category-tab')]
+    .find(btn => btn.textContent.toLowerCase().includes(category.toLowerCase()));
+
+  if (activeBtn) {
+    activeBtn.className =
+      'category-tab bg-green-600 hover:bg-green-500 px-4 py-2 rounded-lg font-bold border-2 border-green-400';
+  }
+}
+
+// =========================
+
+function closeEditModal() {
+  const modal = document.getElementById('editQuestionModal');
+  if (modal) modal.classList.add('hidden');
+}
+
+// =========================
+
+function confirmReturnHome() {
+  const message =
+    (currentLanguage === 'bs' || currentLanguage === 'ge')
+      ? 'Da li ste sigurni da želite napustiti igru? Napredak neće biti sačuvan.'
+      : 'Are you sure you want to leave the game? Progress will not be saved.';
+
+  const modal = document.createElement('div');
+  modal.className = 'fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-6 z-50';
+
+  modal.innerHTML = `
+    <div class="bg-gradient-to-br from-purple-900 to-blue-900 rounded-lg p-8 max-w-md w-full border-4 border-yellow-500">
       
- // Create custom confirmation modal
-      const confirmModal = document.createElement('div');
-      confirmModal.className = 'fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-6 z-50';
-      confirmModal.innerHTML = `
-        <div class="bg-gradient-to-br from-purple-900 to-blue-900 rounded-lg p-8 max-w-md w-full border-4 border-yellow-500">
-          <h2 class="text-2xl font-bold text-yellow-400 mb-4 text-center">    ${currentLanguage === 'bs' ? 'Napusti Igru?' : 'Leave Game?'}</h2>
-          <p class="text-white text-center mb-6">${message}</p>
-          <div class="flex gap-4">
-            <button onclick="returnToHome()" class="flex-1 bg-red-600 hover:bg-red-500 px-6 py-3 rounded-lg font-bold border-2 border-red-400">
-              ${currentLanguage === 'bs' ? 'Da, Napusti' : 'Yes, Leave'}
-            </button>
-            <button onclick="closeConfirmModal()" class="flex-1 bg-green-600 hover:bg-green-500 px-6 py-3 rounded-lg font-bold border-2 border-green-400">
-              ${currentLanguage === 'bs' ? 'Ne, Nastavi' : 'No, Continue'}
-            </button>
-          </div>
-        </div>
-      `;
-      document.body.appendChild(confirmModal);
-      window.currentConfirmModal = confirmModal;
-    }
-    
-    function closeConfirmModal() {
-      if (window.currentConfirmModal) {
-        window.currentConfirmModal.remove();
-        window.currentConfirmModal = null;
-      }
-    }
-    
-    function returnToHome() {
-      closeConfirmModal();
-      document.getElementById('gameScreen').classList.add('hidden');
-      document.getElementById('languageScreen').classList.remove('hidden');
-      // Reset game state
-      currentQuestion = 0;
-      lifelines = {
-        fiftyFifty: true,
-        phoneAFriend: true,
-        askAudience: true
-      };
-    }
+      <h2 class="text-2xl font-bold text-yellow-400 mb-4 text-center">
+        ${(currentLanguage === 'bs' || currentLanguage === 'ge') ? 'Napusti Igru?' : 'Leave Game?'}
+      </h2>
+
+      <p class="text-white text-center mb-6">${message}</p>
+
+      <div class="flex gap-4">
+        <button onclick="returnToHome()" class="flex-1 bg-red-600 hover:bg-red-500 px-6 py-3 rounded-lg font-bold border-2 border-red-400">
+          ${(currentLanguage === 'bs' || currentLanguage === 'ge') ? 'Da, Napusti' : 'Yes, Leave'}
+        </button>
+
+        <button onclick="closeConfirmModal()" class="flex-1 bg-green-600 hover:bg-green-500 px-6 py-3 rounded-lg font-bold border-2 border-green-400">
+          ${(currentLanguage === 'bs' || currentLanguage === 'ge') ? 'Ne, Nastavi' : 'No, Continue'}
+        </button>
+      </div>
+
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+  window.currentConfirmModal = modal;
+}
+
+// =========================
+
+function closeConfirmModal() {
+  if (window.currentConfirmModal) {
+    window.currentConfirmModal.remove();
+    window.currentConfirmModal = null;
+  }
+}
+
+// =========================
+
+function returnToHome() {
+  closeConfirmModal();
+
+  const game = document.getElementById('gameScreen');
+  const lang = document.getElementById('languageScreen');
+
+  if (game) game.classList.add('hidden');
+  if (lang) lang.classList.remove('hidden');
+
+  currentQuestion = 0;
+
+  lifelines = {
+    fiftyFifty: true,
+    phoneAFriend: true,
+    askAudience: true
+  };
+}
 
 
 const baseViewers = 50;
@@ -4748,3 +4857,16 @@ function updateViewers() {
 // start
 viewers = baseViewers;
 updateViewers();
+
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.querySelector(".chat-fab");
+  btn.style.opacity = "0";
+  btn.style.transform = "scale(0)";
+
+  setTimeout(() => {
+    btn.style.transition = "0.5s ease";
+    btn.style.opacity = "1";
+    btn.style.transform = "scale(1)";
+  }, 2000);
+});
+
