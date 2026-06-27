@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="bs">
+<head>
+<meta charset="UTF-8"/>
+<title>MathGPT</title>
+<link rel="icon" type="image/png" href="logo.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AI Math Tutor Pro</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto;
+}
+
+body{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  background:radial-gradient(circle at top,#172554,#0b1020 60%,#05070f);
+  color:#e5e7eb;
+}
+
+/* HEADER */
+header{
+  padding:16px;
+  text-align:center;
+  background:rgba(255,255,255,0.03);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+header h1{
+  font-size:18px;
+}
+header p{
+  font-size:12px;
+  opacity:.6;
+}
+
+/* CHAT */
+#chat{
+  flex:1;
+  overflow-y:auto;
+  padding:20px 14px 120px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  max-width:900px;
+  width:100%;
+  margin:0 auto;
+}
+
+/* MESSAGE */
+.msg{
+  display:flex;
+  gap:10px;
+  animation:fade .15s ease;
+  align-items:flex-end;
+}
+
+.msg.user{
+  justify-content:flex-end;
+}
+
+.avatar{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:13px;
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+.bubble{
+  max-width:75%;
+  padding:12px 14px;
+  border-radius:16px;
+  font-size:14px;
+  line-height:1.5;
+  white-space:pre-wrap;
+  backdrop-filter:blur(12px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* USER */
+.user .bubble{
+  background:linear-gradient(135deg,#2563eb,#1d4ed8);
+  color:white;
+  border-bottom-right-radius:4px;
+}
+
+/* BOT */
+.bot .bubble{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.1);
+  border-bottom-left-radius:4px;
+}
+
+/* INPUT */
+.input-wrap{
+  position:fixed;
+  bottom:18px;
+  left:0;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  padding:0 12px;
+}
+
+.input-box{
+  width:100%;
+  max-width:900px;
+  display:flex;
+  gap:10px;
+  padding:10px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.12);
+  backdrop-filter:blur(18px);
+  box-shadow:0 25px 60px rgba(0,0,0,0.5);
+}
+
+input{
+  flex:1;
+  background:transparent;
+  border:none;
+  outline:none;
+  color:white;
+  font-size:14px;
+}
+
+button{
+  width:42px;
+  height:42px;
+  border:none;
+  border-radius:12px;
+  cursor:pointer;
+  background:linear-gradient(135deg,#3b82f6,#1d4ed8);
+  color:white;
+  transition:.2s;
+}
+
+button:hover{
+  transform:scale(1.05);
+}
+
+/* TYPING */
+.typing{
+  display:flex;
+  gap:4px;
+}
+
+.dot{
+  width:6px;
+  height:6px;
+  background:white;
+  border-radius:50%;
+  animation:bounce 1s infinite;
+}
+
+.dot:nth-child(2){animation-delay:.2s}
+.dot:nth-child(3){animation-delay:.4s}
+
+/* ANIM */
+@keyframes bounce{
+  0%,100%{transform:translateY(0);opacity:.4}
+  50%{transform:translateY(-5px);opacity:1}
+}
+
+@keyframes fade{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>📚 AI Matematički Tutor PRO</h1>
+  <p>MathGPT-style tutor za učenje matematike</p>
+</header>
+
+<div id="chat"></div>
+
+<div class="input-wrap">
+  <div class="input-box">
+    <input id="input" placeholder="Napiši pitanje..." />
+    <button onclick="send()">➤</button>
+  </div>
+</div>
+<script>
+
+const chat = document.getElementById("chat");
+const input = document.getElementById("input");
+
+function add(text, type) {
+  const msg = document.createElement("div");
+  msg.className = "msg " + type;
+
+  const avatar = document.createElement("div");
+  avatar.className = "avatar";
+  avatar.textContent = type === "user" ? "👤" : "🤖";
+
+  const bubble = document.createElement("div");
+  bubble.className = "bubble";
+  bubble.textContent = text;
+
+  if (type === "user") {
+    msg.appendChild(bubble);
+    msg.appendChild(avatar);
+  } else {
+    msg.appendChild(avatar);
+    msg.appendChild(bubble);
+  }
+
+  chat.appendChild(msg);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+function typing() {
+  const t = document.createElement("div");
+  t.className = "msg bot";
+  t.id = "typing";
+
+  t.innerHTML = `
+    <div class="avatar">🤖</div>
+    <div class="bubble">
+      <div class="typing">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+  `;
+
+  chat.appendChild(t);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+async function ai(question){
+
+  const res = await fetch("http://localhost:3000/search",{
+    method:"POST",
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify({ q: question })
+  });
+
+  const data = await res.json();
+
+  return data.answer;
+}
+
+async function send() {
+  const text = input.value.trim();
+  if (!text) return;
+
+  add(text, "user");
+  input.value = "";
+
+  typing();
+
+  const answer = await ai(text);
+
+  document.getElementById("typing")?.remove();
+
+  add(answer, "bot");
+}
+
+input.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") send();
+});
+
+</script>
+</script>
+
+</body>
+</html>
