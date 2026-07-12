@@ -23503,10 +23503,10 @@ correct: "C" }
         {
           question: "Koji se dio tijela preoblikuje u rinoplastici?",
           answers: {
-            A: "ruke",
-            B: "koljena",
-            C: "usta",
-            D: "nos"
+            A: "Ruke",
+            B: "Koljena",
+            C: "Usta",
+            D: "Nos"
           },
           correct: "D"
         },

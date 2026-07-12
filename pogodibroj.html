@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="bs">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pogodi broj </title>
+<link rel="icon" type="image/png" href="pogodi-broj.png">
+<link rel="stylesheet" href="pogodibroj.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+<nav class="game-nav">
+
+<button onclick="goBack()">
+← Mini Games
+</button>
+
+</nav>
+
+<div class="math-background">
+
+<div class="formula f1">π</div>
+<div class="formula f2">√x</div>
+<div class="formula f3">∑</div>
+<div class="formula f4">∞</div>
+<div class="formula f5">x²</div>
+<div class="formula f6">Δ</div>
+<div class="formula f7">∫</div>
+<div class="formula f8">a²+b²=c²</div>
+<div class="formula f9">lim x→∞</div>
+<div class="formula f10">log₂(x)</div>
+<div class="formula f11">sin(θ)</div>
+<div class="formula f12">cos(θ)</div>
+<div class="formula f13">∂f/∂x</div>
+<div class="formula f14">E=mc²</div>
+<div class="formula f15">φ</div>
+<div class="formula f16">Γ(n)</div>
+<div class="formula f17">Σ n²</div>
+<div class="formula f18">√(a²+b²)</div>
+<div class="formula f19">x³+y³</div>
+
+
+<div class="grid-lines"></div>
+
+
+</div>
+
+
+
+
+<div class="container">
+
+
+
+<!-- START -->
+
+<section id="setup-screen" class="card">
+
+<header class="hero-header">
+
+<h1>
+    <span class="gradient-title">Pogodi</span>
+    <span class="gradient-title second">Broj</span>
+</h1>
+
+
+
+</header>
+
+
+
+<label>
+Ime igrača
+</label>
+
+
+<input 
+id="player-name"
+type="text"
+maxlength="24"
+placeholder="Unesi ime">
+
+
+
+
+
+<label>
+Izaberi interval
+</label>
+
+
+
+<div class="levels">
+
+
+<button class="level-tile" data-level="50">
+
+1 - 50
+
+</button>
+
+
+<button class="level-tile" data-level="100">
+
+1 - 100
+
+</button>
+
+
+<button class="level-tile" data-level="1000">
+
+1 - 1000
+
+</button>
+
+
+</div>
+
+
+
+
+<p id="setup-feedback"></p>
+
+
+
+<button id="start-btn" class="main-btn">
+
+POČNI IGRU
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- IGRA -->
+
+
+<section id="game-screen" class="card hidden">
+
+
+
+<div class="game-top">
+
+
+<h2 id="game-range-title">
+
+</h2>
+
+
+<div class="timer">
+
+⏱ <span id="timer-display">0s</span>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<p>
+
+Pogodi broj. Nakon svakog pokušaja dobit ćeš pomoć.
+
+</p>
+
+
+
+
+<div class="guess-box">
+
+
+<input
+id="guess-input"
+type="number"
+placeholder="Broj">
+
+
+<button id="guess-btn">
+
+Pogodi
+
+</button>
+
+
+</div>
+
+
+
+
+<div class="attempt-box">
+
+<div id="attempts-display">
+Pokušaji: 0
+</div>
+
+</div>
+
+
+
+<div id="feedback"></div>
+
+
+
+
+
+<h3>
+
+Historija pokušaja
+
+</h3>
+
+
+<div id="history"></div>
+
+
+
+
+<button id="new-game-btn" class="main-btn hidden">
+
+Nova igra
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- RANG LISTA -->
+
+
+<section class="card leaderboard">
+
+
+
+<h2>
+
+🏆 Rang lista
+
+</h2>
+
+
+
+
+<p id="lb-empty">
+
+Još nema rezultata.
+
+</p>
+
+
+
+<ol id="lb-list"></ol>
+
+
+
+</section>
+
+
+
+
+</div>
+
+
+
+
+
+<script src="pogodibroj.js"></script>
+
+
+</body>
+
+</html>

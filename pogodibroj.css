@@ -1,0 +1,1302 @@
+/* ===============================
+   POGODI BROJ - PREMIUM MATH UI
+================================ */
+
+
+*{
+    box-sizing:border-box;
+}
+
+
+
+body{
+
+    margin:0;
+
+    min-height:100vh;
+
+    font-family:'DM Sans',sans-serif;
+
+    color:#0f172a;
+
+    overflow-x:hidden;
+
+}
+
+
+
+
+/* ===============================
+   MATEMATIČKA POZADINA
+================================ */
+
+
+.math-background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(circle at 15% 20%,
+    rgba(79,124,255,.35),
+    transparent 30%),
+
+    radial-gradient(circle at 85% 10%,
+    rgba(255,107,74,.25),
+    transparent 35%),
+
+    linear-gradient(
+    135deg,
+    #eef4ff,
+    #f8fafc
+    );
+
+}
+
+
+
+/* koordinatna mreža */
+
+.grid-lines{
+
+
+position:absolute;
+
+inset:-50%;
+
+
+background-image:
+
+linear-gradient(
+rgba(30,64,175,.08) 1px,
+transparent 1px
+),
+
+linear-gradient(
+90deg,
+rgba(30,64,175,.08) 1px,
+transparent 1px
+);
+
+
+background-size:
+
+50px 50px;
+
+
+transform:
+perspective(500px)
+rotateX(60deg);
+
+
+opacity:.35;
+
+
+}
+
+
+
+
+/* formule */
+
+.formula{
+
+
+position:absolute;
+
+font-family:'Fraunces',serif;
+
+font-weight:700;
+
+color:rgba(30,64,175,.15);
+
+user-select:none;
+
+
+}
+
+
+
+.f1{
+top:10%;
+left:10%;
+font-size:100px;
+}
+
+
+.f2{
+top:30%;
+right:15%;
+font-size:80px;
+}
+
+
+.f3{
+bottom:20%;
+left:18%;
+font-size:120px;
+}
+
+
+.f4{
+top:55%;
+right:8%;
+font-size:130px;
+}
+
+
+.f5{
+bottom:10%;
+right:35%;
+font-size:90px;
+}
+
+
+.f6{
+top:18%;
+right:40%;
+font-size:100px;
+}
+
+
+.f7{
+bottom:35%;
+left:45%;
+font-size:90px;
+}
+
+
+.f8{
+
+top:70%;
+left:5%;
+
+font-size:45px;
+
+}
+
+
+
+
+
+/* ===============================
+   GLAVNI KONTEJNER
+================================ */
+
+
+.container{
+
+
+width:min(900px,94%);
+
+margin:auto;
+
+padding:50px 0;
+
+
+}
+
+
+
+
+/* ===============================
+   GLASS KARTICE
+================================ */
+
+
+.card{
+
+
+background:
+
+rgba(255,255,255,.78);
+
+
+backdrop-filter:
+
+blur(18px);
+
+
+
+border:
+
+1px solid rgba(255,255,255,.8);
+
+
+
+border-radius:
+
+28px;
+
+
+
+padding:
+
+35px;
+
+
+
+margin-bottom:
+
+30px;
+
+
+
+box-shadow:
+
+
+0 25px 70px rgba(15,23,42,.15),
+
+
+inset 0 1px 0 white;
+
+
+
+animation:
+
+fade .5s ease;
+
+
+}
+
+
+
+
+@keyframes fade{
+
+
+from{
+
+opacity:0;
+
+transform:translateY(20px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:none;
+
+}
+
+
+}
+
+
+
+
+
+/* ===============================
+   NASLOVI
+================================ */
+
+
+h1,h2{
+
+font-family:'Fraunces',serif;
+
+margin-top:0;
+
+
+}
+
+
+
+h1{
+
+font-size:48px;
+
+text-align:center;
+
+}
+
+
+
+.header p{
+
+text-align:center;
+
+font-size:18px;
+
+color:#475569;
+
+}
+
+
+
+
+
+/* ===============================
+ INPUT
+================================ */
+
+
+label{
+
+
+display:block;
+
+font-weight:700;
+
+margin-top:20px;
+
+margin-bottom:8px;
+
+
+}
+
+
+
+input{
+
+
+width:100%;
+
+padding:15px 18px;
+
+
+font-size:18px;
+
+
+border-radius:16px;
+
+
+border:2px solid #cbd5e1;
+
+
+background:white;
+
+
+color:#0f172a;
+
+
+transition:.2s;
+
+
+}
+
+
+
+input:focus{
+
+
+outline:none;
+
+
+border-color:#2563eb;
+
+
+box-shadow:
+
+0 0 0 5px rgba(37,99,235,.15);
+
+
+}
+
+
+
+
+/* ===============================
+ LEVELI
+================================ */
+
+
+.levels{
+
+
+display:grid;
+
+
+grid-template-columns:repeat(3,1fr);
+
+
+gap:15px;
+
+
+margin-top:15px;
+
+
+}
+
+
+
+.level-tile{
+
+
+padding:25px;
+
+
+border-radius:18px;
+
+
+border:2px solid #cbd5e1;
+
+
+background:white;
+
+
+font-weight:800;
+
+
+font-size:18px;
+
+
+cursor:pointer;
+
+
+transition:.25s;
+
+
+}
+
+
+
+.level-tile:hover{
+
+
+transform:translateY(-5px);
+
+
+border-color:#2563eb;
+
+
+}
+
+
+
+.level-tile.active{
+
+
+background:
+
+linear-gradient(
+135deg,
+#dbeafe,
+#eff6ff
+);
+
+
+border-color:#2563eb;
+
+
+}
+
+
+
+
+/* ===============================
+ DUGMAD
+================================ */
+
+
+.main-btn{
+
+
+width:100%;
+
+
+margin-top:25px;
+
+
+padding:16px;
+
+
+border:none;
+
+
+border-radius:18px;
+
+
+background:
+
+linear-gradient(
+135deg,
+#2563eb,
+#4f7cff
+);
+
+
+
+color:white;
+
+
+font-size:18px;
+
+
+font-weight:800;
+
+
+cursor:pointer;
+
+
+
+box-shadow:
+
+0 15px 30px rgba(37,99,235,.35);
+
+
+transition:.2s;
+
+
+}
+
+
+
+.main-btn:hover{
+
+
+transform:translateY(-3px);
+
+
+}
+
+
+
+
+
+/* ===============================
+ IGRA
+================================ */
+
+
+.hidden{
+
+display:none!important;
+
+}
+
+
+
+.game-top{
+
+
+display:flex;
+
+
+justify-content:space-between;
+
+
+align-items:center;
+
+
+}
+
+
+
+.timer{
+
+
+background:#dbeafe;
+
+
+padding:10px 18px;
+
+
+border-radius:999px;
+
+
+font-weight:800;
+
+
+color:#1e40af;
+
+
+}
+
+
+
+.guess-box{
+
+
+display:flex;
+
+
+gap:15px;
+
+
+margin-top:20px;
+
+
+}
+
+
+
+.guess-box input{
+
+flex:1;
+
+}
+
+
+
+.guess-box button{
+
+
+border:none;
+
+
+background:#2563eb;
+
+
+color:white;
+
+
+padding:0 30px;
+
+
+border-radius:16px;
+
+
+font-weight:800;
+
+
+cursor:pointer;
+
+
+}
+
+
+
+
+#feedback{
+
+
+font-size:22px;
+
+
+font-weight:800;
+
+
+margin-top:20px;
+
+
+min-height:35px;
+
+
+}
+
+
+
+.feedback-ok{
+
+color:#15803d;
+
+}
+
+
+.feedback-low{
+
+color:#1d4ed8;
+
+}
+
+
+.feedback-high{
+
+color:#c2410c;
+
+}
+
+
+.feedback-warn{
+
+color:#b45309;
+
+}
+
+
+
+
+/* HISTORIJA */
+
+
+#history{
+
+
+display:flex;
+
+
+flex-wrap:wrap;
+
+
+gap:10px;
+
+
+margin-top:15px;
+
+
+}
+
+
+
+.chip{
+
+
+padding:10px 16px;
+
+
+border-radius:999px;
+
+
+font-weight:800;
+
+
+animation:pop .25s;
+
+
+}
+
+
+
+.chip-low{
+
+background:#dbeafe;
+
+color:#1d4ed8;
+
+}
+
+
+
+.chip-high{
+
+background:#ffedd5;
+
+color:#c2410c;
+
+}
+
+
+
+.chip-ok{
+
+background:#dcfce7;
+
+color:#15803d;
+
+}
+
+
+
+
+@keyframes pop{
+
+
+from{
+
+transform:scale(.5);
+
+}
+
+
+to{
+
+transform:scale(1);
+
+}
+
+
+}
+
+
+
+
+/* RANG LISTA */
+
+
+#lb-list{
+
+
+padding-left:0;
+
+list-style:none;
+
+
+}
+
+
+
+#lb-list li{
+
+
+background:white;
+
+
+padding:15px;
+
+
+border-radius:16px;
+
+
+margin-bottom:10px;
+
+
+display:flex;
+
+
+gap:10px;
+
+
+box-shadow:
+
+0 5px 15px rgba(15,23,42,.08);
+
+
+}
+
+
+
+
+/* MOBILNO */
+
+
+@media(max-width:600px){
+
+
+h1{
+
+font-size:38px;
+
+}
+
+
+
+.levels{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.guess-box{
+
+flex-direction:column;
+
+}
+
+
+
+.guess-box button{
+
+height:55px;
+
+}
+
+
+}
+.f9{
+top:15%;
+left:55%;
+font-size:45px;
+}
+
+.f10{
+top:40%;
+left:5%;
+font-size:55px;
+}
+
+.f11{
+top:65%;
+right:25%;
+font-size:65px;
+}
+
+.f12{
+top:25%;
+left:30%;
+font-size:55px;
+}
+
+.f13{
+bottom:15%;
+left:55%;
+font-size:40px;
+}
+
+.f14{
+top:80%;
+right:10%;
+font-size:50px;
+}
+
+.f15{
+top:45%;
+left:35%;
+font-size:100px;
+}
+
+.f16{
+bottom:45%;
+right:45%;
+font-size:55px;
+}
+
+.f17{
+top:75%;
+left:45%;
+font-size:45px;
+}
+
+.f18{
+top:35%;
+right:35%;
+font-size:50px;
+}
+
+.f19{
+bottom:8%;
+left:25%;
+font-size:60px;
+}
+
+#attempts-display{
+
+margin-top:25px;
+
+padding-top:10px;
+
+font-size:17px;
+
+}
+/* =================================
+   MATHEMATICAL MILLIONAIRE TITLE
+================================= */
+
+.hero-header{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    padding:10px;
+
+    overflow:hidden;
+
+}
+
+
+
+/* NASLOV */
+
+.hero-header h1{
+
+    margin:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+
+    font-family:'Fraunces',serif;
+
+    font-size:clamp(42px,7vw,62px);
+
+    font-weight:600;
+
+    line-height:1.1;
+
+    letter-spacing:-1px;
+
+
+}
+
+
+
+/* POGODI */
+
+.gradient-title{
+
+
+background:
+
+linear-gradient(
+180deg,
+#2563eb 0%,
+#1e40af 50%,
+#0f172a 100%
+);
+
+
+
+-webkit-background-clip:text;
+
+background-clip:text;
+
+color:transparent;
+
+
+
+text-shadow:
+
+0 8px 25px rgba(37,99,235,.25);
+
+
+}
+
+
+
+/* BROJ */
+
+.gradient-title.second{
+
+
+background:
+
+linear-gradient(
+180deg,
+#facc15 0%,
+#f59e0b 45%,
+#b45309 100%
+);
+
+
+
+-webkit-background-clip:text;
+
+background-clip:text;
+
+color:transparent;
+
+
+
+text-shadow:
+
+0 8px 25px rgba(245,158,11,.35);
+
+
+}
+
+
+
+/* matematički luksuzni okvir */
+
+.hero-header::after{
+
+
+content:"π   ∑   √   ∞";
+
+
+display:block;
+
+
+margin-top:15px;
+
+
+font-family:'Fraunces',serif;
+
+
+font-size:20px;
+
+
+letter-spacing:18px;
+
+
+color:rgba(37,99,235,.35);
+
+
+
+}
+
+
+
+/* mali sjaj kao TV kviz */
+
+.hero-header h1{
+
+    margin:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+
+    font-family:'Fraunces',serif;
+
+    font-size:clamp(42px,7vw,62px);
+
+    font-weight:600;
+
+    line-height:1.25;
+
+    letter-spacing:-1px;
+
+    padding-bottom:8px;
+
+}
+}
+
+
+
+/* mobilno */
+
+@media(max-width:600px){
+
+
+.hero-header h1{
+
+font-size:42px;
+
+gap:8px;
+
+}
+
+
+
+.hero-header::after{
+
+font-size:16px;
+
+letter-spacing:10px;
+
+}
+
+
+}
+/* ================= GAME BACK BUTTON ================= */
+
+.game-nav{
+
+    position:absolute;
+
+    top:30px;
+
+    left:30px;
+
+    z-index:10;
+
+}
+
+
+
+.game-nav button{
+
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+
+    padding:13px 24px;
+
+
+    border-radius:18px;
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+    border:
+
+    1px solid rgba(255,255,255,.18);
+
+
+   color:rgba(34, 30, 156, 0.8);
+
+    font-size:15px;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+    backdrop-filter:blur(15px);
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.25),
+
+    inset 0 0 20px rgba(255,255,255,.05);
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.game-nav button:hover{
+
+
+    transform:
+
+    translateY(-3px);
+
+
+    background:
+
+    rgba(96,165,250,.18);
+
+
+    border-color:
+
+    rgba(96,165,250,.6);
+
+
+    box-shadow:
+
+    0 15px 40px rgba(96,165,250,.25);
+
+
+}
+
+
+
+.game-nav button:active{
+
+
+    transform:scale(.95);
+
+
+}
+
+/* =========================
+   GAME BUTTON MOBILE FIX
+========================= */
+
+@media(max-width:1024px){
+
+    .game-nav{
+        position:absolute;
+        top:7px;
+        left:15px;
+        z-index:100;
+    }
+
+    .game-nav button{
+        padding:10px 18px;
+        font-size:14px;
+        border-radius:15px;
+    }
+
+}

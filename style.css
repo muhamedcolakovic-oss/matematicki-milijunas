@@ -1607,16 +1607,37 @@ body.dark-mode {
   opacity: 1;
   transform: translateY(0);
 }
+@media (min-width:768px) and (max-width:1024px){
 
-@media(max-width:640px){
-
-  #themeToggle,
-  button[onclick="showAdminLogin()"]{
-    display:none !important;
+  .game-title-wrapper {
+    transform: translateX(0%) !important;
+    width:100%;
+    text-align:center;
   }
 
-  #musicToggle{
-    display:flex !important;
+  .netflix-title {
+    text-align:center;
   }
 
+}
+
+/* CHAT BUTTON ONLY DESKTOP */
+@media (max-width: 1024px) {
+  .chat-fab {
+    display: none !important;
+  }
+}
+/* =========================
+   LIGHT MODE FLOATING SYMBOLS
+========================= */
+
+body.light-mode .quiz-background::before {
+
+  color: #d97706;
+
+  opacity: 0.09;
+
+  text-shadow:
+      0 0 10px rgba(217,119,6,0.25),
+      0 0 20px rgba(217,119,6,0.15);
 }

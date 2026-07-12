@@ -1720,7 +1720,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.querySelectorAll(".language-card").forEach(card => {
-    card.addEventListener("click", function () {
+    card.addEventListener("click", function (e) {
+
+        if (this.dataset.lang === "mg") {
+            e.stopPropagation();
+            window.location.href = "minigames.html";
+            return;
+        }
+
         selectLanguage(this.dataset.lang);
     });
 });
