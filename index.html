@@ -46,7 +46,7 @@
 <audio id="askAudienceSound" src="publika.mp3"></audio>
 <audio id="fiftyFiftySound" src="50-50.mp3" preload="auto"></audio>
 
-<div class="fixed top-4 right-4 z-50 flex gap-2">
+<div class="fixed top-4 right-4 z-50 hidden lg:flex gap-2">
 <!-- Dark/Light Mode Toggle --> 
 <button id="themeToggle" class="theme-btn">🌙</button>
 <!-- Admin Panel Button --> <button onclick="showAdminLogin()" class="w-12 h-12 bg-purple-700 hover:bg-purple-600 rounded-lg border-2 border-purple-500 transition-all transform hover:scale-105 text-2xl bg-opacity-90 backdrop-blur-sm flex items-center justify-center"> 🔐 </button> 
@@ -100,8 +100,6 @@
   </div>
 </button>
 
-
-
 <button class="card language-card" data-lang="gk">
     <div class="bg" style="background-image:url('milijunas.png')"></div>
 
@@ -109,6 +107,15 @@
     <div class="title">Ko želi biti milijunaš</div>
   </div>
   </button>
+  
+<button class="card language-card"
+        data-lang="mg"
+        onclick="window.location.href='minigames/minigames.html'">
+  <div class="bg" style="background-image:url('minigames.png')"></div>
+  <div class="overlay">
+    <div class="title">Mini games</div>
+  </div>
+</button>
 
 </div>
 <footer class="mt-12 px-4 text-center">
@@ -154,7 +161,9 @@
 
           <a href="https://www.paypal.com/paypalme/muhamedcolakovic96" target="_blank">
             <img src="paypal.jpeg" class="w-14 h-14 opacity-80 hover:opacity-100 transition">
+			
           </a>
+		  
 
         </div>
 
@@ -194,7 +203,6 @@
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
-<!-- School Logo --> <img src="https://secondary.rps.edu.ba/wp-content/uploads/2019/06/rps_logo_white.png" alt="" class="school-logo">
     </div>
    </div>
   </div>
