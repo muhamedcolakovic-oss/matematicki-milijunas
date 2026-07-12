@@ -69,6 +69,56 @@ body {
   transition: opacity 0.3s ease;
 }
 
+/* =========================
+   MONEY TREE FINAL COMPACT +2%
+========================= */
+
+@media(min-width:1024px){
+
+  .lg\:block.lg\:w-80 {
+      overflow:visible !important;
+      height:auto !important;
+  }
+
+
+  #prizeLadder .prize-item {
+
+      padding:3px 5px !important;
+
+      min-height:21px !important;
+
+  }
+
+
+  #prizeLadder .prize-active {
+
+      padding:1px 4px !important;
+
+      min-height:20px !important;
+
+  }
+
+
+  .bg-gradient-to-b.from-gray-900.to-black.rounded-lg.p-1.border-2.border-yellow-600.shadow-2xl {
+
+      margin-bottom:0 !important;
+
+      padding:5px !important;
+    border-width:1px !important;
+
+    border-color:rgba(251,191,36,.55) !important;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.45),
+        inset 0 0 15px rgba(251,191,36,.08);
+  }
+
+}
+
+.bg-black.bg-opacity-50.rounded-lg.p-1.mb-1.border-2.border-yellow-600 {
+    border-width:1px !important;
+    border-color:rgba(251,191,36,.55) !important;
+}
 /* HOVER EFFECT */
 .card:hover {
   transform: translateY(-4px) scale(1.02);
@@ -393,105 +443,357 @@ body {
   .shake {
   animation: shake 0.4s ease;
 }
-    
+ 
+ 
+ /* =====================================================
+   MILLIONAIRE PREMIUM LIGHT MODE
+   CENTER GAME AREA ONLY
+===================================================== */
+
 
 /* =========================
-   MILLIONAIRE LIGHT MODE
+   BACKGROUND
 ========================= */
-body.light-mode #questionText {
-  color: #0f172a;
+
+body.light-mode {
+
+    background:
+
+        url("./pozadinskaslika.jpg")
+        center center /
+        cover
+        no-repeat
+        fixed;
+
+    color:#0f172a;
 }
 
-/* QUESTION BOX - NEON GLASS */
+
+
+/* =========================
+   QUESTION BOX
+========================= */
+
 body.light-mode .question-box {
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
 
-  border: 1px solid rgba(99,102,241,0.25);
+    background:
 
-  box-shadow:
-    0 20px 50px rgba(15,23,42,0.12),
-    0 0 30px rgba(99,102,241,0.10),
-    inset 0 0 25px rgba(255,255,255,0.7);
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.96),
+            rgba(240,245,255,.90)
+        );
 
-  border-radius: 22px;
 
-  position: relative;
-  overflow: hidden;
+    border:
+
+        1px solid rgba(255,255,255,.9);
+
+
+    box-shadow:
+
+        0 25px 55px rgba(15,23,42,.16),
+
+        inset 0 1px rgba(255,255,255,.95),
+
+        inset 0 -8px 25px rgba(37,99,235,.06);
+
+
+    backdrop-filter:
+
+        blur(20px);
+
+
+    -webkit-backdrop-filter:
+
+        blur(20px);
+
+
+    border-radius:
+
+        24px;
+
+
+    overflow:hidden;
+
+    position:relative;
 }
 
-/* SOFT NEON GLOW INSIDE QUESTION */
+
+
 body.light-mode .question-box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
 
-  background: radial-gradient(
-    circle at top,
-    rgba(99,102,241,0.12),
-    transparent 60%
-  );
+    content:"";
 
-  pointer-events: none;
+    position:absolute;
+
+    inset:0;
+
+
+    background:
+
+        linear-gradient(
+            125deg,
+            rgba(255,255,255,.7),
+            transparent 45%,
+            rgba(255,255,255,.25)
+        );
+
+
+    pointer-events:none;
 }
 
-/* ANSWER BUTTONS - GLASS NEON CARDS */
+
+
+/* =========================
+   QUESTION TEXT
+========================= */
+
+
+body.light-mode #questionText {
+
+    color:#0f172a;
+
+
+    text-shadow:
+
+        0 2px 10px rgba(0,0,0,.08);
+}
+
+
+
+/* =========================
+   ANSWER BUTTONS
+========================= */
+
+
 body.light-mode .answer-btn {
-  background: rgba(255, 255, 255, 0.55);
-  backdrop-filter: blur(22px);
-  -webkit-backdrop-filter: blur(22px);
 
-  border: 1px solid rgba(148,163,184,0.25);
+    background:
 
-  color: #0f172a;
-  font-weight: 600;
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #f1f5ff
+        );
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 
-  transition: all 0.2s ease;
+    color:#111827;
+
+
+    border:
+
+        1px solid #dbe4f0;
+
+
+    border-radius:
+
+        18px;
+
+
+    box-shadow:
+
+        0 10px 25px rgba(15,23,42,.08),
+
+        inset 0 1px rgba(255,255,255,.9);
+
+
+    transition:.25s ease;
+
+
+    position:relative;
+
+    overflow:hidden;
 }
 
-/* HOVER - NEON LIFT */
+
+
 body.light-mode .answer-btn:hover {
-  transform: translateY(-3px) scale(1.01);
 
-  border-color: rgba(99,102,241,0.45);
+    transform:
 
-  box-shadow:
-    0 0 25px rgba(99,102,241,0.25),
-    0 15px 35px rgba(0,0,0,0.12);
+        translateY(-4px);
+
+
+    border-color:
+
+        #2563eb;
+
+
+    box-shadow:
+
+        0 18px 40px rgba(37,99,235,.18);
 }
 
-/* SELECTED - GOLD PREMIUM */
+
+
+/* =========================
+   SELECTED
+========================= */
+
+
 body.light-mode .answer-btn.selected {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
-  color: #111827 !important;
 
-  box-shadow:
-    0 0 30px rgba(245,158,11,0.35),
-    0 10px 25px rgba(0,0,0,0.15);
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffd54a,
+            #ffb300
+        );
+
+
+    color:#111!important;
+
+
+    border-color:#ffc107;
+
+
+    box-shadow:
+
+        0 0 25px rgba(255,193,7,.45),
+
+        0 12px 30px rgba(255,193,7,.25);
 }
 
-/* CORRECT - NEON GREEN GLOW */
+
+
+/* =========================
+   CORRECT
+========================= */
+
+
 body.light-mode .answer-btn.correct {
-  background: linear-gradient(135deg, #22c55e, #16a34a) !important;
-  color: #fff !important;
 
-  box-shadow:
-    0 0 25px rgba(34,197,94,0.30),
-    0 10px 25px rgba(0,0,0,0.15);
+    background:
+
+        linear-gradient(
+            135deg,
+            #4ade80,
+            #16a34a
+        )!important;
+
+
+    color:white!important;
+
+
+    box-shadow:
+
+        0 0 25px rgba(34,197,94,.45);
 }
 
-/* WRONG - RED NEON GLOW */
+
+
+/* =========================
+   WRONG
+========================= */
+
+
 body.light-mode .answer-btn.wrong {
-  background: linear-gradient(135deg, #ef4444, #b91c1c) !important;
-  color: #fff !important;
 
-  box-shadow:
-    0 0 25px rgba(239,68,68,0.30),
-    0 10px 25px rgba(0,0,0,0.15);
+    background:
+
+        linear-gradient(
+            135deg,
+            #fb7185,
+            #dc2626
+        )!important;
+
+
+    color:white!important;
+
+
+    box-shadow:
+
+        0 0 25px rgba(239,68,68,.4);
 }
+
+
+
+/* =========================
+   GLOSS EFFECT
+========================= */
+
+
+body.light-mode .question-box::after,
+body.light-mode .answer-btn::after {
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    left:-130%;
+
+
+    top:0;
+
+
+    width:60%;
+
+
+    height:100%;
+
+
+    background:
+
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,.55),
+            transparent
+        );
+
+
+    transform:
+
+        skewX(-25deg);
+
+
+    transition:
+
+        1s;
+
+
+    pointer-events:none;
+}
+
+
+
+body.light-mode .question-box:hover::after,
+body.light-mode .answer-btn:hover::after {
+
+
+    left:160%;
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+
+@media(max-width:768px){
+
+    body.light-mode .question-box {
+
+        border-radius:18px;
+
+    }
+
+
+    body.light-mode .answer-btn {
+
+        border-radius:14px;
+
+    }
+
+}
+
+
  
  /* School logo */
     .school-logo {
@@ -1182,6 +1484,8 @@ body.dark-mode {
 }
 @view-transition { navigation: auto; }
 
+
+
 /* =========================
    FLOATING CHAT BUTTON
    Intercom-style premium
@@ -1302,4 +1606,17 @@ body.dark-mode {
 .chat-fab:hover::before {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media(max-width:640px){
+
+  #themeToggle,
+  button[onclick="showAdminLogin()"]{
+    display:none !important;
+  }
+
+  #musicToggle{
+    display:flex !important;
+  }
+
 }
