@@ -2,14 +2,15 @@ const igre=[
 
 {
 naziv:"Pogodi broj",
-link:"pogodibroj.html"
+link:"pogodibroj.html",
+slika:"pogodi-broj.png"
 },
 
 {
-naziv:"Brzi račun",
-link:"igra2.html"
-},
-
+naziv:"Sudoku",
+link:"sudoku.html",
+slika:"sudoku.png"
+}
 
 ];
 
@@ -37,8 +38,7 @@ card.innerHTML=`
 
 <div class="icon-box">
 
-<img src="pogodi-broj.png">
-
+<img src="${igra.slika}">
 </div>
 
 

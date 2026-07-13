@@ -1,10 +1,10 @@
 /* ==================================
-   POGODI BROJ - JAVASCRIPT
+   POGODI BROJ - PREMIUM JAVASCRIPT
 ================================== */
 
 
 const RANGES = {
-    "50":50,
+    "25":25,
     "100":100,
     "1000":1000
 };
@@ -12,20 +12,17 @@ const RANGES = {
 
 
 let selectedLevel = null;
+let leaderboardLevel = "25";
 
 let target = 0;
-
 let attempts = 0;
 
 let inProgress = false;
 
 let startTime = null;
-
 let timerInterval = null;
 
 
-
-// UČITAVANJE REZULTATA IZ BROWSERA
 
 let records = JSON.parse(
     localStorage.getItem("pogodiBrojRezultati")
@@ -33,53 +30,25 @@ let records = JSON.parse(
 
 
 
+const setupScreen = document.getElementById("setup-screen");
+const gameScreen = document.getElementById("game-screen");
 
-const setupScreen =
-document.getElementById("setup-screen");
+const nameInput = document.getElementById("player-name");
+const setupFeedback = document.getElementById("setup-feedback");
 
+const guessInput = document.getElementById("guess-input");
+const guessBtn = document.getElementById("guess-btn");
 
-const gameScreen =
-document.getElementById("game-screen");
+const feedback = document.getElementById("feedback");
+const history = document.getElementById("history");
 
+const attemptsDisplay = document.getElementById("attempts-display");
 
-const nameInput =
-document.getElementById("player-name");
+const timerDisplay = document.getElementById("timer-display");
 
+const rangeTitle = document.getElementById("game-range-title");
 
-const setupFeedback =
-document.getElementById("setup-feedback");
-
-
-const guessInput =
-document.getElementById("guess-input");
-
-
-const guessBtn =
-document.getElementById("guess-btn");
-
-
-const feedback =
-document.getElementById("feedback");
-
-
-const history =
-document.getElementById("history");
-
-
-const attemptsDisplay =
-document.getElementById("attempts-display");
-
-
-const timerDisplay =
-document.getElementById("timer-display");
-
-
-const rangeTitle =
-document.getElementById("game-range-title");
-
-
-const newGameBtn =
-document.getElementById("new-game-btn");
+const newGameBtn = document.getElementById("new-game-btn");
 
 
 
@@ -92,19 +61,14 @@ document.getElementById("new-game-btn");
 
 function message(element,text,type=""){
 
-
     element.textContent=text;
-
 
     element.className="";
 
-
     if(type){
-
         element.classList.add(
             "feedback-"+type
         );
-
     }
 
 }
@@ -114,7 +78,7 @@ function message(element,text,type=""){
 
 
 /* ===============================
- NIVOI
+ ODABIR NIVOA
 ================================ */
 
 
@@ -122,24 +86,20 @@ document.querySelectorAll(".level-tile")
 .forEach(button=>{
 
 
-    button.addEventListener("click",()=>{
+button.addEventListener("click",()=>{
 
 
-        document
-        .querySelectorAll(".level-tile")
-        .forEach(b=>
-            b.classList.remove("active")
-        );
+document.querySelectorAll(".level-tile")
+.forEach(b=>b.classList.remove("active"));
 
 
-        button.classList.add("active");
+button.classList.add("active");
 
 
-        selectedLevel =
-        button.dataset.level;
+selectedLevel = button.dataset.level;
 
 
-    });
+});
 
 
 });
@@ -150,96 +110,87 @@ document.querySelectorAll(".level-tile")
 
 
 /* ===============================
- START IGRE
+ START
 ================================ */
 
 
-document
-.getElementById("start-btn")
+document.getElementById("start-btn")
 .addEventListener("click",()=>{
 
 
-    const name =
-    nameInput.value.trim();
+let name = nameInput.value.trim();
 
 
 
-    if(!name){
+if(!name){
 
-        message(
-            setupFeedback,
-            "Unesi ime igrača.",
-            "warn"
-        );
+message(
+setupFeedback,
+"Unesi ime igrača.",
+"warn"
+);
 
-        return;
+return;
 
-    }
-
-
-
-    if(!selectedLevel){
-
-
-        message(
-            setupFeedback,
-            "Izaberi interval.",
-            "warn"
-        );
-
-
-        return;
-
-    }
+}
 
 
 
+if(!selectedLevel){
 
-    target =
-    Math.floor(
-        Math.random() *
-        RANGES[selectedLevel]
-    ) + 1;
+message(
+setupFeedback,
+"Izaberi težinu.",
+"warn"
+);
 
+return;
 
-
-    attempts=0;
-
-    inProgress=true;
-
-
-
-    setupScreen.classList.add("hidden");
-
-    gameScreen.classList.remove("hidden");
+}
 
 
 
-    rangeTitle.textContent =
-    "1 - " + RANGES[selectedLevel];
+target =
+Math.floor(
+Math.random()*RANGES[selectedLevel]
+)+1;
 
 
 
-    attemptsDisplay.textContent =
-    "Pokušaji: 0";
+attempts=0;
 
-
-    history.innerHTML="";
-
-
-    feedback.textContent="";
-
-
-    guessInput.value="";
+inProgress=true;
 
 
 
-    startTimer();
+setupScreen.classList.add("hidden");
+
+gameScreen.classList.remove("hidden");
+
+
+
+rangeTitle.textContent =
+"1 - "+RANGES[selectedLevel];
+
+
+
+attemptsDisplay.textContent =
+"Pokušaji: 0";
+
+
+history.innerHTML="";
+
+feedback.textContent="";
+
+
+guessInput.value="";
+
+
+startTimer();
 
 
 
 });
-
 
 
 
@@ -253,48 +204,43 @@ document
 
 function startTimer(){
 
-
-    clearInterval(timerInterval);
-
-
-    startTime=Date.now();
+clearInterval(timerInterval);
 
 
-    timerDisplay.textContent="0s";
+startTime=Date.now();
 
 
-
-    timerInterval =
-    setInterval(()=>{
+timerDisplay.textContent="0s";
 
 
-        let sec =
-        Math.floor(
-            (Date.now()-startTime)/1000
-        );
+timerInterval=setInterval(()=>{
 
 
-        timerDisplay.textContent =
-        sec+"s";
+let sec =
+Math.floor(
+(Date.now()-startTime)/1000
+);
 
 
-    },1000);
+timerDisplay.textContent =
+sec+"s";
+
+
+},1000);
 
 
 }
+
 
 
 
 function getSeconds(){
 
-
-    return Math.floor(
-        (Date.now()-startTime)/1000
-    );
-
+return Math.floor(
+(Date.now()-startTime)/1000
+);
 
 }
-
 
 
 
@@ -302,157 +248,149 @@ function getSeconds(){
 
 
 /* ===============================
- POKUŠAJ
+ POGAĐANJE
 ================================ */
 
 
 function checkGuess(){
 
 
-    if(!inProgress)
-    return;
+if(!inProgress)
+return;
 
 
 
-    let value =
-    Number(guessInput.value);
+let value =
+Number(guessInput.value);
 
 
 
-    let max =
-    RANGES[selectedLevel];
+let max =
+RANGES[selectedLevel];
 
 
 
+if(!value){
 
-    if(!value){
+message(
+feedback,
+"Unesi broj.",
+"warn"
+);
 
+return;
 
-        message(
-            feedback,
-            "Unesi broj.",
-            "warn"
-        );
+}
 
-        return;
 
-    }
 
+if(value<1 || value>max){
 
 
+message(
+feedback,
+"Broj mora biti između 1 i "+max,
+"warn"
+);
 
-    if(value<1 || value>max){
+return;
 
+}
 
-        message(
-            feedback,
-            "Broj mora biti između 1 i "+max,
-            "warn"
-        );
 
 
-        return;
 
-    }
+attempts++;
 
 
+attemptsDisplay.textContent =
+"Pokušaji: "+attempts;
 
 
-    attempts++;
 
 
-    attemptsDisplay.textContent =
-    "Pokušaji: "+attempts;
 
+if(value===target){
 
 
+inProgress=false;
 
 
-    if(value===target){
+clearInterval(timerInterval);
 
 
 
-        inProgress=false;
+let sec=getSeconds();
 
 
-        clearInterval(timerInterval);
+addChip(value,"ok");
 
 
+message(
+feedback,
+"🎉 Bravo! "+attempts+" pokušaja • "+sec+"s",
+"ok"
+);
 
-        addChip(value,"ok");
 
 
+saveResult(
+nameInput.value.trim(),
+selectedLevel,
+attempts,
+sec
+);
 
-        let sec=getSeconds();
 
 
+newGameBtn.classList.remove("hidden");
 
-        message(
-            feedback,
-            "🎉 Bravo! "+attempts+
-            " pokušaja • "+sec+"s",
-            "ok"
-        );
-
-
-
-        saveResult(
-            nameInput.value.trim(),
-            selectedLevel,
-            attempts,
-            sec
-        );
-
-
-
-        newGameBtn.classList.remove("hidden");
-
-
-    }
-
-
-
-
-    else if(value<target){
-
-
-        addChip(value,"low");
-
-
-        message(
-            feedback,
-            "Veći broj ⬆",
-            "low"
-        );
-
-
-    }
-
-
-    else{
-
-
-        addChip(value,"high");
-
-
-        message(
-            feedback,
-            "Manji broj ⬇",
-            "high"
-        );
-
-
-    }
-
-
-
-    guessInput.value="";
-
-    guessInput.focus();
 
 
 }
 
+
+
+else if(value<target){
+
+
+addChip(value,"low");
+
+
+message(
+feedback,
+"Veći broj ⬆",
+"low"
+);
+
+
+}
+
+
+
+else{
+
+
+addChip(value,"high");
+
+
+message(
+feedback,
+"Manji broj ⬇",
+"high"
+);
+
+
+}
+
+
+
+guessInput.value="";
+
+guessInput.focus();
+
+
+}
 
 
 
@@ -479,7 +417,6 @@ checkGuess();
 
 
 
-
 /* ===============================
  HISTORIJA
 ================================ */
@@ -488,16 +425,13 @@ checkGuess();
 function addChip(number,type){
 
 
-let span =
-document.createElement("span");
+let span=document.createElement("span");
 
 
-span.className =
-"chip ";
+span.className="chip";
 
 
 let icon="";
-
 
 
 if(type==="ok"){
@@ -508,28 +442,21 @@ icon="✓";
 
 }
 
-
 else if(type==="low"){
-
 
 span.classList.add("chip-low");
 
 icon="⬆";
 
-
 }
 
-
 else{
-
 
 span.classList.add("chip-high");
 
 icon="⬇";
 
-
 }
-
 
 
 
@@ -541,7 +468,6 @@ number+" "+icon;
 history.appendChild(span);
 
 
-
 }
 
 
@@ -551,7 +477,7 @@ history.appendChild(span);
 
 
 /* ===============================
- SPREMANJE
+ SAVE REZULTATA
 ================================ */
 
 
@@ -568,7 +494,7 @@ records.push({
 
 name:name,
 
-level:"1-"+RANGES[level],
+level:level,
 
 attempts:attempts,
 
@@ -580,40 +506,21 @@ date:new Date().toISOString()
 
 
 
-
-
 records.sort((a,b)=>{
 
+if(a.attempts !== b.attempts)
+return a.attempts - b.attempts;
 
-if(a.attempts!==b.attempts)
-
-return a.attempts-b.attempts;
-
-
-return a.seconds-b.seconds;
-
+return a.seconds - b.seconds;
 
 });
 
 
 
-
-records =
-records.slice(0,10);
-
-
-
-
-
 localStorage.setItem(
-
 "pogodiBrojRezultati",
-
 JSON.stringify(records)
-
 );
-
-
 
 
 
@@ -627,12 +534,52 @@ renderLeaderboard();
 
 
 
+
+/* ===============================
+ TABOVI
+================================ */
+
+
+document.querySelectorAll(".tab")
+.forEach(tab=>{
+
+
+tab.addEventListener("click",()=>{
+
+
+document.querySelectorAll(".tab")
+.forEach(t=>t.classList.remove("active"));
+
+
+tab.classList.add("active");
+
+
+leaderboardLevel =
+tab.dataset.level;
+
+
+
+renderLeaderboard();
+
+
+
+});
+
+
+});
+
+
+
+
+
+
 /* ===============================
  RANG LISTA
 ================================ */
 
 
 function renderLeaderboard(){
+
 
 
 const list =
@@ -648,13 +595,21 @@ list.innerHTML="";
 
 
 
-if(records.length===0){
+let filtered =
+records.filter(r=>
+r.level===leaderboardLevel
+);
+
+
+
+if(filtered.length===0){
 
 
 empty.style.display="";
 
 
 return;
+
 
 }
 
@@ -664,26 +619,43 @@ empty.style.display="none";
 
 
 
+filtered
+.slice(0,10)
+.forEach((r,i)=>{
 
 
-records.forEach((r,i)=>{
-
-
-let li =
-document.createElement("li");
+let li=document.createElement("li");
 
 
 
-li.innerHTML = `
+if(i===0)
+li.classList.add("rank-gold");
 
-<strong>${i+1}.</strong>
+
+if(i===1)
+li.classList.add("rank-silver");
+
+
+if(i===2)
+li.classList.add("rank-bronze");
+
+
+
+
+let place =
+i===0 ? "🥇" :
+i===1 ? "🥈" :
+i===2 ? "🥉" :
+(i+1)+".";
+
+
+
+li.innerHTML=`
+
+<strong>${place}</strong>
 
 <span style="flex:1">
 ${r.name}
-</span>
-
-<span>
-${r.level}
 </span>
 
 <span>
@@ -711,6 +683,8 @@ list.appendChild(li);
 
 
 
+
+
 /* ===============================
  NOVA IGRA
 ================================ */
@@ -724,12 +698,10 @@ newGameBtn.addEventListener(
 clearInterval(timerInterval);
 
 
-
 gameScreen.classList.add("hidden");
 
 
 setupScreen.classList.remove("hidden");
-
 
 
 newGameBtn.classList.add("hidden");
@@ -745,12 +717,14 @@ message(feedback,"");
 
 
 
-// odmah prikaži stare rezultate
-
 renderLeaderboard();
+
+
+
+
 
 function goBack(){
 
-    window.location.href="minigames.html";
+window.location.href="minigames.html";
 
 }

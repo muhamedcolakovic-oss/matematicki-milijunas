@@ -4,18 +4,15 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Pogodi broj</title>
+<title>Sudoku</title>
 
-<link rel="icon" type="image/png" href="pogodi-broj.png">
+<link rel="icon" href="sudoku.png">
 
-<link rel="stylesheet" href="pogodibroj.css">
-
+<link rel="stylesheet" href="sudoku.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
 
 </head>
 
@@ -26,9 +23,7 @@
 <nav class="game-nav">
 
 <button onclick="goBack()">
-
 ← Mini Games
-
 </button>
 
 </nav>
@@ -36,12 +31,9 @@
 
 
 
-
-<!-- POZADINA -->
-
+<!-- BACKGROUND -->
 
 <div class="math-background">
-
 
 <div class="formula f1">π</div>
 <div class="formula f2">√x</div>
@@ -56,19 +48,12 @@
 <div class="formula f10">log₂(x)</div>
 <div class="formula f11">sin(θ)</div>
 <div class="formula f12">cos(θ)</div>
-<div class="formula f13">∂f/∂x</div>
-<div class="formula f14">E=mc²</div>
-<div class="formula f15">φ</div>
-<div class="formula f16">Γ(n)</div>
-<div class="formula f17">Σ n²</div>
-<div class="formula f18">√(a²+b²)</div>
-<div class="formula f19">x³+y³</div>
-
+<div class="formula f13">E=mc²</div>
 
 <div class="grid-lines"></div>
 
-
 </div>
+
 
 
 
@@ -82,11 +67,10 @@
 
 
 
-<!-- ================= START IGRE ================= -->
+<!-- ================= SETUP ================= -->
 
 
 <section id="setup-screen" class="card">
-
 
 
 <header class="hero-header">
@@ -95,12 +79,12 @@
 <h1>
 
 <span class="gradient-title">
-Pogodi
+Sudoku
 </span>
 
 
 <span class="gradient-title second">
-Broj
+Game
 </span>
 
 
@@ -114,9 +98,7 @@ Broj
 
 
 <label>
-
 👤 Ime igrača
-
 </label>
 
 
@@ -134,12 +116,8 @@ placeholder="Unesi ime igrača">
 
 
 
-
-
 <label>
-
 🎮 Izaberi težinu
-
 </label>
 
 
@@ -149,7 +127,7 @@ placeholder="Unesi ime igrača">
 
 
 
-<button class="level-tile easy" data-level="25">
+<button class="level-tile easy" data-level="4">
 
 
 <span>
@@ -164,7 +142,7 @@ Lako
 </b>
 
 <small>
-1 - 25
+4 × 4
 </small>
 
 
@@ -177,7 +155,7 @@ Lako
 
 
 
-<button class="level-tile medium" data-level="100">
+<button class="level-tile medium" data-level="9easy">
 
 
 <span>
@@ -192,7 +170,7 @@ Srednje
 </b>
 
 <small>
-1 - 100
+9 × 9 Easy
 </small>
 
 
@@ -205,7 +183,8 @@ Srednje
 
 
 
-<button class="level-tile hard" data-level="1000">
+
+<button class="level-tile hard" data-level="9hard">
 
 
 <span>
@@ -220,7 +199,7 @@ Teško
 </b>
 
 <small>
-1 - 1000
+9 × 9 Hard
 </small>
 
 
@@ -231,6 +210,7 @@ Teško
 
 
 
+
 </div>
 
 
@@ -238,7 +218,6 @@ Teško
 
 
 <p id="setup-feedback"></p>
-
 
 
 
@@ -269,16 +248,12 @@ POČNI IGRU
 
 
 
-
-
 <div class="game-top">
 
 
-
-<h2 id="game-range-title">
-
+<h2 id="game-title">
+Sudoku
 </h2>
-
 
 
 
@@ -290,7 +265,6 @@ POČNI IGRU
 0s
 </span>
 
-
 </div>
 
 
@@ -301,96 +275,86 @@ POČNI IGRU
 
 
 
-<p>
-
-Pogodi skriveni broj. Nakon svakog pokušaja dobijaš pomoć.
-
-</p>
 
 
+<div id="board" class="sudoku-board">
+
+</div>
 
 
 
-<div class="guess-box">
-
-
-<input
-
-id="guess-input"
-
-type="number"
-
-placeholder="Unesi broj">
 
 
 
-<button id="guess-btn">
+<div id="numpad" class="numpad">
 
-Pogodi
+</div>
+
+
+
+
+
+
+<div class="game-bottom">
+
+
+❌ Greške:
+
+<b id="mistakes">
+0
+</b>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="buttons">
+
+
+<button 
+class="main-btn"
+onclick="checkBoard()">
+
+Provjeri
 
 </button>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="attempt-box">
-
-
-<div id="attempts-display">
-
-Pokušaji: 0
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-<div id="feedback"></div>
-
-
-
-
-
-
-<h3>
-
-📌 Historija pokušaja
-
-</h3>
-
-
-
-<div id="history"></div>
-
-
 
 
 
 
 <button
-
-id="new-game-btn"
-
-class="main-btn hidden">
-
+class="main-btn"
+onclick="newGame()">
 
 Nova igra
-
 
 </button>
 
 
+
+
+<button
+class="main-btn"
+onclick="clearBoard()">
+
+Obriši
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+<div id="message"></div>
 
 
 
@@ -407,10 +371,7 @@ Nova igra
 <!-- ================= RANG LISTA ================= -->
 
 
-
 <section class="card leaderboard">
-
-
 
 
 
@@ -418,16 +379,12 @@ Nova igra
 
 
 <h2>
-
 🏆 Rang lista
-
 </h2>
 
 
 <p>
-
-Najbolji rezultati po težini
-
+Najbolji Sudoku rezultati
 </p>
 
 
@@ -437,52 +394,36 @@ Najbolji rezultati po težini
 
 
 
-
-
 <div class="leader-tabs">
 
 
 
-<button 
-class="tab active"
-data-level="25">
+<button class="tab active" data-level="4">
 
-🟢 Lako
+🟢 4×4
+
+</button>
+
+
+
+<button class="tab" data-level="9easy">
+
+🟡 9×9 Easy
 
 </button>
 
 
 
 
+<button class="tab" data-level="9hard">
 
-<button
-
-class="tab"
-
-data-level="100">
-
-🟡 Srednje
-
-</button>
-
-
-
-
-
-<button
-
-class="tab"
-
-data-level="1000">
-
-🔴 Teško
+🔴 9×9 Hard
 
 </button>
 
 
 
 </div>
-
 
 
 
@@ -499,7 +440,10 @@ Još nema rezultata.
 
 
 
-<ol id="lb-list"></ol>
+<ol id="lb-list">
+
+</ol>
+
 
 
 
@@ -512,15 +456,15 @@ Još nema rezultata.
 
 
 
+
+
 </div>
 
 
 
 
 
-
-<script src="pogodibroj.js"></script>
-
+<script src="sudoku.js"></script>
 
 
 </body>
