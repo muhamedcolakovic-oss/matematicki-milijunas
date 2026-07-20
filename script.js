@@ -10,9 +10,15 @@ slika:"pogodi-broj.png"
 naziv:"Sudoku",
 link:"sudoku.html",
 slika:"sudoku.png"
-}
+},
 
+{
+naziv:"Math Rush",
+link:"mathrush.html",
+slika:"mathrush.png"
+}
 ];
+
 
 
 
@@ -79,4 +85,115 @@ function goHome(){
 
 window.location.href="index.html";
 
+
 }
+// ===============================
+// BACKGROUND MUSIC
+// ===============================
+
+
+const music =
+document.getElementById("bg-music");
+
+
+const musicBtn =
+document.getElementById("music-btn");
+
+
+
+let musicEnabled =
+localStorage.getItem("miniMusic");
+
+
+
+if(musicEnabled === "off"){
+
+    musicBtn.textContent="🔇";
+
+}
+else{
+
+    musicBtn.textContent="🔊";
+
+}
+
+
+
+
+document.addEventListener(
+"click",
+()=>{
+
+
+if(
+localStorage.getItem("miniMusic") !== "off"
+){
+
+
+music.volume=0.25;
+
+
+music.play()
+.catch(()=>{});
+
+
+}
+
+
+},
+{
+once:true
+});
+
+
+
+
+
+
+musicBtn.onclick=(e)=>{
+
+
+e.stopPropagation();
+
+
+
+if(
+localStorage.getItem("miniMusic")==="off"
+){
+
+
+localStorage.setItem(
+"miniMusic",
+"on"
+);
+
+
+musicBtn.textContent="🔊";
+
+
+music.play();
+
+
+
+}
+
+else{
+
+
+localStorage.setItem(
+"miniMusic",
+"off"
+);
+
+
+musicBtn.textContent="🔇";
+
+
+music.pause();
+
+
+
+}
+
+
+};

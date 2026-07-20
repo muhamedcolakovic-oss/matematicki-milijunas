@@ -52,7 +52,7 @@
 <div class="formula f7">∫</div>
 <div class="formula f8">a²+b²=c²</div>
 
-<div class="formula f9">lim x→∞</div>
+<div class="formula f9">tan²(θ)</div>
 <div class="formula f10">log₂(x)</div>
 <div class="formula f11">sin(θ)</div>
 <div class="formula f12">cos(θ)</div>
@@ -162,12 +162,11 @@ placeholder="Unesi ime igrača">
 <b>
 Lako
 </b>
-
-<small>
-1 - 25
+<small> 
 </small>
-
-
+<small>
+Interval brojeva: [1 - 25]
+</small>
 </div>
 
 
@@ -192,7 +191,7 @@ Srednje
 </b>
 
 <small>
-1 - 100
+Interval brojeva: [1 - 100]
 </small>
 
 
@@ -220,7 +219,7 @@ Teško
 </b>
 
 <small>
-1 - 1000
+Interval brojeva: [1 - 1000]
 </small>
 
 
@@ -515,14 +514,40 @@ Još nema rezultata.
 </div>
 
 
+<div id="victory-overlay" class="victory-overlay">
+<div class="confetti"></div>
+    <div class="victory-card">
+
+        <div class="victory-icon">
+            🏆
+        </div>
+
+        <h1 id="victory-title">
+            ČESTITAMO!
+        </h1>
+
+        <p id="victory-text"></p>
+
+        <div id="victory-stats" class="victory-stats">
+
+        </div>
+
+        <div class="victory-buttons">
+
+            <button class="main-btn" onclick="closeVictory()">
+                Nastavi
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
 
 
 
 
 <script src="pogodibroj.js"></script>
-
-
-
 </body>
 
 </html>

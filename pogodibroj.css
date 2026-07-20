@@ -45,34 +45,6 @@ body{
 
 
 
-.grid-lines{
-
-position:absolute;
-inset:-50%;
-
-background-image:
-
-linear-gradient(
-rgba(30,64,175,.08) 1px,
-transparent 1px
-),
-
-linear-gradient(
-90deg,
-rgba(30,64,175,.08) 1px,
-transparent 1px
-);
-
-background-size:50px 50px;
-
-transform:
-perspective(500px)
-rotateX(60deg);
-
-opacity:.35;
-
-}
-
 
 
 
@@ -988,5 +960,150 @@ left:15px;
     #fee2e2,
     #ffffff
     );
+
+}
+/* ===============================
+   UNIVERSAL VICTORY SCREEN
+=============================== */
+
+.victory-overlay{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(10,15,30,.82);
+    backdrop-filter:blur(10px);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.35s;
+
+    z-index:99999;
+}
+
+.victory-overlay.show{
+
+    opacity:1;
+    visibility:visible;
+}
+
+.victory-card{
+
+    width:min(430px,92%);
+
+    background:white;
+
+    border-radius:28px;
+
+    padding:35px;
+
+    text-align:center;
+
+    opacity:0;
+    transform:scale(.5);
+
+}
+
+
+.victory-overlay.show .victory-card{
+
+    animation:winPop .45s forwards;
+
+}
+
+.victory-icon{
+
+    font-size:90px;
+
+    animation:winBounce 1.2s infinite;
+}
+
+#victory-title{
+
+    margin-top:15px;
+}
+
+.victory-text{
+
+    margin:15px 0 25px;
+
+    color:#64748b;
+
+    font-size:18px;
+}
+
+.victory-stats{
+
+    display:grid;
+
+    gap:12px;
+
+    margin-bottom:30px;
+}
+
+.victory-item{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:#eff6ff;
+
+    font-weight:800;
+}
+
+.victory-buttons{
+
+    display:flex;
+
+    gap:10px;
+}
+
+.victory-buttons button{
+
+    flex:1;
+}
+
+@keyframes winPop{
+
+    0%{
+        opacity:0;
+        transform:scale(.4) rotate(-10deg);
+    }
+
+    60%{
+        opacity:1;
+        transform:scale(1.08) rotate(3deg);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1) rotate(0);
+    }
+
+}
+
+@keyframes winBounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+    }
 
 }

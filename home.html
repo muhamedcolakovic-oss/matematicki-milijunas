@@ -177,14 +177,89 @@ button:hover{
   from{opacity:0;transform:translateY(8px)}
   to{opacity:1;transform:translateY(0)}
 }
+.top-header{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    border-bottom:1px solid rgba(255,255,255,.08);
+    background:rgba(255,255,255,.03);
+    backdrop-filter:blur(10px);
+}
+
+.header-content{
+    text-align:center;
+}
+
+.header-content h1{
+    font-size:2rem;
+    margin-bottom:6px;
+}
+
+.header-content p{
+    color:#cbd5e1;
+    font-size:1rem;
+}
+
+.home-btn{
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
+    text-decoration:none;
+    color:#fff;
+    background:#2563eb;
+    padding:10px 16px;
+    border-radius:12px;
+    font-weight:600;
+    transition:.25s;
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
+}
+
+.home-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-50%) scale(1.05);
+}
+@media (max-width: 768px){
+
+    .top-header{
+        flex-direction:column;
+        padding:20px 15px;
+    }
+
+    .home-btn{
+        position:static;
+        transform:none;
+        margin-bottom:15px;
+        align-self:flex-start;
+    }
+
+    .header-content{
+        text-align:center;
+    }
+
+    .header-content h1{
+        font-size:1.5rem;
+    }
+
+    .header-content p{
+        font-size:0.95rem;
+    }
+
+}
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>📚 AI Matematički Tutor PRO</h1>
-  <p>MathGPT-style tutor za učenje matematike</p>
+<header class="top-header">
+    <a href="index.html" class="home-btn">🏠 Početna</a>
+
+    <div class="header-content">
+        <h1>📚 AI Matematički Tutor PRO</h1>
+        <p>MathGPT-style tutor za učenje matematike</p>
+    </div>
 </header>
 
 <div id="chat"></div>

@@ -1635,9 +1635,21 @@ body.light-mode .quiz-background::before {
 
   color: #d97706;
 
-  opacity: 0.09;
+  opacity: 0.12;
 
   text-shadow:
       0 0 10px rgba(217,119,6,0.25),
       0 0 20px rgba(217,119,6,0.15);
+}
+
+@font-face {
+    font-family: 'Allura';
+    src: url('Allura-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.signature {
+    font-family: 'Allura', cursive;
+}
 }

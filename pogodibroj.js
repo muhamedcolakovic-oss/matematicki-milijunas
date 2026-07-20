@@ -21,6 +21,7 @@ let inProgress = false;
 
 let startTime = null;
 let timerInterval = null;
+let playerName = "";
 
 
 
@@ -118,19 +119,33 @@ document.getElementById("start-btn")
 .addEventListener("click",()=>{
 
 
-let name = nameInput.value.trim();
+playerName = nameInput.value.trim();
 
 
 
-if(!name){
+if(!playerName){
 
-message(
-setupFeedback,
-"Unesi ime igrača.",
-"warn"
-);
 
-return;
+    const names = [
+
+        "Brojolovac",
+        "Matematičar",
+        "Srećko",
+        "Brzi Mozak",
+        "Pogađač",
+        "Number Master",
+        "Logičar"
+
+    ];
+
+
+    playerName =
+    names[
+        Math.floor(
+            Math.random()*names.length
+        )
+    ];
+
 
 }
 
@@ -307,45 +322,60 @@ attemptsDisplay.textContent =
 "Pokušaji: "+attempts;
 
 
-
-
-
 if(value===target){
 
+    inProgress=false;
 
-inProgress=false;
+    clearInterval(timerInterval);
 
-
-clearInterval(timerInterval);
-
-
-
-let sec=getSeconds();
+    let sec=getSeconds();
 
 
-addChip(value,"ok");
+    addChip(value,"ok");
 
 
-message(
-feedback,
-"🎉 Bravo! "+attempts+" pokušaja • "+sec+"s",
-"ok"
-);
+    showVictory(
+
+        "BRAVO! 🏆",
+
+        "Pogodili ste tačan broj!",
+
+        [
+            {
+                icon:"🎯",
+                label:"Broj",
+                value:target
+            },
+            {
+                icon:"🔢",
+                label:"Pokušaji",
+                value:attempts
+            },
+            {
+                icon:"⏱",
+                label:"Vrijeme",
+                value:sec+" s"
+            }
+        ]
+
+    );
+
+    message(
+    feedback,
+    "🎉 Bravo! "+attempts+" pokušaja • "+sec+"s",
+    "ok"
+    );
 
 
-
-saveResult(
-nameInput.value.trim(),
-selectedLevel,
-attempts,
-sec
-);
-
+    saveResult(
+	playerName,
+    selectedLevel,
+    attempts,
+    sec
+    );
 
 
-newGameBtn.classList.remove("hidden");
-
-
+    newGameBtn.classList.remove("hidden");
 
 }
 
@@ -721,10 +751,72 @@ renderLeaderboard();
 
 
 
-
-
 function goBack(){
 
 window.location.href="minigames.html";
+
+}
+function showVictory(title,text,stats=[]){
+
+    document
+    .getElementById("victory-title")
+    .textContent=title;
+
+
+    document
+    .getElementById("victory-text")
+    .textContent=text;
+
+
+    const box =
+    document.getElementById("victory-stats");
+
+
+    box.innerHTML="";
+
+
+    stats.forEach(item=>{
+
+        const div=document.createElement("div");
+
+        div.className="victory-item";
+
+
+        div.innerHTML=`
+
+            <span>
+            ${item.icon} ${item.label}
+            </span>
+
+            <strong>
+            ${item.value}
+            </strong>
+
+        `;
+
+
+        box.appendChild(div);
+
+
+    });
+
+
+
+    document
+    .getElementById("victory-overlay")
+    .classList
+    .add("show");
+
+
+}
+
+
+
+function closeVictory(){
+
+    document
+    .getElementById("victory-overlay")
+    .classList
+    .remove("show");
 
 }

@@ -151,21 +151,18 @@ function saveSeenQuestion(id) {
     
 function playSound(soundId) {
 
-  if (!soundEnabled) return;
+  if (masterMuted) return;
 
   const sound = document.getElementById(soundId);
 
-  if (sound) {
+  if (!sound) return;
 
-    // uzmi trenutnu jačinu glavnog zvuka
-    sound.volume = music.volume;
+  if (music.volume === 0) return;
 
-    // ako je muzika utišana, utišaj sve efekte
-    if (music.volume === 0) return;
+  sound.volume = music.volume;
+  sound.currentTime = 0;
 
-    sound.currentTime = 0;
-    sound.play().catch(() => {});
-  }
+  sound.play().catch(()=>{});
 }
     
     // Confetti Animation
@@ -799,7 +796,7 @@ setTimeout(createConfetti, 600);
   if (audio) {
     audio.currentTime = 0;
     audio.volume = 0.8;
-    audio.play().catch(() => {});
+playEffect("fiftyFiftySound");
   }
 
 
@@ -839,7 +836,7 @@ function usePhoneAFriend() {
   // 📞 SOUND START
   const phoneSound = document.getElementById("phoneFriendSound");
   phoneSound.currentTime = 0;
-  phoneSound.play();
+playEffect("phoneFriendSound");
   const t = translations[currentLanguage];
   document.getElementById('lifelineTitle').textContent = t.phoneTitle;
   document.getElementById('lifelineMessage').textContent = t.calling;
@@ -981,8 +978,7 @@ function useAskAudience() {
   if (audio) {
     audio.currentTime = 0;
     audio.volume = 0.8;
-    audio.play().catch(() => {});
-  }
+playEffect("askAudienceSound");  }
 
   const q = selectedQuestions[currentQuestion];
   const correct = q.correct;
@@ -1155,6 +1151,21 @@ window.addEventListener("load", hideIntro);
 
     // Music Controls
     const music = document.getElementById('backgroundMusic');
+let masterMuted = false;
+
+
+function playEffect(id) {
+
+  if (masterMuted) return;
+
+  const audio = document.getElementById(id);
+
+  if (!audio) return;
+
+  audio.volume = music.volume;
+  audio.currentTime = 0;
+  audio.play().catch(()=>{});
+}
     const musicToggle = document.getElementById('musicToggle');
     const volumeSlider = document.getElementById('volumeSlider');
     let isPlaying = true;
@@ -1164,78 +1175,133 @@ window.addEventListener("load", hideIntro);
     music.volume = 0.5;
 
     // Show/hide slider when clicking music icon
-    musicToggle.addEventListener('click', () => {
-      if (volumeSlider.classList.contains('hidden')) {
-        // Show slider
-        volumeSlider.classList.remove('hidden');
-        
-        // Auto-hide after 3 seconds
-        clearTimeout(sliderTimeout);
-        sliderTimeout = setTimeout(() => {
-          volumeSlider.classList.add('hidden');
-        }, 3000);
-      } else {
-        // Toggle play/pause if slider is visible
-        if (isPlaying) {
-          music.pause();
-          musicToggle.textContent = '🔇';
-          isPlaying = false;
-        } else {
-          music.play();
-          const volume = volumeSlider.value / 100;
-          if (volume === 0) {
-            musicToggle.textContent = '🔇';
-          } else if (volume < 0.5) {
-            musicToggle.textContent = '🔉';
-          } else {
-            musicToggle.textContent = '🔊';
-          }
-          isPlaying = true;
-        }
+musicToggle.addEventListener('click', () => {
+
+  if (volumeSlider.classList.contains('hidden')) {
+
+    volumeSlider.classList.remove('hidden');
+
+    clearTimeout(sliderTimeout);
+
+    sliderTimeout = setTimeout(() => {
+      volumeSlider.classList.add('hidden');
+    },3000);
+
+  } else {
+
+
+    if (!masterMuted) {
+
+      // 🔇 MUTE SVE
+      masterMuted = true;
+
+      music.pause();
+
+      document.querySelectorAll("audio").forEach(a=>{
+        a.pause();
+      });
+
+      musicToggle.textContent = '🔇';
+
+    } else {
+
+
+      // 🔊 UNMUTE
+      masterMuted = false;
+
+      music.play().catch(()=>{});
+
+      isPlaying = true;
+
+
+      if(volumeSlider.value == 0){
+        musicToggle.textContent='🔇';
       }
-    });
+      else if(volumeSlider.value < 50){
+        musicToggle.textContent='🔉';
+      }
+      else{
+        musicToggle.textContent='🔊';
+      }
 
-volumeSlider.addEventListener('input', (e) => {
+    }
 
-  const volume = e.target.value / 100;
-
-  music.volume = volume;
-
-  // automatski uključi zvuk kada pojačaš iz 0
-  soundEnabled = volume > 0;
-
-  if (volume > 0 && !isPlaying) {
-    music.play().catch(() => {});
-    isPlaying = true;
   }
-      
-      // Update icon based on volume
-      if (volume === 0) {
-        musicToggle.textContent = '🔇';
-      } else if (volume < 0.5) {
-        musicToggle.textContent = '🔉';
-      } else {
-        musicToggle.textContent = '🔊';
-      }
-      
-      // Reset auto-hide timer
-      clearTimeout(sliderTimeout);
-      sliderTimeout = setTimeout(() => {
-        volumeSlider.classList.add('hidden');
-		clearTimeout(sliderTimeout);
-      }, 3000);
+
+});
+ 
+ 
+ 
+ volumeSlider.addEventListener('input',(e)=>{
+
+const volume = Number(e.target.value) / 100;
+
+music.volume = volume;
+
+
+if(volume === 0){
+
+    masterMuted = true;
+    soundEnabled = false;
+
+    music.pause();
+
+    document.querySelectorAll("audio").forEach(a=>{
+        a.pause();
     });
+
+    musicToggle.textContent='🔇';
+
+}
+else{
+
+    // korisnik je ručno povećao zvuk
+    masterMuted = false;
+    soundEnabled = true;
+
+
+    if(!music.paused){
+        music.play().catch(()=>{});
+    }
+
+
+    if(volume < 0.5){
+        musicToggle.textContent='🔉';
+    }
+    else{
+        musicToggle.textContent='🔊';
+    }
+
+}
+
+
+clearTimeout(sliderTimeout);
+
+sliderTimeout=setTimeout(()=>{
+volumeSlider.classList.add('hidden');
+},3000);
+
+
+});
 
     // Handle autoplay restrictions - try to play when user interacts
-    document.addEventListener('click', () => {
-      if (music.paused && isPlaying) {
-        music.play().catch(() => {
-          // Autoplay was prevented
-          musicToggle.textContent = '🔇';
-          isPlaying = false;
-        });
-      }
-    }, { once: true });
+document.addEventListener('click', () => {
+
+  if (
+    music.paused &&
+    isPlaying &&
+    !masterMuted &&
+    music.volume > 0
+  ) {
+
+    music.play().catch(() => {
+      musicToggle.textContent='🔇';
+      isPlaying=false;
+    });
+
+  }
+
+}, { once:true });
 
 
     // Admin Panel Functions

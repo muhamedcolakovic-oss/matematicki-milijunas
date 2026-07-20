@@ -136,7 +136,7 @@ background:white;
 
 font-size:16px;
 
-font-weight:700;
+font-weight:600;
 
 cursor:pointer;
 
@@ -1444,3 +1444,115 @@ color:#b45309;
 
 
 }
+.victory-overlay{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(10,15,30,.75);
+
+    backdrop-filter:blur(8px);
+
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+
+    transition:.35s;
+
+    z-index:9999;
+
+}
+
+
+.victory-overlay.show{
+
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+
+}
+
+
+.victory-box{
+
+    width:min(420px,90%);
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:40px;
+
+    text-align:center;
+
+    opacity:0;
+
+    transform:scale(.5);
+
+}
+
+
+.victory-overlay.show .victory-box{
+
+    animation:popWinner .45s ease forwards;
+
+}
+.victory-icon{
+
+    font-size:90px;
+
+    animation:winBounce 1.2s infinite;
+}
+
+@keyframes popWinner{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+        scale(.4)
+        rotate(-10deg);
+
+    }
+
+
+    60%{
+
+        opacity:1;
+
+        transform:
+        scale(1.08)
+        rotate(3deg);
+
+    }
+
+
+    100%{
+
+        opacity:1;
+
+        transform:
+        scale(1)
+        rotate(0);
+
+    }
+
+}
+
+@keyframes bounce{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+}
+

@@ -615,3 +615,65 @@ height:320px;
     }
 
 }
+
+/* ===============================
+   MUSIC BUTTON
+================================ */
+
+
+.music-toggle{
+
+    position:fixed;
+
+    bottom:25px;
+
+    right:25px;
+
+
+    width:60px;
+
+    height:60px;
+
+
+    border:none;
+
+    border-radius:50%;
+
+
+    background:white;
+
+
+    font-size:28px;
+
+
+    cursor:pointer;
+
+
+    box-shadow:
+
+    0 15px 35px rgba(0,0,0,.2);
+
+
+    transition:.25s;
+
+
+    z-index:999;
+
+
+}
+
+
+
+.music-toggle:hover{
+
+    transform:scale(1.1);
+
+}
+
+
+
+.music-toggle:active{
+
+    transform:scale(.95);
+
+}

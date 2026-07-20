@@ -35,20 +35,19 @@
 
 <div class="math-background">
 
-<div class="formula f1">π</div>
-<div class="formula f2">√x</div>
-<div class="formula f3">∑</div>
+<div class="formula f1">x²</div>
+<div class="formula f2">sin(θ)</div>
+<div class="formula f3">E=mc²</div>
 <div class="formula f4">∞</div>
-<div class="formula f5">x²</div>
+<div class="formula f5">π</div>
 <div class="formula f6">Δ</div>
 <div class="formula f7">∫</div>
-<div class="formula f8">a²+b²=c²</div>
-
-<div class="formula f9">lim x→∞</div>
-<div class="formula f10">log₂(x)</div>
-<div class="formula f11">sin(θ)</div>
+<div class="formula f8">tan²(θ)</div>
+<div class="formula f9">log₂(x)</div>
+<div class="formula f10">a²+b²=c²</div>
+<div class="formula f11">√x</div>
 <div class="formula f12">cos(θ)</div>
-<div class="formula f13">E=mc²</div>
+<div class="formula f13">∑</div>
 
 <div class="grid-lines"></div>
 
@@ -170,7 +169,7 @@ Srednje
 </b>
 
 <small>
-9 × 9 Easy
+9 × 9 [Easy]
 </small>
 
 
@@ -197,9 +196,8 @@ Srednje
 <b>
 Teško
 </b>
-
 <small>
-9 × 9 Hard
+9 × 9 [Hard]
 </small>
 
 
@@ -315,38 +313,13 @@ Sudoku
 
 <div class="buttons">
 
-
-<button 
-class="main-btn"
-onclick="checkBoard()">
-
-Provjeri
-
-</button>
-
-
-
-
 <button
 class="main-btn"
 onclick="newGame()">
 
-Nova igra
+ Nova igra🔄
 
 </button>
-
-
-
-
-<button
-class="main-btn"
-onclick="clearBoard()">
-
-Obriši
-
-</button>
-
-
 
 </div>
 
@@ -460,7 +433,48 @@ Još nema rezultata.
 
 </div>
 
+<div id="victory-overlay" class="victory-overlay">
 
+    <div class="victory-box">
+
+
+        <div class="victory-icon">
+            🏆
+        </div>
+
+
+        <h1 id="victory-title">
+            ČESTITAMO!
+        </h1>
+
+
+        <p id="victory-text">
+        </p>
+
+
+        <div id="victory-stats" class="victory-stats">
+
+        </div>
+
+
+        <div class="victory-buttons">
+
+
+            <button 
+            class="main-btn"
+            onclick="closeVictory()">
+
+                Nastavi
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</div>
 
 
 

@@ -262,22 +262,34 @@ document
 .onclick=()=>{
 
 
+playerName =
+nameInput.value.trim();
+
+
+if(playerName===""){
+
+
+    const names = [
+
+        "Sudoku Majstor",
+        "Logički Genije",
+        "Mozgalica",
+        "Brzi Rješavač",
+        "Sudoku Ninja",
+        "Matematičar"
+
+    ];
+
+
     playerName =
-    nameInput.value.trim();
+    names[
+        Math.floor(
+            Math.random()*names.length
+        )
+    ];
 
 
-
-    if(playerName===""){
-
-
-        setupMessage(
-        "Unesi ime igrača."
-        );
-
-
-        return;
-
-    }
+}
 
 
 
@@ -1566,13 +1578,12 @@ function finishGame(){
     "🎉 Bravo! Sudoku je riješen!",
     "success-message"
     );
-
-
-
     saveResult();
+	showVictory();
 
 
 }
+
 
 
 
@@ -1950,3 +1961,101 @@ function goBack(){
 
 
 renderLeaderboard();
+
+function showVictory(){
+
+    let seconds = getTime();
+
+
+    document
+    .getElementById("victory-title")
+    .textContent =
+    "BRAVO! 🏆";
+
+
+    document
+    .getElementById("victory-text")
+    .textContent =
+    "Uspješno ste riješili Sudoku!";
+
+
+    const box =
+    document.getElementById("victory-stats");
+
+
+    box.innerHTML="";
+
+
+    let stats=[
+
+        {
+            icon:"🎮",
+            label:"Nivo",
+            value:leaderboardLevel
+        },
+
+
+        {
+            icon:"❌",
+            label:"Greške",
+            value:mistakes
+        },
+
+
+        {
+            icon:"⏱",
+            label:"Vrijeme",
+            value:seconds+" s"
+        }
+
+
+    ];
+
+
+
+    stats.forEach(item=>{
+
+
+        let div =
+        document.createElement("div");
+
+
+        div.className="victory-item";
+
+
+        div.innerHTML=`
+
+        <span>
+        ${item.icon} ${item.label}
+        </span>
+
+        <strong>
+        ${item.value}
+        </strong>
+
+        `;
+
+
+        box.appendChild(div);
+
+
+    });
+
+
+
+    document
+    .getElementById("victory-overlay")
+    .classList
+    .add("show");
+
+}
+
+function closeVictory(){
+
+    document
+    .getElementById("victory-overlay")
+    .classList
+    .remove("show");
+
+}
+

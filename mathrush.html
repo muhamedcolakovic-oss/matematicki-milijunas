@@ -1,0 +1,642 @@
+<!doctype html>
+<html lang="bs">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Math Rush</title>
+
+<link rel="icon" type="image/png" href="mathrush.png">
+
+<link rel="stylesheet" href="mathrush.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=DM+Sans:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- BACKGROUND -->
+
+<div class="math-background">
+
+
+<div class="formula f1">∫</div>
+<div class="formula f2">cos(θ)</div>
+<div class="formula f13">π</div>
+<div class="formula f4">∞</div>
+<div class="formula f5">x²</div>
+<div class="formula f6">Δ</div>
+<div class="formula f7">∑</div>
+<div class="formula f8">a²+b²=c²</div>
+<div class="formula f9">log₂(x)</div>
+<div class="formula f10">tan²(θ)</div>
+<div class="formula f11">sin(θ)</div>
+<div class="formula f12">√x</div>
+<div class="formula f3">E=mc²</div>
+
+
+</div>
+
+
+
+
+
+<nav class="game-nav">
+
+<button onclick="goBack()">
+
+← Mini Games
+
+</button>
+
+</nav>
+
+
+
+
+
+
+
+
+<div class="container">
+
+
+
+
+
+
+
+<!-- ===============================
+ SETUP
+================================ -->
+
+
+<section id="setup-screen" class="card">
+
+
+<header class="hero-header">
+
+
+<h1>
+
+<span class="gradient-title">
+Math
+</span>
+
+
+<span class="gradient-title second">
+Rush
+</span>
+
+
+</h1>
+
+
+</header>
+
+
+
+
+
+<label>
+
+👤 Ime igrača
+
+</label>
+
+
+<input
+
+id="player-name"
+
+maxlength="24"
+
+placeholder="Unesi ime igrača">
+
+
+
+
+
+
+
+<label>
+
+⚡ Izaberi težinu
+
+</label>
+
+
+
+
+
+<div class="levels">
+
+
+
+<button class="level-tile easy" data-level="easy">
+
+
+<span>
+🟢
+</span>
+
+
+<div>
+
+<b>
+Početnik
+</b>
+
+<small>
+Sabiranje i oduzimanje
+</small>
+
+<small>
+30 sekundi
+</small>
+
+
+</div>
+
+
+</button>
+
+
+
+
+
+
+
+<button class="level-tile medium" data-level="medium">
+
+
+<span>
+🟡
+</span>
+
+
+<div>
+
+<b>
+Napredni
+</b>
+
+
+<small>
+Množenje i dijeljenje
+</small>
+
+<small>
+60 sekundi
+</small>
+
+
+</div>
+
+
+</button>
+
+
+
+
+
+
+
+<button class="level-tile hard" data-level="hard">
+
+
+<span>
+🔴
+</span>
+
+
+<div>
+
+<b>
+Expert
+</b>
+
+
+<small>
+Kombinacije
+</small>
+
+<small>
+90 sekundi
+</small>
+
+
+</div>
+
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+<p id="setup-feedback"></p>
+
+
+
+
+
+
+<button id="start-btn" class="main-btn">
+
+START RUSH 🚀
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ===============================
+ GAME
+================================ -->
+
+
+<section id="game-screen" class="card hidden">
+
+
+
+
+
+<div class="game-top">
+
+
+<h2>
+
+⚡ Math Rush
+
+</h2>
+
+
+
+
+<div class="timer">
+
+⏱
+
+<span id="timer">
+
+60s
+
+</span>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="rush-stats">
+
+
+<div>
+
+⭐ Bodovi
+
+<b id="score">
+0
+</b>
+
+
+</div>
+
+
+
+
+
+<div>
+
+🔥 Combo
+
+<b id="combo">
+0
+</b>
+
+
+</div>
+
+
+
+
+
+
+<div>
+
+✅ Tačno
+
+<b id="correct">
+0
+</b>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="question-box">
+
+
+<p>
+
+Riješi:
+
+</p>
+
+
+<h1 id="question">
+
+5 + 5 = ?
+
+</h1>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div class="answer-box">
+
+
+<input
+
+id="answer"
+
+type="number"
+
+placeholder="Odgovor">
+
+
+
+<button id="answer-btn">
+
+ODGOVORI
+
+</button>
+
+<button id="new-game-btn" class="answer-style">
+    🔄 Nova igra
+</button>
+</div>
+
+
+
+
+
+
+
+
+<div id="feedback"></div>
+
+
+
+
+
+
+<button id="new-game-btn" class="main-btn hidden">
+
+Nova igra
+
+</button>
+
+
+
+
+
+</section>
+
+
+
+
+
+<!-- ===============================
+ LEADERBOARD
+================================ -->
+
+
+<section class="card leaderboard">
+
+
+<div class="leader-header">
+
+
+<h2>
+🏆 Rang lista
+</h2>
+
+
+<p>
+Najbolji Math Rush rezultati
+</p>
+
+
+</div>
+
+
+
+
+
+<!-- TABOVI -->
+
+
+<div class="leader-tabs">
+
+
+<button 
+class="tab active"
+data-level="easy">
+
+🟢 Početnik
+
+</button>
+
+
+
+<button 
+class="tab"
+data-level="medium">
+
+🟡 Napredni
+
+</button>
+
+
+
+<button 
+class="tab"
+data-level="hard">
+
+🔴 Expert
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- LISTA -->
+
+
+<ol id="lb-list"></ol>
+
+
+
+
+
+<p id="lb-empty">
+
+Još nema rezultata.
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- ===============================
+ VICTORY
+================================ -->
+
+
+<div id="victory-overlay" class="victory-overlay">
+
+
+<div class="victory-card">
+
+
+
+<div class="victory-icon">
+
+🏆
+
+</div>
+
+
+
+
+<h1 id="victory-title">
+
+BRAVO!
+
+</h1>
+
+
+
+
+
+<p id="victory-text">
+
+</p>
+
+
+
+
+
+
+<div id="victory-stats" class="victory-stats">
+
+</div>
+
+
+
+
+
+
+
+<div class="victory-buttons">
+
+
+<button 
+onclick="closeVictory()"
+class="main-btn">
+
+Nastavi
+
+</button>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div id="answer-effect"></div>
+<script src="mathrush.js"></script>
+
+
+</body>
+
+</html>
