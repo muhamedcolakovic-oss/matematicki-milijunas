@@ -176,7 +176,7 @@ if(!selectedLevel){
 document
 .getElementById("setup-feedback")
 .innerHTML=
-"⚠️ Izaberi težinu igre";
+"Izaberi težinu igre! ⚠️";
 
 
 return;
@@ -1026,7 +1026,7 @@ document.getElementById(
 "victory-title"
 )
 .textContent=
-"BRAVO! 🏆";
+"BRAVO!";
 
 
 

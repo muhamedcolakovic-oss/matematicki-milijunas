@@ -165,37 +165,197 @@ function playSound(soundId) {
   sound.play().catch(()=>{});
 }
     
-    // Confetti Animation
-  function createConfetti() {
-  const colors = [
-    '#FFD700', '#FFC300', '#FFDF00', '#FFFFFF',
-    '#fbbf24', '#f59e0b', '#3b82f6', '#8b5cf6',
-    '#10b981', '#ef4444'
-  ];
+// =======================================
+// PREMIUM CANVAS CONFETTI (LIGHTWEIGHT)
+// =======================================
 
-  for (let i = 0; i < 120; i++) {
-    setTimeout(() => {
-      const confetti = document.createElement('div');
-      confetti.className = 'confetti';
-      // 📍 pozicija
-      confetti.style.left = Math.random() * 100 + '%';
-      // 📏 RANDOM veličina (KLJUČ)
-      const size = Math.random() * 6 + 4;
-      confetti.style.width = size + 'px';
-      confetti.style.height = size + 'px';
-      // 🎨 boja
-      confetti.style.backgroundColor =
-        colors[Math.floor(Math.random() * colors.length)];
-      // ⏱ random trajanje pada
-      confetti.style.animationDuration = (Math.random() * 2 + 2.5) + 's';
-      // 🔄 random rotacija start
-      confetti.style.transform = `rotate(${Math.random() * 360}deg)`;
-      // ✨ malo “shine” efekta
-      confetti.style.boxShadow = "0 0 6px rgba(255,215,0,0.6)";
-      document.body.appendChild(confetti);
-      setTimeout(() => confetti.remove(), 5000);
-    }, i * 12); // gušći pad = bolji efekat
-  }
+function createConfetti(){
+
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+
+    canvas.style.position = "fixed";
+    canvas.style.inset = "0";
+    canvas.style.pointerEvents = "none";
+    canvas.style.zIndex = "99999";
+
+    document.body.appendChild(canvas);
+
+
+    function resize(){
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+
+    resize();
+
+
+    const colors = [
+        "#FFD700",
+        "#FF1744",
+        "#00E5FF",
+        "#7C4DFF",
+        "#00E676",
+        "#FFFFFF",
+        "#FF9100"
+    ];
+
+
+    const particles = [];
+
+    for(let i=0;i<160;i++){
+
+        particles.push({
+
+            x: Math.random()*canvas.width,
+
+            y: -20 - Math.random()*200,
+
+
+            size: Math.random()*8+4,
+
+
+            color:
+            colors[Math.floor(Math.random()*colors.length)],
+
+
+            speedY:
+            Math.random()*3+2,
+
+
+            speedX:
+            (Math.random()-0.5)*3,
+
+
+            gravity:
+            0.05 + Math.random()*0.05,
+
+
+            rotation:
+            Math.random()*360,
+
+
+            rotationSpeed:
+            (Math.random()-0.5)*12,
+
+
+            shape:
+            Math.random()>0.5 ? "rect":"circle"
+
+        });
+
+    }
+
+
+
+    let frame;
+
+
+    function animate(){
+
+        ctx.clearRect(
+            0,
+            0,
+            canvas.width,
+            canvas.height
+        );
+
+
+        particles.forEach((p,index)=>{
+
+
+            p.y += p.speedY;
+            p.speedY += p.gravity;
+
+            p.x += p.speedX;
+
+            p.rotation += p.rotationSpeed;
+
+
+
+            ctx.save();
+
+
+            ctx.translate(
+                p.x,
+                p.y
+            );
+
+
+            ctx.rotate(
+                p.rotation*Math.PI/180
+            );
+
+
+            ctx.fillStyle=p.color;
+
+
+            if(p.shape==="rect"){
+
+                ctx.fillRect(
+                    -p.size/2,
+                    -p.size/2,
+                    p.size,
+                    p.size*1.8
+                );
+
+            }
+            else{
+
+                ctx.beginPath();
+
+                ctx.arc(
+                    0,
+                    0,
+                    p.size/2,
+                    0,
+                    Math.PI*2
+                );
+
+                ctx.fill();
+
+            }
+
+
+            ctx.restore();
+
+
+
+            if(p.y > canvas.height+50){
+
+                particles.splice(index,1);
+
+            }
+
+
+        });
+
+
+
+        if(particles.length){
+
+            frame=requestAnimationFrame(animate);
+
+        }
+        else{
+
+            cancelAnimationFrame(frame);
+            canvas.remove();
+
+        }
+
+    }
+
+
+    animate();
+
+
+    window.addEventListener(
+        "resize",
+        resize,
+        {once:true}
+    );
+
 }
     
     // Load stats from localStorage
@@ -785,6 +945,16 @@ setTimeout(createConfetti, 600);
       updateStatsDisplay();
       
       document.getElementById('gameOverModal').classList.remove('hidden');
+	  
+	  const modal = document.getElementById('gameOverModal');
+
+modal.classList.remove('million-win', 'game-lost');
+
+if (won) {
+    modal.classList.add('million-win');
+} else {
+    modal.classList.add('game-lost');
+}
 
     }
 
@@ -1030,7 +1200,7 @@ function showAudienceGraph(percentages) {
   document.getElementById('lifelineTitle').textContent =
     translations[currentLanguage].audienceTitle;
 
-  document.getElementById('lifelineMessage').textContent = '';
+document.getElementById('lifelineMessage').classList.add('hidden');
   document.getElementById('timerCircle').classList.add('hidden');
   document.getElementById('audienceGraph').classList.remove('hidden');
   document.getElementById('lifelineModal').classList.remove('hidden');
@@ -1260,9 +1430,7 @@ else{
     soundEnabled = true;
 
 
-    if(!music.paused){
-        music.play().catch(()=>{});
-    }
+music.play().catch(()=>{});
 
 
     if(volume < 0.5){
@@ -1334,32 +1502,57 @@ document.addEventListener('click', () => {
       document.getElementById('adminPanel').classList.add('hidden');
       document.getElementById('languageScreen').classList.remove('hidden');
     }
- function setAdminLanguage(lang) {
-      adminLanguage = lang;
-      document.getElementById('adminLangBs').className = lang === 'bs' 
-        ? 'bg-blue-600 hover:bg-blue-500 px-8 py-3 rounded-lg font-bold border-2 border-blue-400'
-        : 'bg-gray-600 hover:bg-gray-500 px-8 py-3 rounded-lg font-bold border-2 border-gray-400';
-      document.getElementById('adminLangEn').className = lang === 'en'
-        ? 'bg-blue-600 hover:bg-blue-500 px-8 py-3 rounded-lg font-bold border-2 border-blue-400'
-        : 'bg-gray-600 hover:bg-gray-500 px-8 py-3 rounded-lg font-bold border-2 border-gray-400';
-      loadAdminQuestions();
-	  updateAdminQuizCounts(adminLanguage);
-    }
+function setAdminLanguage(lang) {
 
-function showCategory(category, event) {
-  currentAdminCategory = category;
+  adminLanguage = lang;
 
-  document.querySelectorAll('.category-tab').forEach(btn => {
-    btn.className =
-      'category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400';
+
+  document.querySelectorAll('.quiz-btn').forEach(btn=>{
+      btn.classList.remove('active');
   });
 
-  if (event && event.target) {
-    event.target.className =
-      'category-tab bg-green-600 hover:bg-green-500 px-4 py-2 rounded-lg font-bold border-2 border-green-400';
+
+  if(lang==='bs'){
+      document.getElementById('adminLangBs').classList.add('active');
   }
 
+  if(lang==='en'){
+      document.getElementById('adminLangEn').classList.add('active');
+  }
+
+  if(lang==='ge'){
+      document.getElementById('adminLangGe').classList.add('active');
+  }
+
+  if(lang==='gk'){
+      document.querySelector('[onclick="setAdminLanguage(\'gk\')"]')
+      .classList.add('active');
+  }
+
+
   loadAdminQuestions();
+
+  updateAdminQuizCounts(adminLanguage);
+
+}
+
+function showCategory(category,event){
+
+  currentAdminCategory = category;
+
+
+  document.querySelectorAll('.category-tab').forEach(btn=>{
+      btn.classList.remove('active');
+  });
+
+
+  if(event){
+      event.currentTarget.classList.add('active');
+  }
+
+
+  loadAdminQuestions();
+
 }
 
  function loadAdminQuestions() {
@@ -1383,71 +1576,101 @@ if (difficulty === 'easy') {
 }
 
 difficultyDiv.className =
-  `mb-6 border ${colorClass} rounded-lg p-3`;
+`
+mb-6
+rounded-2xl
+p-4
+border
+border-white/10
+bg-white/5
+backdrop-blur-xl
+shadow-xl
+`;
 
-    // HEADER (klikabilan)
-    const difficultyTitle = document.createElement('h3');
-    difficultyTitle.className = 'text-2xl font-bold text-yellow-400 mb-3 cursor-pointer';
+// HEADER
+const difficultyTitle = document.createElement('h3');
+difficultyTitle.className =
+'text-2xl font-bold text-yellow-400 mb-3 cursor-pointer flex justify-between';
+
+
+const content = document.createElement('div');
+content.className = 'hidden';
+
+
 const arrow = document.createElement('span');
-arrow.textContent = ' ▼';
-arrow.style.float = 'right';
-arrow.style.transition = '0.2s';
+arrow.textContent='▼';
+arrow.style.transition='0.2s';
+
 
 let displayName = difficulty;
 
-if (difficulty === 'hard') displayName = 'medium';
-if (difficulty === 'hardest') displayName = 'hard';
+if(difficulty==='hard') displayName='medium';
+if(difficulty==='hardest') displayName='hard';
+
 
 difficultyTitle.textContent =
-  `${displayName.toUpperCase()} (${category[difficulty].length} questions)`;
+`${displayName.toUpperCase()} (${category[difficulty].length} questions)`;
+
+
 difficultyTitle.appendChild(arrow);
 
+
+
 difficultyTitle.onclick = () => {
-  content.classList.toggle('hidden');
 
-  // rotacija strelice
-  if (content.classList.contains('hidden')) {
-    arrow.style.transform = 'rotate(0deg)';
-  } else {
-    arrow.style.transform = 'rotate(180deg)';
-  }
+content.classList.toggle('hidden');
+
+
+arrow.style.transform =
+content.classList.contains('hidden')
+?
+'rotate(0deg)'
+:
+'rotate(180deg)';
+
 };
-
-    // CONTENT (skriven/pokazan)
-    const content = document.createElement('div');
-    content.className = 'hidden';
-
-    // toggle open/close
-    difficultyTitle.onclick = () => {
-      content.classList.toggle('hidden');
-    };
 
     category[difficulty].forEach((q, index) => {
       const questionCard = document.createElement('div');
-      questionCard.className =
-        'bg-gray-800 bg-opacity-80 rounded-lg p-4 mb-3 border-2 border-gray-600 hover:border-blue-400 transition-all';
-
+questionCard.className =
+`
+bg-white/5
+backdrop-blur-xl
+rounded-2xl
+p-5
+mb-4
+border
+border-white/10
+hover:border-yellow-400/40
+hover:bg-white/10
+transition-all
+duration-300
+shadow-lg
+`;
+  
       questionCard.innerHTML = `
         <div class="flex justify-between items-start">
           <div class="flex-1">
-            <p class="text-white font-bold mb-2">${q.question}</p>
+          <p class="text-white font-bold text-lg mb-3">
+${q.question}
+</p>
             <div class="grid grid-cols-2 gap-2 text-sm">
-              <span class="text-green-400">${q.correct}: ${q.answers[q.correct]}</span>
+             <span class="text-emerald-300 font-semibold">${q.correct}: ${q.answers[q.correct]}</span>
               ${Object.keys(q.answers)
                 .filter(k => k !== q.correct)
-                .map(k => `<span class="text-gray-400">${k}: ${q.answers[k]}</span>`)
+                .map(k => `<span class="text-slate-300">${k}: ${q.answers[k]}</span>`)
                 .join('')}
             </div>
           </div>
 
           <div class="flex gap-2 ml-4">
             <button onclick="editQuestion('${currentAdminCategory}', '${difficulty}', ${index})"
-              class="bg-blue-600 hover:bg-blue-500 px-3 py-1 rounded text-sm font-bold">
+     class="bg-yellow-500/20 text-yellow-300 border border-yellow-400/30 hover:bg-yellow-500/30 px-3 py-1 rounded-lg text-sm font-bold transition">
               Edit
             </button>
 
             <button onclick="deleteQuestion('${currentAdminCategory}', '${difficulty}', ${index})"
-              class="bg-red-600 hover:bg-red-500 px-3 py-1 rounded text-sm font-bold">
+          class="bg-red-500/20 text-red-300 border border-red-400/30 hover:bg-red-500/30 px-3 py-1 rounded-lg text-sm font-bold transition">
               🗑️ Delete
             </button>
           </div>
@@ -1552,14 +1775,67 @@ function updateAdminQuizCounts(activeLang = currentActiveLang) {
     const baseText = btn.textContent.replace(/\s*\(\d+\)\s*/, '').trim();
     btn.innerHTML = `${baseText} <span class="text-yellow-300">(${total})</span>`;
 
-    // ACTIVE STATE
-    if (lang === currentActiveLang) {
-      btn.className =
-        'bg-blue-600 hover:bg-blue-500 px-8 py-3 rounded-lg font-bold border-2 border-blue-400';
-    } else {
-      btn.className =
-        'bg-gray-600 hover:bg-gray-500 px-8 py-3 rounded-lg font-bold border-2 border-gray-400';
-    }
+// ACTIVE STATE
+if (lang === currentActiveLang) {
+
+  btn.className =
+`
+quiz-btn
+active
+
+px-8
+py-3
+
+rounded-xl
+
+font-bold
+
+text-black
+
+bg-gradient-to-r
+from-yellow-300
+to-yellow-500
+
+border
+border-yellow-200
+
+shadow-[0_0_30px_rgba(255,216,106,.35)]
+
+transition
+duration-300
+
+scale-105
+`;
+
+} else {
+
+  btn.className =
+`
+quiz-btn
+
+px-8
+py-3
+
+rounded-xl
+
+font-bold
+
+text-white
+
+bg-white/5
+
+border
+border-white/10
+
+hover:bg-white/10
+
+hover:border-yellow-400/40
+
+transition
+duration-300
+`;
+
+}
   });
 }
     function showAddQuestion() {
@@ -1692,36 +1968,217 @@ function closeEditModal() {
 
 // =========================
 
+
+function updateLifelineLanguage(type){
+
+const lang = currentLanguage || "bs";
+
+
+const texts = {
+
+bs:{
+phone:"Pozovi prijatelja",
+audience:"Pitaj publiku",
+lifeline:"POMOĆ",
+close:"Zatvori"
+},
+
+
+en:{
+phone:"Phone a Friend",
+audience:"Ask the Audience",
+lifeline:"LIFELINE",
+close:"Close"
+},
+
+};
+
+
+const t=texts[lang];
+
+
+document.getElementById("lifelineType").textContent=t.lifeline;
+
+
+document.querySelector(".close-text").textContent=t.close;
+
+
+if(type==="phone"){
+
+document.getElementById("lifelineTitle").textContent=t.phone;
+
+}
+
+
+if(type==="audience"){
+
+document.getElementById("lifelineTitle").textContent=t.audience;
+
+document.getElementById("audienceTitle").textContent=t.audience;
+
+}
+
+
+}
+
+
+
+
+
+
+
+
 function confirmReturnHome() {
-  const message =
-    (currentLanguage === 'bs' || currentLanguage === 'ge')
-      ? 'Da li ste sigurni da želite napustiti igru? Napredak neće biti sačuvan.'
-      : 'Are you sure you want to leave the game? Progress will not be saved.';
 
-  const modal = document.createElement('div');
-  modal.className = 'fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-6 z-50';
+  const isBS = currentLanguage === "bs" || currentLanguage === "ge";
 
-  modal.innerHTML = `
-    <div class="bg-gradient-to-br from-purple-900 to-blue-900 rounded-lg p-8 max-w-md w-full border-4 border-yellow-500">
-      
-      <h2 class="text-2xl font-bold text-yellow-400 mb-4 text-center">
-        ${(currentLanguage === 'bs' || currentLanguage === 'ge') ? 'Napusti Igru?' : 'Leave Game?'}
-      </h2>
+  const modal = document.createElement("div");
 
-      <p class="text-white text-center mb-6">${message}</p>
+  modal.className =
+    "fixed inset-0 z-[9999] flex items-center justify-center p-6";
 
-      <div class="flex gap-4">
-        <button onclick="returnToHome()" class="flex-1 bg-red-600 hover:bg-red-500 px-6 py-3 rounded-lg font-bold border-2 border-red-400">
-          ${(currentLanguage === 'bs' || currentLanguage === 'ge') ? 'Da, Napusti' : 'Yes, Leave'}
-        </button>
+  modal.style.background =
+    "radial-gradient(circle at center, rgba(20,30,70,.45), rgba(0,0,0,.92))";
+  modal.style.backdropFilter = "blur(10px)";
+  modal.style.webkitBackdropFilter = "blur(10px)";
 
-        <button onclick="closeConfirmModal()" class="flex-1 bg-green-600 hover:bg-green-500 px-6 py-3 rounded-lg font-bold border-2 border-green-400">
-          ${(currentLanguage === 'bs' || currentLanguage === 'ge') ? 'Ne, Nastavi' : 'No, Continue'}
-        </button>
-      </div>
+modal.innerHTML = `
+<div style="
+position:relative;
+width:100%;
+max-width:520px;
+border-radius:24px;
+overflow:hidden;
+background:rgba(11,18,38,.82);
+backdrop-filter:blur(24px);
+-webkit-backdrop-filter:blur(24px);
+border:1px solid rgba(255,214,102,.28);
+box-shadow:
+0 30px 80px rgba(0,0,0,.75),
+0 0 80px rgba(36,91,255,.12),
+inset 0 1px 0 rgba(255,255,255,.06);
+">
 
-    </div>
-  `;
+<!-- top glow -->
+<div style="
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height:2px;
+background:linear-gradient(90deg,transparent,#FFD86A,transparent);
+opacity:.9;
+"></div>
+
+<div style="padding:46px;">
+
+<div style="
+font-size:13px;
+letter-spacing:4px;
+text-transform:uppercase;
+color:#9DA9C6;
+margin-bottom:14px;
+font-weight:600;
+">
+${(currentLanguage === 'bs' || currentLanguage === 'ge') ? 'Potvrda' : 'Confirmation'}
+</div>
+
+<h2 style="
+margin:0;
+font-size:34px;
+font-weight:800;
+color:white;
+line-height:1.15;
+">
+${(currentLanguage === 'bs' || currentLanguage === 'ge')
+? 'Napustiti igru?'
+: 'Leave the game?'}
+</h2>
+
+<div style="
+width:70px;
+height:3px;
+margin:22px 0 28px;
+background:linear-gradient(90deg,#FFD86A,transparent);
+border-radius:10px;
+"></div>
+
+<p style="
+margin:0;
+font-size:17px;
+line-height:1.8;
+color:#B9C4E2;
+">
+${(currentLanguage === 'bs' || currentLanguage === 'ge')
+? 'Ako sada napustite igru, trenutni napredak neće biti sačuvan.'
+: 'If you leave now, your current progress will not be saved.'}
+</p>
+
+<div style="
+display:flex;
+justify-content:flex-end;
+gap:14px;
+margin-top:42px;
+">
+
+<button
+onclick="closeConfirmModal()"
+style="
+min-width:150px;
+height:54px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:14px;
+color:#E5E7EB;
+font-size:15px;
+font-weight:700;
+cursor:pointer;
+transition:.25s;
+"
+onmouseover="
+this.style.background='rgba(255,255,255,.09)';
+this.style.transform='translateY(-2px)';
+"
+onmouseout="
+this.style.background='rgba(255,255,255,.05)';
+this.style.transform='translateY(0)';
+">
+${(currentLanguage === 'bs' || currentLanguage === 'ge') ? 'Nastavi igru' : 'Continue'}
+</button>
+
+<button
+onclick="returnToHome()"
+style="
+min-width:170px;
+height:54px;
+background:linear-gradient(135deg,#D9B95B,#F6DD8C);
+border:none;
+border-radius:14px;
+color:#111827;
+font-size:15px;
+font-weight:800;
+letter-spacing:.4px;
+cursor:pointer;
+box-shadow:0 12px 35px rgba(217,185,91,.28);
+transition:.25s;
+"
+onmouseover="
+this.style.transform='translateY(-2px)';
+this.style.boxShadow='0 18px 45px rgba(217,185,91,.45)';
+"
+onmouseout="
+this.style.transform='translateY(0)';
+this.style.boxShadow='0 12px 35px rgba(217,185,91,.28)';
+">
+${(currentLanguage === 'bs' || currentLanguage === 'ge') ? 'Napusti igru' : 'Leave Game'}
+</button>
+
+</div>
+
+</div>
+
+</div>
+`;
 
   document.body.appendChild(modal);
   window.currentConfirmModal = modal;
@@ -1796,4 +2253,27 @@ document.querySelectorAll(".language-card").forEach(card => {
 
         selectLanguage(this.dataset.lang);
     });
+});
+
+const backgroundMusic = document.getElementById("backgroundMusic");
+
+if(backgroundMusic){
+    backgroundMusic.volume = 0.13;
+}
+
+// ENTER LOGIN
+document
+.querySelectorAll('#adminUsername, #adminPassword')
+.forEach(input => {
+
+    input.addEventListener('keydown', function(e){
+
+        if(e.key === "Enter"){
+
+            adminLogin();
+
+        }
+
+    });
+
 });

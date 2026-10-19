@@ -146,7 +146,7 @@ body {
       top: 0;
       left: 0;
       width: 100%;
-      height: 200%;
+      height: 300%;
       font-size: 42px;
       opacity: 0.08;
       animation: floatSymbols 35s linear infinite;
@@ -154,13 +154,19 @@ body {
 	  will-change: transform;
       line-height: 100px;
       word-spacing: 40px;
+	  filter: blur(2px);
+	  animation-duration:45s;
+    -webkit-filter: blur(1.15px);
     }
     
 @keyframes floatSymbols {
   0% { transform: translateY(0%) rotate(0deg); }
   100% { transform: translateY(-50%) rotate(360deg); }
 }
- 
+ .quiz-background::before {
+    top:-360px;
+    left:-160px;
+}
     /* Spotlight effect */
     .quiz-background::after {
       content: '';
@@ -178,6 +184,48 @@ body {
       50% { transform: translate(20%, 20%) scale(1.2); }
     }
     
+	
+
+/* TABLET */
+@media(max-width:1024px){
+
+.quiz-background::before{
+
+    width:300%;
+    left:-100%;
+
+    font-size:40px;
+
+    letter-spacing:55px;
+    word-spacing:35px;
+    line-height:95px;
+    animation-duration:60s;
+}
+
+}
+
+
+/* MOBILE */
+@media(max-width:600px){
+
+.quiz-background::before{
+
+    width:350%;
+    left:-125%;
+
+    top:-250px;
+
+    font-size:38px;
+
+    letter-spacing:50px;
+    word-spacing:35px;
+    line-height:90px;
+
+    animation-duration:95s;
+
+}
+
+}
 .question-box {
   position: relative;
 
@@ -453,7 +501,7 @@ body {
 
 /* =========================
    BACKGROUND
-========================= */
+
 
 body.light-mode {
 
@@ -470,9 +518,6 @@ body.light-mode {
 
 
 
-/* =========================
-   QUESTION BOX
-========================= */
 
 body.light-mode .question-box {
 
@@ -545,11 +590,6 @@ body.light-mode .question-box::before {
 
 
 
-/* =========================
-   QUESTION TEXT
-========================= */
-
-
 body.light-mode #questionText {
 
     color:#0f172a;
@@ -562,9 +602,6 @@ body.light-mode #questionText {
 
 
 
-/* =========================
-   ANSWER BUTTONS
-========================= */
 
 
 body.light-mode .answer-btn {
@@ -627,40 +664,31 @@ body.light-mode .answer-btn:hover {
 
 
 
-/* =========================
-   SELECTED
-========================= */
 
 
 body.light-mode .answer-btn.selected {
 
-    background:
+  background: linear-gradient(
+      135deg,
+      #fbbf24,
+      #f59e0b
+  );
 
-        linear-gradient(
-            135deg,
-            #ffd54a,
-            #ffb300
-        );
+  color:#111827 !important;
 
+  border:1px solid rgba(255,255,255,0.35) !important;
 
-    color:#111!important;
+  box-shadow:
+      inset 0 1px 2px rgba(255,255,255,.35),
+      0 6px 18px rgba(245,158,11,.25);
 
+  transform:none !important;
 
-    border-color:#ffc107;
-
-
-    box-shadow:
-
-        0 0 25px rgba(255,193,7,.45),
-
-        0 12px 30px rgba(255,193,7,.25);
+  transition:
+      background .2s ease,
+      box-shadow .2s ease;
 }
 
-
-
-/* =========================
-   CORRECT
-========================= */
 
 
 body.light-mode .answer-btn.correct {
@@ -684,11 +712,6 @@ body.light-mode .answer-btn.correct {
 
 
 
-/* =========================
-   WRONG
-========================= */
-
-
 body.light-mode .answer-btn.wrong {
 
     background:
@@ -710,9 +733,6 @@ body.light-mode .answer-btn.wrong {
 
 
 
-/* =========================
-   GLOSS EFFECT
-========================= */
 
 
 body.light-mode .question-box::after,
@@ -771,9 +791,6 @@ body.light-mode .answer-btn:hover::after {
 
 
 
-/* =========================
-   MOBILE
-========================= */
 
 
 @media(max-width:768px){
@@ -793,8 +810,91 @@ body.light-mode .answer-btn:hover::after {
 
 }
 
+========================= */
 
- 
+/* =====================================================
+   LIGHT MODE SYSTEM - OSNOVNO
+===================================================== */
+
+
+/* POZADINA LIGHT MODE */
+body.light-mode {
+
+    background:
+
+        url("./pozadinskaslika1.jpg")
+        center center /
+        cover
+        no-repeat
+        fixed;
+
+}
+
+
+
+
+/* SELECTED LIGHT */
+body.light-mode .answer-btn.selected {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fbbf24,
+            #f59e0b
+        );
+
+    color:#111827!important;
+
+}
+
+
+/* TAČAN ODGOVOR LIGHT */
+body.light-mode .answer-btn.correct {
+
+    background:
+        linear-gradient(
+            135deg,
+            #4ade80,
+            #16a34a
+        )!important;
+
+    color:white!important;
+
+}
+
+
+/* POGREŠAN ODGOVOR LIGHT */
+body.light-mode .answer-btn.wrong {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fb7185,
+            #dc2626
+        )!important;
+
+    color:white!important;
+
+}
+
+
+/* MOBILE LIGHT */
+@media(max-width:768px){
+
+    body.light-mode .question-box {
+
+        border-radius:18px;
+
+    }
+
+
+    body.light-mode .answer-btn {
+
+        border-radius:14px;
+
+    }
+
+}
  /* School logo */
     .school-logo {
       max-width: 80px;
@@ -850,11 +950,6 @@ body.light-mode .answer-btn:hover::after {
       100% { background-color: #ef4444; }
     }
     
-    .lifeline-used {
-      opacity: 0.3;
-      cursor: not-allowed;
-      filter: grayscale(100%);
-    }
 
 }
 
@@ -864,36 +959,22 @@ body.light-mode .answer-btn:hover::after {
     display: none !important;
   }
 }
-.answer-btn {
-  position: relative;
-  transition: all 0.25s ease;
-  background: rgba(25, 30, 55, 0.65);
-  backdrop-filter: blur(12px);
-  width: 99%;
 
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
 
-  padding: 12px 14px;
-  color: #fff;
+@media (hover:hover) and (pointer:fine){
 
-  transition: all 0.2s ease;
+.answer-btn:hover:not(:disabled){
 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    transform-origin: center;
-  will-change: transform;
+  transform: translateY(-2px);
+
+  border-color: rgba(251,191,36,.45);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,.25),
+    0 0 18px rgba(251,191,36,.15);
+
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .answer-btn:hover:not(:disabled) {
-    transform: translateY(-3px) scale(1.02);
-    border-color: rgba(251, 191, 36, 0.6);
-
-    box-shadow:
-      0 0 10px rgba(251, 191, 36, 0.35),
-      0 0 25px rgba(251, 191, 36, 0.25),
-      0 0 45px rgba(251, 191, 36, 0.15);
-  }
 }
     
 .answer-btn.correct {
@@ -931,7 +1012,7 @@ body.light-mode .answer-btn:hover::after {
   position: relative;
   display: inline-block;
 
-  color: #fbbf24;
+  color: #D9B95B;
   text-shadow: 0 0 10px rgba(251,191,36,0.25);
   text-shadow:
   
@@ -987,18 +1068,84 @@ body.light-mode .answer-btn:hover::after {
 }
 
 .answer-btn.selected {
-  background: linear-gradient(135deg, #fbbf24, #f59e0b);
-  color: #111827 !important;
 
-  border-color: #fbbf24 !important;
-  box-shadow: 0 0 25px rgba(251, 191, 36, 0.6);
+    background:
+        linear-gradient(
+            135deg,
+            #fbbf24 0%,
+            #f59e0b 45%,
+            #d97706 100%
+        ) !important;
 
-  transform: scale(1.02);
+
+    color:#111827 !important;
+
+
+    border:
+        2px solid rgba(255,220,120,0.9) !important;
+
+
+    box-shadow:
+
+        0 0 12px rgba(251,191,36,0.65),
+
+        0 8px 25px rgba(245,158,11,0.35),
+
+        inset 0 2px 8px rgba(255,255,255,0.35),
+
+        inset 0 -8px 15px rgba(180,90,0,0.25) !important;
+
+
+    transform:none !important;
+
+    position:relative;
+    overflow:hidden;
+
 }
-.answer-btn:hover {
-  box-shadow: none !important;
-  border-color: rgba(255,255,255,0.08) !important;
-  transform: none !important;
+
+
+
+/* Millionaire glass shine */
+.answer-btn.selected::before {
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+
+    background:
+        linear-gradient(
+            120deg,
+            transparent 20%,
+            rgba(255,255,255,0.45),
+            transparent 55%
+        );
+
+
+    transform:translateX(-120%) skewX(-20deg);
+
+    animation: millionaireOrangeShine 1s ease forwards;
+
+}
+
+
+
+@keyframes millionaireOrangeShine {
+
+    from{
+        transform:translateX(-120%) skewX(-20deg);
+    }
+
+    to{
+        transform:translateX(120%) skewX(-20deg);
+    }
+
+}
+
+.answer-btn.selected::after{
+    display:none !important;
 }
     .audience-bar {
       transition: height 0.5s ease-in-out;
@@ -1151,7 +1298,7 @@ body.light-mode .answer-btn:hover::after {
 }
 
 body.dark-mode {
-  background: url("./pozadinskaslika.jpg") center center / cover no-repeat;
+  background: url("./pozadinskaslika1.jpg") center center / cover no-repeat;
 }
 
 
@@ -1159,46 +1306,8 @@ body.dark-mode {
   0%, 100% { box-shadow: 0 0 10px rgba(255,0,0,0.2); }
   50% { box-shadow: 0 0 25px rgba(255,0,0,0.5); }
 }
-    .lifeline-container {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    
-    .lifeline-icon {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      border: 4px solid;
-      position: relative;
-    }
-    
-    .lifeline-icon.fifty-fifty {
-      background: linear-gradient(135deg, #d4a574 0%, #8b6f47 100%);
-      border-color: #d4a574;
-    }
-    
-    .lifeline-icon.phone {
-      background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
-      border-color: #4ade80;
-    }
-    
-    .lifeline-icon.audience {
-      background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
-      border-color: #a78bfa;
-    }
-    
-    .lifeline-icon:hover:not(.lifeline-used) {
-      transform: scale(1.1);
-      box-shadow: 0 0 30px rgba(251, 191, 36, 0.6);
-    }
+
+   
     /* =========================
    FULL SCREEN NETFLIX INTRO
 ========================= */
@@ -1211,7 +1320,7 @@ body.dark-mode {
   align-items: center;
   justify-content: center;
   z-index: 99999;
-
+color:D9B95B;
   animation: introFadeOut 1.1s ease forwards;
   animation-delay: 1.1s;
 }
@@ -1324,34 +1433,39 @@ body.dark-mode {
   0% { left: -120%; }
   100% { left: 120%; }
 }
-    .joker-crossed {
-      position: relative;
-    }
-    
-    .joker-crossed::after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 120%;
-      height: 4px;
-      background: linear-gradient(90deg, transparent 0%, #ef4444 10%, #dc2626 50%, #ef4444 90%, transparent 100%);
-      transform: translate(-50%, -50%) rotate(-45deg);
-      box-shadow: 0 0 8px rgba(239, 68, 68, 0.8);
-    }
-    
-    .joker-crossed::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 120%;
-      height: 4px;
-      background: linear-gradient(90deg, transparent 0%, #ef4444 10%, #dc2626 50%, #ef4444 90%, transparent 100%);
-      transform: translate(-50%, -50%) rotate(45deg);
-      box-shadow: 0 0 8px rgba(239, 68, 68, 0.8);
-    }
-    
+   
+   /* =====================================
+   USED JOKER - SMALL RED CROSS
+===================================== */
+
+.joker-crossed {
+    position:relative;
+}
+
+
+.joker-crossed::after {
+
+    content:"✕";
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:45px;
+
+    font-weight:800;
+
+    color:#ef4444;
+
+    text-shadow:
+        0 0 8px rgba(239,68,68,.9);
+
+    z-index:20;
+
+}
     .timer-circle {
       width: 80px;
       height: 80px;
@@ -1426,19 +1540,6 @@ body.dark-mode {
 
   .answer-btn span.text-yellow-400 {
     font-size: 1.3rem !important;
-  }
-
-  /* LIFELINES */
-  .lifeline-container {
-    margin-bottom: 6px !important;
-    gap: 8px !important;
-  }
-
-  .lifeline-icon {
-    width: 52px !important;
-    height: 52px !important;
-    font-size: 18px !important;
-    border-width: 2px !important;
   }
 
   /* GRID */
@@ -1652,4 +1753,1952 @@ body.light-mode .quiz-background::before {
 .signature {
     font-family: 'Allura', cursive;
 }
+
+.answer-btn {
+    transform: none;
+    transition:
+        background .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+    will-change: auto;
+}
+
+
+.answer-btn.selected,
+.answer-btn.correct,
+.answer-btn.wrong {
+    transform:none !important;
+}
+
+.answer-btn {
+
+    position:relative;
+    overflow:hidden;
+
+    width:99%;
+
+    padding:14px 18px;
+
+    border-radius:18px;
+
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(30,41,80,0.85),
+            rgba(15,23,42,0.92)
+        );
+
+
+    color:#f8fafc;
+
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+
+
+    box-shadow:
+
+        0 10px 25px rgba(0,0,0,.28),
+
+        inset 0 1px 2px rgba(255,255,255,.08);
+
+
+    font-size:1.05rem;
+
+    font-weight:600;
+
+    letter-spacing:.2px;
+
+
+    cursor:pointer;
+
+
+    transition:
+
+        transform .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+
+}
+
+
+/* lagani glass odsjaj */
+
+.answer-btn::before {
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-120%;
+
+    width:80%;
+    height:100%;
+
+
+    background:
+
+        linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,.12),
+            transparent
+        );
+
+
+    transform:skewX(-25deg);
+
+    transition:.7s;
+
+}
+
+
+/* hover */
+
+.answer-btn:hover:not(:disabled) {
+
+    transform:translateY(-3px);
+
+
+    border-color:
+        rgba(251,191,36,.55);
+
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(37,99,235,.35),
+            rgba(15,23,42,.95)
+        );
+
+
+    box-shadow:
+
+        0 15px 35px rgba(0,0,0,.35),
+
+        0 0 18px rgba(251,191,36,.18),
+
+        inset 0 1px 3px rgba(255,255,255,.12);
+
+}
+
+
+.answer-btn:hover:not(:disabled)::before {
+
+    left:140%;
+
+}
+
+
+/* slovo A B C D */
+
+.answer-btn span:first-child {
+
+    color:#fbbf24;
+
+    font-weight:800;
+
+}
+
+/* =========================
+   FIX ANSWER BUTTON SIZE ON CLICK
+========================= */
+
+.answer-btn,
+.answer-btn:hover,
+.answer-btn:active,
+.answer-btn:focus,
+.answer-btn.selected,
+.answer-btn.correct,
+.answer-btn.wrong {
+
+    transform: none !important;
+    scale: 1 !important;
+
+}
+
+
+.answer-btn:active {
+    transform: none !important;
+}
+
+
+.answer-btn.selected {
+
+    transform: none !important;
+
+    width:99% !important;
+
+    margin-left:0 !important;
+    margin-right:0 !important;
+
+}
+
+
+
+
+/* =====================================
+   PREMIUM IMAGE LIFELINES CLEAN FINAL
+===================================== */
+
+.lifeline-container {
+
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+
+    gap:35px !important;
+
+    width:100% !important;
+    height:95px !important;
+
+    margin:0 auto 10px auto !important;
+
+    flex-shrink:0 !important;
+
+    position:relative;
+    z-index:20;
+
+    pointer-events:none !important;
+}
+
+
+
+.lifeline-icon {
+
+    width:95px !important;
+    height:95px !important;
+
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+
+    background:none !important;
+    border:none !important;
+    box-shadow:none !important;
+
+    padding:0 !important;
+
+    position:relative;
+
+    overflow:visible !important;
+
+    cursor:pointer;
+
+    pointer-events:auto !important;
+
+}
+
+
+
+.lifeline-icon span {
+
+    display:flex !important;
+
+    width:100%;
+    height:100%;
+
+    justify-content:center;
+    align-items:center;
+
+}
+
+
+
+/* SLIKE */
+
+.lifeline-icon img {
+
+    width:150px !important;
+    height:150px !important;
+
+    max-width:none !important;
+    max-height:none !important;
+
+    object-fit:contain !important;
+
+    display:block !important;
+
+    transition:
+        transform .25s ease,
+        filter .25s ease;
+
+    filter:
+        drop-shadow(0 8px 15px rgba(0,0,0,.45));
+
+}
+
+
+
+/* HOVER samo mali efekat */
+
+.lifeline-icon:hover img {
+
+    transform:scale(1.06);
+
+    filter:
+        drop-shadow(0 0 12px rgba(251,191,36,.7));
+
+}
+
+
+
+/* CLICK */
+
+.lifeline-icon:active img {
+
+    transform:scale(.96);
+
+}
+
+
+
+/* ISKORIŠTEN */
+
+
+
+
+
+
+/* ODGOVORI - malo odvojeni */
+
+.grid.grid-cols-1.md\\:grid-cols-2 {
+
+    margin-top:10px !important;
+
+}
+
+
+
+/* DESKTOP */
+
+@media(min-width:1024px){
+
+    .lifeline-container {
+
+        height:100px !important;
+
+        gap:45px !important;
+
+    }
+
+
+    .lifeline-icon img {
+
+        width:165px !important;
+        height:165px !important;
+
+    }
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .lifeline-container {
+
+        height:100px !important;
+
+        gap:15px !important;
+
+    }
+
+
+    .lifeline-icon img {
+
+        width:100px !important;
+        height:100px !important;
+
+    }
+
+}
+
+
+
+.lifeline-container {
+    pointer-events:none !important;
+}
+
+.lifeline-icon {
+    pointer-events:auto !important;
+}
+
+.lifeline-used {
+    opacity:0.3 !important;
+    filter:grayscale(1) brightness(0.6) !important;
+    pointer-events:none !important;
+    cursor:not-allowed !important;
+}
+
+@media(max-width:768px){
+
+    .lifeline-container {
+
+        height:120px !important;
+        gap:25px !important;
+
+    }
+
+
+    .lifeline-icon {
+
+        width:120px !important;
+        height:120px !important;
+
+    }
+
+
+    .lifeline-icon img {
+
+        width:125px !important;
+        height:125px !important;
+
+    }
+
+
+}
+
+
+.joker-small img {
+    width:55px;
+    object-fit:contain;
+}
+
+
+
+/* ==========================================
+   PREMIUM MILLIONAIRE MONEY TREE
+   GLASS GOLD EDITION
+========================================== */
+
+
+#prizeLadder {
+
+    width:100%;
+
+    padding:14px 12px;
+
+    border-radius:24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(15,23,42,.85),
+            rgba(3,7,18,.95)
+        );
+
+    backdrop-filter:blur(18px);
+
+    border:
+        1px solid rgba(251,191,36,.25);
+
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.55),
+
+        inset 0 1px 20px rgba(255,255,255,.05),
+
+        0 0 30px rgba(251,191,36,.08);
+
+}
+
+
+
+/* svaki nivo */
+
+.prize-item {
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:35px 1fr 25px;
+
+    align-items:center;
+
+
+    height:32px;
+
+    margin:5px 0;
+
+    padding:0 12px;
+
+
+    border-radius:12px;
+
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.05),
+            rgba(255,255,255,.015)
+        );
+
+
+    border:
+
+        1px solid rgba(255,255,255,.08);
+
+
+    color:
+
+        rgba(255,255,255,.75);
+
+
+    font-weight:700;
+
+    font-size:14px;
+
+
+    transition:.25s ease;
+
+
+    overflow:hidden;
+
+}
+
+
+
+
+/* broj pitanja */
+
+.prize-item span:first-child {
+
+    color:#94a3b8;
+
+}
+
+
+
+/* novac */
+
+.prize-item span:nth-child(2){
+
+    color:#f8fafc;
+
+    letter-spacing:.5px;
+
+}
+
+
+
+/* dijamant */
+
+.prize-item .diamond {
+
+    color:#fbbf24;
+
+}
+
+
+
+/* hover */
+
+.prize-item:hover {
+
+
+    transform:translateX(-5px);
+
+
+    border-color:
+
+        rgba(251,191,36,.45);
+
+
+}
+
+
+
+/* =================================
+   ACTIVE LEVEL - MILLIONAIRE GOLD
+================================= */
+
+
+.prize-active {
+
+
+    height:38px;
+
+
+    background:
+
+
+        linear-gradient(
+            90deg,
+            rgba(251,191,36,.18),
+            rgba(245,158,11,.35),
+            rgba(251,191,36,.15)
+        ) !important;
+
+
+
+    border:
+
+        1px solid rgba(251,191,36,.9) !important;
+
+
+
+    color:white !important;
+
+
+
+    box-shadow:
+
+
+        0 0 18px rgba(251,191,36,.45),
+
+
+        inset 0 0 20px rgba(255,215,0,.12);
+
+
+
+    transform:scale(1.04);
+
+
+
+    animation:
+
+        millionairePulse 1.8s infinite;
+
+}
+
+
+
+.prize-active span:first-child {
+
+    color:#fbbf24 !important;
+
+}
+
+
+.prize-active span:nth-child(2){
+
+    color:#fff !important;
+
+    font-size:16px;
+
+}
+
+
+.prize-active .diamond {
+
+    color:#fde68a !important;
+
+}
+
+
+
+
+@keyframes millionairePulse {
+
+
+0% {
+
+box-shadow:
+
+0 0 12px rgba(251,191,36,.25),
+
+inset 0 0 10px rgba(251,191,36,.1);
+
+}
+
+
+50% {
+
+box-shadow:
+
+0 0 35px rgba(251,191,36,.65),
+
+inset 0 0 25px rgba(251,191,36,.2);
+
+}
+
+
+100% {
+
+box-shadow:
+
+0 0 12px rgba(251,191,36,.25),
+
+inset 0 0 10px rgba(251,191,36,.1);
+
+}
+
+
+}
+
+
+
+
+/* milestone 5,10,15 */
+
+
+.prize-milestone {
+
+
+    border-left:
+
+        3px solid #fbbf24;
+
+
+    background:
+
+
+        linear-gradient(
+            90deg,
+            rgba(251,191,36,.15),
+            rgba(255,255,255,.04)
+        );
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+
+#prizeLadder{
+
+padding:10px;
+
+}
+
+
+
+.prize-item{
+
+height:28px;
+
+font-size:12px;
+
+}
+
+
+
+.prize-active{
+
+height:34px;
+
+}
+
+
+}
+/* FIX ACTIVE MONEY TREE CENTER ALIGN */
+
+.prize-active {
+
+    display:grid !important;
+
+    grid-template-columns:35px 1fr 25px !important;
+
+    align-items:center !important;
+
+}
+
+
+
+.prize-active span {
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    height:100%;
+
+    line-height:1 !important;
+
+}
+
+
+
+.prize-active span:first-child {
+
+    justify-content:flex-start;
+
+}
+
+
+
+.prize-active span:nth-child(2) {
+
+    justify-content:center;
+
+}
+
+
+
+.prize-active .diamond {
+
+    justify-content:flex-end;
+
+}
+
+
+/* =======================================
+   REALISTIC PREMIUM CONFETTI
+======================================= */
+
+
+.confetti{
+
+    position:fixed;
+
+    z-index:99999;
+
+    pointer-events:none;
+
+    top:-20px;
+
+    opacity:0.95;
+
+    will-change:transform;
+
+}
+
+
+/* lagani 3D osjećaj */
+
+.confetti:nth-child(3n){
+
+    filter:
+    brightness(1.2);
+
+}
+
+
+.confetti:nth-child(4n){
+
+    filter:
+    blur(.2px);
+
+}
+
+
+
+/* globalna zlatna aura */
+
+body.win-celebration::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:99990;
+
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(255,215,0,.12),
+        transparent 55%
+    );
+
+
+    animation:
+    celebrationGlow 2s ease;
+
+
+}
+
+
+
+@keyframes celebrationGlow{
+
+    from{
+        opacity:0;
+    }
+
+    40%{
+        opacity:1;
+    }
+
+    to{
+        opacity:0;
+    }
+
+}
+
+/* =====================================
+   MILLION WIN ONLY - GOLD
+===================================== */
+
+#gameOverModal.million-win:not(.hidden) .bg-gradient-to-br {
+
+    animation: winGlow 2s infinite alternate;
+
+}
+
+
+@keyframes winGlow {
+
+    from {
+        box-shadow:
+        0 0 20px rgba(255,215,0,.4),
+        0 0 40px rgba(255,255,255,.15);
+    }
+
+    to {
+        box-shadow:
+        0 0 55px rgba(255,215,0,.9),
+        0 0 100px rgba(255,255,255,.25);
+    }
+
+}
+
+
+/* =====================================
+   WRONG ANSWER - RED FAILURE
+===================================== */
+
+#gameOverModal.game-lost:not(.hidden) .bg-gradient-to-br {
+
+    border:2px solid rgba(239,68,68,.8);
+
+    animation: loseGlow 1.5s infinite alternate;
+
+}
+
+
+@keyframes loseGlow {
+
+    from {
+
+        box-shadow:
+        0 0 15px rgba(239,68,68,.35),
+        0 0 30px rgba(239,68,68,.15);
+
+    }
+
+
+    to {
+
+        box-shadow:
+        0 0 45px rgba(239,68,68,.75),
+        0 0 80px rgba(239,68,68,.35);
+
+    }
+
+}
+
+@keyframes winGlow {
+
+    from {
+        box-shadow:
+        0 0 20px rgba(255,215,0,.4),
+        0 0 40px rgba(255,255,255,.15);
+    }
+
+
+    to {
+        box-shadow:
+        0 0 50px rgba(255,215,0,.8),
+        0 0 90px rgba(255,255,255,.25);
+    }
+
+}
+
+
+/* =====================================
+   LIFELINE SIZE -20%
+===================================== */
+
+.lifeline-container {
+    height:90px !important;
+    gap:28px !important;
+}
+
+
+.lifeline-icon {
+    width:75px !important;
+    height:75px !important;
+}
+
+
+.lifeline-icon img {
+
+    width:80px !important;
+    height:80px !important;
+
+    object-fit:contain !important;
+}
+
+
+/* DESKTOP */
+@media(min-width:1024px){
+
+    .lifeline-container {
+        height:95px !important;
+        gap:36px !important;
+    }
+
+
+    .lifeline-icon {
+        width:88px !important;
+        height:88px !important;
+    }
+
+
+    .lifeline-icon img {
+        width:96px !important;
+        height:96px !important;
+    }
+
+}
+
+
+/* MOBILE */
+@media(max-width:768px){
+
+    .lifeline-container {
+        height:80px !important;
+        gap:16px !important;
+    }
+
+
+    .lifeline-icon {
+        width:64px !important;
+        height:64px !important;
+    }
+
+
+    .lifeline-icon img {
+        width:72px !important;
+        height:72px !important;
+    }
+
+}
+
+/* =====================================
+   FIX TABLET TOUCH ANSWER STATE
+===================================== */
+
+.answer-btn:focus,
+.answer-btn:focus-visible,
+.answer-btn:active {
+    outline: none !important;
+    filter: none !important;
+}
+
+
+/* ukloni zadržani touch highlight */
+.answer-btn {
+    -webkit-tap-highlight-color: transparent !important;
+}
+
+
+/* reset nakon prelaska na novo pitanje */
+.answer-btn:not(.selected):not(.correct):not(.wrong) {
+    background: linear-gradient(
+        135deg,
+        rgba(30,41,80,0.85),
+        rgba(15,23,42,0.92)
+    ) !important;
+
+    color: #f8fafc !important;
+
+    border-color: rgba(255,255,255,0.12) !important;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.28),
+        inset 0 1px 2px rgba(255,255,255,.08) !important;
+}
+
+.quiz-background,
+body {
+    overflow-x: hidden !important;
+}
+
+/* HEADER - dodatno 3px manje */
+.tv-header {
+    padding-top: 6px !important;
+    padding-bottom: 7px !important;
+}
+
+.header-logo {
+    max-width: 112px !important;
+}
+
+.netflix-title {
+    font-size: clamp(19px, 3.1vw, 32px) !important;
+}
+
+@media(min-width:1025px){
+
+    .live-badge {
+        transform: scale(1.1);
+        padding: 6px 12px !important;
+    }
+
+}
+
+
+/* =====================================
+   PREMIUM FLOATING GLASS CONTROLS
+===================================== */
+
+.top-controls{
+
+    animation: controlsIn .7s ease both;
+
+}
+
+
+@keyframes controlsIn{
+
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+
+
+/* GLASS PILL */
+
+.control-glass{
+
+    display:flex;
+    align-items:center;
+    gap:5px;
+
+    padding:4px;
+
+
+    border-radius:20px;
+
+
+    background:
+
+    rgba(10,15,25,.55);
+
+
+    backdrop-filter:blur(16px);
+    -webkit-backdrop-filter:blur(16px);
+
+
+
+    border:
+
+    1px solid rgba(255,255,255,.12);
+
+
+
+    box-shadow:
+
+    0 12px 30px rgba(0,0,0,.35),
+
+    inset 0 1px 0 rgba(255,255,255,.12);
+
+}
+
+
+
+/* BUTTON */
+
+.control-btn{
+
+
+    width:41px;
+    height:41px;
+
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+
+    border-radius:14px;
+
+
+    font-size:20px;
+
+
+    color:white;
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+
+    border:none;
+
+
+
+    box-shadow:
+
+    inset 0 1px 8px rgba(255,255,255,.08);
+
+
+    cursor:pointer;
+
+
+    transition:.25s ease;
+
+}
+
+
+
+.control-btn:hover{
+
+
+    background:
+
+    rgba(255,215,0,.18);
+
+
+
+    transform:
+
+    translateY(-2px);
+
+
+
+    box-shadow:
+
+    0 0 18px rgba(255,215,0,.25),
+
+    inset 0 1px 8px rgba(255,255,255,.15);
+
+}
+
+
+
+
+/* ADMIN */
+
+.admin-btn:hover{
+
+    background:
+
+    rgba(168,85,247,.22);
+
+
+    box-shadow:
+
+    0 0 18px rgba(168,85,247,.3);
+
+}
+
+
+
+/* SOUND */
+
+.music-box{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+
+/* HIDDEN VOLUME */
+
+#volumeSlider{
+
+
+    width:0;
+
+    opacity:0;
+
+
+    height:4px;
+
+
+    accent-color:#facc15;
+
+
+    transition:.35s ease;
+
+
+}
+
+
+
+/* OPEN */
+
+.music-box:hover #volumeSlider{
+
+
+    width:85px;
+
+    opacity:1;
+
+    margin-left:6px;
+
+}/* =====================================
+   PREMIUM GLASS CONTROL BAR v3
+===================================== */
+
+.control-glass{
+
+    display:flex;
+    align-items:center;
+
+    gap:7px;
+
+    padding:7px; /* više zraka oko dugmadi */
+
+
+    border-radius:23px;
+
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(255,255,255,.14),
+        rgba(255,255,255,.04)
+    );
+
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+
+
+    border:
+
+    1px solid rgba(255,255,255,.16);
+
+
+
+    box-shadow:
+
+    0 18px 45px rgba(0,0,0,.38),
+
+    inset 0 1px 12px rgba(255,255,255,.12),
+
+    0 0 25px rgba(250,204,21,.08);
+
+
+}
+
+
+
+
+.control-btn{
+
+    width:42px;
+    height:40px;
+
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+
+    border-radius:15px;
+
+
+    font-size:21px;
+
+
+    color:white;
+
+
+    background:
+
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.16),
+        rgba(255,255,255,.05)
+    );
+
+
+
+    border:
+
+    1px solid rgba(255,255,255,.08);
+
+
+
+    box-shadow:
+
+    inset 0 1px 8px rgba(255,255,255,.12),
+
+    0 5px 15px rgba(0,0,0,.3);
+
+
+
+    transition:.3s ease;
+
+}
+
+
+
+
+.control-btn:hover{
+
+
+    transform:
+
+    translateY(-2px)
+    scale(1.05);
+
+
+
+    background:
+
+    rgba(250,204,21,.18);
+
+
+
+    box-shadow:
+
+    0 0 22px rgba(250,204,21,.35),
+
+    inset 0 1px 10px rgba(255,255,255,.2);
+
+}
+
+
+
+
+.admin-btn:hover{
+
+    background:
+
+    rgba(168,85,247,.2);
+
+
+    box-shadow:
+
+    0 0 22px rgba(168,85,247,.4);
+
+}
+
+
+
+/* MUSIC */
+
+.music-box{
+
+    display:flex;
+    align-items:center;
+
+}
+
+
+
+#volumeSlider{
+
+    width:0;
+
+    opacity:0;
+
+    height:4px;
+
+
+    transition:
+
+    width .35s ease,
+    opacity .35s ease;
+
+
+    accent-color:#facc15;
+
+}
+
+
+
+.music-box:hover #volumeSlider{
+
+    width:90px;
+
+    opacity:1;
+
+    margin-left:8px;
+
+}
+
+.top-controls{
+
+    position:absolute;
+
+    top:10px;
+
+    right:15px;
+
+    z-index:50;
+
+}
+
+@keyframes controlsIn{
+
+    from{
+        opacity:0;
+        transform:translateY(-8px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* MONEY TREE - samo 1% manja visina */
+#prizeLadder {
+    transform: scaleY(0.96);
+    transform-origin: top center;
+}
+
+#prizeLadder {
+    margin-bottom: -3%;
+}
+
+/* MONEY TREE OUTER BOX - compact height */
+.bg-gradient-to-b.from-gray-900.to-black.rounded-lg.p-1.border-2.border-yellow-600.shadow-2xl {
+
+    padding: 4px !important;
+
+    border-width: 2 px !important;
+
+    margin-bottom: -20px !important;
+
+}
+
+
+/* ==========================================
+   PREMIUM GAME OVER EFFECTS
+========================================== */
+
+
+#gameOverModal > div:last-child{
+animation: modalAppear .45s cubic-bezier(.16,1,.3,1);
+}
+
+
+@keyframes modalAppear{
+
+from{
+opacity:0;
+transform:scale(.92) translateY(30px);
+}
+
+to{
+opacity:1;
+transform:scale(1) translateY(0);
+}
+
+}
+
+
+
+/* GOLD PRIZE ANIMATION */
+
+#finalPrize{
+
+animation:
+goldGlow 2s ease-in-out infinite alternate;
+
+}
+
+
+@keyframes goldGlow{
+
+from{
+
+filter:
+drop-shadow(0 0 15px rgba(246,221,140,.4));
+
+}
+
+
+to{
+
+filter:
+drop-shadow(0 0 45px rgba(246,221,140,.9));
+
+}
+
+}
+
+
+
+
+
+/* BUTTON SHINE */
+
+#gameOverModal button,
+#gameOverModal a{
+
+isolation:isolate;
+
+}
+
+
+
+#gameOverModal button::after,
+#gameOverModal a::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+linear-gradient(
+120deg,
+transparent 30%,
+rgba(255,255,255,.35),
+transparent 70%
+);
+
+transform:
+translateX(-120%);
+
+transition:.8s;
+
+}
+
+
+
+#gameOverModal button:hover::after,
+#gameOverModal a:hover::after{
+
+transform:
+translateX(120%);
+
+}
+
+
+
+
+
+/* STAT CARD HOVER */
+
+
+#gameOverModal .rounded-\[30px\]{
+
+transition:
+transform .35s ease,
+box-shadow .35s ease;
+
+}
+
+
+#gameOverModal .rounded-\[30px\]:hover{
+
+transform:
+translateY(-6px);
+
+}
+
+
+
+
+/* BADGES PREMIUM */
+
+
+#badgesList > *{
+
+border-radius:20px !important;
+
+background:
+linear-gradient(
+135deg,
+rgba(217,185,91,.25),
+rgba(255,255,255,.05)
+)!important;
+
+border:
+1px solid rgba(246,221,140,.35)!important;
+
+
+box-shadow:
+0 0 25px rgba(217,185,91,.18);
+
+
+padding:14px 18px!important;
+
+
+transition:.3s;
+
+}
+
+
+
+#badgesList > *:hover{
+
+transform:
+translateY(-5px)
+scale(1.04);
+
+
+box-shadow:
+0 0 45px rgba(246,221,140,.45);
+
+}
+
+
+
+
+
+/* EXPLANATION CARDS GLASS */
+
+#explanationSection > div{
+
+backdrop-filter:
+blur(15px);
+
+}
+
+
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+#gameOverModal h2{
+
+font-size:2.8rem!important;
+
+}
+
+
+#finalPrize{
+
+font-size:3rem!important;
+
+}
+
+
+#gameOverModal{
+
+padding:15px!important;
+
+}
+
+
+}
+
+
+
+/* REMOVE RED GAME OVER GLOW */
+
+#gameOverModal.game-lost:not(.hidden) .bg-gradient-to-br {
+
+    border: none !important;
+
+    animation: none !important;
+
+    box-shadow: none !important;
+
+}
+/* =====================================
+   GAME OVER - OUTER RED GLOW ONLY
+===================================== */
+
+#gameOverModal.game-lost:not(.hidden) {
+
+    animation: loseOuterGlow 1.8s ease-in-out infinite alternate;
+
+}
+
+
+#gameOverModal.game-lost:not(.hidden) > div:first-child {
+
+    box-shadow:
+        0 0 20px rgba(239,68,68,.35),
+        0 0 45px rgba(239,68,68,.25),
+        0 0 80px rgba(239,68,68,.15) !important;
+
+    border:1px solid rgba(239,68,68,.55) !important;
+
+}
+
+
+
+/* ukloni crveno iz unutrašnjih dijelova */
+
+#gameOverModal.game-lost:not(.hidden) .rounded-\[30px\],
+#gameOverModal.game-lost:not(.hidden) button,
+#gameOverModal.game-lost:not(.hidden) .bg-gradient-to-br {
+
+    box-shadow:none !important;
+
+    border-color:rgba(255,255,255,.1) !important;
+
+}
+
+
+@keyframes loseOuterGlow {
+
+    from {
+
+        filter:drop-shadow(
+            0 0 10px rgba(239,68,68,.25)
+        );
+
+    }
+
+    to {
+
+        filter:drop-shadow(
+            0 0 35px rgba(239,68,68,.55)
+        );
+
+    }
+
+}
+
+
+.category-tab{
+padding:12px 20px;
+border-radius:12px;
+font-weight:700;
+background:rgba(255,255,255,.08);
+color:white;
+border:1px solid rgba(255,255,255,.1);
+}
+
+
+.category-tab.active{
+background:rgba(34,197,94,.25);
+color:#86efac;
+border-color:#4ade80;
+}
+
+.quiz-btn.active,
+.quiz-btn:hover {
+
+background:
+linear-gradient(
+135deg,
+rgba(34,197,94,.35),
+rgba(22,163,74,.55)
+) !important;
+
+color:#dcfce7 !important;
+
+border-color:
+rgba(74,222,128,.7) !important;
+
+box-shadow:
+0 0 35px rgba(34,197,94,.35) !important;
+
+transform:scale(1.05);
+
+}
+
+#finalPrize{
+    animation:none;
+    filter:none;
+}
+
+#gameOverModal *{
+    will-change:auto !important;
+    backdrop-filter:none !important;
+}
+
+#finalPrize{
+    font-size: clamp(2rem, 4vw, 2.8rem) !important;
+    font-weight: 800;
+    line-height: 1.1;
+}
+.category-tab{
+
+padding:12px 20px;
+border-radius:14px;
+font-weight:700;
+
+background:
+linear-gradient(
+145deg,
+rgba(255,255,255,.12),
+rgba(255,255,255,.04)
+);
+
+color:#fff;
+
+border:1px solid rgba(255,216,106,.18);
+
+box-shadow:
+inset 0 1px 8px rgba(255,255,255,.08),
+0 8px 25px rgba(0,0,0,.25);
+
+transition:.3s ease;
+
+}
+
+
+.category-tab:hover{
+
+transform:translateY(-2px);
+
+border-color:#F6DD8C;
+
+box-shadow:
+0 0 25px rgba(246,221,140,.25);
+
+}
+
+
+.category-tab.active{
+
+background:
+linear-gradient(
+135deg,
+rgba(217,185,91,.35),
+rgba(246,221,140,.15)
+);
+
+color:#F6DD8C;
+
+border-color:#F6DD8C;
+
+box-shadow:
+0 0 30px rgba(246,221,140,.3);
+
+}
+
+
+#gameOverModal * {
+    backface-visibility:hidden;
+    -webkit-font-smoothing:antialiased;
+}
+
+.intro h1{
+
+color:#D9B95B;
+
+text-shadow:
+0 0 15px rgba(217,185,91,.6),
+0 0 40px rgba(217,185,91,.3);
+
 }

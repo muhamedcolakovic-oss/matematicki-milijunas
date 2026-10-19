@@ -1642,3 +1642,1785 @@ transform:translateX(8px);
 }
 
 }
+
+.rush-stats{
+    margin-top:18px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+
+.rush-stats div{
+    min-width:100px;
+    padding:12px 18px;
+    border-radius:16px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
+    text-align:center;
+
+    font-weight:600;
+}
+
+
+.rush-stats b{
+    display:block;
+    margin-top:5px;
+    font-size:22px;
+    color:#fbbf24;
+}
+
+
+
+
+
+/* =========================================
+   PREMIUM MILLIONAIRE STYLE
+========================================= */
+
+
+*{
+box-sizing:border-box;
+font-family:Inter,Arial,sans-serif;
+}
+
+
+
+body{
+
+min-height:100vh;
+
+color:white;
+
+overflow-x:hidden;
+
+background:#050814;
+
+}
+
+
+
+/* BACKGROUND */
+
+
+.math-background{
+
+position:fixed;
+
+inset:0;
+
+z-index:-2;
+
+
+background:
+
+radial-gradient(
+circle at 20% 20%,
+rgba(217,185,91,.22),
+transparent 35%
+),
+
+
+radial-gradient(
+circle at 80% 80%,
+rgba(37,99,235,.25),
+transparent 35%
+),
+
+
+linear-gradient(
+135deg,
+#050814,
+#0b1228,
+#020617
+);
+
+}
+
+
+
+
+/* NAV */
+
+
+.game-nav{
+
+position:fixed;
+
+top:25px;
+
+left:25px;
+
+z-index:20;
+
+}
+
+
+
+.game-nav button{
+
+
+padding:14px 26px;
+
+border-radius:18px;
+
+
+background:
+
+rgba(255,255,255,.08);
+
+
+border:
+
+1px solid rgba(246,221,140,.25);
+
+
+color:white;
+
+
+font-weight:800;
+
+
+backdrop-filter:blur(20px);
+
+
+cursor:pointer;
+
+
+transition:.35s;
+
+}
+
+
+
+.game-nav button:hover{
+
+
+transform:translateY(-5px);
+
+
+background:
+
+rgba(217,185,91,.18);
+
+
+box-shadow:
+
+0 0 30px rgba(246,221,140,.25);
+
+}
+
+
+
+
+/* CONTAINER */
+
+
+.million-container{
+
+
+width:min(900px,92%);
+
+
+margin:
+
+100px auto 50px;
+
+
+}
+
+
+
+/* GLASS CARDS */
+
+
+.million-card{
+
+
+background:
+
+linear-gradient(
+145deg,
+rgba(15,23,42,.95),
+rgba(30,41,59,.80)
+);
+
+
+
+border:
+
+1px solid rgba(246,221,140,.25);
+
+
+
+border-radius:35px;
+
+
+
+padding:40px;
+
+
+
+backdrop-filter:blur(25px);
+
+
+
+box-shadow:
+
+0 30px 90px rgba(0,0,0,.6);
+
+
+position:relative;
+
+
+overflow:hidden;
+
+
+}
+
+
+
+.million-card::before{
+
+
+content:"";
+
+
+position:absolute;
+
+
+top:0;
+
+left:15%;
+
+right:15%;
+
+
+height:3px;
+
+
+
+background:
+
+linear-gradient(
+90deg,
+transparent,
+#F6DD8C,
+transparent
+);
+
+
+box-shadow:
+
+0 0 30px #F6DD8C;
+
+
+}
+
+
+
+
+/* TITLE */
+
+
+.gradient-title{
+
+
+background:
+
+linear-gradient(
+135deg,
+#fff,
+#F6DD8C,
+#D9B95B
+);
+
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+
+font-size:65px;
+
+font-weight:950;
+
+
+}
+
+
+
+.gradient-title.second{
+
+color:#F6DD8C;
+
+}
+
+
+
+/* INPUTS */
+
+
+input{
+
+
+width:100%;
+
+
+padding:16px 20px;
+
+
+border-radius:18px;
+
+
+margin:10px 0 25px;
+
+
+background:
+
+rgba(255,255,255,.08);
+
+
+border:
+
+1px solid rgba(246,221,140,.25);
+
+
+color:white;
+
+
+font-size:18px;
+
+
+outline:none;
+
+
+}
+
+
+
+input:focus{
+
+
+border-color:#F6DD8C;
+
+
+box-shadow:
+
+0 0 25px rgba(246,221,140,.25);
+
+}
+
+
+
+
+/* LEVEL BUTTONS */
+
+
+.level-tile{
+
+
+width:100%;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+gap:20px;
+
+
+padding:22px;
+
+
+margin:15px 0;
+
+
+border-radius:22px;
+
+
+background:
+
+rgba(255,255,255,.06);
+
+
+border:
+
+1px solid rgba(255,255,255,.15);
+
+
+color:white;
+
+
+cursor:pointer;
+
+
+transition:.35s;
+
+
+}
+
+
+
+.level-tile:hover{
+
+
+transform:translateY(-5px);
+
+
+border-color:#F6DD8C;
+
+
+box-shadow:
+
+0 20px 50px rgba(246,221,140,.25);
+
+
+}
+
+
+
+/* MAIN BUTTON */
+
+
+.main-btn{
+
+
+width:100%;
+
+
+padding:18px;
+
+
+border-radius:20px;
+
+
+border:none;
+
+
+font-size:18px;
+
+
+font-weight:900;
+
+
+cursor:pointer;
+
+
+
+background:
+
+linear-gradient(
+135deg,
+#D9B95B,
+#F6DD8C
+);
+
+
+
+color:#111827;
+
+
+
+box-shadow:
+
+0 15px 40px rgba(217,185,91,.3);
+
+
+transition:.35s;
+
+
+}
+
+
+
+.main-btn:hover{
+
+
+transform:
+
+translateY(-4px)
+scale(1.03);
+
+
+box-shadow:
+
+0 25px 70px rgba(246,221,140,.5);
+
+
+}
+
+
+
+/* HISTORY */
+
+
+.history-box,
+.attempt-box{
+
+
+margin-top:25px;
+
+
+padding:25px;
+
+
+border-radius:25px;
+
+
+background:
+
+rgba(255,255,255,.05);
+
+
+border:
+
+1px solid rgba(255,255,255,.12);
+
+}
+
+
+
+/* VICTORY */
+
+
+.victory-card{
+
+
+background:
+
+linear-gradient(
+145deg,
+#050814,
+#111827
+);
+
+
+border:
+
+1px solid #F6DD8C;
+
+
+box-shadow:
+
+0 0 100px rgba(246,221,140,.35);
+
+
+border-radius:35px;
+
+
+padding:45px;
+
+
+}
+
+
+
+.victory-card h1{
+
+
+background:
+
+linear-gradient(
+90deg,
+#F6DD8C,
+white
+);
+
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+font-size:50px;
+
+}
+
+
+/* =========================================
+   TEXT SELECTION
+========================================= */
+
+::selection{
+
+background:#F6DD8C;
+
+color:#111827;
+
+}
+
+
+::-moz-selection{
+
+background:#F6DD8C;
+
+color:#111827;
+
+}
+
+.million-card p,
+.million-card label,
+.million-card small{
+
+color:#d1d5db;
+
+}
+
+
+/* =========================================
+   FIX TEXT ON LIGHT ELEMENTS
+========================================= */
+
+
+/* odabrana težina */
+.level-tile,
+.level-tile b,
+.level-tile small{
+
+    color:#D9B95B
+;
+
+}
+
+
+
+/* aktivna težina */
+.level-tile.active,
+.level-tile.active b,
+.level-tile.active small{
+
+    color:#0f172a;
+
+}
+
+
+
+/* leaderboard bijela polja */
+
+#lb-list li{
+
+    color:#0f172a;
+
+}
+
+
+#lb-list li *{
+
+    color:#0f172a;
+
+}
+
+
+
+/* leaderboard hover */
+
+#lb-list li:hover{
+
+    color:#0f172a;
+
+}
+
+
+
+/* tabovi */
+
+.tab:not(.active){
+
+    color:#0f172a;
+
+}
+
+
+
+/* input placeholder */
+
+input::placeholder{
+
+    color:#64748b;
+
+}
+
+
+/* selekcija teksta */
+
+::selection{
+
+background:#F6DD8C;
+
+color:#0f172a;
+
+}
+
+::-moz-selection{
+
+background:#F6DD8C;
+
+color:#0f172a;
+
+}
+
+/* =========================================
+   VICTORY CARD TEXT FIX
+========================================= */
+
+.victory-card,
+.victory-card h1,
+.victory-card h2,
+.victory-card h3,
+.victory-card span,
+.victory-card div{
+
+    color:#0f172a;
+
+}
+.victory-card h1,
+.victory-card p{
+
+    color:black;
+
+}
+
+
+.victory-card .victory-item{
+
+    color:#0f172a;
+
+    background:#eff6ff;
+
+}
+
+
+.victory-card .victory-item span{
+
+    color:#0f172a;
+
+}
+
+#lb-list li{
+    color:#0f172a;
+}
+
+
+#lb-list li span,
+#lb-list li strong{
+    color:#0f172a;
+}
+
+/* Sudoku naslov */
+.game-top h2{
+    color:#0f172a;
+}
+
+
+/* Sudoku brojevi */
+.sudoku-board .cell{
+    color:#0f172a;
+}
+
+/* TAČAN ODGOVOR - BLAGA ZELENA */
+.sudoku-board .cell.correct{
+    background:#86efac !important;
+    color:#14532d !important;
+}
+
+
+/* POGREŠAN ODGOVOR - JAČA CRVENA */
+.sudoku-board .cell.error{
+    background:#f53939 !important;
+    color:#761010 !important;
+}
+
+/* =========================================
+   SUDOKU PREMIUM VICTORY
+========================================= */
+
+
+.victory-overlay{
+
+position:fixed;
+
+inset:0;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+background:
+
+rgba(2,6,23,.75);
+
+
+backdrop-filter:blur(18px);
+
+
+z-index:999;
+
+
+}
+
+
+
+.victory-card{
+
+
+width:min(480px,90%);
+
+
+padding:45px;
+
+
+text-align:center;
+
+
+border-radius:38px;
+
+
+background:
+
+
+linear-gradient(
+145deg,
+#081735,
+#020617
+);
+
+
+
+border:
+
+1px solid rgba(246,221,140,.8);
+
+
+
+box-shadow:
+
+
+0 0 90px rgba(246,221,140,.35),
+0 30px 80px rgba(0,0,0,.6);
+
+
+
+animation:
+
+victoryAppear .45s ease;
+
+
+
+}
+
+
+
+@keyframes victoryAppear{
+
+
+from{
+
+opacity:0;
+
+transform:scale(.8) translateY(30px);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:scale(1) translateY(0);
+
+}
+
+
+}
+
+
+
+
+.victory-icon{
+
+
+font-size:85px;
+
+
+margin-bottom:15px;
+
+
+filter:
+
+drop-shadow(
+0 0 25px rgba(246,221,140,.7)
+);
+
+
+
+animation:
+
+trophyGlow 2s infinite alternate;
+
+
+}
+
+
+
+@keyframes trophyGlow{
+
+
+from{
+
+transform:scale(1);
+
+}
+
+
+to{
+
+transform:scale(1.1);
+
+}
+
+
+}
+
+
+
+
+
+.victory-card h1{
+
+
+font-size:50px;
+
+
+font-weight:950;
+
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+
+margin-bottom:15px;
+
+
+}
+
+
+
+
+.victory-card p{
+
+
+color:#e5e7eb;
+
+
+font-size:18px;
+
+
+line-height:1.6;
+
+
+}
+
+
+
+
+.victory-stats{
+
+
+margin:25px 0;
+
+
+padding:22px;
+
+
+border-radius:22px;
+
+
+background:
+
+rgba(255,255,255,.07);
+
+
+border:
+
+1px solid rgba(246,221,140,.25);
+
+
+
+color:white;
+
+
+font-size:18px;
+
+
+box-shadow:
+
+inset 0 0 30px rgba(37,99,235,.15);
+
+
+
+}
+
+
+
+
+
+.victory-buttons{
+
+
+margin-top:25px;
+
+
+display:flex;
+
+justify-content:center;
+
+
+}
+
+
+
+
+
+.victory-card .main-btn{
+
+
+min-width:180px;
+
+
+}
+
+
+
+
+@media(max-width:600px){
+
+
+.victory-card{
+
+padding:35px 25px;
+
+}
+
+
+.victory-card h1{
+
+font-size:38px;
+
+}
+
+
+.victory-icon{
+
+font-size:65px;
+
+}
+
+
+}
+
+/* =========================================
+   VICTORY STATS - PREMIUM MINI CARDS
+========================================= */
+
+.victory-stats{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:12px;
+
+
+margin:25px 0;
+
+
+background:transparent;
+
+border:none;
+
+padding:0;
+
+
+}
+
+
+
+.victory-item{
+
+
+padding:16px 10px;
+
+
+border-radius:18px;
+
+
+background:
+
+linear-gradient(
+145deg,
+rgba(255,255,255,.10),
+rgba(255,255,255,.04)
+);
+
+
+
+border:
+
+1px solid rgba(246,221,140,.25);
+
+
+
+backdrop-filter:blur(12px);
+
+
+box-shadow:
+
+0 15px 35px rgba(0,0,0,.25);
+
+
+
+transition:.3s;
+
+
+}
+
+
+
+.victory-item:hover{
+
+
+transform:translateY(-5px);
+
+
+border-color:#F6DD8C;
+
+
+box-shadow:
+
+0 0 30px rgba(246,221,140,.25);
+
+
+}
+
+
+
+
+.victory-item span{
+
+
+display:block;
+
+
+font-size:14px;
+
+
+color:#cbd5e1;
+
+
+margin-bottom:8px;
+
+
+}
+
+
+
+.victory-item strong{
+
+
+display:block;
+
+
+font-size:28px;
+
+
+font-weight:950;
+
+
+color:#0f172a;
+
+
+text-shadow:
+
+0 0 15px rgba(246,221,140,.4);
+
+
+}
+
+
+
+
+@media(max-width:600px){
+
+
+.victory-stats{
+
+grid-template-columns:1fr;
+
+}
+
+
+}
+
+/* =========================================
+   SUDOKU + TABLET + MOBILE RESPONSIVE FIX
+========================================= */
+
+
+@media (max-width:900px){
+
+
+    .million-container{
+
+        width:94%;
+        margin:90px auto 30px;
+
+    }
+
+
+    .million-card{
+
+        padding:25px;
+
+        border-radius:28px;
+
+    }
+
+
+
+    .hero-header h1{
+
+        font-size:42px;
+
+    }
+
+
+
+    .game-top{
+
+        flex-direction:column;
+
+        gap:12px;
+
+        text-align:center;
+
+    }
+
+
+
+    .game-top h2{
+
+        font-size:26px;
+
+    }
+
+
+
+    .sudoku-board{
+
+        width:min(92vw,420px);
+
+        border-width:3px;
+
+    }
+
+
+
+    .cell{
+
+        font-size:clamp(18px,5vw,28px);
+
+    }
+
+
+
+    .numpad{
+
+        gap:10px;
+
+        margin-top:20px;
+
+    }
+
+
+
+    .numpad button{
+
+        width:55px;
+
+        height:55px;
+
+        border-radius:16px;
+
+        font-size:20px;
+
+    }
+
+
+}
+
+
+
+
+
+
+@media (max-width:600px){
+
+
+
+    .game-nav{
+
+        top:12px;
+
+        left:12px;
+
+    }
+
+
+
+    .game-nav button{
+
+        padding:10px 16px;
+
+        font-size:14px;
+
+    }
+
+
+
+    .million-container{
+
+        margin-top:75px;
+
+    }
+
+
+
+    .million-card{
+
+        padding:18px;
+
+        border-radius:24px;
+
+    }
+
+
+
+    .gradient-title{
+
+        font-size:42px;
+
+    }
+
+
+
+    .levels{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .level-tile{
+
+        padding:18px;
+
+    }
+
+
+
+
+    /* Sudoku tabla */
+
+    .sudoku-board{
+
+        width:94vw;
+
+        max-width:360px;
+
+        border-radius:14px;
+
+    }
+
+
+
+    .cell{
+
+        font-size:22px;
+
+        border-width:1px;
+
+    }
+
+
+
+    .cell.block-right{
+
+        border-right-width:3px;
+
+    }
+
+
+
+    .cell.block-bottom{
+
+        border-bottom-width:3px;
+
+    }
+
+
+
+
+
+    /* greške */
+
+    .game-bottom{
+
+        font-size:18px;
+
+        margin:15px;
+
+    }
+
+
+
+
+
+    /* numpad */
+
+    .numpad button{
+
+        width:52px;
+
+        height:52px;
+
+    }
+
+
+
+
+
+    /* leaderboard */
+
+    .leader-tabs{
+
+        flex-direction:column;
+
+    }
+
+
+
+    #lb-list li{
+
+        font-size:14px;
+
+        gap:8px;
+
+        padding:14px;
+
+    }
+
+
+
+
+
+    /* pobjeda */
+
+    .victory-card{
+
+        width:92%;
+
+        padding:28px 20px;
+
+        border-radius:28px;
+
+    }
+
+
+
+    .victory-icon{
+
+        font-size:60px;
+
+    }
+
+
+
+    .victory-card h1{
+
+        font-size:38px;
+
+    }
+
+
+
+    .victory-card p{
+
+        font-size:16px;
+
+    }
+
+
+
+    .victory-stats{
+
+        grid-template-columns:1fr;
+
+        gap:10px;
+
+    }
+
+
+
+    .victory-item{
+
+        padding:14px;
+
+    }
+
+
+}
+
+
+
+
+
+@media (max-width:380px){
+
+
+    .sudoku-board{
+
+        width:300px;
+
+    }
+
+
+    .cell{
+
+        font-size:18px;
+
+    }
+
+
+
+    .numpad button{
+
+        width:45px;
+
+        height:45px;
+
+        font-size:18px;
+
+    }
+
+
+}
+
+
+.leaderboard{
+
+    margin-top:30px;
+
+}
+
+@media(max-width:600px){
+
+    .levels{
+        gap:10px;
+    }
+
+
+    .level-tile{
+
+        margin:5px 0;
+        padding:16px;
+
+    }
+
+
+    .level-tile span{
+
+        font-size:28px;
+
+    }
+
+
+    .level-tile b{
+
+        font-size:16px;
+
+    }
+
+
+    .level-tile small{
+
+        font-size:13px;
+
+    }
+
+}
+
+/* =========================================
+   SUDOKU TITLE - INPUT SPACING
+========================================= */
+
+.hero-header{
+
+    margin-bottom:20px;
+
+}
+
+
+.hero-header h1{
+
+    margin-bottom:0;
+
+}
+
+
+.hero-header + label{
+
+    margin-top:10px;
+
+}
+
+/* =========================================
+   SUDOKU TITLE + PLAYER SMALL GAP
+========================================= */
+
+.hero-header{
+
+    margin-bottom:12px;
+
+}
+
+
+.hero-header h1{
+
+    margin-bottom:5px;
+
+    line-height:1.1;
+
+}
+
+
+.hero-header + label{
+
+    margin-top:10px;
+
+}
+
+
+
+@media(max-width:900px){
+
+    .hero-header{
+
+        margin-bottom:10px;
+
+    }
+
+
+    .hero-header + label{
+
+        margin-top:8px;
+
+    }
+
+}
+
+
+
+@media(max-width:600px){
+
+    .hero-header{
+
+        margin-bottom:8px;
+
+    }
+
+
+    .hero-header + label{
+
+        margin-top:8px;
+
+    }
+
+}
+
+.game-top h2 {
+    color: #f6dd8c;
+}
+
+.million-card p, .million-card label, .million-card small {
+    color: #d1d5db;
+}
+
+.question-box {
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(15,23,42,.98),
+        rgba(30,41,59,.95)
+    );
+
+    border-radius:30px;
+
+    padding:40px;
+
+    text-align:center;
+
+    margin:25px 0;
+
+
+    border:1px solid rgba(246,221,140,.35);
+
+
+    box-shadow:
+
+    0 25px 70px rgba(0,0,0,.5),
+
+    inset 0 1px 0 rgba(255,255,255,.12);
+
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+#answer-btn {
+    
+    background: #2563eb;
+box-shadow:none;	
+    
+}
+
+#answer-btn:hover{
+    box-shadow:none !important;
+}
+
+input:focus {
+
+    box-shadow:none;
+}
+
+#setup-feedback
+ {
+    color: #dc2626;
+}

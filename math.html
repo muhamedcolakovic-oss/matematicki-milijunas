@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="bs">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Math Hero</title>
+
+<link rel="stylesheet" href="math.css">
+<link rel="icon" type="image/png" href="math.png">
+
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;900&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<div class="math-background"></div>
+
+<div id="screen-flash"></div>
+
+<div id="toast"></div>
+
+
+<nav class="game-nav">
+
+<button onclick="goBack()">
+← Nazad
+</button>
+
+</nav>
+<!-- ================= HOME ================= -->
+
+
+<section id="home-screen" class="screen active">
+
+
+
+<header class="main-title">
+
+<h1>
+Math Hero
+</h1>
+
+
+</header>
+
+
+
+
+<div class="home-layout">
+
+
+
+<!-- ================= LIJEVA STRANA ================= -->
+
+
+<div class="home-left">
+
+
+
+<div class="player-card home-card">
+
+
+<div id="home-avatar" class="avatar">
+
+🟢
+
+</div>
+
+
+
+<h2 id="home-evolution">
+
+Number Kid
+
+</h2>
+
+
+
+<p id="home-level">
+
+Level 1
+
+</p>
+
+
+
+
+
+<div class="xp-box">
+
+
+<div class="xp-label">
+
+<span>
+XP
+</span>
+
+
+<span id="xp-text">
+
+0 / 100
+
+</span>
+
+
+</div>
+
+
+
+<div class="xp-bar">
+
+<div id="xp-fill"></div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="stats">
+
+
+<div>
+
+🪙
+
+<span id="coins">
+0
+</span>
+
+
+</div>
+
+
+
+<div>
+
+🔥
+
+<span id="streak">
+0
+</span>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<button class="premium-btn"
+onclick="showModes()">
+
+
+POČNI IGRU 🚀
+
+
+</button>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= DESNA STRANA DAILY ================= -->
+
+<div class="home-right">
+
+
+<div id="daily-card"
+class="daily-card player-card"
+onclick="startDaily()">
+
+<h3>
+Daily Challenge 🎯
+</h3>
+
+
+<p id="daily-text">
+Riješi 6 dnevnih zadataka i osvoji bonus
+</p>
+
+
+<div id="daily-days"></div>
+
+<div id="daily-countdown"></div>
+
+
+</div>
+
+
+
+<button class="secondary-btn profile-home-btn"
+onclick="showProfile()">
+
+Profil 👤
+
+</button>
+
+<button class="secondary-btn"
+onclick="openShop()">
+
+🛒 Shop
+
+</button>
+
+
+</div>
+
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ================= MODES ================= -->
+
+
+<section id="mode-screen" class="screen">
+
+
+
+<h1 class="section-title">
+
+Izaberi mod
+
+</h1>
+
+
+
+
+<div class="mode-container">
+
+
+
+
+
+<div class="mode-card"
+onclick="startGame('speed')">
+
+
+<div class="mode-icon">
+
+⚡
+
+</div>
+
+
+<h2>
+
+Speed
+
+</h2>
+
+
+<p>
+
+60 sekundi maksimalno zadataka
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="mode-card"
+onclick="startGame('logic')">
+
+
+
+<div class="mode-icon">
+
+🧠
+
+</div>
+
+
+
+<h2>
+
+Logic
+
+</h2>
+
+
+
+<p>
+
+Nizovi i obrasci
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="mode-card"
+onclick="startGame('challenge')">
+
+
+
+<div class="mode-icon">
+
+🔥
+
+</div>
+
+
+
+<h2>
+
+Challenge
+
+</h2>
+
+
+
+<p>
+
+Teški zadaci i veliki XP
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<button class="back-btn"
+onclick="goHome()">
+
+
+← Nazad
+
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- ================= GAME ================= -->
+
+
+
+<section id="game-screen" class="screen">
+
+
+
+<div class="game-top">
+
+
+<span id="game-mode">
+
+⚡ Speed
+
+</span>
+
+
+
+<span id="timer">
+
+60s
+
+</span>
+
+
+
+<span>
+
+🔥
+
+<span id="combo">
+
+0
+
+</span>
+
+
+</span>
+
+
+
+</div>
+
+
+
+
+
+<div class="question-card">
+
+
+
+<h1 id="question">
+
+25 + 17 = ?
+
+</h1>
+
+
+
+
+
+<form id="answer-form">
+
+
+<input
+
+id="answer"
+
+type="number"
+
+autocomplete="off"
+
+placeholder="Odgovor">
+
+
+
+<button>
+
+✓
+
+</button>
+
+
+</form>
+
+
+
+
+<p id="feedback"></p>
+
+
+
+</div>
+
+
+
+
+
+<div class="mini-xp">
+
+
+<div id="game-xp-fill"></div>
+
+
+</div>
+
+
+
+
+
+<button class="back-btn"
+onclick="endGame()">
+
+
+Završi igru
+
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- ================= RESULTS ================= -->
+
+
+<section id="result-screen" class="screen">
+
+
+<div class="result-card">
+
+
+<h1>
+Rezultat 🎉
+</h1>
+
+
+
+
+<div class="result-row">
+
+<span>
+Riješeno
+</span>
+
+<b id="result-solved">
+0
+</b>
+
+</div>
+
+
+
+
+<div class="result-row">
+
+<span>
+Tačno
+</span>
+
+<b id="result-correct">
+0
+</b>
+
+</div>
+
+
+
+
+<div class="result-row">
+
+<span>
+XP
+</span>
+
+<b id="result-xp">
++0
+</b>
+
+</div>
+
+
+
+
+<div class="result-row">
+
+<span>
+Novčići
+</span>
+
+<b id="result-coins">
++0
+</b>
+
+</div>
+
+
+
+
+<div class="result-row">
+
+<span>
+Najbolji combo
+</span>
+
+<b id="result-combo">
+0
+</b>
+
+</div>
+
+
+
+
+
+<button class="premium-btn result-btn"
+onclick="goHome()">
+
+Nastavi 🚀
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ================= PROFILE ================= -->
+
+
+<section id="profile-screen" class="screen">
+
+
+
+<div class="player-card profile">
+
+
+
+<div id="profile-avatar"
+class="avatar">
+
+🟢
+
+</div>
+
+
+
+
+<h1 id="profile-name">
+
+Number Kid
+
+</h1>
+
+
+
+
+<p id="profile-level">
+
+Level 1
+
+</p>
+
+
+
+
+
+
+<div class="profile-stats">
+
+
+
+<div>
+
+<span>
+Ukupno zadataka
+</span>
+
+
+<b id="total">
+0
+</b>
+
+
+</div>
+
+
+
+
+
+<div>
+
+<span>
+Tačnost
+</span>
+
+
+<b id="accuracy">
+0%
+</b>
+
+
+</div>
+
+
+
+
+
+<div>
+
+<span>
+Najbolji combo
+</span>
+
+
+<b id="best">
+0
+</b>
+
+
+</div>
+
+
+
+
+<div>
+
+<span>
+Novčići
+</span>
+
+
+<b id="profile-coins">
+0
+</b>
+
+
+</div>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<button class="back-btn"
+onclick="goHome()">
+
+← Nazad
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ================= SHOP ================= -->
+
+
+<section id="shop-screen" class="screen">
+
+
+<h1 class="section-title">
+
+🛒 Premium Shop
+
+</h1>
+
+
+
+<div class="shop-container">
+
+
+
+<div class="shop-card">
+
+<h2>
+🔵 Blue Genius
+</h2>
+
+<p>
+Premium matematički skin
+</p>
+
+<button onclick="buyItem('blue')">
+
+300 🪙
+
+</button>
+
+</div>
+
+
+
+
+<div class="shop-card">
+
+<h2>
+🟣 Math Master
+</h2>
+
+<p>
+Majstor računanja
+</p>
+
+<button onclick="buyItem('purple')">
+
+700 🪙
+
+</button>
+
+</div>
+
+
+
+
+
+<div class="shop-card">
+
+<h2>
+🟡 Golden Legend
+</h2>
+
+<p>
+Zlatni premium skin
+</p>
+
+<button onclick="buyItem('gold')">
+
+1500 🪙
+
+</button>
+
+</div>
+
+
+
+
+
+<div class="shop-card">
+
+<h2>
+💎 Diamond King
+</h2>
+
+<p>
+Najrjeđi skin
+</p>
+
+<button onclick="buyItem('diamond')">
+
+3000 🪙
+
+</button>
+
+</div>
+
+
+
+
+
+
+<div class="shop-card">
+
+<h2>
+⚡ XP Boost
+</h2>
+
+<p>
+Dupli XP u igri
+</p>
+
+<button onclick="buyItem('boost')">
+
+500 🪙
+
+</button>
+
+</div>
+
+
+
+
+
+<div class="shop-card">
+
+<h2>
+❤️ Extra Life
+</h2>
+
+<p>
+Spašava jedan pogrešan odgovor
+</p>
+
+<button onclick="buyItem('life')">
+
+200 🪙
+
+</button>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<button class="back-btn"
+onclick="goHome()">
+
+← Nazad
+
+</button>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- ================= LEVEL UP ================= -->
+
+
+<div id="evolution-overlay">
+
+
+
+<div class="particles"></div>
+
+
+
+<div class="evolution-box">
+
+
+
+<h1>
+
+LEVEL UP 🚀
+
+</h1>
+
+
+
+
+<div id="evolution-avatar">
+
+🟢
+
+</div>
+
+
+
+
+<h2 id="evolution-name">
+
+Number Kid
+
+</h2>
+
+
+
+
+<p>
+
+Novi nivo dostignut!
+
+</p>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<script src="math.js"></script>
+
+
+</body>
+
+</html>

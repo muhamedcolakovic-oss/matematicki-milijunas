@@ -297,7 +297,7 @@ if(playerName===""){
 
 
         setupMessage(
-        "Izaberi težinu."
+"Izaberi težinu igre! ⚠️"
         );
 
 
@@ -1375,10 +1375,8 @@ function clearBoard(){
 
 
 
-
-
 /* ==================================
-   TASTATURA
+   TASTATURA + STRELICE
 ================================== */
 
 
@@ -1387,40 +1385,77 @@ document.addEventListener(
 (e)=>{
 
 
-
+    // unos brojeva
     if(
     e.key>="1"
     &&
     e.key<=SIZE
     ){
 
-
-
         placeNumber(
         Number(e.key)
         );
 
+        return;
 
     }
 
 
 
-
-
-
+    // brisanje
     if(
     e.key==="Backspace"
     ||
     e.key==="Delete"
     ){
 
-
-
         clearBoard();
 
+        return;
 
     }
 
+
+
+    // kretanje strelicama
+
+    if(!selectedCell) return;
+
+
+    let r = selectedCell.row;
+    let c = selectedCell.col;
+
+
+
+    if(e.key==="ArrowUp") r--;
+
+    if(e.key==="ArrowDown") r++;
+
+    if(e.key==="ArrowLeft") c--;
+
+    if(e.key==="ArrowRight") c++;
+
+
+
+    if(
+        r>=0 &&
+        r<SIZE &&
+        c>=0 &&
+        c<SIZE
+    ){
+
+        selectedCell={
+
+            row:r,
+
+            col:c
+
+        };
+
+
+        highlight();
+
+    }
 
 
 });
@@ -1970,7 +2005,7 @@ function showVictory(){
     document
     .getElementById("victory-title")
     .textContent =
-    "BRAVO! 🏆";
+    "BRAVO!";
 
 
     document

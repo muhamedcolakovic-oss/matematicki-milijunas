@@ -2,18 +2,126 @@ window.questionBank = {
   bs: {
     history: {
       easy: [
-{ question: "Šta je 'Apsolutna vrijednost' broja -15?", answers: { A: "0", B: "-15", C: "15", D: "1" }, correct: "C" },
-{ question: "Šta je 'Apsolutna vrijednost' broja 27?", answers: { A: "27", B: "-27", C: "0", D: "1" }, correct: "A" },
-{ question: "Koji je simbol za skup cijelih brojeva?", answers: { A: "N", B: "Q", C: "Z", D: "R" }, correct: "C" },
-{ question: "Kako se zove linija koja spaja dva nesusjedna vrha mnogougla?", answers: { A: "Dijagonala", B: "Stranica", C: "Tetiva", D: "Visina" }, correct: "A" },
-{ question: "Kako se naziva broj koji se može podijeliti samo sa 1 i sa samim sobom?", answers: { A: "Složen broj", B: "Prost broj", C: "Parni broj", D: "Savršen broj" }, correct: "B" },
-{ question: "Koliko iznosi zbir svih unutrašnjih uglova u bilo kojem trouglu na sferi (zakrivljenoj površini)?", answers: { A: "Tačno 180°", B: "Manje od 180°", C: "Više od 180°", D: "Uvijek 360°" }, correct: "C" },
-{ question: "Kako se zove paradoks koji kaže da je nemoguće preći put, jer prvo moraš preći polovinu, pa polovinu preostalog?", answers: { A: "Zenonov paradoks", B: "Russellov paradoks", C: "Hilbertov hotel", D: "Paradoks lažljivca" }, correct: "A" },
-{ question: "Koji oblik imaju ćelije u pčelinjem saću jer je to najefikasnije za popunjavanje prostora?", answers: { A: "Dodekagon", B: "Oktagon", C: "Heksagon", D: "Pentagon" }, correct: "C" },
-{ question: "Koliko iznosi vjerovatnoća da će se nešto desiti ako je to 'siguran događaj'?", answers: { A: "0", B: "0.5", C: "1", D: "100" }, correct: "C" },
-{ question: "Šta znači prefiks 'Tera' u mjernim jedinicama (npr. terabajt)?", answers: { A: "Milion", B: "Milijarda", C: "Trilion", D: "Kvadrilion" }, correct: "C" },
-{ question: "Koji broj dobijemo kada kvadriramo broj 111?", answers: { A: "11111", B: "12321", C: "12121", D: "12221" }, correct: "B" },
-{ question: "Kolika je veličina svakog od dva jednaka manja ugla u jednakokrakom pravouglom trouglu?", answers: { A: "30°", B: "45°", C: "60°", D: "90°" }, correct: "B" },
+        {
+          question: "Šta je 'Apsolutna vrijednost' broja -15?",
+          answers: {
+            A: "0",
+            B: "-15",
+            C: "15",
+            D: "1"
+          },
+          correct: "C"
+        },
+        {
+          question: "Šta je 'Apsolutna vrijednost' broja 27?",
+          answers: {
+            A: "27",
+            B: "-27",
+            C: "0",
+            D: "1"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koji je simbol za skup cijelih brojeva?",
+          answers: {
+            A: "N",
+            B: "Q",
+            C: "Z",
+            D: "R"
+          },
+          correct: "C"
+        },
+        {
+          question: "Kako se zove linija koja spaja dva nesusjedna vrha mnogougla?",
+          answers: {
+            A: "Dijagonala",
+            B: "Stranica",
+            C: "Tetiva",
+            D: "Visina"
+          },
+          correct: "A"
+        },
+        {
+          question: "Kako se naziva broj koji se može podijeliti samo sa 1 i sa samim sobom?",
+          answers: {
+            A: "Složen broj",
+            B: "Prost broj",
+            C: "Parni broj",
+            D: "Savršen broj"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koliko iznosi zbir svih unutrašnjih uglova u bilo kojem trouglu na sferi (zakrivljenoj površini)?",
+          answers: {
+            A: "Tačno 180°",
+            B: "Manje od 180°",
+            C: "Više od 180°",
+            D: "Uvijek 360°"
+          },
+          correct: "C"
+        },
+        {
+          question: "Kako se zove paradoks koji kaže da je nemoguće preći put, jer prvo moraš preći polovinu, pa polovinu preostalog?",
+          answers: {
+            A: "Zenonov paradoks",
+            B: "Russellov paradoks",
+            C: "Hilbertov hotel",
+            D: "Paradoks lažljivca"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koji oblik imaju ćelije u pčelinjem saću jer je to najefikasnije za popunjavanje prostora?",
+          answers: {
+            A: "Dodekagon",
+            B: "Oktagon",
+            C: "Heksagon",
+            D: "Pentagon"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koliko iznosi vjerovatnoća da će se nešto desiti ako je to 'siguran događaj'?",
+          answers: {
+            A: "0",
+            B: "0.5",
+            C: "1",
+            D: "100"
+          },
+          correct: "C"
+        },
+        {
+          question: "Šta znači prefiks 'Tera' u mjernim jedinicama (npr. terabajt)?",
+          answers: {
+            A: "Milion",
+            B: "Milijarda",
+            C: "Trilion",
+            D: "Kvadrilion"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koji broj dobijemo kada kvadriramo broj 111?",
+          answers: {
+            A: "11111",
+            B: "12321",
+            C: "12121",
+            D: "12221"
+          },
+          correct: "B"
+        },
+        {
+          question: "Kolika je veličina svakog od dva jednaka manja ugla u jednakokrakom pravouglom trouglu?",
+          answers: {
+            A: "30°",
+            B: "45°",
+            C: "60°",
+            D: "90°"
+          },
+          correct: "B"
+        },
         {
           question: "Kako se naziva trougao čije su stranice 3, 4 i 5?",
           answers: {
@@ -469,7 +577,7 @@ window.questionBank = {
           answers: {
             A: "Proizvod",
             B: "Razliku",
-            C: "Sumu (Zbir)",
+            C: "Sumu",
             D: "Količnik"
           },
           correct: "C"
@@ -871,7 +979,7 @@ window.questionBank = {
         {
           question: "Koji je matematičar razvio 'Binomni teorem' u 17. vijeku?",
           answers: {
-            A: "Isaac Newton",
+            A: "Newton",
             B: "Pascal",
             C: "Euler",
             D: "Fermat"
@@ -1128,7 +1236,6 @@ window.questionBank = {
           },
           correct: "C"
         },
- 
         {
           question: "Kako se zove geometrijski oblik koji ima samo jednu stranu i jednu ivicu?",
           answers: {
@@ -1413,8 +1520,16 @@ window.questionBank = {
           },
           correct: "C"
         },
-		{ question: "Kako se naziva geometrijski oblik koji ima beskonačan obim, a konačnu površinu?", answers: { A: "Fraktal", B: "Krug", C: "Elipsa", D: "Hiperbola" }, correct: "A" },
-
+        {
+          question: "Kako se naziva geometrijski oblik koji ima beskonačan obim, a konačnu površinu?",
+          answers: {
+            A: "Fraktal",
+            B: "Krug",
+            C: "Elipsa",
+            D: "Hiperbola"
+          },
+          correct: "A"
+        },
         {
           question: "Koja figura nastaje okretanjem poluprečnika oko centra?",
           answers: {
@@ -4171,7 +4286,7 @@ window.questionBank = {
             A: "Rusija",
             B: "Njemačka",
             C: "Danska",
-            D: "Nizozemska"
+            D: "Holandija"
           },
           correct: "A"
         },
@@ -4394,7 +4509,7 @@ window.questionBank = {
             D: "Translacionu simetriju"
           },
           correct: "C"
-        }, 
+        },
         {
           question: "Koliki je najmanji zajednički sadržalac brojeva 15 i 20?",
           answers: {
@@ -5066,7 +5181,7 @@ window.questionBank = {
           answers: {
             A: "Descartes",
             B: "Euler",
-            C: "Pierre de Fermat",
+            C: "Fermat",
             D: "Cauchy"
           },
           correct: "C"
@@ -5213,7 +5328,6 @@ window.questionBank = {
         }
       ],
       hardest: [
-
         {
           question: "Koji je matematičar bio fasciniran brojem 1729, koji je postao poznat kao njegov broj?",
           answers: {
@@ -5464,34 +5578,142 @@ window.questionBank = {
           },
           correct: "C"
         },
-		{
-  question: "Koji je matematičar postavio poznatu hipotezu o prostim brojevima koja i danas nije dokazana?",
-  answers: {
-    A: "David Hilbert",
-    B: "Carl Friedrich Gauss",
-    C: "Bernhard Riemann",
-    D: "Évariste Galois"
-  },
-  correct: "C"
-}
+        {
+          question: "Koji je matematičar postavio poznatu hipotezu o prostim brojevima koja i danas nije dokazana?",
+          answers: {
+            A: "David Hilbert",
+            B: "Carl Friedrich Gauss",
+            C: "Bernhard Riemann",
+            D: "Évariste Galois"
+          },
+          correct: "C"
+        }
       ]
     }
   },
   en: {
-  history: {
+    history: {
       easy: [
-{ question: "What is the 'Absolute value' of the number -15?", answers: { A: "0", B: "-15", C: "15", D: "1" }, correct: "C" },
-{ question: "What is the 'Absolute value' of the number 27?", answers: { A: "27", B: "-27", C: "0", D: "1" }, correct: "A" },
-{ question: "Which symbol represents the set of integers?", answers: { A: "N", B: "Q", C: "Z", D: "R" }, correct: "C" },
-{ question: "What is the name of the line that connects two non-adjacent vertices of a polygon?", answers: { A: "Diagonal", B: "Side", C: "Chord", D: "Height" }, correct: "A" },
-{ question: "What is the name of a number that can only be divided by 1 and itself?", answers: { A: "Composite number", B: "Prime number", C: "Even number", D: "Perfect number" }, correct: "B" },
-{ question: "What is the sum of all interior angles in any triangle on a spherical (curved) surface?", answers: { A: "Exactly 180°", B: "Less than 180°", C: "More than 180°", D: "Always 360°" }, correct: "C" },
-{ question: "What is the paradox that says it is impossible to complete a journey because you must first cross half, then half of the remaining part?", answers: { A: "Zeno's paradox", B: "Russell's paradox", C: "Hilbert's hotel", D: "Liar paradox" }, correct: "A" },
-{ question: "What shape do cells in a honeycomb have because it is the most space-efficient?", answers: { A: "Dodecagon", B: "Octagon", C: "Hexagon", D: "Pentagon" }, correct: "C" },
-{ question: "What is the probability of an event that is a 'certain event'?", answers: { A: "0", B: "0.5", C: "1", D: "100" }, correct: "C" },
-{ question: "What does the prefix 'Tera' mean in units (e.g., terabyte)?", answers: { A: "Million", B: "Billion", C: "Trillion", D: "Quadrillion" }, correct: "C" },
-{ question: "What number do we get when we square 111?", answers: { A: "11111", B: "12321", C: "12121", D: "12221" }, correct: "B" },
-{ question: "What is the measure of each of the two equal acute angles in an isosceles right triangle?", answers: { A: "30°", B: "45°", C: "60°", D: "90°" }, correct: "B" },
+        {
+          question: "What is the 'Absolute value' of the number -15?",
+          answers: {
+            A: "0",
+            B: "-15",
+            C: "15",
+            D: "1"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the 'Absolute value' of the number 27?",
+          answers: {
+            A: "27",
+            B: "-27",
+            C: "0",
+            D: "1"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which symbol represents the set of integers?",
+          answers: {
+            A: "N",
+            B: "Q",
+            C: "Z",
+            D: "R"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the name of the line that connects two non-adjacent vertices of a polygon?",
+          answers: {
+            A: "Diagonal",
+            B: "Side",
+            C: "Chord",
+            D: "Height"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the name of a number that can only be divided by 1 and itself?",
+          answers: {
+            A: "Composite number",
+            B: "Prime number",
+            C: "Even number",
+            D: "Perfect number"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the sum of all interior angles in any triangle on a spherical (curved) surface?",
+          answers: {
+            A: "Exactly 180°",
+            B: "Less than 180°",
+            C: "More than 180°",
+            D: "Always 360°"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the paradox that says it is impossible to complete a journey because you must first cross half, then half of the remaining part?",
+          answers: {
+            A: "Zeno's paradox",
+            B: "Russell's paradox",
+            C: "Hilbert's hotel",
+            D: "Liar paradox"
+          },
+          correct: "A"
+        },
+        {
+          question: "What shape do cells in a honeycomb have because it is the most space-efficient?",
+          answers: {
+            A: "Dodecagon",
+            B: "Octagon",
+            C: "Hexagon",
+            D: "Pentagon"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the probability of an event that is a 'certain event'?",
+          answers: {
+            A: "0",
+            B: "0.5",
+            C: "1",
+            D: "100"
+          },
+          correct: "C"
+        },
+        {
+          question: "What does the prefix 'Tera' mean in units (e.g., terabyte)?",
+          answers: {
+            A: "Million",
+            B: "Billion",
+            C: "Trillion",
+            D: "Quadrillion"
+          },
+          correct: "C"
+        },
+        {
+          question: "What number do we get when we square 111?",
+          answers: {
+            A: "11111",
+            B: "12321",
+            C: "12121",
+            D: "12221"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the measure of each of the two equal acute angles in an isosceles right triangle?",
+          answers: {
+            A: "30°",
+            B: "45°",
+            C: "60°",
+            D: "90°"
+          },
+          correct: "B"
+        },
         {
           question: "What is the name of a triangle with sides 3, 4, and 5?",
           answers: {
@@ -6060,7 +6282,7 @@ window.questionBank = {
             A: "Machine",
             B: "Writing pen",
             C: "Difficult decision",
-            D: "Small pebble",
+            D: "Small pebble"
           },
           correct: "D"
         },
@@ -6698,4274 +6920,4269 @@ window.questionBank = {
         }
       ]
     },
-  geography: {
-  easy: [
-    {
-      question: "What is 40% of 500?",
-      answers: {
-        A: "150",
-        B: "250",
-        C: "200",
-        D: "300"
-      },
-      correct: "C"
+    geography: {
+      easy: [
+        {
+          question: "What is 40% of 500?",
+          answers: {
+            A: "150",
+            B: "250",
+            C: "200",
+            D: "300"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the next number in the sequence 1, 1, 2, 3, 5, 8, ?",
+          answers: {
+            A: "11",
+            B: "13",
+            C: "12",
+            D: "15"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which letter is used to denote the set of natural numbers?",
+          answers: {
+            A: "Z",
+            B: "N",
+            C: "R",
+            D: "Q"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which letter is used to denote the set of rational numbers?",
+          answers: {
+            A: "Q",
+            B: "R",
+            C: "Z",
+            D: "N"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which letter is used to denote the set of complex numbers?",
+          answers: {
+            A: "R",
+            B: "C",
+            C: "Z",
+            D: "Q"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which letter is used to denote the set of real numbers?",
+          answers: {
+            A: "Q",
+            B: "Z",
+            C: "R",
+            D: "C"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the sum of the first five prime numbers?",
+          answers: {
+            A: "26",
+            B: "28",
+            C: "30",
+            D: "32"
+          },
+          correct: "B"
+        },
+        {
+          question: "A right triangle has legs 12 and 5. What is the hypotenuse?",
+          answers: {
+            A: "12",
+            B: "13",
+            C: "17",
+            D: "15"
+          },
+          correct: "B"
+        },
+        {
+          question: "A right triangle has legs 8 and 6. What is the hypotenuse?",
+          answers: {
+            A: "10",
+            B: "12",
+            C: "14",
+            D: "9"
+          },
+          correct: "A"
+        },
+        {
+          question: "A right triangle has legs 3 and 4. What is the hypotenuse?",
+          answers: {
+            A: "6",
+            B: "5",
+            C: "7",
+            D: "4"
+          },
+          correct: "B"
+        },
+        {
+          question: "How many hours are there in 4 days?",
+          answers: {
+            A: "72",
+            B: "96",
+            C: "88",
+            D: "100"
+          },
+          correct: "B"
+        },
+        {
+          question: "How many hours are there in 6 days?",
+          answers: {
+            A: "120",
+            B: "132",
+            C: "144",
+            D: "150"
+          },
+          correct: "C"
+        },
+        {
+          question: "How many hours are there in 2 weeks?",
+          answers: {
+            A: "336",
+            B: "320",
+            C: "360",
+            D: "300"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which number cannot be used for division?",
+          answers: {
+            A: "-1",
+            B: "0",
+            C: "2",
+            D: "10000"
+          },
+          correct: "B"
+        },
+        {
+          question: "If a = -2, what is a cubed?",
+          answers: {
+            A: "-6",
+            B: "6",
+            C: "-8",
+            D: "8"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is 30% of 400?",
+          answers: {
+            A: "100",
+            B: "140",
+            C: "120",
+            D: "160"
+          },
+          correct: "C"
+        },
+        {
+          question: "How many diagonals does a hexagon have?",
+          answers: {
+            A: "6",
+            B: "9",
+            C: "12",
+            D: "15"
+          },
+          correct: "B"
+        },
+        {
+          question: "How many diagonals does a heptagon have?",
+          answers: {
+            A: "9",
+            B: "14",
+            C: "12",
+            D: "16"
+          },
+          correct: "B"
+        },
+        {
+          question: "How many diagonals does an octagon have?",
+          answers: {
+            A: "16",
+            B: "18",
+            C: "20",
+            D: "14"
+          },
+          correct: "C"
+        },
+        {
+          question: "What do you call a geometric shape with infinite perimeter but finite area?",
+          answers: {
+            A: "Fractal",
+            B: "Circle",
+            C: "Ellipse",
+            D: "Hyperbola"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which figure is formed by rotating a radius around a center?",
+          answers: {
+            A: "Triangle",
+            B: "Circle",
+            C: "Square",
+            D: "Rectangle"
+          },
+          correct: "B"
+        },
+        {
+          question: "What does π represent in geometry?",
+          answers: {
+            A: "Ratio of diameter and radius",
+            B: "Ratio of circumference to diameter of a circle",
+            C: "Difference of circle areas",
+            D: "Square of radius"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the next number: 2, 6, 12, 20, 30, ?",
+          answers: {
+            A: "40",
+            B: "41",
+            C: "42",
+            D: "44"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is 11² - 10²?",
+          answers: {
+            A: "19",
+            B: "20",
+            C: "21",
+            D: "22"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which number is missing: 1, 4, 9, 16, ?, 36",
+          answers: {
+            A: "20",
+            B: "24",
+            C: "25",
+            D: "30"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is 99 × 101?",
+          answers: {
+            A: "9999",
+            B: "10099",
+            C: "9801",
+            D: "10001"
+          },
+          correct: "A"
+        },
+        {
+          question: "If a=2, b=3, what is a³ + b³?",
+          answers: {
+            A: "25",
+            B: "35",
+            C: "27",
+            D: "29"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is 1 + 2 + 3 + ... + 20?",
+          answers: {
+            A: "190",
+            B: "200",
+            C: "210",
+            D: "220"
+          },
+          correct: "C"
+        },
+        {
+          question: "How many diagonals does a hexagon have?",
+          answers: {
+            A: "6",
+            B: "9",
+            C: "12",
+            D: "15"
+          },
+          correct: "B"
+        },
+        {
+          question: "If 7x = 1, what is x?",
+          answers: {
+            A: "1/7",
+            B: "7",
+            C: "0",
+            D: "1"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the next number: 1, 2, 6, 24, 120, ?",
+          answers: {
+            A: "600",
+            B: "720",
+            C: "840",
+            D: "500"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is 50² - 49²?",
+          answers: {
+            A: "99",
+            B: "100",
+            C: "101",
+            D: "98"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is 25% of 240?",
+          answers: {
+            A: "50",
+            B: "60",
+            C: "70",
+            D: "80"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which Fibonacci number comes after 13?",
+          answers: {
+            A: "18",
+            B: "20",
+            C: "21",
+            D: "22"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is √196?",
+          answers: {
+            A: "12",
+            B: "13",
+            C: "14",
+            D: "15"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is 15 × 15 - 10 × 10?",
+          answers: {
+            A: "125",
+            B: "150",
+            C: "175",
+            D: "200"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which number is missing: 3, 9, 27, ?, 243",
+          answers: {
+            A: "54",
+            B: "72",
+            C: "81",
+            D: "108"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is 2⁸?",
+          answers: {
+            A: "128",
+            B: "256",
+            C: "512",
+            D: "1024"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is 2^30 approximately?",
+          answers: {
+            A: "1.07×10^9",
+            B: "1.07×10^19",
+            C: "1.07×10^3",
+            D: "1.07×10^30"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is 75% of 360?",
+          answers: {
+            A: "260",
+            B: "270",
+            C: "280",
+            D: "300"
+          },
+          correct: "B"
+        },
+        {
+          question: "If today is Wednesday, what day will it be in 365 days?",
+          answers: {
+            A: "Wednesday",
+            B: "Thursday",
+            C: "Tuesday",
+            D: "Friday"
+          },
+          correct: "B"
+        },
+        {
+          question: "Who introduced the infinity symbol?",
+          answers: {
+            A: "Isaac Newton",
+            B: "Leonhard Euler",
+            C: "John Wallis",
+            D: "René Descartes"
+          },
+          correct: "C"
+        },
+        {
+          question: "Who first used decimal notation in mathematics?",
+          answers: {
+            A: "Fibonacci",
+            B: "Al-Khwarizmi",
+            C: "Simon Stevin",
+            D: "Descartes"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which number did Ludolph van Ceulen calculate to 35 decimals?",
+          answers: {
+            A: "e",
+            B: "π",
+            C: "φ",
+            D: "√2"
+          },
+          correct: "B"
+        },
+        {
+          question: "How was Carl Friedrich Gauss known by nickname?",
+          answers: {
+            A: "King of Mathematics",
+            B: "Father of Algebra",
+            C: "Prince of Mathematics",
+            D: "Number Genius"
+          },
+          correct: "C"
+        },
+        {
+          question: "Who invented logarithms?",
+          answers: {
+            A: "Gottfried Leibniz",
+            B: "Isaac Newton",
+            C: "Leonhard Euler",
+            D: "John Napier"
+          },
+          correct: "D"
+        },
+        {
+          question: "Who first used negative numbers in mathematics?",
+          answers: {
+            A: "Chinese",
+            B: "Greeks",
+            C: "Romans",
+            D: "Egyptians"
+          },
+          correct: "A"
+        },
+        {
+          question: "Who formally defined the concept of function?",
+          answers: {
+            A: "Descartes",
+            B: "Fermat",
+            C: "Euler",
+            D: "Leibniz"
+          },
+          correct: "C"
+        },
+        {
+          question: "Who is known as the 'father of geometry'?",
+          answers: {
+            A: "Pythagoras",
+            B: "Euclid",
+            C: "Archimedes",
+            D: "Plato"
+          },
+          correct: "B"
+        },
+        {
+          question: "In which country did the Arabic numeral system originate?",
+          answers: {
+            A: "Arabia",
+            B: "Egypt",
+            C: "India",
+            D: "China"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which symbol is used for infinity?",
+          answers: {
+            A: "α",
+            B: "∞",
+            C: "Ω",
+            D: "π"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is 1 + 3 + 5 + 7 + ... + 19?",
+          answers: {
+            A: "81",
+            B: "100",
+            C: "121",
+            D: "90"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is 3⁴?",
+          answers: {
+            A: "64",
+            B: "72",
+            C: "81",
+            D: "90"
+          },
+          correct: "C"
+        },
+        {
+          question: "In which century did algebra originate?",
+          answers: {
+            A: "5th century",
+            B: "7th century",
+            C: "9th century",
+            D: "11th century"
+          },
+          correct: "C"
+        },
+        {
+          question: "What do you call a function equal to its own inverse?",
+          answers: {
+            A: "Exponential function",
+            B: "Identity function",
+            C: "Quadratic function",
+            D: "Reciprocal function"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is 3^10?",
+          answers: {
+            A: "59049",
+            B: "30000",
+            C: "90000",
+            D: "100000"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is a proof that assumes the opposite to reach contradiction called?",
+          answers: {
+            A: "Direct proof",
+            B: "Induction",
+            C: "Proof by contradiction",
+            D: "Constructive proof"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is 5^6?",
+          answers: {
+            A: "15625",
+            B: "56000",
+            C: "65000",
+            D: "50000"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is 7^3?",
+          answers: {
+            A: "343",
+            B: "333",
+            C: "353",
+            D: "363"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is 11^2?",
+          answers: {
+            A: "121",
+            B: "111",
+            C: "131",
+            D: "141"
+          },
+          correct: "A"
+        },
+        {
+          question: "What do you call numbers that cannot be expressed as a fraction?",
+          answers: {
+            A: "Rational",
+            B: "Natural",
+            C: "Irrational",
+            D: "Integer"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is 0.25 × 0.25?",
+          answers: {
+            A: "0.5",
+            B: "0.125",
+            C: "0.0625",
+            D: "0.25"
+          },
+          correct: "C"
+        },
+        {
+          question: "How many m² are in 2.5 km²?",
+          answers: {
+            A: "250,000",
+            B: "2,500,000",
+            C: "25,000,000",
+            D: "250,000,000"
+          },
+          correct: "B"
+        }
+      ],
+      hard: [
+        {
+          question: "What is the sum of all numbers on a roulette wheel (1 to 36)?",
+          answers: {
+            A: "555",
+            B: "1000",
+            C: "666",
+            D: "777"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the longest side in a right triangle called?",
+          answers: {
+            A: "Leg",
+            B: "Base",
+            C: "Height",
+            D: "Hypotenuse"
+          },
+          correct: "D"
+        },
+        {
+          question: "What number is called a 'Googol'?",
+          answers: {
+            A: "1 with 10 zeros",
+            B: "1 with 100 zeros",
+            C: "1 with 1000 zeros",
+            D: "Infinity"
+          },
+          correct: "B"
+        },
+        {
+          question: "How many seconds are in one hour?",
+          answers: {
+            A: "60",
+            B: "600",
+            C: "3600",
+            D: "360"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is an angle greater than 90° and less than 180° called?",
+          answers: {
+            A: "Acute angle",
+            B: "Right angle",
+            C: "Straight angle",
+            D: "Obtuse angle"
+          },
+          correct: "D"
+        },
+        {
+          question: "Which constant is obtained by dividing a circle's circumference by its diameter?",
+          answers: {
+            A: "e",
+            B: "π (Pi)",
+            C: "φ (Phi)",
+            D: "√2"
+          },
+          correct: "B"
+        },
+        {
+          question: "If you fold a sheet of paper 42 times, its thickness would theoretically reach:",
+          answers: {
+            A: "The Moon",
+            B: "Mount Everest",
+            C: "Clouds",
+            D: "Earth's core"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is a curve that approaches an axis but never touches it called?",
+          answers: {
+            A: "Parabola",
+            B: "Asymptote",
+            C: "Hyperbola",
+            D: "Tangent"
+          },
+          correct: "B"
+        },
+        {
+          question: "How many degrees are in a full circle?",
+          answers: {
+            A: "180°",
+            B: "270°",
+            C: "360°",
+            D: "400°"
+          },
+          correct: "C"
+        },
+        {
+          question: "What branch of mathematics uses letters instead of numbers to solve equations?",
+          answers: {
+            A: "Geometry",
+            B: "Statistics",
+            C: "Topology",
+            D: "Algebra"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is the result of 0 divided by 5?",
+          answers: {
+            A: "5",
+            B: "0",
+            C: "1",
+            D: "Undefined"
+          },
+          correct: "B"
+        },
+        {
+          question: "What do you call a triangle with all sides equal?",
+          answers: {
+            A: "Scalene",
+            B: "Right",
+            C: "Equilateral",
+            D: "Isosceles"
+          },
+          correct: "C"
+        },
+        {
+          question: "What does 'median' represent in statistics?",
+          answers: {
+            A: "Average value",
+            B: "Most frequent value",
+            C: "Difference between max and min",
+            D: "Sum of all values"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is 12 squared?",
+          answers: {
+            A: "122",
+            B: "144",
+            C: "132",
+            D: "156"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is an axiom?",
+          answers: {
+            A: "A statement assumed true without proof",
+            B: "A theorem",
+            C: "A hypothesis",
+            D: "A lemma"
+          },
+          correct: "A"
+        },
+        {
+          question: "Who proved that the square of the hypotenuse equals the sum of squares of the legs?",
+          answers: {
+            A: "Aristotle",
+            B: "Pythagoras",
+            C: "Euclid",
+            D: "Archimedes"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is x⁰ (any non-zero number)?",
+          answers: {
+            A: "0",
+            B: "x",
+            C: "1",
+            D: "Infinity"
+          },
+          correct: "C"
+        },
+        {
+          question: "What do you call the bottom number in a fraction?",
+          answers: {
+            A: "Numerator",
+            B: "Denominator",
+            C: "Fraction line",
+            D: "Remainder"
+          },
+          correct: "B"
+        },
+        {
+          question: "Who is considered the 'father of computers'?",
+          answers: {
+            A: "Alan Turing",
+            B: "Charles Babbage",
+            C: "Ada Lovelace",
+            D: "John von Neumann"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is a line that touches a circle at exactly one point called?",
+          answers: {
+            A: "Chord",
+            B: "Secant",
+            C: "Tangent",
+            D: "Normal"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the sum of interior angles in a pentagon?",
+          answers: {
+            A: "560°",
+            B: "550°",
+            C: "540°",
+            D: "520°"
+          },
+          correct: "C"
+        }
+      ],
+      hardest: [
+        {
+          question: "What does the topological problem known as the 'Seven Bridges of Königsberg' study?",
+          answers: {
+            A: "Graph theory",
+            B: "Combinatorics",
+            C: "Differential equations",
+            D: "Probability"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the base of natural logarithms, known as Euler's number?",
+          answers: {
+            A: "3.14159",
+            B: "2.71828",
+            C: "1.61803",
+            D: "1.41421"
+          },
+          correct: "B"
+        },
+        {
+          question: "How is the set of points in the complex plane forming a famous fractal called?",
+          answers: {
+            A: "Pascal's triangle",
+            B: "Fibonacci sequence",
+            C: "Mandelbrot set",
+            D: "Koch snowflake"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the result of the integral of the function 1/x?",
+          answers: {
+            A: "x + C",
+            B: "x² + C",
+            C: "e^x + C",
+            D: "ln|x| + C"
+          },
+          correct: "D"
+        },
+        {
+          question: "What theorem connects vertices (V), edges (E), and faces (F) of a polyhedron (V - E + F = 2)?",
+          answers: {
+            A: "Euler characteristic",
+            B: "Pythagorean theorem",
+            C: "Lagrange theorem",
+            D: "Newton binomial"
+          },
+          correct: "A"
+        },
+        {
+          question: "What does Russell's paradox describe in set theory?",
+          answers: {
+            A: "The set of all sets that do not contain themselves",
+            B: "Infinity of numbers",
+            C: "Division by zero",
+            D: "Empty set"
+          },
+          correct: "A"
+        },
+        {
+          question: "What branch of mathematics deals with rates of change and areas under curves?",
+          answers: {
+            A: "Linear algebra",
+            B: "Discrete mathematics",
+            C: "Trigonometry",
+            D: "Infinitesimal calculus"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is the smallest number with 12 divisors?",
+          answers: {
+            A: "60",
+            B: "72",
+            C: "48",
+            D: "120"
+          },
+          correct: "A"
+        },
+        {
+          question: "What does standard deviation measure in statistics?",
+          answers: {
+            A: "Average value",
+            B: "Center of data",
+            C: "Most frequent value",
+            D: "Data dispersion"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is the determinant of any identity matrix?",
+          answers: {
+            A: "0",
+            B: "Infinity",
+            C: "1",
+            D: "-1"
+          },
+          correct: "C"
+        },
+        {
+          question: "Who first used the term 'function'?",
+          answers: {
+            A: "Leibniz",
+            B: "Euler",
+            C: "Descartes",
+            D: "Newton"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the binomial coefficient '5 choose 2'?",
+          answers: {
+            A: "5",
+            B: "10",
+            C: "20",
+            D: "15"
+          },
+          correct: "B"
+        },
+        {
+          question: "What curve is defined by x²/a² + y²/b² = 1?",
+          answers: {
+            A: "Hyperbola",
+            B: "Parabola",
+            C: "Circle",
+            D: "Ellipse"
+          },
+          correct: "D"
+        },
+        {
+          question: "What curve is defined by x²/a² - y²/b² = 1?",
+          answers: {
+            A: "Hyperbola",
+            B: "Parabola",
+            C: "Circle",
+            D: "Ellipse"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the derivative of a function at a point?",
+          answers: {
+            A: "Slope of the tangent line",
+            B: "Area under curve",
+            C: "Function value",
+            D: "X-intercept"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which number system uses base 16?",
+          answers: {
+            A: "Binary",
+            B: "Octal",
+            C: "Decimal",
+            D: "Hexadecimal"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is cardinality of a set?",
+          answers: {
+            A: "Number of elements in a set",
+            B: "Sum of elements",
+            C: "Type of elements",
+            D: "Ordering of set"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the limit of sin(x)/x as x approaches 0?",
+          answers: {
+            A: "0",
+            B: "1",
+            C: "Infinity",
+            D: "Undefined"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is a square matrix?",
+          answers: {
+            A: "Zero matrix",
+            B: "Identity matrix",
+            C: "Matrix with same number of rows and columns",
+            D: "Diagonal matrix"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which theorem proves there are infinitely many prime numbers?",
+          answers: {
+            A: "Pythagorean theorem",
+            B: "Fermat's theorem",
+            C: "Sieve theorem",
+            D: "Euclid's theorem"
+          },
+          correct: "D"
+        },
+        {
+          question: "In probability theory, what is a complementary event?",
+          answers: {
+            A: "Event that occurs when A does not occur",
+            B: "Event occurring simultaneously with A",
+            C: "Impossible event",
+            D: "Certain event"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which matrix acts as identity in matrix multiplication?",
+          answers: {
+            A: "Zero matrix",
+            B: "Identity matrix",
+            C: "Scalar matrix",
+            D: "Transposed matrix"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is a linear function?",
+          answers: {
+            A: "Quadratic",
+            B: "Exponential",
+            C: "Linear",
+            D: "Logarithmic"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the product of two imaginary numbers (e.g., 2i * 3i)?",
+          answers: {
+            A: "6",
+            B: "6i",
+            C: "0",
+            D: "-6"
+          },
+          correct: "D"
+        },
+        {
+          question: "How many real solutions can a quadratic equation have?",
+          answers: {
+            A: "Always two",
+            B: "Always one",
+            C: "Zero, one, or two",
+            D: "Infinite"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is a factorial?",
+          answers: {
+            A: "Sum from 1 to n",
+            B: "n squared",
+            C: "n divided by 2",
+            D: "Product of all integers from 1 to n"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is the traveling salesman problem?",
+          answers: {
+            A: "Shortest route visiting all cities once and returning",
+            B: "Sorting algorithm",
+            C: "Graph coloring",
+            D: "Knapsack problem"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is Dirichlet's principle (pigeonhole principle)?",
+          answers: {
+            A: "At least two items share a property in large enough set",
+            B: "Law of large numbers",
+            C: "Impossible events",
+            D: "Random distribution"
+          },
+          correct: "A"
+        },
+        {
+          question: "What are transcendental numbers?",
+          answers: {
+            A: "Solutions of linear equations",
+            B: "Rational numbers",
+            C: "Not roots of any polynomial with integer coefficients",
+            D: "Negative numbers"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is Jacobian in multivariable calculus?",
+          answers: {
+            A: "Determinant of partial derivatives matrix",
+            B: "Sum of numbers",
+            C: "Type of integral",
+            D: "Normal vector"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is an inflection point?",
+          answers: {
+            A: "Maximum",
+            B: "Minimum",
+            C: "Zero",
+            D: "Point where concavity changes"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is a cycloid?",
+          answers: {
+            A: "Curve traced by a point on rolling circle",
+            B: "Ellipse",
+            C: "Hyperbola",
+            D: "Parabola"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the Gaussian curve?",
+          answers: {
+            A: "Normal distribution",
+            B: "Circle",
+            C: "Orbit path",
+            D: "Integral type"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is sin²(x) + cos²(x)?",
+          answers: {
+            A: "0",
+            B: "sin(2x)",
+            C: "1",
+            D: "tan(x)"
+          },
+          correct: "C"
+        },
+        {
+          question: "What rule is used for indeterminate limits?",
+          answers: {
+            A: "Pythagorean rule",
+            B: "L'Hôpital's rule",
+            C: "Gaussian rule",
+            D: "Newton's rule"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the imaginary part of 5 + 3i?",
+          answers: {
+            A: "5",
+            B: "-1",
+            C: "3i",
+            D: "3"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is the volume of a sphere?",
+          answers: {
+            A: "4πr²",
+            B: "2πr²",
+            C: "πr²",
+            D: "(4/3)πr³"
+          },
+          correct: "D"
+        },
+        {
+          question: "How many sides does a snowflake have due to ice molecular structure?",
+          answers: {
+            A: "4",
+            B: "5",
+            C: "6",
+            D: "7"
+          },
+          correct: "C"
+        }
+      ]
     },
-    {
-      question: "What is the next number in the sequence 1, 1, 2, 3, 5, 8, ?",
-      answers: {
-        A: "11",
-        B: "13",
-        C: "12",
-        D: "15"
-      },
-      correct: "B"
+    funFacts: {
+      easy: [
+        {
+          question: "What is 2 to the fifth power?",
+          answers: {
+            A: "32",
+            B: "16",
+            C: "25",
+            D: "64"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which square is closest to 1000?",
+          answers: {
+            A: "30²",
+            B: "32²",
+            C: "31²",
+            D: "33²"
+          },
+          correct: "B"
+        },
+        {
+          question: "What do you call a fraction where the numerator is greater than the denominator?",
+          answers: {
+            A: "Proper fraction",
+            B: "Mixed number",
+            C: "Irreducible fraction",
+            D: "Improper fraction"
+          },
+          correct: "D"
+        },
+        {
+          question: "Rene Descartes is known for his famous quote:",
+          answers: {
+            A: "'I think, therefore I am'",
+            B: "'Knowledge is power'",
+            C: "'Eureka!'",
+            D: "'Everything is relative'"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is a shape with 8 sides called?",
+          answers: {
+            A: "Hexagon",
+            B: "Octagon",
+            C: "Decagon",
+            D: "Tetrahedron"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the name of the famous paradox with infinite steps where Achilles cannot catch the tortoise?",
+          answers: {
+            A: "Death paradox",
+            B: "Zeno's paradox",
+            C: "Simpson's paradox",
+            D: "Galileo's paradox"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the cube root of 27?",
+          answers: {
+            A: "3",
+            B: "9",
+            C: "27",
+            D: "6"
+          },
+          correct: "A"
+        },
+        {
+          question: "In which country was mathematician Gauss born?",
+          answers: {
+            A: "Germany",
+            B: "Switzerland",
+            C: "Austria",
+            D: "France"
+          },
+          correct: "A"
+        },
+        {
+          question: "In which country was mathematician Fermat born?",
+          answers: {
+            A: "Italy",
+            B: "Spain",
+            C: "France",
+            D: "England"
+          },
+          correct: "C"
+        },
+        {
+          question: "In which city was mathematician Pascal born?",
+          answers: {
+            A: "Paris",
+            B: "Clermont-Ferrand",
+            C: "Marseille",
+            D: "Nice"
+          },
+          correct: "B"
+        },
+        {
+          question: "In which country was mathematician Newton born?",
+          answers: {
+            A: "Scotland",
+            B: "England",
+            C: "Ireland",
+            D: "Wales"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the Roman numeral for 50?",
+          answers: {
+            A: "L",
+            B: "C",
+            C: "V",
+            D: "X"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the Roman numeral for 100?",
+          answers: {
+            A: "D",
+            B: "L",
+            C: "C",
+            D: "X"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the Roman numeral for 1000?",
+          answers: {
+            A: "M",
+            B: "D",
+            C: "C",
+            D: "X"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the Roman numeral for 10?",
+          answers: {
+            A: "V",
+            B: "X",
+            C: "L",
+            D: "I"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the Roman numeral for 500?",
+          answers: {
+            A: "M",
+            B: "D",
+            C: "C",
+            D: "L"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the fourth letter of the Greek alphabet?",
+          answers: {
+            A: "Gamma",
+            B: "Delta",
+            C: "Beta",
+            D: "Epsilon"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the third letter of the Greek alphabet?",
+          answers: {
+            A: "Beta",
+            B: "Delta",
+            C: "Gamma",
+            D: "Alpha"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the last letter of the Greek alphabet?",
+          answers: {
+            A: "Sigma",
+            B: "Omega",
+            C: "Psi",
+            D: "Theta"
+          },
+          correct: "B"
+        },
+        {
+          question: "In which city was the Clay Mathematics Institute founded?",
+          answers: {
+            A: "New York",
+            B: "Cambridge",
+            C: "San Francisco",
+            D: "Seattle"
+          },
+          correct: "B"
+        },
+        {
+          question: "Where is the 'Euler Room' located in honor of Leonhard Euler?",
+          answers: {
+            A: "Bern",
+            B: "Zurich",
+            C: "Basel",
+            D: "Berlin"
+          },
+          correct: "C"
+        },
+        {
+          question: "In which country is the largest mathematical library located?",
+          answers: {
+            A: "France",
+            B: "Germany",
+            C: "USA",
+            D: "Italy"
+          },
+          correct: "A"
+        },
+        {
+          question: "Where is the largest mathematics museum in the world (Museum of Mathematics) located?",
+          answers: {
+            A: "New York",
+            B: "London",
+            C: "Berlin",
+            D: "Tokyo"
+          },
+          correct: "A"
+        },
+        {
+          question: "In which city is the University of Copenhagen, where Niels Bohr worked?",
+          answers: {
+            A: "Stockholm",
+            B: "Copenhagen",
+            C: "Oslo",
+            D: "Helsinki"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which civilization first developed a method for solving quadratic equations?",
+          answers: {
+            A: "Egyptians",
+            B: "Babylonians",
+            C: "Greeks",
+            D: "Chinese"
+          },
+          correct: "B"
+        },
+        {
+          question: "In which city is the famous Mathematics Bridge located?",
+          answers: {
+            A: "London",
+            B: "Paris",
+            C: "Cambridge",
+            D: "Oxford"
+          },
+          correct: "C"
+        },
+        {
+          question: "In which country was Pythagoras born?",
+          answers: {
+            A: "Greece",
+            B: "Italy",
+            C: "Turkey",
+            D: "Egypt"
+          },
+          correct: "A"
+        },
+        {
+          question: "Where is the Institute for Advanced Study, where Einstein worked, located?",
+          answers: {
+            A: "Boston",
+            B: "Princeton",
+            C: "Cambridge",
+            D: "New York"
+          },
+          correct: "B"
+        },
+        {
+          question: "In which city is the Fields Institute for Mathematics located?",
+          answers: {
+            A: "Vancouver",
+            B: "Montreal",
+            C: "Toronto",
+            D: "Ottawa"
+          },
+          correct: "C"
+        },
+        {
+          question: "Where was mathematician Leonhard Euler born?",
+          answers: {
+            A: "Germany",
+            B: "Switzerland",
+            C: "Austria",
+            D: "Netherlands"
+          },
+          correct: "B"
+        },
+        {
+          question: "In which country is the famous Library of Alexandria, known for its mathematical tradition?",
+          answers: {
+            A: "Egypt",
+            B: "Greece",
+            C: "Italy",
+            D: "France"
+          },
+          correct: "A"
+        },
+        {
+          question: "In which city was the Institute for Mathematical Sciences (IMS) founded?",
+          answers: {
+            A: "Beijing",
+            B: "New York",
+            C: "Singapore",
+            D: "Paris"
+          },
+          correct: "C"
+        },
+        {
+          question: "Where is CERN, known for mathematical and physical research, located?",
+          answers: {
+            A: "Switzerland",
+            B: "France",
+            C: "Germany",
+            D: "Italy"
+          },
+          correct: "A"
+        },
+        {
+          question: "In which city is MIT, known for mathematics and technology, located?",
+          answers: {
+            A: "Boston",
+            B: "Cambridge, Massachusetts",
+            C: "San Francisco",
+            D: "Seattle"
+          },
+          correct: "B"
+        },
+        {
+          question: "What do you call a 12-sided polygon?",
+          answers: {
+            A: "Decagon",
+            B: "Dodecagon",
+            C: "Hendecagon",
+            D: "Octagon"
+          },
+          correct: "B"
+        },
+        {
+          question: "Who first described the golden ratio mathematically?",
+          answers: {
+            A: "Euclid",
+            B: "Newton",
+            C: "Euler",
+            D: "Gauss"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which number is the only one that is both even and prime?",
+          answers: {
+            A: "0",
+            B: "1",
+            C: "2",
+            D: "3"
+          },
+          correct: "C"
+        },
+        {
+          question: "How many hours are in one week?",
+          answers: {
+            A: "144",
+            B: "160",
+            C: "168",
+            D: "176"
+          },
+          correct: "C"
+        },
+        {
+          question: "In how many ways can 3 different objects be arranged in a row?",
+          answers: {
+            A: "3",
+            B: "6",
+            C: "9",
+            D: "12"
+          },
+          correct: "B"
+        },
+        {
+          question: "In how many ways can 4 different objects be arranged in a row?",
+          answers: {
+            A: "12",
+            B: "16",
+            C: "24",
+            D: "32"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the area of a circle with radius 7 cm?",
+          answers: {
+            A: "49π",
+            B: "14π",
+            C: "21π",
+            D: "28π"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the area of a circle with radius 8 cm?",
+          answers: {
+            A: "16π",
+            B: "64π",
+            C: "32π",
+            D: "8π"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the area of a circle with radius 10 cm?",
+          answers: {
+            A: "20π",
+            B: "50π",
+            C: "100π",
+            D: "10π"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which mathematical symbol is used for approximately equal?",
+          answers: {
+            A: "≈",
+            B: "=",
+            C: "≠",
+            D: "≤"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the largest prime number less than 100?",
+          answers: {
+            A: "97",
+            B: "91",
+            C: "89",
+            D: "99"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is Pascal’s triangle used for?",
+          answers: {
+            A: "Circle geometry",
+            B: "Combinatorics and binomial coefficients",
+            C: "Solving integrals",
+            D: "Logarithmic functions"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which mathematician is the division algorithm named after?",
+          answers: {
+            A: "Newton",
+            B: "Horner",
+            C: "Gauss",
+            D: "Lagrange"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is 1+1 in modular arithmetic mod 2?",
+          answers: {
+            A: "0",
+            B: "1",
+            C: "2",
+            D: "Undefined"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which constant is approximately 2.718?",
+          answers: {
+            A: "π",
+            B: "e",
+            C: "φ",
+            D: "γ"
+          },
+          correct: "B"
+        },
+        {
+          question: "What does the prefix 'kilo' mean?",
+          answers: {
+            A: "100",
+            B: "1000",
+            C: "10000",
+            D: "1000000"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the Pythagorean triple called?",
+          answers: {
+            A: "Pythagorean triple",
+            B: "Euclid triple",
+            C: "Mathematical triple",
+            D: "Geometric triple"
+          },
+          correct: "A"
+        },
+        {
+          question: "How many degrees are in a full circle?",
+          answers: {
+            A: "180°",
+            B: "270°",
+            C: "360°",
+            D: "450°"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is 0! (zero factorial)?",
+          answers: {
+            A: "0",
+            B: "1",
+            C: "2",
+            D: "Undefined"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which digit does not appear in the binary system?",
+          answers: {
+            A: "0",
+            B: "1",
+            C: "2",
+            D: "None"
+          },
+          correct: "C"
+        }
+      ],
+      hard: [
+        {
+          question: "How is the scientist who shouted 'Eureka!' in the bath called?",
+          answers: {
+            A: "Archimedes",
+            B: "Pythagoras",
+            C: "Euclid",
+            D: "Galileo"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the name of the first female programmer in history, collaborator of Charles Babbage?",
+          answers: {
+            A: "Ada Lovelace",
+            B: "Marie Curie",
+            C: "Rosalind Franklin",
+            D: "Grace Hopper"
+          },
+          correct: "A"
+        },
+        {
+          question: "How many millimeters are in one centimeter?",
+          answers: {
+            A: "100",
+            B: "Million",
+            C: "1000",
+            D: "10"
+          },
+          correct: "D"
+        },
+        {
+          question: "What do you call a number that has exactly two divisors (1 and itself)?",
+          answers: {
+            A: "Composite number",
+            B: "Prime number",
+            C: "Even number",
+            D: "Negative number"
+          },
+          correct: "B"
+        },
+        {
+          question: "How many edges does a cube have?",
+          answers: {
+            A: "8",
+            B: "10",
+            C: "12",
+            D: "6"
+          },
+          correct: "C"
+        },
+        {
+          question: "What do you call a quadrilateral with all four sides equal, but angles not necessarily 90°?",
+          answers: {
+            A: "Square",
+            B: "Rhombus",
+            C: "Trapezoid",
+            D: "Parallelogram"
+          },
+          correct: "B"
+        },
+        {
+          question: "What do you get when you divide 100 by 0.5?",
+          answers: {
+            A: "50",
+            B: "200",
+            C: "150",
+            D: "25"
+          },
+          correct: "B"
+        },
+        {
+          question: "How many minutes are in one day?",
+          answers: {
+            A: "1240",
+            B: "1340",
+            C: "1440",
+            D: "1640"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the longest chord in a circle called?",
+          answers: {
+            A: "Radius",
+            B: "Diameter",
+            C: "Tangent",
+            D: "Secant"
+          },
+          correct: "B"
+        },
+        {
+          question: "How many degrees are in the sum of angles in a right triangle?",
+          answers: {
+            A: "90°",
+            B: "180°",
+            C: "270°",
+            D: "360°"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is a 'set' in mathematics?",
+          answers: {
+            A: "A collection of well-defined objects",
+            B: "Sum of numbers",
+            C: "Result of multiplication",
+            D: "Geometric drawing"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the next number in the sequence: 1, 4, 9, 16, 25...?",
+          answers: {
+            A: "30",
+            B: "35",
+            C: "36",
+            D: "49"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which is the only integer that is neither positive nor negative?",
+          answers: {
+            A: "0",
+            B: "1",
+            C: "-1",
+            D: "Infinity"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the notation for the set of natural numbers without zero?",
+          answers: {
+            A: "N",
+            B: "N₀",
+            C: "Z",
+            D: "R"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is a polygon with 6 sides called?",
+          answers: {
+            A: "Pentagon",
+            B: "Hexagon",
+            C: "Heptagon",
+            D: "Octagon"
+          },
+          correct: "B"
+        },
+        {
+          question: "How many liters of water fit into one cubic meter (1 m³)?",
+          answers: {
+            A: "100",
+            B: "500",
+            C: "1000",
+            D: "10000"
+          },
+          correct: "C"
+        }
+      ],
+      hardest: [
+        {
+          question: "What is the Euler characteristic (χ) of a torus surface?",
+          answers: {
+            A: "2",
+            B: "1",
+            C: "0",
+            D: "-1"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the name of a function that is continuous everywhere but nowhere differentiable?",
+          answers: {
+            A: "Weierstrass function",
+            B: "Dirichlet function",
+            C: "Gauss function",
+            D: "Taylor function"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is a mapping that preserves distances between points called?",
+          answers: {
+            A: "Isometry",
+            B: "Projection",
+            C: "Rotation",
+            D: "Dilation"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is sin(π/2)?",
+          answers: {
+            A: "0",
+            B: "0.5",
+            C: "1",
+            D: "-1"
+          },
+          correct: "C"
+        },
+        {
+          question: "How many solutions does a quadratic equation with negative discriminant have in R?",
+          answers: {
+            A: "2",
+            B: "1",
+            C: "0",
+            D: "Infinite"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is log(1000)?",
+          answers: {
+            A: "10",
+            B: "1",
+            C: "3",
+            D: "0"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the interior angle of a regular pentagon?",
+          answers: {
+            A: "108°",
+            B: "72°",
+            C: "90°",
+            D: "120°"
+          },
+          correct: "A"
+        },
+        {
+          question: "Who is the author of the famous book 'Elements'?",
+          answers: {
+            A: "Pythagoras",
+            B: "Euclid",
+            C: "Archimedes",
+            D: "Plato"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the square root of 1600?",
+          answers: {
+            A: "40",
+            B: "4",
+            C: "16",
+            D: "400"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which ancient mathematician was killed while defending his geometric drawings in the sand from a Roman soldier?",
+          answers: {
+            A: "Pythagoras",
+            B: "Euclid",
+            C: "Archimedes",
+            D: "Tales"
+          },
+          correct: "C"
+        },
+        {
+          question: "Who is considered the first professional female mathematician in history?",
+          answers: {
+            A: "Hypatia",
+            B: "Ada Lovelace",
+            C: "Sophie Germain",
+            D: "Emmy Noether"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which mathematician became blind in one eye and later completely blind but continued dictating works from memory?",
+          answers: {
+            A: "Carl Friedrich Gauss",
+            B: "Isaac Newton",
+            C: "Leonhard Euler",
+            D: "Bernhard Riemann"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the sequence where each term is the sum of the previous two, but starts with 1 and 2 instead of 1 and 1 called?",
+          answers: {
+            A: "Fibonacci",
+            B: "Lucas",
+            C: "Pascal",
+            D: "Taylor"
+          },
+          correct: "B"
+        },
+        {
+          question: "What does Green's theorem state?",
+          answers: {
+            A: "It relates a line integral to a double integral over a region",
+            B: "Color is important in topology",
+            C: "All curves are green",
+            D: "Sum of angles is 180°"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is L'Hôpital's rule?",
+          answers: {
+            A: "A hospital rule",
+            B: "A rule for limits of 1/n type",
+            C: "A geometric theorem",
+            D: "A method for evaluating 0/0 limits",
+            correct: "D"
+          }
+        },
+        {
+          question: "What is bijection?",
+          answers: {
+            A: "Only injective mapping",
+            B: "Injective mapping",
+            C: "Surjective mapping",
+            D: "Both injective and surjective mapping"
+          },
+          correct: "D"
+        },
+        {
+          question: "Who introduced the ∫ integral notation?",
+          answers: {
+            A: "Leibniz",
+            B: "Newton",
+            C: "Euler",
+            D: "Riemann"
+          },
+          correct: "A"
+        },
+        {
+          question: "When was Euclid's book 'Elements' published?",
+          answers: {
+            A: "500 BC",
+            B: "300 BC",
+            C: "100 BC",
+            D: "100 AD"
+          },
+          correct: "B"
+        },
+        {
+          question: "Who first formally defined the real number continuum?",
+          answers: {
+            A: "Cantor",
+            B: "Dedekind",
+            C: "Weierstrass",
+            D: "Hilbert"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which Italian city was Fibonacci from?",
+          answers: {
+            A: "Pisa",
+            B: "Florence",
+            C: "Rome",
+            D: "Milan"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which country is René Descartes from?",
+          answers: {
+            A: "Belgium",
+            B: "France",
+            C: "Switzerland",
+            D: "Netherlands"
+          },
+          correct: "B"
+        },
+        {
+          question: "In which country was Riemann born?",
+          answers: {
+            A: "France",
+            B: "Austria",
+            C: "Switzerland",
+            D: "Germany"
+          },
+          correct: "D"
+        },
+        {
+          question: "In which country was Hilbert born?",
+          answers: {
+            A: "Germany",
+            B: "Poland",
+            C: "Czech Republic",
+            D: "Austria"
+          },
+          correct: "A"
+        },
+        {
+          question: "In which country was Kolmogorov born?",
+          answers: {
+            A: "Russia",
+            B: "Ukraine",
+            C: "Poland",
+            D: "Belarus"
+          },
+          correct: "A"
+        }
+      ]
     },
-    {
-      question: "Which letter is used to denote the set of natural numbers?",
-      answers: {
-        A: "Z",
-        B: "N",
-        C: "R",
-        D: "Q"
-      },
-      correct: "B"
+    interestingFacts: {
+      easy: [
+        {
+          question: "What is the sum of angles in a triangle?",
+          answers: {
+            A: "360°",
+            B: "90°",
+            C: "270°",
+            D: "180°"
+          },
+          correct: "D"
+        },
+        {
+          question: "If a plane crashes on the border of two countries, where are the survivors buried?",
+          answers: {
+            A: "In the first country",
+            B: "In the second",
+            C: "On the border",
+            D: "They are not buried"
+          },
+          correct: "D"
+        },
+        {
+          question: "How many times a day do clock hands overlap?",
+          answers: {
+            A: "12",
+            B: "22",
+            C: "24",
+            D: "48"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which of the given numbers equals three times the sum of its digits?",
+          answers: {
+            A: "12",
+            B: "18",
+            C: "27",
+            D: "36"
+          },
+          correct: "C"
+        },
+        {
+          question: "If a number is increased by 20% and then decreased by 20%, the result is:",
+          answers: {
+            A: "Greater",
+            B: "Smaller",
+            C: "Same",
+            D: "Depends"
+          },
+          correct: "B"
+        },
+        {
+          question: "How many diagonals does a square have?",
+          answers: {
+            A: "1",
+            B: "2",
+            C: "4",
+            D: "6"
+          },
+          correct: "B"
+        },
+        {
+          question: "If you flip a coin 3 times, how many possible outcomes are there?",
+          answers: {
+            A: "6",
+            B: "8",
+            C: "4",
+            D: "3"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the smallest number divisible by all numbers from 1 to 5?",
+          answers: {
+            A: "20",
+            B: "60",
+            C: "30",
+            D: "120"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which number is a palindrome?",
+          answers: {
+            A: "123",
+            B: "121",
+            C: "132",
+            D: "231"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the sum of the infinite series 1/2 + 1/4 + 1/8 + ...?",
+          answers: {
+            A: "1",
+            B: "2",
+            C: "∞",
+            D: "1/2"
+          },
+          correct: "A"
+        },
+        {
+          question: "If you have 5 different books, how many ways can you arrange them?",
+          answers: {
+            A: "25",
+            B: "120",
+            C: "60",
+            D: "100"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which number is a perfect square?",
+          answers: {
+            A: "361",
+            B: "256",
+            C: "121",
+            D: "All of the above"
+          },
+          correct: "D"
+        },
+        {
+          question: "If 5 machines need 5 minutes to make 5 products, how long do 100 machines need to make 100 products?",
+          answers: {
+            A: "100 min",
+            B: "5 min",
+            C: "50 min",
+            D: "1 min"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is 2^10 + 2^10?",
+          answers: {
+            A: "1024",
+            B: "2048",
+            C: "4096",
+            D: "512"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is √2 to 2 decimal places?",
+          answers: {
+            A: "1.41",
+            B: "1.42",
+            C: "1.43",
+            D: "1.44"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is 2^0?",
+          answers: {
+            A: "2",
+            B: "0",
+            C: "1",
+            D: "Undefined"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is 6666 × 6667?",
+          answers: {
+            A: "44442222",
+            B: "33333333",
+            C: "67676767",
+            D: "66666667"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which number is divisible by 6?",
+          answers: {
+            A: "214",
+            B: "222",
+            C: "230",
+            D: "212"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is NZS in mathematics?",
+          answers: {
+            A: "Greatest common denominator",
+            B: "Least common multiple",
+            C: "Least common divisor",
+            D: "Odd common set"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is NZD in mathematics?",
+          answers: {
+            A: "Greatest common divisor",
+            B: "Least common divisor",
+            C: "Least common multiple",
+            D: "Negative sum of divisors"
+          },
+          correct: "A"
+        },
+        {
+          question: "The golden ratio is connected to which sequence?",
+          answers: {
+            A: "Lucas sequence",
+            B: "Pythagorean sequence",
+            C: "Fibonacci sequence",
+            D: "Geometric sequence"
+          },
+          correct: "C"
+        },
+        {
+          question: "How are sets most commonly represented?",
+          answers: {
+            A: "Histogram",
+            B: "Venn diagram",
+            C: "Line graph",
+            D: "Table"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which number is divisible by 3?",
+          answers: {
+            A: "124",
+            B: "222",
+            C: "121",
+            D: "101"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which symbol represents set intersection?",
+          answers: {
+            A: "∪",
+            B: "∩",
+            C: "⊂",
+            D: "∈"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the decimal form of 1/3?",
+          answers: {
+            A: "0.34",
+            B: "0.3",
+            C: "0.333",
+            D: "0.333..."
+          },
+          correct: "D"
+        },
+        {
+          question: "What is the sum of the first three prime numbers?",
+          answers: {
+            A: "8",
+            B: "10",
+            C: "12",
+            D: "15"
+          },
+          correct: "B"
+        },
+        {
+          question: "How many edges does a tetrahedron have?",
+          answers: {
+            A: "4",
+            B: "6",
+            C: "8",
+            D: "12"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the sum of interior angles in a pentagon?",
+          answers: {
+            A: "560°",
+            B: "500°",
+            C: "580°",
+            D: "540°"
+          },
+          correct: "D"
+        },
+        {
+          question: "If you roll two dice, what is the probability of getting a sum of 7?",
+          answers: {
+            A: "1/6",
+            B: "1/12",
+            C: "1/36",
+            D: "1/3"
+          },
+          correct: "A"
+        },
+        {
+          question: "How many prime numbers are less than 10?",
+          answers: {
+            A: "3",
+            B: "4",
+            C: "5",
+            D: "6"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which number is both a square and a prime?",
+          answers: {
+            A: "1",
+            B: "4",
+            C: "9",
+            D: "None"
+          },
+          correct: "D"
+        },
+        {
+          question: "If x + x = x, what is x?",
+          answers: {
+            A: "1",
+            B: "0",
+            C: "2",
+            D: "-1"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the third angle in a triangle if the other two are 50° and 60°?",
+          answers: {
+            A: "70°",
+            B: "65°",
+            C: "80°",
+            D: "75°"
+          },
+          correct: "A"
+        },
+        {
+          question: "If each square on a chessboard doubles rice grains starting from 1, how many grains are on the 64th square?",
+          answers: {
+            A: "About 100 kg of rice",
+            B: "One truck of rice",
+            C: "More than total world rice production",
+            D: "Impossible to calculate"
+          },
+          correct: "C"
+        },
+        {
+          question: "How many times can paper realistically be folded?",
+          answers: {
+            A: "7 times",
+            B: "10 times",
+            C: "67",
+            D: "Infinite"
+          },
+          correct: "A"
+        },
+        {
+          question: "How many lines can pass through 4 distinct points (in general position)?",
+          answers: {
+            A: "3",
+            B: "4",
+            C: "6",
+            D: "Undefined"
+          },
+          correct: "C"
+        },
+        {
+          question: "What are collinear points?",
+          answers: {
+            A: "Points on the same circle",
+            B: "Points on the same line",
+            C: "Points in a plane",
+            D: "Random points"
+          },
+          correct: "B"
+        },
+        {
+          question: "What are non-collinear points?",
+          answers: {
+            A: "Points on the same line",
+            B: "Points on a circle",
+            C: "Points not on the same line",
+            D: "Points with same center"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which are undefined basic geometric terms?",
+          answers: {
+            A: "Point, line, plane",
+            B: "Angle, segment, circle",
+            C: "Solid, volume, area",
+            D: "Vector, matrix, function"
+          },
+          correct: "A"
+        },
+        {
+          question: "What was the name of the Greek school where irrational numbers were discovered?",
+          answers: {
+            A: "Plato's Academy",
+            B: "Pythagorean school",
+            C: "Aristotle's school",
+            D: "Euclid's school"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which artist used mathematical proportions and the golden ratio in 'The Last Supper'?",
+          answers: {
+            A: "Michelangelo",
+            B: "Leonardo da Vinci",
+            C: "Raphael",
+            D: "Donatello"
+          },
+          correct: "B"
+        },
+        {
+          question: "Where is the Fibonacci sequence found in nature?",
+          answers: {
+            A: "In flowers",
+            B: "In snowflakes and shells",
+            C: "In spiral shapes",
+            D: "In all of the above"
+          },
+          correct: "D"
+        },
+        {
+          question: "Which numbers are both a square and a cube?",
+          answers: {
+            A: "1 and 64",
+            B: "0 and 1",
+            C: "1 and 729",
+            D: "4 and 8"
+          },
+          correct: "A"
+        }
+      ],
+      hard: [
+        {
+          question: "What is a sphere called, where all points are equally distant from the center in 3D space?",
+          answers: {
+            A: "Circle",
+            B: "Sphere",
+            C: "Cylinder",
+            D: "Ellipse"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is 15% of 300?",
+          answers: {
+            A: "30",
+            B: "45",
+            C: "60",
+            D: "15"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the smallest Armstrong number?",
+          answers: {
+            A: "370",
+            B: "371",
+            C: "407",
+            D: "153"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is the Roman numeral for 90?",
+          answers: {
+            A: "LXXXX",
+            B: "XC",
+            C: "LX",
+            D: "CX"
+          },
+          correct: "B"
+        },
+        {
+          question: "How many vertices does a pyramid with a square base have?",
+          answers: {
+            A: "4",
+            B: "5",
+            C: "6",
+            D: "8"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the square root of 225?",
+          answers: {
+            A: "15",
+            B: "25",
+            C: "12",
+            D: "20"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which prefix means one-millionth (10⁻⁶)?",
+          answers: {
+            A: "Milli",
+            B: "Nano",
+            C: "Micro",
+            D: "Pico"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the sum of two complementary angles?",
+          answers: {
+            A: "45°",
+            B: "180°",
+            C: "90°",
+            D: "360°"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is a quadrilateral with exactly one pair of parallel sides called?",
+          answers: {
+            A: "Rhombus",
+            B: "Parallelogram",
+            C: "Trapezoid",
+            D: "Kite"
+          },
+          correct: "C"
+        },
+        {
+          question: "How many seconds are in one day?",
+          answers: {
+            A: "3600",
+            B: "86400",
+            C: "43200",
+            D: "60000"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which branch of mathematics deals with collecting and analyzing data?",
+          answers: {
+            A: "Geometry",
+            B: "Algebra",
+            C: "Topology",
+            D: "Statistics"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is the next number in the sequence: 100, 81, 64, 49...?",
+          answers: {
+            A: "40",
+            B: "36",
+            C: "25",
+            D: "32"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is half of one third of 18?",
+          answers: {
+            A: "3",
+            B: "6",
+            C: "2",
+            D: "9"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the interior of a circle called?",
+          answers: {
+            A: "Circumference",
+            B: "Disk",
+            C: "Radius",
+            D: "Center"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the next number in the sequence: 2, 5, 11, 23, ...?",
+          answers: {
+            A: "35",
+            B: "41",
+            C: "47",
+            D: "46"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the sum of all interior angles of a rectangle?",
+          answers: {
+            A: "180°",
+            B: "270°",
+            C: "360°",
+            D: "90°"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which branch of mathematics studies shapes and space?",
+          answers: {
+            A: "Arithmetic",
+            B: "Algebra",
+            C: "Statistics",
+            D: "Geometry"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is the fastest way to multiply a two-digit number by 11 (e.g., 25 × 11)?",
+          answers: {
+            A: "Add a zero",
+            B: "Add digits and place in the middle (2+5 → 275)",
+            C: "Multiply by 10 and add 5",
+            D: "Subtract 11"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the number system based on 60 (Babylonians), still used for time?",
+          answers: {
+            A: "Binary",
+            B: "Decimal",
+            C: "Hexadecimal",
+            D: "Sexagesimal"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is the sum of all exterior angles of any polygon?",
+          answers: {
+            A: "180°",
+            B: "360°",
+            C: "540°",
+            D: "720°"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the next number in the sequence: 2, 4, 8, 14, 22...?",
+          answers: {
+            A: "30",
+            B: "32",
+            C: "28",
+            D: "34"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the reciprocal of a fraction called?",
+          answers: {
+            A: "Opposite",
+            B: "Negative",
+            C: "Reciprocal",
+            D: "Complex"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the square root of 1,000,000?",
+          answers: {
+            A: "100",
+            B: "1000",
+            C: "10000",
+            D: "10"
+          },
+          correct: "B"
+        },
+        {
+          question: "In which century did zero become widely used in Europe?",
+          answers: {
+            A: "5th century",
+            B: "9th century",
+            C: "12th century",
+            D: "15th century"
+          },
+          correct: "C"
+        },
+        {
+          question: "What does the Greek letter Delta (Δ) represent in math?",
+          answers: {
+            A: "Sum",
+            B: "Unknown",
+            C: "Product",
+            D: "Change or difference"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is 0.5 divided by 0.5?",
+          answers: {
+            A: "0.25",
+            B: "0.5",
+            C: "1",
+            D: "2"
+          },
+          correct: "C"
+        },
+        {
+          question: "Riddle: If you add 5 to 9 you get 2, what are you looking at?",
+          answers: {
+            A: "Calendar",
+            B: "Thermometer",
+            C: "Calculator",
+            D: "Clock"
+          },
+          correct: "D"
+        },
+        {
+          question: "What shape is formed by the intersection of a cone and a plane parallel to its base?",
+          answers: {
+            A: "Circle",
+            B: "Ellipse",
+            C: "Triangle",
+            D: "Square"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is 20% of 50?",
+          answers: {
+            A: "5",
+            B: "10",
+            C: "15",
+            D: "20"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the Roman numeral for 40?",
+          answers: {
+            A: "XL",
+            B: "XXXX",
+            C: "LX",
+            D: "VL"
+          },
+          correct: "A"
+        },
+        {
+          question: "How many edges does a tetrahedron have?",
+          answers: {
+            A: "3",
+            B: "6",
+            C: "8",
+            D: "4"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which prefix means one-thousandth (10⁻³)?",
+          answers: {
+            A: "Centi",
+            B: "Milli",
+            C: "Micro",
+            D: "Kilo"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is 5 cubed (5³)?",
+          answers: {
+            A: "625",
+            B: "15",
+            C: "125",
+            D: "225"
+          },
+          correct: "C"
+        }
+      ],
+      hardest: [
+        {
+          question: "In which country was the mathematician Noether born?",
+          answers: {
+            A: "Germany",
+            B: "Austria",
+            C: "Switzerland",
+            D: "Italy"
+          },
+          correct: "A"
+        },
+        {
+          question: "In which country was the mathematician Cantor born?",
+          answers: {
+            A: "Russia",
+            B: "Germany",
+            C: "Denmark",
+            D: "Netherlands"
+          },
+          correct: "A"
+        },
+        {
+          question: "Where is the International Mathematical Congress held every 4 years?",
+          answers: {
+            A: "Always in the same place",
+            B: "It rotates worldwide",
+            C: "Only in Europe",
+            D: "Only in the USA"
+          },
+          correct: "B"
+        },
+        {
+          question: "Where is the Steklov Institute of Mathematics located?",
+          answers: {
+            A: "Saint Petersburg",
+            B: "Moscow",
+            C: "Kyiv",
+            D: "Minsk"
+          },
+          correct: "B"
+        },
+        {
+          question: "In which city did Al-Khwarizmi write his works on algebra?",
+          answers: {
+            A: "Baghdad",
+            B: "Damascus",
+            C: "Cairo",
+            D: "Medina"
+          },
+          correct: "A"
+        },
+        {
+          question: "How is 2026 written in Roman numerals?",
+          answers: {
+            A: "MMXXVI",
+            B: "MMXVI",
+            C: "MCMXXVI",
+            D: "MMXXIV"
+          },
+          correct: "A"
+        },
+        {
+          question: "Where is the Max Planck Institute for Mathematics located?",
+          answers: {
+            A: "Berlin",
+            B: "Bonn",
+            C: "Munich",
+            D: "Hamburg"
+          },
+          correct: "B"
+        },
+        {
+          question: "Where is the 'Mathematical Sciences Research Institute' (MSRI)?",
+          answers: {
+            A: "Berkeley",
+            B: "Stanford",
+            C: "Princeton",
+            D: "Harvard"
+          },
+          correct: "A"
+        },
+        {
+          question: "In which city was the 'Institut für Mathematik' founded?",
+          answers: {
+            A: "Berlin",
+            B: "Göttingen",
+            C: "Munich",
+            D: "Frankfurt"
+          },
+          correct: "B"
+        },
+        {
+          question: "In which country was the mathematician Gödel born?",
+          answers: {
+            A: "Austria",
+            B: "Czech Republic",
+            C: "Germany",
+            D: "Switzerland"
+          },
+          correct: "B"
+        },
+        {
+          question: "In which country was the mathematician Turing born?",
+          answers: {
+            A: "England",
+            B: "Scotland",
+            C: "Ireland",
+            D: "Wales"
+          },
+          correct: "A"
+        },
+        {
+          question: "In which country was the mathematician Perelman born?",
+          answers: {
+            A: "Russia",
+            B: "Ukraine",
+            C: "Belarus",
+            D: "Lithuania"
+          },
+          correct: "A"
+        },
+        {
+          question: "In which country was the mathematician Wiles born?",
+          answers: {
+            A: "England",
+            B: "USA",
+            C: "Canada",
+            D: "Australia"
+          },
+          correct: "A"
+        },
+        {
+          question: "Where is the Institut Henri Poincaré located?",
+          answers: {
+            A: "Lyon",
+            B: "Marseille",
+            C: "Paris",
+            D: "Toulouse"
+          },
+          correct: "C"
+        },
+        {
+          question: "Where was the first Academy of Sciences (Accademia del Cimento) founded?",
+          answers: {
+            A: "Rome",
+            B: "Pisa",
+            C: "Turin",
+            D: "Florence"
+          },
+          correct: "D"
+        },
+        {
+          question: "Where is the Tata Institute of Fundamental Research (TIFR) located?",
+          answers: {
+            A: "India",
+            B: "Japan",
+            C: "China",
+            D: "Korea"
+          },
+          correct: "A"
+        },
+        {
+          question: "Where was the first International Mathematical Congress (1897) held?",
+          answers: {
+            A: "Berlin",
+            B: "Paris",
+            C: "Zurich",
+            D: "London"
+          },
+          correct: "C"
+        },
+        {
+          question: "How many Platonic solids are there?",
+          answers: {
+            A: "3",
+            B: "4",
+            C: "5",
+            D: "6"
+          },
+          correct: "C"
+        },
+        {
+          question: "Who solved the cubic equation in the 16th century?",
+          answers: {
+            A: "Cardano",
+            B: "Tartaglia",
+            C: "Ferrari",
+            D: "Viète"
+          },
+          correct: "A"
+        },
+        {
+          question: "Who proved that e is transcendental?",
+          answers: {
+            A: "Hermite",
+            B: "Lindemann",
+            C: "Cantor",
+            D: "Weierstrass"
+          },
+          correct: "A"
+        },
+        {
+          question: "Who discovered non-Euclidean geometry?",
+          answers: {
+            A: "Gauss",
+            B: "Bolyai",
+            C: "Lobachevsky",
+            D: "All of the above"
+          },
+          correct: "D"
+        },
+        {
+          question: "Who developed group theory in its modern form?",
+          answers: {
+            A: "Noether",
+            B: "Jordan",
+            C: "Lagrange",
+            D: "Galois"
+          },
+          correct: "D"
+        },
+        {
+          question: "Who introduced the Σ symbol for summation?",
+          answers: {
+            A: "Gauss",
+            B: "Leibniz",
+            C: "Bernoulli",
+            D: "Euler"
+          },
+          correct: "D"
+        },
+        {
+          question: "What type of symmetry do butterfly wings show?",
+          answers: {
+            A: "Rotational symmetry",
+            B: "Central symmetry",
+            C: "Bilateral symmetry",
+            D: "Translational symmetry"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the least common multiple of 15 and 20?",
+          answers: {
+            A: "5",
+            B: "30",
+            C: "1",
+            D: "60"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is √2 approximately (to 3 decimals)?",
+          answers: {
+            A: "1.415",
+            B: "1.416",
+            C: "1.417",
+            D: "1.414"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is √3 approximately (to 2 decimals)?",
+          answers: {
+            A: "1.72",
+            B: "1.73",
+            C: "1.74",
+            D: "1.75"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is √5 approximately (to 2 decimals)?",
+          answers: {
+            A: "2.22",
+            B: "2.24",
+            C: "2.26",
+            D: "2.28"
+          },
+          correct: "B"
+        },
+        {
+          question: "In which century did calculus originate?",
+          answers: {
+            A: "15th century",
+            B: "16th century",
+            C: "17th century",
+            D: "18th century"
+          },
+          correct: "C"
+        },
+        {
+          question: "Who first proved that there are infinitely many prime numbers?",
+          answers: {
+            A: "Euclid",
+            B: "Euler",
+            C: "Gauss",
+            D: "Cantor"
+          },
+          correct: "A"
+        }
+      ]
     },
-    {
-      question: "Which letter is used to denote the set of rational numbers?",
-      answers: {
-        A: "Q",
-        B: "R",
-        C: "Z",
-        D: "N"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which letter is used to denote the set of complex numbers?",
-      answers: {
-        A: "R",
-        B: "C",
-        C: "Z",
-        D: "Q"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which letter is used to denote the set of real numbers?",
-      answers: {
-        A: "Q",
-        B: "Z",
-        C: "R",
-        D: "C"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the sum of the first five prime numbers?",
-      answers: {
-        A: "26",
-        B: "28",
-        C: "30",
-        D: "32"
-      },
-      correct: "B"
-    },
-    {
-      question: "A right triangle has legs 12 and 5. What is the hypotenuse?",
-      answers: {
-        A: "12",
-        B: "13",
-        C: "17",
-        D: "15"
-      },
-      correct: "B"
-    },
-    {
-      question: "A right triangle has legs 8 and 6. What is the hypotenuse?",
-      answers: {
-        A: "10",
-        B: "12",
-        C: "14",
-        D: "9"
-      },
-      correct: "A"
-    },
-    {
-      question: "A right triangle has legs 3 and 4. What is the hypotenuse?",
-      answers: {
-        A: "6",
-        B: "5",
-        C: "7",
-        D: "4"
-      },
-      correct: "B"
-    },
-    {
-      question: "How many hours are there in 4 days?",
-      answers: {
-        A: "72",
-        B: "96",
-        C: "88",
-        D: "100"
-      },
-      correct: "B"
-    },
-    {
-      question: "How many hours are there in 6 days?",
-      answers: {
-        A: "120",
-        B: "132",
-        C: "144",
-        D: "150"
-      },
-      correct: "C"
-    },
-    {
-      question: "How many hours are there in 2 weeks?",
-      answers: {
-        A: "336",
-        B: "320",
-        C: "360",
-        D: "300"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which number cannot be used for division?",
-      answers: {
-        A: "-1",
-        B: "0",
-        C: "2",
-        D: "10000"
-      },
-      correct: "B"
-    },
-    {
-      question: "If a = -2, what is a cubed?",
-      answers: {
-        A: "-6",
-        B: "6",
-        C: "-8",
-        D: "8"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is 30% of 400?",
-      answers: {
-        A: "100",
-        B: "140",
-        C: "120",
-        D: "160"
-      },
-      correct: "C"
-    },
-    {
-      question: "How many diagonals does a hexagon have?",
-      answers: {
-        A: "6",
-        B: "9",
-        C: "12",
-        D: "15"
-      },
-      correct: "B"
-    },
-    {
-      question: "How many diagonals does a heptagon have?",
-      answers: {
-        A: "9",
-        B: "14",
-        C: "12",
-        D: "16"
-      },
-      correct: "B"
-    },
-    {
-      question: "How many diagonals does an octagon have?",
-      answers: {
-        A: "16",
-        B: "18",
-        C: "20",
-        D: "14"
-      },
-      correct: "C"
-    },
-    {
-      question: "What do you call a geometric shape with infinite perimeter but finite area?",
-      answers: {
-        A: "Fractal",
-        B: "Circle",
-        C: "Ellipse",
-        D: "Hyperbola"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which figure is formed by rotating a radius around a center?",
-      answers: {
-        A: "Triangle",
-        B: "Circle",
-        C: "Square",
-        D: "Rectangle"
-      },
-      correct: "B"
-    },
-    {
-      question: "What does π represent in geometry?",
-      answers: {
-        A: "Ratio of diameter and radius",
-        B: "Ratio of circumference to diameter of a circle",
-        C: "Difference of circle areas",
-        D: "Square of radius"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the next number: 2, 6, 12, 20, 30, ?",
-      answers: {
-        A: "40",
-        B: "41",
-        C: "42",
-        D: "44"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is 11² - 10²?",
-      answers: {
-        A: "19",
-        B: "20",
-        C: "21",
-        D: "22"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which number is missing: 1, 4, 9, 16, ?, 36",
-      answers: {
-        A: "20",
-        B: "24",
-        C: "25",
-        D: "30"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is 99 × 101?",
-      answers: {
-        A: "9999",
-        B: "10099",
-        C: "9801",
-        D: "10001"
-      },
-      correct: "A"
-    },
-    {
-      question: "If a=2, b=3, what is a³ + b³?",
-      answers: {
-        A: "25",
-        B: "35",
-        C: "27",
-        D: "29"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is 1 + 2 + 3 + ... + 20?",
-      answers: {
-        A: "190",
-        B: "200",
-        C: "210",
-        D: "220"
-      },
-      correct: "C"
-    },
-    {
-      question: "How many diagonals does a hexagon have?",
-      answers: {
-        A: "6",
-        B: "9",
-        C: "12",
-        D: "15"
-      },
-      correct: "B"
-    },
-    {
-      question: "If 7x = 1, what is x?",
-      answers: {
-        A: "1/7",
-        B: "7",
-        C: "0",
-        D: "1"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is the next number: 1, 2, 6, 24, 120, ?",
-      answers: {
-        A: "600",
-        B: "720",
-        C: "840",
-        D: "500"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is 50² - 49²?",
-      answers: {
-        A: "99",
-        B: "100",
-        C: "101",
-        D: "98"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is 25% of 240?",
-      answers: {
-        A: "50",
-        B: "60",
-        C: "70",
-        D: "80"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which Fibonacci number comes after 13?",
-      answers: {
-        A: "18",
-        B: "20",
-        C: "21",
-        D: "22"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is √196?",
-      answers: {
-        A: "12",
-        B: "13",
-        C: "14",
-        D: "15"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is 15 × 15 - 10 × 10?",
-      answers: {
-        A: "125",
-        B: "150",
-        C: "175",
-        D: "200"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which number is missing: 3, 9, 27, ?, 243",
-      answers: {
-        A: "54",
-        B: "72",
-        C: "81",
-        D: "108"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is 2⁸?",
-      answers: {
-        A: "128",
-        B: "256",
-        C: "512",
-        D: "1024"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is 2^30 approximately?",
-      answers: {
-        A: "1.07×10^9",
-        B: "1.07×10^19",
-        C: "1.07×10^3",
-        D: "1.07×10^30"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is 75% of 360?",
-      answers: {
-        A: "260",
-        B: "270",
-        C: "280",
-        D: "300"
-      },
-      correct: "B"
-    },
-    {
-      question: "If today is Wednesday, what day will it be in 365 days?",
-      answers: {
-        A: "Wednesday",
-        B: "Thursday",
-        C: "Tuesday",
-        D: "Friday"
-      },
-      correct: "B"
-    },
-    {
-      question: "Who introduced the infinity symbol?",
-      answers: {
-        A: "Isaac Newton",
-        B: "Leonhard Euler",
-        C: "John Wallis",
-        D: "René Descartes"
-      },
-      correct: "C"
-    },
-    {
-      question: "Who first used decimal notation in mathematics?",
-      answers: {
-        A: "Fibonacci",
-        B: "Al-Khwarizmi",
-        C: "Simon Stevin",
-        D: "Descartes"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which number did Ludolph van Ceulen calculate to 35 decimals?",
-      answers: {
-        A: "e",
-        B: "π",
-        C: "φ",
-        D: "√2"
-      },
-      correct: "B"
-    },
-    {
-      question: "How was Carl Friedrich Gauss known by nickname?",
-      answers: {
-        A: "King of Mathematics",
-        B: "Father of Algebra",
-        C: "Prince of Mathematics",
-        D: "Number Genius"
-      },
-      correct: "C"
-    },
-    {
-      question: "Who invented logarithms?",
-      answers: {
-        A: "Gottfried Leibniz",
-        B: "Isaac Newton",
-        C: "Leonhard Euler",
-        D: "John Napier"
-      },
-      correct: "D"
-    },
-    {
-      question: "Who first used negative numbers in mathematics?",
-      answers: {
-        A: "Chinese",
-        B: "Greeks",
-        C: "Romans",
-        D: "Egyptians"
-      },
-      correct: "A"
-    },
-    {
-      question: "Who formally defined the concept of function?",
-      answers: {
-        A: "Descartes",
-        B: "Fermat",
-        C: "Euler",
-        D: "Leibniz"
-      },
-      correct: "C"
-    },
-    {
-      question: "Who is known as the 'father of geometry'?",
-      answers: {
-        A: "Pythagoras",
-        B: "Euclid",
-        C: "Archimedes",
-        D: "Plato"
-      },
-      correct: "B"
-    },
-    {
-      question: "In which country did the Arabic numeral system originate?",
-      answers: {
-        A: "Arabia",
-        B: "Egypt",
-        C: "India",
-        D: "China"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which symbol is used for infinity?",
-      answers: {
-        A: "α",
-        B: "∞",
-        C: "Ω",
-        D: "π"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is 1 + 3 + 5 + 7 + ... + 19?",
-      answers: {
-        A: "81",
-        B: "100",
-        C: "121",
-        D: "90"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is 3⁴?",
-      answers: {
-        A: "64",
-        B: "72",
-        C: "81",
-        D: "90"
-      },
-      correct: "C"
-    },
-    {
-      question: "In which century did algebra originate?",
-      answers: {
-        A: "5th century",
-        B: "7th century",
-        C: "9th century",
-        D: "11th century"
-      },
-      correct: "C"
-    },
-    {
-      question: "What do you call a function equal to its own inverse?",
-      answers: {
-        A: "Exponential function",
-        B: "Identity function",
-        C: "Quadratic function",
-        D: "Reciprocal function"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is 3^10?",
-      answers: {
-        A: "59049",
-        B: "30000",
-        C: "90000",
-        D: "100000"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is a proof that assumes the opposite to reach contradiction called?",
-      answers: {
-        A: "Direct proof",
-        B: "Induction",
-        C: "Proof by contradiction",
-        D: "Constructive proof"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is 5^6?",
-      answers: {
-        A: "15625",
-        B: "56000",
-        C: "65000",
-        D: "50000"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is 7^3?",
-      answers: {
-        A: "343",
-        B: "333",
-        C: "353",
-        D: "363"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is 11^2?",
-      answers: {
-        A: "121",
-        B: "111",
-        C: "131",
-        D: "141"
-      },
-      correct: "A"
-    },
-    {
-      question: "What do you call numbers that cannot be expressed as a fraction?",
-      answers: {
-        A: "Rational",
-        B: "Natural",
-        C: "Irrational",
-        D: "Integer"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is 0.25 × 0.25?",
-      answers: {
-        A: "0.5",
-        B: "0.125",
-        C: "0.0625",
-        D: "0.25"
-      },
-      correct: "C"
-    },
-    {
-      question: "How many m² are in 2.5 km²?",
-      answers: {
-        A: "250,000",
-        B: "2,500,000",
-        C: "25,000,000",
-        D: "250,000,000"
-      },
-      correct: "B"
+    numbers: {
+      easy: [
+        {
+          question: "What is the number 2^8?",
+          answers: {
+            A: "512",
+            B: "128",
+            C: "1024",
+            D: "256"
+          },
+          correct: "D"
+        },
+        {
+          question: "The product of an odd and an even number is always?",
+          answers: {
+            A: "Odd",
+            B: "Even",
+            C: "Negative",
+            D: "0"
+          },
+          correct: "B"
+        },
+        {
+          question: "The product of a positive and a negative number is?",
+          answers: {
+            A: "Positive",
+            B: "0",
+            C: "Negative",
+            D: "Undefined"
+          },
+          correct: "C"
+        },
+        {
+          question: "The sum of two negative numbers is?",
+          answers: {
+            A: "Positive",
+            B: "Negative",
+            C: "0",
+            D: "Undefined"
+          },
+          correct: "B"
+        },
+        {
+          question: "The product of two negative numbers is?",
+          answers: {
+            A: "Negative",
+            B: "0",
+            C: "Positive",
+            D: "Undefined"
+          },
+          correct: "C"
+        },
+        {
+          question: "What do you call two angles whose sum is 90°?",
+          answers: {
+            A: "Supplementary",
+            B: "Complementary",
+            C: "Vertical",
+            D: "Adjacent"
+          },
+          correct: "B"
+        },
+        {
+          question: "What do you call two angles whose sum is 180°?",
+          answers: {
+            A: "Complementary",
+            B: "Vertical",
+            C: "Supplementary",
+            D: "Parallel"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the next prime number after 97?",
+          answers: {
+            A: "99",
+            B: "101",
+            C: "103",
+            D: "107"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is e (Euler’s constant) to 2 decimal places?",
+          answers: {
+            A: "2.52",
+            B: "2.62",
+            C: "2.72",
+            D: "2.82"
+          },
+          correct: "C"
+        },
+        {
+          question: "A hotel with infinite rooms is full. A new guest arrives. Can they be accommodated?",
+          answers: {
+            A: "No",
+            B: "Yes",
+            C: "Only in the hallway",
+            D: "Depends on the room"
+          },
+          correct: "B"
+        },
+        {
+          question: "Birthday paradox: How many people are needed for a 50% chance that two share a birthday?",
+          answers: {
+            A: "183",
+            B: "100",
+            C: "50",
+            D: "23"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is 2 + 2 × 2 - 2 / 2?",
+          answers: {
+            A: "5",
+            B: "7",
+            C: "4",
+            D: "6"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which number is 3 times larger than 1/3?",
+          answers: {
+            A: "2",
+            B: "3",
+            C: "4",
+            D: "1"
+          },
+          correct: "D"
+        },
+        {
+          question: "If x = 2 and y = 3, what is x^y?",
+          answers: {
+            A: "6",
+            B: "9",
+            C: "8",
+            D: "27"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is 2 to the power of 10?",
+          answers: {
+            A: "512",
+            B: "1024",
+            C: "2048",
+            D: "4096"
+          },
+          correct: "B"
+        },
+        {
+          question: "Two fathers and two sons catch 3 fish. Each gets one fish. How?",
+          answers: {
+            A: "Impossible",
+            B: "Grandfather, father, son",
+            C: "They share one",
+            D: "They release one"
+          },
+          correct: "B"
+        },
+        {
+          question: "If 1/2 + 1/3 + 1/6 = ?",
+          answers: {
+            A: "2",
+            B: "3",
+            C: "0.5",
+            D: "1"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is 1/2 of 1/2?",
+          answers: {
+            A: "1/2",
+            B: "1",
+            C: "2",
+            D: "1/4"
+          },
+          correct: "D"
+        },
+        {
+          question: "How many ways are there to roll a die and get an even number?",
+          answers: {
+            A: "2",
+            B: "3",
+            C: "4",
+            D: "5"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which number has the fewest divisors among the options?",
+          answers: {
+            A: "12",
+            B: "18",
+            C: "20",
+            D: "16"
+          },
+          correct: "D"
+        },
+        {
+          question: "Which number comes next in the Fibonacci sequence after 0, 1, 1, 2, 3?",
+          answers: {
+            A: "4",
+            B: "5",
+            C: "6",
+            D: "8"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the third digit of π (after the decimal point)?",
+          answers: {
+            A: "3",
+            B: "1",
+            C: "4",
+            D: "5"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which of these numbers is prime?",
+          answers: {
+            A: "21",
+            B: "29",
+            C: "39",
+            D: "51"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the square of 21?",
+          answers: {
+            A: "441",
+            B: "421",
+            C: "401",
+            D: "21"
+          },
+          correct: "A"
+        },
+        {
+          question: "How many solutions does x³ + y³ = z³ have in natural numbers?",
+          answers: {
+            A: "Infinite",
+            B: "Two",
+            C: "None",
+            D: "Only one"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is 2^10 + 2^9?",
+          answers: {
+            A: "1024",
+            B: "2048",
+            C: "512",
+            D: "1536"
+          },
+          correct: "D"
+        },
+        {
+          question: "What number do we get when we square 0.1?",
+          answers: {
+            A: "0.01",
+            B: "0.2",
+            C: "0.1",
+            D: "1"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is 1000 divided by 8?",
+          answers: {
+            A: "125",
+            B: "150",
+            C: "250",
+            D: "115"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the sum of interior angles of a hexagon?",
+          answers: {
+            A: "760°",
+            B: "720°",
+            C: "740°",
+            D: "700°"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the next number in the sequence: 1, 8, 27, 64, ...?",
+          answers: {
+            A: "100",
+            B: "121",
+            C: "125",
+            D: "144"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is 2 to the tenth power, often used as a basic unit in computing (Kilo)?",
+          answers: {
+            A: "1000",
+            B: "1024",
+            C: "512",
+            D: "2048"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which mathematical symbol was introduced by Robert Recorde?",
+          answers: {
+            A: "Plus (+)",
+            B: "Minus (-)",
+            C: "Equals (=)",
+            D: "Infinity (∞)"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is the factorial of 4 (4!)?",
+          answers: {
+            A: "8",
+            B: "16",
+            C: "24",
+            D: "12"
+          },
+          correct: "C"
+        },
+        {
+          question: "The plus sign (+) is actually an abbreviation of the Latin word 'et', which means:",
+          answers: {
+            A: "More",
+            B: "And",
+            C: "Sum",
+            D: "Total"
+          },
+          correct: "B"
+        },
+        {
+          question: "Who introduced the use of letters (x, y, z) for unknown quantities in mathematics?",
+          answers: {
+            A: "René Descartes",
+            B: "Albert Einstein",
+            C: "Galileo Galilei",
+            D: "Blaise Pascal"
+          },
+          correct: "A"
+        },
+        {
+          question: "The Latin word 'Axioma', from which the term axiom comes, means:",
+          answers: {
+            A: "Starting point",
+            B: "Something considered worthy or true",
+            C: "Difficult problem",
+            D: "Hidden proof"
+          },
+          correct: "B"
+        },
+        {
+          question: "The word 'Arithmetic' comes from the Greek 'arithmos', meaning:",
+          answers: {
+            A: "Number",
+            B: "Law",
+            C: "Skill",
+            D: "Truth"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which language does the word 'Algebra' originate from?",
+          answers: {
+            A: "Greek",
+            B: "Sanskrit",
+            C: "Arabic",
+            D: "Latin"
+          },
+          correct: "C"
+        },
+        {
+          question: "What does the Arabic word 'al-jabr', from which Algebra comes, originally mean?",
+          answers: {
+            A: "Reassembling broken parts",
+            B: "Calculation",
+            C: "Hidden number",
+            D: "Wisdom"
+          },
+          correct: "A"
+        },
+        {
+          question: "The word 'Geometry' literally means:",
+          answers: {
+            A: "Drawing shapes",
+            B: "Recording space",
+            C: "Science of angles",
+            D: "Measuring the Earth"
+          },
+          correct: "D"
+        },
+        {
+          question: "From which Latin phrase does the term 'percent' originate?",
+          answers: {
+            A: "Per centuria (per century)",
+            B: "Per centum (per hundred)",
+            C: "Pro centum (for part)",
+            D: "Pre cent (before everything)"
+          },
+          correct: "B"
+        }
+      ],
+      hard: [
+        {
+          question: "What is the absolute value of a number?",
+          answers: {
+            A: "Its distance from zero",
+            B: "Its square",
+            C: "Its opposite",
+            D: "Its reciprocal"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is 0.1 + 0.01 + 0.001?",
+          answers: {
+            A: "0.3",
+            B: "0.111",
+            C: "0.011",
+            D: "1.11"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is 10% of 10% of 100?",
+          answers: {
+            A: "10",
+            B: "0.01",
+            C: "0.1",
+            D: "1"
+          },
+          correct: "D"
+        },
+        {
+          question: "What do you call a quadrilateral with all sides equal and all right angles?",
+          answers: {
+            A: "Rectangle",
+            B: "Rhombus",
+            C: "Square",
+            D: "Trapezoid"
+          },
+          correct: "C"
+        },
+        {
+          question: "How many seconds are in 12 minutes?",
+          answers: {
+            A: "600",
+            B: "1200",
+            C: "360",
+            D: "720"
+          },
+          correct: "D"
+        },
+        {
+          question: "What do you call a number obtained by multiplying a number by itself?",
+          answers: {
+            A: "Cube",
+            B: "Factorial",
+            C: "Factor",
+            D: "Square"
+          },
+          correct: "D"
+        },
+        {
+          question: "What is the next number in the sequence: 5, 10, 20, 40, ...?",
+          answers: {
+            A: "60",
+            B: "50",
+            C: "80",
+            D: "100"
+          },
+          correct: "C"
+        },
+        {
+          question: "What is a hypotenuse?",
+          answers: {
+            A: "Shortest side of a triangle",
+            B: "90-degree angle",
+            C: "Longest side of a right triangle",
+            D: "Pythagorean theorem"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which number is the neutral element for addition?",
+          answers: {
+            A: "0",
+            B: "1",
+            C: "-1",
+            D: "10"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the result of 3³ (three cubed)?",
+          answers: {
+            A: "9",
+            B: "27",
+            C: "12",
+            D: "81"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which number comes next in the sequence: 1, 3, 6, 10, 15...?",
+          answers: {
+            A: "21",
+            B: "23",
+            C: "25",
+            D: "20"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which of these numbers is prime?",
+          answers: {
+            A: "9",
+            B: "15",
+            C: "17",
+            D: "21"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which number is the neutral element for multiplication?",
+          answers: {
+            A: "0",
+            B: "1",
+            C: "10",
+            D: "-1"
+          },
+          correct: "B"
+        },
+        {
+          question: "What do we get when a number is multiplied by its reciprocal?",
+          answers: {
+            A: "0",
+            B: "1",
+            C: "The number itself",
+            D: "Square of the number"
+          },
+          correct: "B"
+        },
+        {
+          question: "What is the next number in the sequence: 100, 90, 81, 73...?",
+          answers: {
+            A: "66",
+            B: "67",
+            C: "68",
+            D: "69"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is a seven-sided polygon called?",
+          answers: {
+            A: "Hexagon",
+            B: "Octagon",
+            C: "Heptagon",
+            D: "Nonagon"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which British mathematician decrypted the German Enigma during WWII?",
+          answers: {
+            A: "Stephen Hawking",
+            B: "John Nash",
+            C: "Isaac Newton",
+            D: "Alan Turing"
+          },
+          correct: "D"
+        },
+        {
+          question: "Which mathematician was a vegetarian and believed eating beans was a sin?",
+          answers: {
+            A: "Pythagoras",
+            B: "Euclid",
+            C: "Archimedes",
+            D: "Aristotle"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which mathematician wrote 'Elements', a book used as a textbook for over 2000 years?",
+          answers: {
+            A: "Thales",
+            B: "Euclid",
+            C: "Plato",
+            D: "Archimedes"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which mathematician (and lawyer) is known for 'Fermat’s Last Theorem' written in the margin of a book?",
+          answers: {
+            A: "Descartes",
+            B: "Euler",
+            C: "Pierre de Fermat",
+            D: "Cauchy"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which mathematician won the Nobel Prize in Economics and had his life portrayed in the film 'A Beautiful Mind'?",
+          answers: {
+            A: "Alan Turing",
+            B: "John Nash",
+            C: "Paul Erdős",
+            D: "Andrew Wiles"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which mathematician developed analytic geometry by combining algebra and geometry?",
+          answers: {
+            A: "Fermat",
+            B: "Pascal",
+            C: "Lagrange",
+            D: "Descartes"
+          },
+          correct: "D"
+        },
+        {
+          question: "Which Indian mathematician claimed the goddess Namagiri dictated formulas to him in dreams?",
+          answers: {
+            A: "Ramanujan",
+            B: "Aryabhata",
+            C: "Brahmagupta",
+            D: "Bhaskara"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which mathematician developed infinitesimal calculus independently of Newton?",
+          answers: {
+            A: "Euler",
+            B: "Leibniz",
+            C: "Bernoulli",
+            D: "Kepler"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which mathematician, despite restrictions on women, published under the male pseudonym Monsieur LeBlanc?",
+          answers: {
+            A: "Ada Lovelace",
+            B: "Hypatia",
+            C: "Sophie Germain",
+            D: "Emmy Noether"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which mathematician was the tutor of Alexander the Great?",
+          answers: {
+            A: "Aristotle",
+            B: "Plato",
+            C: "Socrates",
+            D: "Pythagoras"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which Arabic mathematician wrote the book 'Al-Jabr', from which algebra got its name?",
+          answers: {
+            A: "Alhazen",
+            B: "Al-Biruni",
+            C: "Al-Khwarizmi",
+            D: "Omar Khayyam"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which mathematician (and astronomer) first stated that Earth revolves around the Sun?",
+          answers: {
+            A: "Galileo",
+            B: "Kepler",
+            C: "Newton",
+            D: "Aristarchus of Samos"
+          },
+          correct: "D"
+        },
+        {
+          question: "Which mathematician is known for developing fractals?",
+          answers: {
+            A: "Benoît Mandelbrot",
+            B: "Georg Cantor",
+            C: "David Hilbert",
+            D: "Henri Poincaré"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which German mathematician was called 'the most important woman in the history of mathematics' by Einstein?",
+          answers: {
+            A: "Ada Lovelace",
+            B: "Emmy Noether",
+            C: "Sophie Germain",
+            D: "Hypatia"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which mathematician (and writer) wrote 'Alice in Wonderland'?",
+          answers: {
+            A: "Oscar Wilde",
+            B: "Charles Dickens",
+            C: "Mark Twain",
+            D: "Lewis Carroll"
+          },
+          correct: "D"
+        },
+        {
+          question: "Which ancient mathematician first calculated Earth's circumference using shadows in wells?",
+          answers: {
+            A: "Eratosthenes",
+            B: "Pythagoras",
+            C: "Euclid",
+            D: "Ptolemy"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which mathematician discovered the law of the lever and the volume of a crown?",
+          answers: {
+            A: "Eratosthenes",
+            B: "Archimedes",
+            C: "Thales",
+            D: "Euclid"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which mathematician introduced zero into European mathematics through 'Liber Abaci'?",
+          answers: {
+            A: "Pacioli",
+            B: "Descartes",
+            C: "Fibonacci",
+            D: "Tartaglia"
+          },
+          correct: "C"
+        }
+      ],
+      hardest: [
+        {
+          question: "Which mathematician was fascinated by the number 1729, now known as his number?",
+          answers: {
+            A: "Hardy",
+            B: "Littlewood",
+            C: "Erdős",
+            D: "Ramanujan"
+          },
+          correct: "D"
+        },
+        {
+          question: "Which mathematician founded a school whose motto was: 'Everything is number'?",
+          answers: {
+            A: "Thales",
+            B: "Pythagoras",
+            C: "Plato",
+            D: "Zeno"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which mathematician is known for a list of 23 unsolved problems?",
+          answers: {
+            A: "David Hilbert",
+            B: "Bernhard Riemann",
+            C: "Henri Poincaré",
+            D: "Felix Klein"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which mathematician survived imprisonment in Russia by solving geometry problems?",
+          answers: {
+            A: "Monge",
+            B: "Poncelet",
+            C: "Carnot",
+            D: "Fourier"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which mathematician invented the 'Game of Life'?",
+          answers: {
+            A: "John Nash",
+            B: "Stephen Hawking",
+            C: "John Conway",
+            D: "Martin Gardner"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which mathematician is known for Pascal’s Triangle?",
+          answers: {
+            A: "Pascal",
+            B: "Descartes",
+            C: "Euler",
+            D: "Newton"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which mathematician developed diagrams for sets?",
+          answers: {
+            A: "Boole",
+            B: "Russell",
+            C: "Cantor",
+            D: "Venn"
+          },
+          correct: "D"
+        },
+        {
+          question: "Which mathematician is known for the butterfly effect?",
+          answers: {
+            A: "Mandelbrot",
+            B: "Poincaré",
+            C: "Newton",
+            D: "Lorenz"
+          },
+          correct: "D"
+        },
+        {
+          question: "Which mathematician was known for always traveling with a suitcase full of papers, calling children 'epsilons'?",
+          answers: {
+            A: "Erdos",
+            B: "Euler",
+            C: "Gauss",
+            D: "Newton"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which mathematician is known as 'Napoleon’s mathematician'?",
+          answers: {
+            A: "Fourier",
+            B: "Lagrange",
+            C: "Laplace",
+            D: "Cauchy"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which mathematician (and inventor) created logarithms?",
+          answers: {
+            A: "Napier",
+            B: "Briggs",
+            C: "Euler",
+            D: "Kepler"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is the density of primes near n?",
+          answers: {
+            A: "1/n",
+            B: "1/ln(n)",
+            C: "1/√n",
+            D: "1/n²"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which mathematician wrote 'Arithmetica', which inspired Fermat?",
+          answers: {
+            A: "Euclid",
+            B: "Diophantus",
+            C: "Pythagoras",
+            D: "Archimedes"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which mathematician is known for the normal distribution curve?",
+          answers: {
+            A: "Gauss",
+            B: "Laplace",
+            C: "Euler",
+            D: "Poisson"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which mathematician created vector analysis?",
+          answers: {
+            A: "Newton",
+            B: "Gibbs",
+            C: "Maxwell",
+            D: "Heaviside"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which mathematician is known for axioms of natural numbers?",
+          answers: {
+            A: "Hilbert",
+            B: "Cantor",
+            C: "Peano",
+            D: "Dedekind"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which mathematician first introduced coordinate systems with negative numbers?",
+          answers: {
+            A: "Descartes",
+            B: "Fermat",
+            C: "Newton",
+            D: "Leibniz"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which mathematician solved cubic equations (third-degree equations)?",
+          answers: {
+            A: "Pacioli",
+            B: "Cardano",
+            C: "Ferrari",
+            D: "Bombelli"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which mathematician (and astronomer) formulated the three laws of planetary motion?",
+          answers: {
+            A: "Newton",
+            B: "Kepler",
+            C: "Copernicus",
+            D: "Brahe"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which mathematician first used 'e' for the base of the natural logarithm?",
+          answers: {
+            A: "Napier",
+            B: "Bernoulli",
+            C: "Newton",
+            D: "Euler"
+          },
+          correct: "D"
+        },
+        {
+          question: "Which mathematician founded the Kyoto school of mathematics?",
+          answers: {
+            A: "Kyoto",
+            B: "Takagi",
+            C: "Iwasawa",
+            D: "Sato"
+          },
+          correct: "B"
+        },
+        {
+          question: "Which mathematician studied conic sections (cones)?",
+          answers: {
+            A: "Archimedes",
+            B: "Euclid",
+            C: "Pythagoras",
+            D: "Apollonius"
+          },
+          correct: "D"
+        },
+        {
+          question: "Which mathematician wrote 'Ars Magna'?",
+          answers: {
+            A: "Cardano",
+            B: "Pacioli",
+            C: "Tartaglia",
+            D: "Ferrari"
+          },
+          correct: "A"
+        },
+        {
+          question: "What is e^(iπ) + 1?",
+          answers: {
+            A: "0",
+            B: "1",
+            C: "i",
+            D: "-1"
+          },
+          correct: "A"
+        },
+        {
+          question: "Which mathematician (and geneticist) developed laws of inheritance?",
+          answers: {
+            A: "Darwin",
+            B: "Galton",
+            C: "Mendel",
+            D: "Fisher"
+          },
+          correct: "C"
+        },
+        {
+          question: "Which mathematician proposed the famous hypothesis about prime numbers that is still unproven today?",
+          answers: {
+            A: "David Hilbert",
+            B: "Carl Friedrich Gauss",
+            C: "Bernhard Riemann",
+            D: "Évariste Galois"
+          },
+          correct: "C"
+        }
+      ]
     }
-  ],
-
-  hard: [
-    {
-      question: "What is the sum of all numbers on a roulette wheel (1 to 36)?",
-      answers: {
-        A: "555",
-        B: "1000",
-        C: "666",
-        D: "777"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the longest side in a right triangle called?",
-      answers: {
-        A: "Leg",
-        B: "Base",
-        C: "Height",
-        D: "Hypotenuse"
-      },
-      correct: "D"
-    },
-    {
-      question: "What number is called a 'Googol'?",
-      answers: {
-        A: "1 with 10 zeros",
-        B: "1 with 100 zeros",
-        C: "1 with 1000 zeros",
-        D: "Infinity"
-      },
-      correct: "B"
-    },
-    {
-      question: "How many seconds are in one hour?",
-      answers: {
-        A: "60",
-        B: "600",
-        C: "3600",
-        D: "360"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is an angle greater than 90° and less than 180° called?",
-      answers: {
-        A: "Acute angle",
-        B: "Right angle",
-        C: "Straight angle",
-        D: "Obtuse angle"
-      },
-      correct: "D"
-    },
-    {
-      question: "Which constant is obtained by dividing a circle's circumference by its diameter?",
-      answers: {
-        A: "e",
-        B: "π (Pi)",
-        C: "φ (Phi)",
-        D: "√2"
-      },
-      correct: "B"
-    },
-    {
-      question: "If you fold a sheet of paper 42 times, its thickness would theoretically reach:",
-      answers: {
-        A: "The Moon",
-        B: "Mount Everest",
-        C: "Clouds",
-        D: "Earth's core"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is a curve that approaches an axis but never touches it called?",
-      answers: {
-        A: "Parabola",
-        B: "Asymptote",
-        C: "Hyperbola",
-        D: "Tangent"
-      },
-      correct: "B"
-    },
-    {
-      question: "How many degrees are in a full circle?",
-      answers: {
-        A: "180°",
-        B: "270°",
-        C: "360°",
-        D: "400°"
-      },
-      correct: "C"
-    },
-    {
-      question: "What branch of mathematics uses letters instead of numbers to solve equations?",
-      answers: {
-        A: "Geometry",
-        B: "Statistics",
-        C: "Topology",
-        D: "Algebra"
-      },
-      correct: "D"
-    },
-    {
-      question: "What is the result of 0 divided by 5?",
-      answers: {
-        A: "5",
-        B: "0",
-        C: "1",
-        D: "Undefined"
-      },
-      correct: "B"
-    },
-    {
-      question: "What do you call a triangle with all sides equal?",
-      answers: {
-        A: "Scalene",
-        B: "Right",
-        C: "Equilateral",
-        D: "Isosceles"
-      },
-      correct: "C"
-    },
-    {
-      question: "What does 'median' represent in statistics?",
-      answers: {
-        A: "Average value",
-        B: "Most frequent value",
-        C: "Difference between max and min",
-        D: "Sum of all values"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is 12 squared?",
-      answers: {
-        A: "122",
-        B: "144",
-        C: "132",
-        D: "156"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is an axiom?",
-      answers: {
-        A: "A statement assumed true without proof",
-        B: "A theorem",
-        C: "A hypothesis",
-        D: "A lemma"
-      },
-      correct: "A"
-    },
-    {
-      question: "Who proved that the square of the hypotenuse equals the sum of squares of the legs?",
-      answers: {
-        A: "Aristotle",
-        B: "Pythagoras",
-        C: "Euclid",
-        D: "Archimedes"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is x⁰ (any non-zero number)?",
-      answers: {
-        A: "0",
-        B: "x",
-        C: "1",
-        D: "Infinity"
-      },
-      correct: "C"
-    },
-    {
-      question: "What do you call the bottom number in a fraction?",
-      answers: {
-        A: "Numerator",
-        B: "Denominator",
-        C: "Fraction line",
-        D: "Remainder"
-      },
-      correct: "B"
-    },
-    {
-      question: "Who is considered the 'father of computers'?",
-      answers: {
-        A: "Alan Turing",
-        B: "Charles Babbage",
-        C: "Ada Lovelace",
-        D: "John von Neumann"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is a line that touches a circle at exactly one point called?",
-      answers: {
-        A: "Chord",
-        B: "Secant",
-        C: "Tangent",
-        D: "Normal"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the sum of interior angles in a pentagon?",
-      answers: {
-        A: "560°",
-        B: "550°",
-        C: "540°",
-        D: "520°"
-      },
-      correct: "C"
-    }
-  ],
-
-hardest: [
-  {
-    question: "What does the topological problem known as the 'Seven Bridges of Königsberg' study?",
-    answers: {
-      A: "Graph theory",
-      B: "Combinatorics",
-      C: "Differential equations",
-      D: "Probability"
-    },
-    correct: "A"
   },
-  {
-    question: "What is the base of natural logarithms, known as Euler's number?",
-    answers: {
-      A: "3.14159",
-      B: "2.71828",
-      C: "1.61803",
-      D: "1.41421"
-    },
-    correct: "B"
-  },
-  {
-    question: "How is the set of points in the complex plane forming a famous fractal called?",
-    answers: {
-      A: "Pascal's triangle",
-      B: "Fibonacci sequence",
-      C: "Mandelbrot set",
-      D: "Koch snowflake"
-    },
-    correct: "C"
-  },
-  {
-    question: "What is the result of the integral of the function 1/x?",
-    answers: {
-      A: "x + C",
-      B: "x² + C",
-      C: "e^x + C",
-      D: "ln|x| + C"
-    },
-    correct: "D"
-  },
-  {
-    question: "What theorem connects vertices (V), edges (E), and faces (F) of a polyhedron (V - E + F = 2)?",
-    answers: {
-      A: "Euler characteristic",
-      B: "Pythagorean theorem",
-      C: "Lagrange theorem",
-      D: "Newton binomial"
-    },
-    correct: "A"
-  },
-  {
-    question: "What does Russell's paradox describe in set theory?",
-    answers: {
-      A: "The set of all sets that do not contain themselves",
-      B: "Infinity of numbers",
-      C: "Division by zero",
-      D: "Empty set"
-    },
-    correct: "A"
-  },
-  {
-    question: "What branch of mathematics deals with rates of change and areas under curves?",
-    answers: {
-      A: "Linear algebra",
-      B: "Discrete mathematics",
-      C: "Trigonometry",
-      D: "Infinitesimal calculus"
-    },
-    correct: "D"
-  },
-  {
-    question: "What is the smallest number with 12 divisors?",
-    answers: {
-      A: "60",
-      B: "72",
-      C: "48",
-      D: "120"
-    },
-    correct: "A"
-  },
-  {
-    question: "What does standard deviation measure in statistics?",
-    answers: {
-      A: "Average value",
-      B: "Center of data",
-      C: "Most frequent value",
-      D: "Data dispersion"
-    },
-    correct: "D"
-  },
-  {
-    question: "What is the determinant of any identity matrix?",
-    answers: {
-      A: "0",
-      B: "Infinity",
-      C: "1",
-      D: "-1"
-    },
-    correct: "C"
-  },
-  {
-    question: "Who first used the term 'function'?",
-    answers: {
-      A: "Leibniz",
-      B: "Euler",
-      C: "Descartes",
-      D: "Newton"
-    },
-    correct: "A"
-  },
-  {
-    question: "What is the binomial coefficient '5 choose 2'?",
-    answers: {
-      A: "5",
-      B: "10",
-      C: "20",
-      D: "15"
-    },
-    correct: "B"
-  },
-  {
-    question: "What curve is defined by x²/a² + y²/b² = 1?",
-    answers: {
-      A: "Hyperbola",
-      B: "Parabola",
-      C: "Circle",
-      D: "Ellipse"
-    },
-    correct: "D"
-  },
-  {
-    question: "What curve is defined by x²/a² - y²/b² = 1?",
-    answers: {
-      A: "Hyperbola",
-      B: "Parabola",
-      C: "Circle",
-      D: "Ellipse"
-    },
-    correct: "A"
-  },
-  {
-    question: "What is the derivative of a function at a point?",
-    answers: {
-      A: "Slope of the tangent line",
-      B: "Area under curve",
-      C: "Function value",
-      D: "X-intercept"
-    },
-    correct: "A"
-  },
-  {
-    question: "Which number system uses base 16?",
-    answers: {
-      A: "Binary",
-      B: "Octal",
-      C: "Decimal",
-      D: "Hexadecimal"
-    },
-    correct: "D"
-  },
-  {
-    question: "What is cardinality of a set?",
-    answers: {
-      A: "Number of elements in a set",
-      B: "Sum of elements",
-      C: "Type of elements",
-      D: "Ordering of set"
-    },
-    correct: "A"
-  },
-  {
-    question: "What is the limit of sin(x)/x as x approaches 0?",
-    answers: {
-      A: "0",
-      B: "1",
-      C: "Infinity",
-      D: "Undefined"
-    },
-    correct: "B"
-  },
-  {
-    question: "What is a square matrix?",
-    answers: {
-      A: "Zero matrix",
-      B: "Identity matrix",
-      C: "Matrix with same number of rows and columns",
-      D: "Diagonal matrix"
-    },
-    correct: "C"
-  },
-  {
-    question: "Which theorem proves there are infinitely many prime numbers?",
-    answers: {
-      A: "Pythagorean theorem",
-      B: "Fermat's theorem",
-      C: "Sieve theorem",
-      D: "Euclid's theorem"
-    },
-    correct: "D"
-  },
-  {
-    question: "In probability theory, what is a complementary event?",
-    answers: {
-      A: "Event that occurs when A does not occur",
-      B: "Event occurring simultaneously with A",
-      C: "Impossible event",
-      D: "Certain event"
-    },
-    correct: "A"
-  },
-  {
-    question: "Which matrix acts as identity in matrix multiplication?",
-    answers: {
-      A: "Zero matrix",
-      B: "Identity matrix",
-      C: "Scalar matrix",
-      D: "Transposed matrix"
-    },
-    correct: "B"
-  },
-  {
-    question: "What is a linear function?",
-    answers: {
-      A: "Quadratic",
-      B: "Exponential",
-      C: "Linear",
-      D: "Logarithmic"
-    },
-    correct: "C"
-  },
-  {
-    question: "What is the product of two imaginary numbers (e.g., 2i * 3i)?",
-    answers: {
-      A: "6",
-      B: "6i",
-      C: "0",
-      D: "-6"
-    },
-    correct: "D"
-  },
-  {
-    question: "How many real solutions can a quadratic equation have?",
-    answers: {
-      A: "Always two",
-      B: "Always one",
-      C: "Zero, one, or two",
-      D: "Infinite"
-    },
-    correct: "C"
-  },
-  {
-    question: "What is a factorial?",
-    answers: {
-      A: "Sum from 1 to n",
-      B: "n squared",
-      C: "n divided by 2",
-      D: "Product of all integers from 1 to n"
-    },
-    correct: "D"
-  },
-  {
-    question: "What is the traveling salesman problem?",
-    answers: {
-      A: "Shortest route visiting all cities once and returning",
-      B: "Sorting algorithm",
-      C: "Graph coloring",
-      D: "Knapsack problem"
-    },
-    correct: "A"
-  },
-  {
-    question: "What is Dirichlet's principle (pigeonhole principle)?",
-    answers: {
-      A: "At least two items share a property in large enough set",
-      B: "Law of large numbers",
-      C: "Impossible events",
-      D: "Random distribution"
-    },
-    correct: "A"
-  },
-  {
-    question: "What are transcendental numbers?",
-    answers: {
-      A: "Solutions of linear equations",
-      B: "Rational numbers",
-      C: "Not roots of any polynomial with integer coefficients",
-      D: "Negative numbers"
-    },
-    correct: "C"
-  },
-  {
-    question: "What is Jacobian in multivariable calculus?",
-    answers: {
-      A: "Determinant of partial derivatives matrix",
-      B: "Sum of numbers",
-      C: "Type of integral",
-      D: "Normal vector"
-    },
-    correct: "A"
-  },
-  {
-    question: "What is an inflection point?",
-    answers: {
-      A: "Maximum",
-      B: "Minimum",
-      C: "Zero",
-      D: "Point where concavity changes"
-    },
-    correct: "D"
-  },
-  {
-    question: "What is a cycloid?",
-    answers: {
-      A: "Curve traced by a point on rolling circle",
-      B: "Ellipse",
-      C: "Hyperbola",
-      D: "Parabola"
-    },
-    correct: "A"
-  },
-  {
-    question: "What is the Gaussian curve?",
-    answers: {
-      A: "Normal distribution",
-      B: "Circle",
-      C: "Orbit path",
-      D: "Integral type"
-    },
-    correct: "A"
-  },
-  {
-    question: "What is sin²(x) + cos²(x)?",
-    answers: {
-      A: "0",
-      B: "sin(2x)",
-      C: "1",
-      D: "tan(x)"
-    },
-    correct: "C"
-  },
-  {
-    question: "What rule is used for indeterminate limits?",
-    answers: {
-      A: "Pythagorean rule",
-      B: "L'Hôpital's rule",
-      C: "Gaussian rule",
-      D: "Newton's rule"
-    },
-    correct: "B"
-  },
-  {
-    question: "What is the imaginary part of 5 + 3i?",
-    answers: {
-      A: "5",
-      B: "-1",
-      C: "3i",
-      D: "3"
-    },
-    correct: "D"
-  },
-  {
-    question: "What is the volume of a sphere?",
-    answers: {
-      A: "4πr²",
-      B: "2πr²",
-      C: "πr²",
-      D: "(4/3)πr³"
-    },
-    correct: "D"
-  },
-  {
-    question: "How many sides does a snowflake have due to ice molecular structure?",
-    answers: {
-      A: "4",
-      B: "5",
-      C: "6",
-      D: "7"
-    },
-    correct: "C"
-  }
-]
-},
-  funFacts: {
-  easy: [
-    {
-      question: "What is 2 to the fifth power?",
-      answers: {
-        A: "32",
-        B: "16",
-        C: "25",
-        D: "64"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which square is closest to 1000?",
-      answers: {
-        A: "30²",
-        B: "32²",
-        C: "31²",
-        D: "33²"
-      },
-      correct: "B"
-    },
-    {
-      question: "What do you call a fraction where the numerator is greater than the denominator?",
-      answers: {
-        A: "Proper fraction",
-        B: "Mixed number",
-        C: "Irreducible fraction",
-        D: "Improper fraction"
-      },
-      correct: "D"
-    },
-    {
-      question: "Rene Descartes is known for his famous quote:",
-      answers: {
-        A: "'I think, therefore I am'",
-        B: "'Knowledge is power'",
-        C: "'Eureka!'",
-        D: "'Everything is relative'"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is a shape with 8 sides called?",
-      answers: {
-        A: "Hexagon",
-        B: "Octagon",
-        C: "Decagon",
-        D: "Tetrahedron"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the name of the famous paradox with infinite steps where Achilles cannot catch the tortoise?",
-      answers: {
-        A: "Death paradox",
-        B: "Zeno's paradox",
-        C: "Simpson's paradox",
-        D: "Galileo's paradox"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the cube root of 27?",
-      answers: {
-        A: "3",
-        B: "9",
-        C: "27",
-        D: "6"
-      },
-      correct: "A"
-    },
-    {
-      question: "In which country was mathematician Gauss born?",
-      answers: {
-        A: "Germany",
-        B: "Switzerland",
-        C: "Austria",
-        D: "France"
-      },
-      correct: "A"
-    },
-    {
-      question: "In which country was mathematician Fermat born?",
-      answers: {
-        A: "Italy",
-        B: "Spain",
-        C: "France",
-        D: "England"
-      },
-      correct: "C"
-    },
-    {
-      question: "In which city was mathematician Pascal born?",
-      answers: {
-        A: "Paris",
-        B: "Clermont-Ferrand",
-        C: "Marseille",
-        D: "Nice"
-      },
-      correct: "B"
-    },
-    {
-      question: "In which country was mathematician Newton born?",
-      answers: {
-        A: "Scotland",
-        B: "England",
-        C: "Ireland",
-        D: "Wales"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the Roman numeral for 50?",
-      answers: {
-        A: "L",
-        B: "C",
-        C: "V",
-        D: "X"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is the Roman numeral for 100?",
-      answers: {
-        A: "D",
-        B: "L",
-        C: "C",
-        D: "X"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the Roman numeral for 1000?",
-      answers: {
-        A: "M",
-        B: "D",
-        C: "C",
-        D: "X"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is the Roman numeral for 10?",
-      answers: {
-        A: "V",
-        B: "X",
-        C: "L",
-        D: "I"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the Roman numeral for 500?",
-      answers: {
-        A: "M",
-        B: "D",
-        C: "C",
-        D: "L"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the fourth letter of the Greek alphabet?",
-      answers: {
-        A: "Gamma",
-        B: "Delta",
-        C: "Beta",
-        D: "Epsilon"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the third letter of the Greek alphabet?",
-      answers: {
-        A: "Beta",
-        B: "Delta",
-        C: "Gamma",
-        D: "Alpha"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the last letter of the Greek alphabet?",
-      answers: {
-        A: "Sigma",
-        B: "Omega",
-        C: "Psi",
-        D: "Theta"
-      },
-      correct: "B"
-    },
-    {
-      question: "In which city was the Clay Mathematics Institute founded?",
-      answers: {
-        A: "New York",
-        B: "Cambridge",
-        C: "San Francisco",
-        D: "Seattle"
-      },
-      correct: "B"
-    },
-    {
-      question: "Where is the 'Euler Room' located in honor of Leonhard Euler?",
-      answers: {
-        A: "Bern",
-        B: "Zurich",
-        C: "Basel",
-        D: "Berlin"
-      },
-      correct: "C"
-    },
-    {
-      question: "In which country is the largest mathematical library located?",
-      answers: {
-        A: "France",
-        B: "Germany",
-        C: "USA",
-        D: "Italy"
-      },
-      correct: "A"
-    },
-    {
-      question: "Where is the largest mathematics museum in the world (Museum of Mathematics) located?",
-      answers: {
-        A: "New York",
-        B: "London",
-        C: "Berlin",
-        D: "Tokyo"
-      },
-      correct: "A"
-    },
-    {
-      question: "In which city is the University of Copenhagen, where Niels Bohr worked?",
-      answers: {
-        A: "Stockholm",
-        B: "Copenhagen",
-        C: "Oslo",
-        D: "Helsinki"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which civilization first developed a method for solving quadratic equations?",
-      answers: {
-        A: "Egyptians",
-        B: "Babylonians",
-        C: "Greeks",
-        D: "Chinese"
-      },
-      correct: "B"
-    },
-    {
-      question: "In which city is the famous Mathematics Bridge located?",
-      answers: {
-        A: "London",
-        B: "Paris",
-        C: "Cambridge",
-        D: "Oxford"
-      },
-      correct: "C"
-    },
-    {
-      question: "In which country was Pythagoras born?",
-      answers: {
-        A: "Greece",
-        B: "Italy",
-        C: "Turkey",
-        D: "Egypt"
-      },
-      correct: "A"
-    },
-    {
-      question: "Where is the Institute for Advanced Study, where Einstein worked, located?",
-      answers: {
-        A: "Boston",
-        B: "Princeton",
-        C: "Cambridge",
-        D: "New York"
-      },
-      correct: "B"
-    },
-    {
-      question: "In which city is the Fields Institute for Mathematics located?",
-      answers: {
-        A: "Vancouver",
-        B: "Montreal",
-        C: "Toronto",
-        D: "Ottawa"
-      },
-      correct: "C"
-    },
-    {
-      question: "Where was mathematician Leonhard Euler born?",
-      answers: {
-        A: "Germany",
-        B: "Switzerland",
-        C: "Austria",
-        D: "Netherlands"
-      },
-      correct: "B"
-    },
-    {
-      question: "In which country is the famous Library of Alexandria, known for its mathematical tradition?",
-      answers: {
-        A: "Egypt",
-        B: "Greece",
-        C: "Italy",
-        D: "France"
-      },
-      correct: "A"
-    },
-    {
-      question: "In which city was the Institute for Mathematical Sciences (IMS) founded?",
-      answers: {
-        A: "Beijing",
-        B: "New York",
-        C: "Singapore",
-        D: "Paris"
-      },
-      correct: "C"
-    },
-    {
-      question: "Where is CERN, known for mathematical and physical research, located?",
-      answers: {
-        A: "Switzerland",
-        B: "France",
-        C: "Germany",
-        D: "Italy"
-      },
-      correct: "A"
-    },
-    {
-      question: "In which city is MIT, known for mathematics and technology, located?",
-      answers: {
-        A: "Boston",
-        B: "Cambridge, Massachusetts",
-        C: "San Francisco",
-        D: "Seattle"
-      },
-      correct: "B"
-    },
-    {
-      question: "What do you call a 12-sided polygon?",
-      answers: {
-        A: "Decagon",
-        B: "Dodecagon",
-        C: "Hendecagon",
-        D: "Octagon"
-      },
-      correct: "B"
-    },
-    {
-      question: "Who first described the golden ratio mathematically?",
-      answers: {
-        A: "Euclid",
-        B: "Newton",
-        C: "Euler",
-        D: "Gauss"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which number is the only one that is both even and prime?",
-      answers: {
-        A: "0",
-        B: "1",
-        C: "2",
-        D: "3"
-      },
-      correct: "C"
-    },
-    {
-      question: "How many hours are in one week?",
-      answers: {
-        A: "144",
-        B: "160",
-        C: "168",
-        D: "176"
-      },
-      correct: "C"
-    },
-    {
-      question: "In how many ways can 3 different objects be arranged in a row?",
-      answers: {
-        A: "3",
-        B: "6",
-        C: "9",
-        D: "12"
-      },
-      correct: "B"
-    },
-    {
-      question: "In how many ways can 4 different objects be arranged in a row?",
-      answers: {
-        A: "12",
-        B: "16",
-        C: "24",
-        D: "32"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the area of a circle with radius 7 cm?",
-      answers: {
-        A: "49π",
-        B: "14π",
-        C: "21π",
-        D: "28π"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is the area of a circle with radius 8 cm?",
-      answers: {
-        A: "16π",
-        B: "64π",
-        C: "32π",
-        D: "8π"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the area of a circle with radius 10 cm?",
-      answers: {
-        A: "20π",
-        B: "50π",
-        C: "100π",
-        D: "10π"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which mathematical symbol is used for approximately equal?",
-      answers: {
-        A: "≈",
-        B: "=",
-        C: "≠",
-        D: "≤"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is the largest prime number less than 100?",
-      answers: {
-        A: "97",
-        B: "91",
-        C: "89",
-        D: "99"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is Pascal’s triangle used for?",
-      answers: {
-        A: "Circle geometry",
-        B: "Combinatorics and binomial coefficients",
-        C: "Solving integrals",
-        D: "Logarithmic functions"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which mathematician is the division algorithm named after?",
-      answers: {
-        A: "Newton",
-        B: "Horner",
-        C: "Gauss",
-        D: "Lagrange"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is 1+1 in modular arithmetic mod 2?",
-      answers: {
-        A: "0",
-        B: "1",
-        C: "2",
-        D: "Undefined"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which constant is approximately 2.718?",
-      answers: {
-        A: "π",
-        B: "e",
-        C: "φ",
-        D: "γ"
-      },
-      correct: "B"
-    },
-    {
-      question: "What does the prefix 'kilo' mean?",
-      answers: {
-        A: "100",
-        B: "1000",
-        C: "10000",
-        D: "1000000"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the Pythagorean triple called?",
-      answers: {
-        A: "Pythagorean triple",
-        B: "Euclid triple",
-        C: "Mathematical triple",
-        D: "Geometric triple"
-      },
-      correct: "A"
-    },
-    {
-      question: "How many degrees are in a full circle?",
-      answers: {
-        A: "180°",
-        B: "270°",
-        C: "360°",
-        D: "450°"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is 0! (zero factorial)?",
-      answers: {
-        A: "0",
-        B: "1",
-        C: "2",
-        D: "Undefined"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which digit does not appear in the binary system?",
-      answers: {
-        A: "0",
-        B: "1",
-        C: "2",
-        D: "None"
-      },
-      correct: "C"
-    }
-  ],
-  hard: [
-    {
-      question: "How is the scientist who shouted 'Eureka!' in the bath called?",
-      answers: {
-        A: "Archimedes",
-        B: "Pythagoras",
-        C: "Euclid",
-        D: "Galileo"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is the name of the first female programmer in history, collaborator of Charles Babbage?",
-      answers: {
-        A: "Ada Lovelace",
-        B: "Marie Curie",
-        C: "Rosalind Franklin",
-        D: "Grace Hopper"
-      },
-      correct: "A"
-    },
-    {
-      question: "How many millimeters are in one centimeter?",
-      answers: {
-        A: "100",
-        B: "Million",
-        C: "1000",
-        D: "10"
-      },
-      correct: "D"
-    },
-    {
-      question: "What do you call a number that has exactly two divisors (1 and itself)?",
-      answers: {
-        A: "Composite number",
-        B: "Prime number",
-        C: "Even number",
-        D: "Negative number"
-      },
-      correct: "B"
-    },
-    {
-      question: "How many edges does a cube have?",
-      answers: {
-        A: "8",
-        B: "10",
-        C: "12",
-        D: "6"
-      },
-      correct: "C"
-    },
-    {
-      question: "What do you call a quadrilateral with all four sides equal, but angles not necessarily 90°?",
-      answers: {
-        A: "Square",
-        B: "Rhombus",
-        C: "Trapezoid",
-        D: "Parallelogram"
-      },
-      correct: "B"
-    },
-    {
-      question: "What do you get when you divide 100 by 0.5?",
-      answers: {
-        A: "50",
-        B: "200",
-        C: "150",
-        D: "25"
-      },
-      correct: "B"
-    },
-    {
-      question: "How many minutes are in one day?",
-      answers: {
-        A: "1240",
-        B: "1340",
-        C: "1440",
-        D: "1640"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the longest chord in a circle called?",
-      answers: {
-        A: "Radius",
-        B: "Diameter",
-        C: "Tangent",
-        D: "Secant"
-      },
-      correct: "B"
-    },
-    {
-      question: "How many degrees are in the sum of angles in a right triangle?",
-      answers: {
-        A: "90°",
-        B: "180°",
-        C: "270°",
-        D: "360°"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is a 'set' in mathematics?",
-      answers: {
-        A: "A collection of well-defined objects",
-        B: "Sum of numbers",
-        C: "Result of multiplication",
-        D: "Geometric drawing"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is the next number in the sequence: 1, 4, 9, 16, 25...?",
-      answers: {
-        A: "30",
-        B: "35",
-        C: "36",
-        D: "49"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which is the only integer that is neither positive nor negative?",
-      answers: {
-        A: "0",
-        B: "1",
-        C: "-1",
-        D: "Infinity"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is the notation for the set of natural numbers without zero?",
-      answers: {
-        A: "N",
-        B: "N₀",
-        C: "Z",
-        D: "R"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is a polygon with 6 sides called?",
-      answers: {
-        A: "Pentagon",
-        B: "Hexagon",
-        C: "Heptagon",
-        D: "Octagon"
-      },
-      correct: "B"
-    },
-    {
-      question: "How many liters of water fit into one cubic meter (1 m³)?",
-      answers: {
-        A: "100",
-        B: "500",
-        C: "1000",
-        D: "10000"
-      },
-      correct: "C"
-    }
-  ],
-  hardest: [
-    {
-      question: "What is the Euler characteristic (χ) of a torus surface?",
-      answers: {
-        A: "2",
-        B: "1",
-        C: "0",
-        D: "-1"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the name of a function that is continuous everywhere but nowhere differentiable?",
-      answers: {
-        A: "Weierstrass function",
-        B: "Dirichlet function",
-        C: "Gauss function",
-        D: "Taylor function"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is a mapping that preserves distances between points called?",
-      answers: {
-        A: "Isometry",
-        B: "Projection",
-        C: "Rotation",
-        D: "Dilation"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is sin(π/2)?",
-      answers: {
-        A: "0",
-        B: "0.5",
-        C: "1",
-        D: "-1"
-      },
-      correct: "C"
-    },
-    {
-      question: "How many solutions does a quadratic equation with negative discriminant have in R?",
-      answers: {
-        A: "2",
-        B: "1",
-        C: "0",
-        D: "Infinite"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is log(1000)?",
-      answers: {
-        A: "10",
-        B: "1",
-        C: "3",
-        D: "0"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the interior angle of a regular pentagon?",
-      answers: {
-        A: "108°",
-        B: "72°",
-        C: "90°",
-        D: "120°"
-      },
-      correct: "A"
-    },
-    {
-      question: "Who is the author of the famous book 'Elements'?",
-      answers: {
-        A: "Pythagoras",
-        B: "Euclid",
-        C: "Archimedes",
-        D: "Plato"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the square root of 1600?",
-      answers: {
-        A: "40",
-        B: "4",
-        C: "16",
-        D: "400"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which ancient mathematician was killed while defending his geometric drawings in the sand from a Roman soldier?",
-      answers: {
-        A: "Pythagoras",
-        B: "Euclid",
-        C: "Archimedes",
-        D: "Tales"
-      },
-      correct: "C"
-    },
-    {
-      question: "Who is considered the first professional female mathematician in history?",
-      answers: {
-        A: "Hypatia",
-        B: "Ada Lovelace",
-        C: "Sophie Germain",
-        D: "Emmy Noether"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which mathematician became blind in one eye and later completely blind but continued dictating works from memory?",
-      answers: {
-        A: "Carl Friedrich Gauss",
-        B: "Isaac Newton",
-        C: "Leonhard Euler",
-        D: "Bernhard Riemann"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the sequence where each term is the sum of the previous two, but starts with 1 and 2 instead of 1 and 1 called?",
-      answers: {
-        A: "Fibonacci",
-        B: "Lucas",
-        C: "Pascal",
-        D: "Taylor"
-      },
-      correct: "B"
-    },
-    {
-      question: "What does Green's theorem state?",
-      answers: {
-        A: "It relates a line integral to a double integral over a region",
-        B: "Color is important in topology",
-        C: "All curves are green",
-        D: "Sum of angles is 180°"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is L'Hôpital's rule?",
-      answers: {
-        A: "A hospital rule",
-        B: "A rule for limits of 1/n type",
-        C: "A geometric theorem",
-        D: "A method for evaluating 0/0 limits",
-        correct: "D"
-      }
-    },
-    {
-      question: "What is bijection?",
-      answers: {
-        A: "Only injective mapping",
-        B: "Injective mapping",
-        C: "Surjective mapping",
-        D: "Both injective and surjective mapping"
-      },
-      correct: "D"
-    },
-    {
-      question: "Who introduced the ∫ integral notation?",
-      answers: {
-        A: "Leibniz",
-        B: "Newton",
-        C: "Euler",
-        D: "Riemann"
-      },
-      correct: "A"
-    },
-    {
-      question: "When was Euclid's book 'Elements' published?",
-      answers: {
-        A: "500 BC",
-        B: "300 BC",
-        C: "100 BC",
-        D: "100 AD"
-      },
-      correct: "B"
-    },
-    {
-      question: "Who first formally defined the real number continuum?",
-      answers: {
-        A: "Cantor",
-        B: "Dedekind",
-        C: "Weierstrass",
-        D: "Hilbert"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which Italian city was Fibonacci from?",
-      answers: {
-        A: "Pisa",
-        B: "Florence",
-        C: "Rome",
-        D: "Milan"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which country is René Descartes from?",
-      answers: {
-        A: "Belgium",
-        B: "France",
-        C: "Switzerland",
-        D: "Netherlands"
-      },
-      correct: "B"
-    },
-    {
-      question: "In which country was Riemann born?",
-      answers: {
-        A: "France",
-        B: "Austria",
-        C: "Switzerland",
-        D: "Germany"
-      },
-      correct: "D"
-    },
-    {
-      question: "In which country was Hilbert born?",
-      answers: {
-        A: "Germany",
-        B: "Poland",
-        C: "Czech Republic",
-        D: "Austria"
-      },
-      correct: "A"
-    },
-    {
-      question: "In which country was Kolmogorov born?",
-      answers: {
-        A: "Russia",
-        B: "Ukraine",
-        C: "Poland",
-        D: "Belarus"
-      },
-      correct: "A"
-    }
-  ]
-},
-  interestingFacts: {
-  easy: [
-    {
-      question: "What is the sum of angles in a triangle?",
-      answers: {
-        A: "360°",
-        B: "90°",
-        C: "270°",
-        D: "180°"
-      },
-      correct: "D"
-    },
-    {
-      question: "If a plane crashes on the border of two countries, where are the survivors buried?",
-      answers: {
-        A: "In the first country",
-        B: "In the second",
-        C: "On the border",
-        D: "They are not buried"
-      },
-      correct: "D"
-    },
-    {
-      question: "How many times a day do clock hands overlap?",
-      answers: {
-        A: "12",
-        B: "22",
-        C: "24",
-        D: "48"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which of the given numbers equals three times the sum of its digits?",
-      answers: {
-        A: "12",
-        B: "18",
-        C: "27",
-        D: "36"
-      },
-      correct: "C"
-    },
-    {
-      question: "If a number is increased by 20% and then decreased by 20%, the result is:",
-      answers: {
-        A: "Greater",
-        B: "Smaller",
-        C: "Same",
-        D: "Depends"
-      },
-      correct: "B"
-    },
-    {
-      question: "How many diagonals does a square have?",
-      answers: {
-        A: "1",
-        B: "2",
-        C: "4",
-        D: "6"
-      },
-      correct: "B"
-    },
-    {
-      question: "If you flip a coin 3 times, how many possible outcomes are there?",
-      answers: {
-        A: "6",
-        B: "8",
-        C: "4",
-        D: "3"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the smallest number divisible by all numbers from 1 to 5?",
-      answers: {
-        A: "20",
-        B: "60",
-        C: "30",
-        D: "120"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which number is a palindrome?",
-      answers: {
-        A: "123",
-        B: "121",
-        C: "132",
-        D: "231"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the sum of the infinite series 1/2 + 1/4 + 1/8 + ...?",
-      answers: {
-        A: "1",
-        B: "2",
-        C: "∞",
-        D: "1/2"
-      },
-      correct: "A"
-    },
-    {
-      question: "If you have 5 different books, how many ways can you arrange them?",
-      answers: {
-        A: "25",
-        B: "120",
-        C: "60",
-        D: "100"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which number is a perfect square?",
-      answers: {
-        A: "361",
-        B: "256",
-        C: "121",
-        D: "All of the above"
-      },
-      correct: "D"
-    },
-    {
-      question: "If 5 machines need 5 minutes to make 5 products, how long do 100 machines need to make 100 products?",
-      answers: {
-        A: "100 min",
-        B: "5 min",
-        C: "50 min",
-        D: "1 min"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is 2^10 + 2^10?",
-      answers: {
-        A: "1024",
-        B: "2048",
-        C: "4096",
-        D: "512"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is √2 to 2 decimal places?",
-      answers: {
-        A: "1.41",
-        B: "1.42",
-        C: "1.43",
-        D: "1.44"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is 2^0?",
-      answers: {
-        A: "2",
-        B: "0",
-        C: "1",
-        D: "Undefined"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is 6666 × 6667?",
-      answers: {
-        A: "44442222",
-        B: "33333333",
-        C: "67676767",
-        D: "66666667"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which number is divisible by 6?",
-      answers: {
-        A: "214",
-        B: "222",
-        C: "230",
-        D: "212"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is NZS in mathematics?",
-      answers: {
-        A: "Greatest common denominator",
-        B: "Least common multiple",
-        C: "Least common divisor",
-        D: "Odd common set"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is NZD in mathematics?",
-      answers: {
-        A: "Greatest common divisor",
-        B: "Least common divisor",
-        C: "Least common multiple",
-        D: "Negative sum of divisors"
-      },
-      correct: "A"
-    },
-    {
-      question: "The golden ratio is connected to which sequence?",
-      answers: {
-        A: "Lucas sequence",
-        B: "Pythagorean sequence",
-        C: "Fibonacci sequence",
-        D: "Geometric sequence"
-      },
-      correct: "C"
-    },
-    {
-      question: "How are sets most commonly represented?",
-      answers: {
-        A: "Histogram",
-        B: "Venn diagram",
-        C: "Line graph",
-        D: "Table"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which number is divisible by 3?",
-      answers: {
-        A: "124",
-        B: "222",
-        C: "121",
-        D: "101"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which symbol represents set intersection?",
-      answers: {
-        A: "∪",
-        B: "∩",
-        C: "⊂",
-        D: "∈"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the decimal form of 1/3?",
-      answers: {
-        A: "0.34",
-        B: "0.3",
-        C: "0.333",
-        D: "0.333..."
-      },
-      correct: "D"
-    },
-    {
-      question: "What is the sum of the first three prime numbers?",
-      answers: {
-        A: "8",
-        B: "10",
-        C: "12",
-        D: "15"
-      },
-      correct: "B"
-    },
-    {
-      question: "How many edges does a tetrahedron have?",
-      answers: {
-        A: "4",
-        B: "6",
-        C: "8",
-        D: "12"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the sum of interior angles in a pentagon?",
-      answers: {
-        A: "560°",
-        B: "500°",
-        C: "580°",
-        D: "540°"
-      },
-      correct: "D"
-    },
-    {
-      question: "If you roll two dice, what is the probability of getting a sum of 7?",
-      answers: {
-        A: "1/6",
-        B: "1/12",
-        C: "1/36",
-        D: "1/3"
-      },
-      correct: "A"
-    },
-    {
-      question: "How many prime numbers are less than 10?",
-      answers: {
-        A: "3",
-        B: "4",
-        C: "5",
-        D: "6"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which number is both a square and a prime?",
-      answers: {
-        A: "1",
-        B: "4",
-        C: "9",
-        D: "None"
-      },
-      correct: "D"
-    },
-    {
-      question: "If x + x = x, what is x?",
-      answers: {
-        A: "1",
-        B: "0",
-        C: "2",
-        D: "-1"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the third angle in a triangle if the other two are 50° and 60°?",
-      answers: {
-        A: "70°",
-        B: "65°",
-        C: "80°",
-        D: "75°"
-      },
-      correct: "A"
-    },
-    {
-      question: "If each square on a chessboard doubles rice grains starting from 1, how many grains are on the 64th square?",
-      answers: {
-        A: "About 100 kg of rice",
-        B: "One truck of rice",
-        C: "More than total world rice production",
-        D: "Impossible to calculate"
-      },
-      correct: "C"
-    },
-    {
-      question: "How many times can paper realistically be folded?",
-      answers: {
-        A: "7 times",
-        B: "10 times",
-        C: "67",
-        D: "Infinite"
-      },
-      correct: "A"
-    },
-    {
-      question: "How many lines can pass through 4 distinct points (in general position)?",
-      answers: {
-        A: "3",
-        B: "4",
-        C: "6",
-        D: "Undefined"
-      },
-      correct: "C"
-    },
-    {
-      question: "What are collinear points?",
-      answers: {
-        A: "Points on the same circle",
-        B: "Points on the same line",
-        C: "Points in a plane",
-        D: "Random points"
-      },
-      correct: "B"
-    },
-    {
-      question: "What are non-collinear points?",
-      answers: {
-        A: "Points on the same line",
-        B: "Points on a circle",
-        C: "Points not on the same line",
-        D: "Points with same center"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which are undefined basic geometric terms?",
-      answers: {
-        A: "Point, line, plane",
-        B: "Angle, segment, circle",
-        C: "Solid, volume, area",
-        D: "Vector, matrix, function"
-      },
-      correct: "A"
-    },
-    {
-      question: "What was the name of the Greek school where irrational numbers were discovered?",
-      answers: {
-        A: "Plato's Academy",
-        B: "Pythagorean school",
-        C: "Aristotle's school",
-        D: "Euclid's school"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which artist used mathematical proportions and the golden ratio in 'The Last Supper'?",
-      answers: {
-        A: "Michelangelo",
-        B: "Leonardo da Vinci",
-        C: "Raphael",
-        D: "Donatello"
-      },
-      correct: "B"
-    },
-    {
-      question: "Where is the Fibonacci sequence found in nature?",
-      answers: {
-        A: "In flowers",
-        B: "In snowflakes and shells",
-        C: "In spiral shapes",
-        D: "In all of the above"
-      },
-      correct: "D"
-    },
-    {
-      question: "Which numbers are both a square and a cube?",
-      answers: {
-        A: "1 and 64",
-        B: "0 and 1",
-        C: "1 and 729",
-        D: "4 and 8"
-      },
-      correct: "A"
-    }
-  ],
-
-  hard: [
-    {
-      question: "What is a sphere called, where all points are equally distant from the center in 3D space?",
-      answers: {
-        A: "Circle",
-        B: "Sphere",
-        C: "Cylinder",
-        D: "Ellipse"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is 15% of 300?",
-      answers: {
-        A: "30",
-        B: "45",
-        C: "60",
-        D: "15"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the smallest Armstrong number?",
-      answers: {
-        A: "370",
-        B: "371",
-        C: "407",
-        D: "153"
-      },
-      correct: "D"
-    },
-    {
-      question: "What is the Roman numeral for 90?",
-      answers: {
-        A: "LXXXX",
-        B: "XC",
-        C: "LX",
-        D: "CX"
-      },
-      correct: "B"
-    },
-    {
-      question: "How many vertices does a pyramid with a square base have?",
-      answers: {
-        A: "4",
-        B: "5",
-        C: "6",
-        D: "8"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the square root of 225?",
-      answers: {
-        A: "15",
-        B: "25",
-        C: "12",
-        D: "20"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which prefix means one-millionth (10⁻⁶)?",
-      answers: {
-        A: "Milli",
-        B: "Nano",
-        C: "Micro",
-        D: "Pico"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the sum of two complementary angles?",
-      answers: {
-        A: "45°",
-        B: "180°",
-        C: "90°",
-        D: "360°"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is a quadrilateral with exactly one pair of parallel sides called?",
-      answers: {
-        A: "Rhombus",
-        B: "Parallelogram",
-        C: "Trapezoid",
-        D: "Kite"
-      },
-      correct: "C"
-    },
-    {
-      question: "How many seconds are in one day?",
-      answers: {
-        A: "3600",
-        B: "86400",
-        C: "43200",
-        D: "60000"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which branch of mathematics deals with collecting and analyzing data?",
-      answers: {
-        A: "Geometry",
-        B: "Algebra",
-        C: "Topology",
-        D: "Statistics"
-      },
-      correct: "D"
-    },
-    {
-      question: "What is the next number in the sequence: 100, 81, 64, 49...?",
-      answers: {
-        A: "40",
-        B: "36",
-        C: "25",
-        D: "32"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is half of one third of 18?",
-      answers: {
-        A: "3",
-        B: "6",
-        C: "2",
-        D: "9"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is the interior of a circle called?",
-      answers: {
-        A: "Circumference",
-        B: "Disk",
-        C: "Radius",
-        D: "Center"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the next number in the sequence: 2, 5, 11, 23, ...?",
-      answers: {
-        A: "35",
-        B: "41",
-        C: "47",
-        D: "46"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the sum of all interior angles of a rectangle?",
-      answers: {
-        A: "180°",
-        B: "270°",
-        C: "360°",
-        D: "90°"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which branch of mathematics studies shapes and space?",
-      answers: {
-        A: "Arithmetic",
-        B: "Algebra",
-        C: "Statistics",
-        D: "Geometry"
-      },
-      correct: "D"
-    },
-    {
-      question: "What is the fastest way to multiply a two-digit number by 11 (e.g., 25 × 11)?",
-      answers: {
-        A: "Add a zero",
-        B: "Add digits and place in the middle (2+5 → 275)",
-        C: "Multiply by 10 and add 5",
-        D: "Subtract 11"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the number system based on 60 (Babylonians), still used for time?",
-      answers: {
-        A: "Binary",
-        B: "Decimal",
-        C: "Hexadecimal",
-        D: "Sexagesimal"
-      },
-      correct: "D"
-    },
-    {
-      question: "What is the sum of all exterior angles of any polygon?",
-      answers: {
-        A: "180°",
-        B: "360°",
-        C: "540°",
-        D: "720°"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the next number in the sequence: 2, 4, 8, 14, 22...?",
-      answers: {
-        A: "30",
-        B: "32",
-        C: "28",
-        D: "34"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the reciprocal of a fraction called?",
-      answers: {
-        A: "Opposite",
-        B: "Negative",
-        C: "Reciprocal",
-        D: "Complex"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the square root of 1,000,000?",
-      answers: {
-        A: "100",
-        B: "1000",
-        C: "10000",
-        D: "10"
-      },
-      correct: "B"
-    },
-    {
-      question: "In which century did zero become widely used in Europe?",
-      answers: {
-        A: "5th century",
-        B: "9th century",
-        C: "12th century",
-        D: "15th century"
-      },
-      correct: "C"
-    },
-    {
-      question: "What does the Greek letter Delta (Δ) represent in math?",
-      answers: {
-        A: "Sum",
-        B: "Unknown",
-        C: "Product",
-        D: "Change or difference"
-      },
-      correct: "D"
-    },
-    {
-      question: "What is 0.5 divided by 0.5?",
-      answers: {
-        A: "0.25",
-        B: "0.5",
-        C: "1",
-        D: "2"
-      },
-      correct: "C"
-    },
-    {
-      question: "Riddle: If you add 5 to 9 you get 2, what are you looking at?",
-      answers: {
-        A: "Calendar",
-        B: "Thermometer",
-        C: "Calculator",
-        D: "Clock"
-      },
-      correct: "D"
-    },
-    {
-      question: "What shape is formed by the intersection of a cone and a plane parallel to its base?",
-      answers: {
-        A: "Circle",
-        B: "Ellipse",
-        C: "Triangle",
-        D: "Square"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is 20% of 50?",
-      answers: {
-        A: "5",
-        B: "10",
-        C: "15",
-        D: "20"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the Roman numeral for 40?",
-      answers: {
-        A: "XL",
-        B: "XXXX",
-        C: "LX",
-        D: "VL"
-      },
-      correct: "A"
-    },
-    {
-      question: "How many edges does a tetrahedron have?",
-      answers: {
-        A: "3",
-        B: "6",
-        C: "8",
-        D: "4"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which prefix means one-thousandth (10⁻³)?",
-      answers: {
-        A: "Centi",
-        B: "Milli",
-        C: "Micro",
-        D: "Kilo"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is 5 cubed (5³)?",
-      answers: {
-        A: "625",
-        B: "15",
-        C: "125",
-        D: "225"
-      },
-      correct: "C"
-    }
-  ],
-
-  hardest: [
-    {
-      question: "In which country was the mathematician Noether born?",
-      answers: {
-        A: "Germany",
-        B: "Austria",
-        C: "Switzerland",
-        D: "Italy"
-      },
-      correct: "A"
-    },
-    {
-      question: "In which country was the mathematician Cantor born?",
-      answers: {
-        A: "Russia",
-        B: "Germany",
-        C: "Denmark",
-        D: "Netherlands"
-      },
-      correct: "A"
-    },
-    {
-      question: "Where is the International Mathematical Congress held every 4 years?",
-      answers: {
-        A: "Always in the same place",
-        B: "It rotates worldwide",
-        C: "Only in Europe",
-        D: "Only in the USA"
-      },
-      correct: "B"
-    },
-    {
-      question: "Where is the Steklov Institute of Mathematics located?",
-      answers: {
-        A: "Saint Petersburg",
-        B: "Moscow",
-        C: "Kyiv",
-        D: "Minsk"
-      },
-      correct: "B"
-    },
-    {
-      question: "In which city did Al-Khwarizmi write his works on algebra?",
-      answers: {
-        A: "Baghdad",
-        B: "Damascus",
-        C: "Cairo",
-        D: "Medina"
-      },
-      correct: "A"
-    },
-    {
-      question: "How is 2026 written in Roman numerals?",
-      answers: {
-        A: "MMXXVI",
-        B: "MMXVI",
-        C: "MCMXXVI",
-        D: "MMXXIV"
-      },
-      correct: "A"
-    },
-    {
-      question: "Where is the Max Planck Institute for Mathematics located?",
-      answers: {
-        A: "Berlin",
-        B: "Bonn",
-        C: "Munich",
-        D: "Hamburg"
-      },
-      correct: "B"
-    },
-    {
-      question: "Where is the 'Mathematical Sciences Research Institute' (MSRI)?",
-      answers: {
-        A: "Berkeley",
-        B: "Stanford",
-        C: "Princeton",
-        D: "Harvard"
-      },
-      correct: "A"
-    },
-    {
-      question: "In which city was the 'Institut für Mathematik' founded?",
-      answers: {
-        A: "Berlin",
-        B: "Göttingen",
-        C: "Munich",
-        D: "Frankfurt"
-      },
-      correct: "B"
-    },
-    {
-      question: "In which country was the mathematician Gödel born?",
-      answers: {
-        A: "Austria",
-        B: "Czech Republic",
-        C: "Germany",
-        D: "Switzerland"
-      },
-      correct: "B"
-    },
-    {
-      question: "In which country was the mathematician Turing born?",
-      answers: {
-        A: "England",
-        B: "Scotland",
-        C: "Ireland",
-        D: "Wales"
-      },
-      correct: "A"
-    },
-    {
-      question: "In which country was the mathematician Perelman born?",
-      answers: {
-        A: "Russia",
-        B: "Ukraine",
-        C: "Belarus",
-        D: "Lithuania"
-      },
-      correct: "A"
-    },
-    {
-      question: "In which country was the mathematician Wiles born?",
-      answers: {
-        A: "England",
-        B: "USA",
-        C: "Canada",
-        D: "Australia"
-      },
-      correct: "A"
-    },
-    {
-      question: "Where is the Institut Henri Poincaré located?",
-      answers: {
-        A: "Lyon",
-        B: "Marseille",
-        C: "Paris",
-        D: "Toulouse"
-      },
-      correct: "C"
-    },
-    {
-      question: "Where was the first Academy of Sciences (Accademia del Cimento) founded?",
-      answers: {
-        A: "Rome",
-        B: "Pisa",
-        C: "Turin",
-        D: "Florence"
-      },
-      correct: "D"
-    },
-    {
-      question: "Where is the Tata Institute of Fundamental Research (TIFR) located?",
-      answers: {
-        A: "India",
-        B: "Japan",
-        C: "China",
-        D: "Korea"
-      },
-      correct: "A"
-    },
-    {
-      question: "Where was the first International Mathematical Congress (1897) held?",
-      answers: {
-        A: "Berlin",
-        B: "Paris",
-        C: "Zurich",
-        D: "London"
-      },
-      correct: "C"
-    },
-    {
-      question: "How many Platonic solids are there?",
-      answers: {
-        A: "3",
-        B: "4",
-        C: "5",
-        D: "6"
-      },
-      correct: "C"
-    },
-    {
-      question: "Who solved the cubic equation in the 16th century?",
-      answers: {
-        A: "Cardano",
-        B: "Tartaglia",
-        C: "Ferrari",
-        D: "Viète"
-      },
-      correct: "A"
-    },
-    {
-      question: "Who proved that e is transcendental?",
-      answers: {
-        A: "Hermite",
-        B: "Lindemann",
-        C: "Cantor",
-        D: "Weierstrass"
-      },
-      correct: "A"
-    },
-    {
-      question: "Who discovered non-Euclidean geometry?",
-      answers: {
-        A: "Gauss",
-        B: "Bolyai",
-        C: "Lobachevsky",
-        D: "All of the above"
-      },
-      correct: "D"
-    },
-    {
-      question: "Who developed group theory in its modern form?",
-      answers: {
-        A: "Noether",
-        B: "Jordan",
-        C: "Lagrange",
-        D: "Galois"
-      },
-      correct: "D"
-    },
-    {
-      question: "Who introduced the Σ symbol for summation?",
-      answers: {
-        A: "Gauss",
-        B: "Leibniz",
-        C: "Bernoulli",
-        D: "Euler"
-      },
-      correct: "D"
-    },
-    {
-      question: "What type of symmetry do butterfly wings show?",
-      answers: {
-        A: "Rotational symmetry",
-        B: "Central symmetry",
-        C: "Bilateral symmetry",
-        D: "Translational symmetry"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the least common multiple of 15 and 20?",
-      answers: {
-        A: "5",
-        B: "30",
-        C: "1",
-        D: "60"
-      },
-      correct: "D"
-    },
-    {
-      question: "What is √2 approximately (to 3 decimals)?",
-      answers: {
-        A: "1.415",
-        B: "1.416",
-        C: "1.417",
-        D: "1.414"
-      },
-      correct: "D"
-    },
-    {
-      question: "What is √3 approximately (to 2 decimals)?",
-      answers: {
-        A: "1.72",
-        B: "1.73",
-        C: "1.74",
-        D: "1.75"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is √5 approximately (to 2 decimals)?",
-      answers: {
-        A: "2.22",
-        B: "2.24",
-        C: "2.26",
-        D: "2.28"
-      },
-      correct: "B"
-    },
-    {
-      question: "In which century did calculus originate?",
-      answers: {
-        A: "15th century",
-        B: "16th century",
-        C: "17th century",
-        D: "18th century"
-      },
-      correct: "C"
-    },
-    {
-      question: "Who first proved that there are infinitely many prime numbers?",
-      answers: {
-        A: "Euclid",
-        B: "Euler",
-        C: "Gauss",
-        D: "Cantor"
-      },
-      correct: "A"
-    }
-  ]
-},
-  numbers: {
-  easy: [
-    {
-      question: "What is the number 2^8?",
-      answers: {
-        A: "512",
-        B: "128",
-        C: "1024",
-        D: "256"
-      },
-      correct: "D"
-    },
-    {
-      question: "The product of an odd and an even number is always?",
-      answers: {
-        A: "Odd",
-        B: "Even",
-        C: "Negative",
-        D: "0"
-      },
-      correct: "B"
-    },
-    {
-      question: "The product of a positive and a negative number is?",
-      answers: {
-        A: "Positive",
-        B: "0",
-        C: "Negative",
-        D: "Undefined"
-      },
-      correct: "C"
-    },
-    {
-      question: "The sum of two negative numbers is?",
-      answers: {
-        A: "Positive",
-        B: "Negative",
-        C: "0",
-        D: "Undefined"
-      },
-      correct: "B"
-    },
-    {
-      question: "The product of two negative numbers is?",
-      answers: {
-        A: "Negative",
-        B: "0",
-        C: "Positive",
-        D: "Undefined"
-      },
-      correct: "C"
-    },
-    {
-      question: "What do you call two angles whose sum is 90°?",
-      answers: {
-        A: "Supplementary",
-        B: "Complementary",
-        C: "Vertical",
-        D: "Adjacent"
-      },
-      correct: "B"
-    },
-    {
-      question: "What do you call two angles whose sum is 180°?",
-      answers: {
-        A: "Complementary",
-        B: "Vertical",
-        C: "Supplementary",
-        D: "Parallel"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the next prime number after 97?",
-      answers: {
-        A: "99",
-        B: "101",
-        C: "103",
-        D: "107"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is e (Euler’s constant) to 2 decimal places?",
-      answers: {
-        A: "2.52",
-        B: "2.62",
-        C: "2.72",
-        D: "2.82"
-      },
-      correct: "C"
-    },
-    {
-      question: "A hotel with infinite rooms is full. A new guest arrives. Can they be accommodated?",
-      answers: {
-        A: "No",
-        B: "Yes",
-        C: "Only in the hallway",
-        D: "Depends on the room"
-      },
-      correct: "B"
-    },
-    {
-      question: "Birthday paradox: How many people are needed for a 50% chance that two share a birthday?",
-      answers: {
-        A: "183",
-        B: "100",
-        C: "50",
-        D: "23"
-      },
-      correct: "D"
-    },
-    {
-      question: "What is 2 + 2 × 2 - 2 / 2?",
-      answers: {
-        A: "5",
-        B: "7",
-        C: "4",
-        D: "6"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which number is 3 times larger than 1/3?",
-      answers: {
-        A: "2",
-        B: "3",
-        C: "4",
-        D: "1"
-      },
-      correct: "D"
-    },
-    {
-      question: "If x = 2 and y = 3, what is x^y?",
-      answers: {
-        A: "6",
-        B: "9",
-        C: "8",
-        D: "27"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is 2 to the power of 10?",
-      answers: {
-        A: "512",
-        B: "1024",
-        C: "2048",
-        D: "4096"
-      },
-      correct: "B"
-    },
-    {
-      question: "Two fathers and two sons catch 3 fish. Each gets one fish. How?",
-      answers: {
-        A: "Impossible",
-        B: "Grandfather, father, son",
-        C: "They share one",
-        D: "They release one"
-      },
-      correct: "B"
-    },
-    {
-      question: "If 1/2 + 1/3 + 1/6 = ?",
-      answers: {
-        A: "2",
-        B: "3",
-        C: "0.5",
-        D: "1"
-      },
-      correct: "D"
-    },
-    {
-      question: "What is 1/2 of 1/2?",
-      answers: {
-        A: "1/2",
-        B: "1",
-        C: "2",
-        D: "1/4"
-      },
-      correct: "D"
-    },
-    {
-      question: "How many ways are there to roll a die and get an even number?",
-      answers: {
-        A: "2",
-        B: "3",
-        C: "4",
-        D: "5"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which number has the fewest divisors among the options?",
-      answers: {
-        A: "12",
-        B: "18",
-        C: "20",
-        D: "16"
-      },
-      correct: "D"
-    },
-    {
-      question: "Which number comes next in the Fibonacci sequence after 0, 1, 1, 2, 3?",
-      answers: {
-        A: "4",
-        B: "5",
-        C: "6",
-        D: "8"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the third digit of π (after the decimal point)?",
-      answers: {
-        A: "3",
-        B: "1",
-        C: "4",
-        D: "5"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which of these numbers is prime?",
-      answers: {
-        A: "21",
-        B: "29",
-        C: "39",
-        D: "51"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the square of 21?",
-      answers: {
-        A: "441",
-        B: "421",
-        C: "401",
-        D: "21"
-      },
-      correct: "A"
-    },
-    {
-      question: "How many solutions does x³ + y³ = z³ have in natural numbers?",
-      answers: {
-        A: "Infinite",
-        B: "Two",
-        C: "None",
-        D: "Only one"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is 2^10 + 2^9?",
-      answers: {
-        A: "1024",
-        B: "2048",
-        C: "512",
-        D: "1536"
-      },
-      correct: "D"
-    },
-    {
-      question: "What number do we get when we square 0.1?",
-      answers: {
-        A: "0.01",
-        B: "0.2",
-        C: "0.1",
-        D: "1"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is 1000 divided by 8?",
-      answers: {
-        A: "125",
-        B: "150",
-        C: "250",
-        D: "115"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is the sum of interior angles of a hexagon?",
-      answers: {
-        A: "760°",
-        B: "720°",
-        C: "740°",
-        D: "700°"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the next number in the sequence: 1, 8, 27, 64, ...?",
-      answers: {
-        A: "100",
-        B: "121",
-        C: "125",
-        D: "144"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is 2 to the tenth power, often used as a basic unit in computing (Kilo)?",
-      answers: {
-        A: "1000",
-        B: "1024",
-        C: "512",
-        D: "2048"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which mathematical symbol was introduced by Robert Recorde?",
-      answers: {
-        A: "Plus (+)",
-        B: "Minus (-)",
-        C: "Equals (=)",
-        D: "Infinity (∞)"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is the factorial of 4 (4!)?",
-      answers: {
-        A: "8",
-        B: "16",
-        C: "24",
-        D: "12"
-      },
-      correct: "C"
-    },
-    {
-      question: "The plus sign (+) is actually an abbreviation of the Latin word 'et', which means:",
-      answers: {
-        A: "More",
-        B: "And",
-        C: "Sum",
-        D: "Total"
-      },
-      correct: "B"
-    },
-    {
-      question: "Who introduced the use of letters (x, y, z) for unknown quantities in mathematics?",
-      answers: {
-        A: "René Descartes",
-        B: "Albert Einstein",
-        C: "Galileo Galilei",
-        D: "Blaise Pascal"
-      },
-      correct: "A"
-    },
-    {
-      question: "The Latin word 'Axioma', from which the term axiom comes, means:",
-      answers: {
-        A: "Starting point",
-        B: "Something considered worthy or true",
-        C: "Difficult problem",
-        D: "Hidden proof"
-      },
-      correct: "B"
-    },
-    {
-      question: "The word 'Arithmetic' comes from the Greek 'arithmos', meaning:",
-      answers: {
-        A: "Number",
-        B: "Law",
-        C: "Skill",
-        D: "Truth"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which language does the word 'Algebra' originate from?",
-      answers: {
-        A: "Greek",
-        B: "Sanskrit",
-        C: "Arabic",
-        D: "Latin"
-      },
-      correct: "C"
-    },
-    {
-      question: "What does the Arabic word 'al-jabr', from which Algebra comes, originally mean?",
-      answers: {
-        A: "Reassembling broken parts",
-        B: "Calculation",
-        C: "Hidden number",
-        D: "Wisdom"
-      },
-      correct: "A"
-    },
-    {
-      question: "The word 'Geometry' literally means:",
-      answers: {
-        A: "Drawing shapes",
-        B: "Recording space",
-        C: "Science of angles",
-        D: "Measuring the Earth"
-      },
-      correct: "D"
-    },
-    {
-      question: "From which Latin phrase does the term 'percent' originate?",
-      answers: {
-        A: "Per centuria (per century)",
-        B: "Per centum (per hundred)",
-        C: "Pro centum (for part)",
-        D: "Pre cent (before everything)"
-      },
-      correct: "B"
-    }
-  ],
-
-  hard: [
-    {
-      question: "What is the absolute value of a number?",
-      answers: {
-        A: "Its distance from zero",
-        B: "Its square",
-        C: "Its opposite",
-        D: "Its reciprocal"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is 0.1 + 0.01 + 0.001?",
-      answers: {
-        A: "0.3",
-        B: "0.111",
-        C: "0.011",
-        D: "1.11"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is 10% of 10% of 100?",
-      answers: {
-        A: "10",
-        B: "0.01",
-        C: "0.1",
-        D: "1"
-      },
-      correct: "D"
-    },
-    {
-      question: "What do you call a quadrilateral with all sides equal and all right angles?",
-      answers: {
-        A: "Rectangle",
-        B: "Rhombus",
-        C: "Square",
-        D: "Trapezoid"
-      },
-      correct: "C"
-    },
-    {
-      question: "How many seconds are in 12 minutes?",
-      answers: {
-        A: "600",
-        B: "1200",
-        C: "360",
-        D: "720"
-      },
-      correct: "D"
-    },
-    {
-      question: "What do you call a number obtained by multiplying a number by itself?",
-      answers: {
-        A: "Cube",
-        B: "Factorial",
-        C: "Factor",
-        D: "Square"
-      },
-      correct: "D"
-    },
-    {
-      question: "What is the next number in the sequence: 5, 10, 20, 40, ...?",
-      answers: {
-        A: "60",
-        B: "50",
-        C: "80",
-        D: "100"
-      },
-      correct: "C"
-    },
-    {
-      question: "What is a hypotenuse?",
-      answers: {
-        A: "Shortest side of a triangle",
-        B: "90-degree angle",
-        C: "Longest side of a right triangle",
-        D: "Pythagorean theorem"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which number is the neutral element for addition?",
-      answers: {
-        A: "0",
-        B: "1",
-        C: "-1",
-        D: "10"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is the result of 3³ (three cubed)?",
-      answers: {
-        A: "9",
-        B: "27",
-        C: "12",
-        D: "81"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which number comes next in the sequence: 1, 3, 6, 10, 15...?",
-      answers: {
-        A: "21",
-        B: "23",
-        C: "25",
-        D: "20"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which of these numbers is prime?",
-      answers: {
-        A: "9",
-        B: "15",
-        C: "17",
-        D: "21"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which number is the neutral element for multiplication?",
-      answers: {
-        A: "0",
-        B: "1",
-        C: "10",
-        D: "-1"
-      },
-      correct: "B"
-    },
-    {
-      question: "What do we get when a number is multiplied by its reciprocal?",
-      answers: {
-        A: "0",
-        B: "1",
-        C: "The number itself",
-        D: "Square of the number"
-      },
-      correct: "B"
-    },
-    {
-      question: "What is the next number in the sequence: 100, 90, 81, 73...?",
-      answers: {
-        A: "66",
-        B: "67",
-        C: "68",
-        D: "69"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is a seven-sided polygon called?",
-      answers: {
-        A: "Hexagon",
-        B: "Octagon",
-        C: "Heptagon",
-        D: "Nonagon"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which British mathematician decrypted the German Enigma during WWII?",
-      answers: {
-        A: "Stephen Hawking",
-        B: "John Nash",
-        C: "Isaac Newton",
-        D: "Alan Turing"
-      },
-      correct: "D"
-    },
-    {
-      question: "Which mathematician was a vegetarian and believed eating beans was a sin?",
-      answers: {
-        A: "Pythagoras",
-        B: "Euclid",
-        C: "Archimedes",
-        D: "Aristotle"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which mathematician wrote 'Elements', a book used as a textbook for over 2000 years?",
-      answers: {
-        A: "Thales",
-        B: "Euclid",
-        C: "Plato",
-        D: "Archimedes"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which mathematician (and lawyer) is known for 'Fermat’s Last Theorem' written in the margin of a book?",
-      answers: {
-        A: "Descartes",
-        B: "Euler",
-        C: "Pierre de Fermat",
-        D: "Cauchy"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which mathematician won the Nobel Prize in Economics and had his life portrayed in the film 'A Beautiful Mind'?",
-      answers: {
-        A: "Alan Turing",
-        B: "John Nash",
-        C: "Paul Erdős",
-        D: "Andrew Wiles"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which mathematician developed analytic geometry by combining algebra and geometry?",
-      answers: {
-        A: "Fermat",
-        B: "Pascal",
-        C: "Lagrange",
-        D: "Descartes"
-      },
-      correct: "D"
-    },
-    {
-      question: "Which Indian mathematician claimed the goddess Namagiri dictated formulas to him in dreams?",
-      answers: {
-        A: "Ramanujan",
-        B: "Aryabhata",
-        C: "Brahmagupta",
-        D: "Bhaskara"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which mathematician developed infinitesimal calculus independently of Newton?",
-      answers: {
-        A: "Euler",
-        B: "Leibniz",
-        C: "Bernoulli",
-        D: "Kepler"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which mathematician, despite restrictions on women, published under the male pseudonym Monsieur LeBlanc?",
-      answers: {
-        A: "Ada Lovelace",
-        B: "Hypatia",
-        C: "Sophie Germain",
-        D: "Emmy Noether"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which mathematician was the tutor of Alexander the Great?",
-      answers: {
-        A: "Aristotle",
-        B: "Plato",
-        C: "Socrates",
-        D: "Pythagoras"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which Arabic mathematician wrote the book 'Al-Jabr', from which algebra got its name?",
-      answers: {
-        A: "Alhazen",
-        B: "Al-Biruni",
-        C: "Al-Khwarizmi",
-        D: "Omar Khayyam"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which mathematician (and astronomer) first stated that Earth revolves around the Sun?",
-      answers: {
-        A: "Galileo",
-        B: "Kepler",
-        C: "Newton",
-        D: "Aristarchus of Samos"
-      },
-      correct: "D"
-    },
-    {
-      question: "Which mathematician is known for developing fractals?",
-      answers: {
-        A: "Benoît Mandelbrot",
-        B: "Georg Cantor",
-        C: "David Hilbert",
-        D: "Henri Poincaré"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which German mathematician was called 'the most important woman in the history of mathematics' by Einstein?",
-      answers: {
-        A: "Ada Lovelace",
-        B: "Emmy Noether",
-        C: "Sophie Germain",
-        D: "Hypatia"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which mathematician (and writer) wrote 'Alice in Wonderland'?",
-      answers: {
-        A: "Oscar Wilde",
-        B: "Charles Dickens",
-        C: "Mark Twain",
-        D: "Lewis Carroll"
-      },
-      correct: "D"
-    },
-    {
-      question: "Which ancient mathematician first calculated Earth's circumference using shadows in wells?",
-      answers: {
-        A: "Eratosthenes",
-        B: "Pythagoras",
-        C: "Euclid",
-        D: "Ptolemy"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which mathematician discovered the law of the lever and the volume of a crown?",
-      answers: {
-        A: "Eratosthenes",
-        B: "Archimedes",
-        C: "Thales",
-        D: "Euclid"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which mathematician introduced zero into European mathematics through 'Liber Abaci'?",
-      answers: {
-        A: "Pacioli",
-        B: "Descartes",
-        C: "Fibonacci",
-        D: "Tartaglia"
-      },
-      correct: "C"
-    }
-  ],
-
-  hardest: [
-    {
-      question: "Which mathematician was fascinated by the number 1729, now known as his number?",
-      answers: {
-        A: "Hardy",
-        B: "Littlewood",
-        C: "Erdős",
-        D: "Ramanujan"
-      },
-      correct: "D"
-    },
-    {
-      question: "Which mathematician founded a school whose motto was: 'Everything is number'?",
-      answers: {
-        A: "Thales",
-        B: "Pythagoras",
-        C: "Plato",
-        D: "Zeno"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which mathematician is known for a list of 23 unsolved problems?",
-      answers: {
-        A: "David Hilbert",
-        B: "Bernhard Riemann",
-        C: "Henri Poincaré",
-        D: "Felix Klein"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which mathematician survived imprisonment in Russia by solving geometry problems?",
-      answers: {
-        A: "Monge",
-        B: "Poncelet",
-        C: "Carnot",
-        D: "Fourier"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which mathematician invented the 'Game of Life'?",
-      answers: {
-        A: "John Nash",
-        B: "Stephen Hawking",
-        C: "John Conway",
-        D: "Martin Gardner"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which mathematician is known for Pascal’s Triangle?",
-      answers: {
-        A: "Pascal",
-        B: "Descartes",
-        C: "Euler",
-        D: "Newton"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which mathematician developed diagrams for sets?",
-      answers: {
-        A: "Boole",
-        B: "Russell",
-        C: "Cantor",
-        D: "Venn"
-      },
-      correct: "D"
-    },
-    {
-      question: "Which mathematician is known for the butterfly effect?",
-      answers: {
-        A: "Mandelbrot",
-        B: "Poincaré",
-        C: "Newton",
-        D: "Lorenz"
-      },
-      correct: "D"
-    },
-    {
-      question: "Which mathematician was known for always traveling with a suitcase full of papers, calling children 'epsilons'?",
-      answers: {
-        A: "Erdos",
-        B: "Euler",
-        C: "Gauss",
-        D: "Newton"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which mathematician is known as 'Napoleon’s mathematician'?",
-      answers: {
-        A: "Fourier",
-        B: "Lagrange",
-        C: "Laplace",
-        D: "Cauchy"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which mathematician (and inventor) created logarithms?",
-      answers: {
-        A: "Napier",
-        B: "Briggs",
-        C: "Euler",
-        D: "Kepler"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is the density of primes near n?",
-      answers: {
-        A: "1/n",
-        B: "1/ln(n)",
-        C: "1/√n",
-        D: "1/n²"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which mathematician wrote 'Arithmetica', which inspired Fermat?",
-      answers: {
-        A: "Euclid",
-        B: "Diophantus",
-        C: "Pythagoras",
-        D: "Archimedes"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which mathematician is known for the normal distribution curve?",
-      answers: {
-        A: "Gauss",
-        B: "Laplace",
-        C: "Euler",
-        D: "Poisson"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which mathematician created vector analysis?",
-      answers: {
-        A: "Newton",
-        B: "Gibbs",
-        C: "Maxwell",
-        D: "Heaviside"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which mathematician is known for axioms of natural numbers?",
-      answers: {
-        A: "Hilbert",
-        B: "Cantor",
-        C: "Peano",
-        D: "Dedekind"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which mathematician first introduced coordinate systems with negative numbers?",
-      answers: {
-        A: "Descartes",
-        B: "Fermat",
-        C: "Newton",
-        D: "Leibniz"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which mathematician solved cubic equations (third-degree equations)?",
-      answers: {
-        A: "Pacioli",
-        B: "Cardano",
-        C: "Ferrari",
-        D: "Bombelli"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which mathematician (and astronomer) formulated the three laws of planetary motion?",
-      answers: {
-        A: "Newton",
-        B: "Kepler",
-        C: "Copernicus",
-        D: "Brahe"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which mathematician first used 'e' for the base of the natural logarithm?",
-      answers: {
-        A: "Napier",
-        B: "Bernoulli",
-        C: "Newton",
-        D: "Euler"
-      },
-      correct: "D"
-    },
-    {
-      question: "Which mathematician founded the Kyoto school of mathematics?",
-      answers: {
-        A: "Kyoto",
-        B: "Takagi",
-        C: "Iwasawa",
-        D: "Sato"
-      },
-      correct: "B"
-    },
-    {
-      question: "Which mathematician studied conic sections (cones)?",
-      answers: {
-        A: "Archimedes",
-        B: "Euclid",
-        C: "Pythagoras",
-        D: "Apollonius"
-      },
-      correct: "D"
-    },
-    {
-      question: "Which mathematician wrote 'Ars Magna'?",
-      answers: {
-        A: "Cardano",
-        B: "Pacioli",
-        C: "Tartaglia",
-        D: "Ferrari"
-      },
-      correct: "A"
-    },
-    {
-      question: "What is e^(iπ) + 1?",
-      answers: {
-        A: "0",
-        B: "1",
-        C: "i",
-        D: "-1"
-      },
-      correct: "A"
-    },
-    {
-      question: "Which mathematician (and geneticist) developed laws of inheritance?",
-      answers: {
-        A: "Darwin",
-        B: "Galton",
-        C: "Mendel",
-        D: "Fisher"
-      },
-      correct: "C"
-    },
-    {
-      question: "Which mathematician proposed the famous hypothesis about prime numbers that is still unproven today?",
-      answers: {
-        A: "David Hilbert",
-        B: "Carl Friedrich Gauss",
-        C: "Bernhard Riemann",
-        D: "Évariste Galois"
-      },
-correct: "C" } 
-] 
-} 
-},
   gk: {
     history: {
       easy: [
@@ -20911,137 +21128,506 @@ correct: "C" }
   ge: {
     history: {
       easy: [
-{ question: "Koja američka savezna država ime nosi po španjolskom nazivu za planinu?", answers: { A: "Nevada", B: "Montana", C: "Colorado", D: "Arizona" }, correct: "B" },
-{ question: "Tko je napisao 'Crvenkapicu', 'Mačka u čizmama' i 'Pepeljugu'?", answers: { A: "Charles Perrault", B: "Hans Christian Andersen", C: "Braća Grimm", D: "Giambattista Basile" }, correct: "A" },
-{ question: "Koji je car u središtu Moskve dobio spomenik visok 98m?", answers: { A: "Ivan Grozni", B: "Petar Veliki", C: "Aleksandar II", D: "Nikola I" }, correct: "B" },
-{ question: "Po kojem je akronimu poznata austrijska državna televizija?", answers: { A: "ARD", B: "ZDF", C: "ORF", D: "RTL" }, correct: "C" },
-{ question: "Tko na početku Shakespeareovog 'Macbetha' prorekne glavnom liku da će postati kralj?", answers: { A: "Vještice", B: "Kralj Duncan", C: "Banquo", D: "Macduff" }, correct: "A" },
-{ question: "Koji je nobelovac osnivač instituta za teoretsku fiziku u Kopenhagenu?", answers: { A: "Albert Einstein", B: "Erwin Schrödinger", C: "Werner Heisenberg", D: "Niels Bohr" }, correct: "D" },
-{ question: "U koju pticu u baletu Čajkovskog čarobnjak Rothbart pretvori Odette?", answers: { A: "Orao", B: "Gavran", C: "Labud", D: "Golub" }, correct: "C" },
-{ question: "Kako se norveški glavni grad zvao u razdoblju 1600–1860?", answers: { A: "Bergen", B: "Trondheim", C: "Christiania", D: "Stavanger" }, correct: "C" },
-{ question: "Koja je najnovija alpska skijaška disciplina?", answers: { A: "Super-G", B: "Slalom", C: "Veleslalom", D: "Spust" }, correct: "A" },
-{ question: "U kojem je bosanskohercegovačkom gradu rođen 'trener svih trenera'?", answers: { A: "Zenica", B: "Sarajevo", C: "Mostar", D: "Travnik" }, correct: "D" },
-{ question: "Koji se vitamin još naziva kalciferol?", answers: { A: "Vitamin D", B: "Vitamin C", C: "Vitamin B12", D: "Vitamin A" }, correct: "A" },
-{ question: "Koja je glumica postala počasni građanin Sarajeva 2012. godine?", answers: { A: "Nicole Kidman", B: "Angelina Jolie", C: "Charlize Theron", D: "Julia Roberts" }, correct: "B" },
-{ question: "Ime koje najmanje srednjoameričke države se prevodi kao 'spasitelj'?", answers: { A: "Honduras", B: "Nikaragva", C: "El Salvador", D: "Panama" }, correct: "C" },
-{ question: "Koji je grad inspiracija za društvenu igru Monopoly?", answers: { A: "Chicago City", B: "Boston City", C: "Miami City", D: "Atlantic City" }, correct: "D" },
-{ question: "U kojoj državi počinje radnja filma 'Olympia'?", answers: { A: "Italija", B: "Grčka", C: "Francuska", D: "Egipat" }, correct: "B" },
-{ question: "Kome u Molierovoj komediji sluga kaže da ne vjeruje ni u šta, a želi da ga drže za časna čovjeka?", answers: { A: "Tartuffe", B: "Harpagon", C: "Sganarelle", D: "Don Juan" }, correct: "D" },
-{ question: "Kako se naziva bolest definirana kao duševno ili tjelesno preopterećenje koje vodi do iscrpljenosti?", answers: { A: "Stres", B: "Depresija", C: "Anksioznost", D: "Burnout" }, correct: "A" },
-{ question: "U kojoj je državi skijaško središte Semmering?", answers: { A: "Švicarska", B: "Austrija", C: "Njemačka", D: "Italija" }, correct: "B" },
-{ question: "Na kojoj je stazi održano najviše utrka Formule 1 u povijesti?", answers: { A: "Silverstone", B: "Suzuka", C: "Monza", D: "Monaco" }, correct: "C" },
-{ question: "Koliko promila iznosi salinitet Jadranskog mora?", answers: { A: "35‰", B: "48‰", C: "25‰", D: "38‰" }, correct: "D" },
-{ question: "U kojoj se franšizi borilačkih igara pojavljuju Scorpion i Sonya Blade?", answers: { A: "Tekken", B: "Street Fighter", C: "Mortal Kombat", D: "Dead or Alive" }, correct: "A" },
-{ question: "Koji je Jedi učitelj na planetu Dagobah učio mladog Luka Skywalkera?", answers: { A: "Obi-Wan Kenobi", B: "Yoda", C: "Mace Windu", D: "Qui-Gon Jinn" }, correct: "B" },
-{ question: "Koja kobasica dijeli ime sa njemačkom riječi za lovca?", answers: { A: "Bratwurst", B: "Frankfurter", C: "Jägerwurst", D: "Kielbasa" }, correct: "C" },
-{ question: "Na kojem je jeziku napisana 'Ljudska komedija' Honoréa de Balzaca?", answers: { A: "Francuskom", B: "Latinskom", C: "Engleskom", D: "Talijanskom" }, correct: "A" },
-{ question: "Do čega je sigurno došlo ako se dogodio 'coup d'état'?", answers: { A: "Ekonomska kriza", B: "Državni udar", C: "Revolucija", D: "Izbori" }, correct: "B" },
-{ question: "Pod kojim imenom je poznatiji 3. Newtonov zakon?", answers: { A: "Zakon inercije", B: "Zakon gravitacije", C: "Zakon akcije i reakcije", D: "Zakon sile" }, correct: "C" },
-{ question: "Island je 1918. stekao nezavisnost, ali je ostao u personalnoj uniji s kojom državom?", answers: { A: "Danskom", B: "Norveškom", C: "Švedskom", D: "Ujedinjenim Kraljevstvom" }, correct: "A" },
-{ question: "Koji je najmanji troznamenkasti prosti broj?", answers: { A: "101", B: "103", C: "107", D: "109" }, correct: "A" },
-{ question: "Koji jezik se danas najčešće smatra globalnom lingua francom?", answers: { A: "Engleski", B: "Francuski", C: "Španski", D: "Mandarinski kineski" }, correct: "A" },
-{ question: "Na valutama koje države se od 2012. nalazi lik Nelsona Mandele?", answers: { A: "Kenija", B: "Namibija", C: "Južna Afrika", D: "Zimbabve" }, correct: "C" },
-{ question: "Koliko je kćeri imala tebanska kraljica Nioba uz svojih sedam sinova?", answers: { A: "Sedam", B: "Ni jednu", C: "Devet", D: "Jednu" }, correct: "A" },
-
-
-
-{ question: "Koji sastojak daje tiramisuu njegov prepoznatljivi okus?", answers: { A: "Kakao", B: "Kafa", C: "Vanilija", D: "Amaretto" }, correct: "B" },
-{ question: "Po kojem mikrobiologu je nazvana stanica pariskog metroa u blizini njegovog instituta?", answers: { A: "Koch", B: "Lister", C: "Fleming", D: "Pasteur" }, correct: "D" },
-{ question: "Koja se morska životinja krije iza latinskog naziva *Hippocampus*?", answers: { A: "Morski pas", B: "Morski konjic", C: "Meduza", D: "Morska zvijezda" }, correct: "B" },
-{ question: "Koji je najmnogoljudniji grad na Kosovu nakon Prištine?", answers: { A: "Mitrovica", B: "Peć", C: "Gnjilane", D: "Prizren" }, correct: "D" },
-{ question: "225 i 256 su kvadrati kojih brojeva?", answers: { A: "15 i 16", B: "14 i 15", C: "13 i 18", D: "16 i 17" }, correct: "A" },
-{ question: "Koja je računalna igra iz 80-ih proslavila rusku narodnu pjesmu 'Korobeiniki'?", answers: { A: "Tetris", B: "Pac-Man", C: "Doom", D: "Space Invaders" }, correct: "A" },
-{ question: "Po kojem zaljevu je nazvan Zaljevski rat?", answers: { A: "Iranski", B: "Perzijski", C: "Omanski", D: "Bengalski" }, correct: "B" },
-{ question: "Koje je boje planet u naslovu dječjeg romana Ante Gardaša?", answers: { A: "Crveni", B: "Zeleni", C: "Ljubičasti", D: "Plavi" }, correct: "C" },
-{ question: "Kojem skladatelju je otac bio Francuz koji je emigrirao u Poljsku 1787. godine?", answers: { A: "Mozart", B: "Liszt", C: "Beethoven", D: "Chopin" }, correct: "D" },
-{ question: "Na festivalu u kojem gradu je nekada o Zlatnom medvjedu odlučivala publika?", answers: { A: "Venecija", B: "Cannes", C: "Toronto", D: "Berlin" }, correct: "D" },
-{ question: "U pjesmi 'Tu noć kad si se udavala' postoje neki drugi — što?", answers: { A: "Ljudi", B: "Gradovi", C: "Svjetovi", D: "Životi" }, correct: "C" },
-{ question: "General Tōjō Hideki imao je ključnu ulogu u pripremi Japana za koji rat?", answers: { A: "Prvi svjetski rat", B: "Drugi svjetski rat", C: "Vijetnamski rat", D: "Korejski rat" }, correct: "B" },
-{ question: "Kojem prirodnom broju je jednak korijen iz 625?", answers: { A: "35", B: "15", C: "45", D: "25" }, correct: "D" },
-{ question: "Na kojem kontinentu se nalaze sve države koje u nazivu počinju slovom Z?", answers: { A: "Evropa", B: "Azija", C: "Afrika", D: "Južna Amerika" }, correct: "C" },
-{ question: "Prema Međunarodnoj hokejaškoj federaciji, prva utakmica hokeja na ledu odigrana je u kojem gradu?", answers: { A: "Pariz", B: "Lyon", C: "Brisel", D: "Montreal" }, correct: "D" },
-{ question: "U koliko sati se u Bosni i Hercegovini po zakonu otvaraju biračka mjesta na izborima?", answers: { A: "7:00", B: "8:00", C: "6:00", D: "9:00" }, correct: "A" },
-{ question: "Tko je sa 12 godina postao najmlađa osoba primljena u društvo američkih mađioničara?", answers: { A: "Harry Houdini", B: "Penn Jillette", C: "Dynamo", D: "David Copperfield" }, correct: "D" },
-{ question: "Koje je godine, manje od mjesec dana nakon potonuća Titanica, snimljen film 'Spasena s Titanica'?", answers: { A: "1911", B: "1912", C: "1913", D: "1914" }, correct: "B" },
-{ question: "Kremen se sastoji od kisika i kojeg još hemijskog elementa?", answers: { A: "Aluminij", B: "Silicij", C: "Ugljik", D: "Željezo" }, correct: "B" },
-{ question: "Koja država je 1. jula 2013. postala članica Evropske unije?", answers: { A: "Rumunija", B: "Bugarska", C: "Hrvatska", D: "Bjelorusija" }, correct: "C" },
-{ question: "Brzinu čega je prvi odredio danski astronom Ole Christensen Rømer?", answers: { A: "Svjetlosti", B: "Zvuka", C: "Gravitacije", D: "Rotacije Zemlje", }, correct: "A" },
-{ question: "Kako se zove manji hotel uz cestu, namijenjen putnicima motornim vozilima?", answers: { A: "Hostel", B: "Motel", C: "Pansion", D: "Apartman" }, correct: "B" },
-{ question: "Koju je državu Henry Kissinger opisao kao 'preveliku za Evropu, ali premalenu za svijet'?", answers: { A: "Rusiju", B: "Njemačku", C: "Francusku", D: "Poljsku" }, correct: "B" },
-{ question: "Koja država ima obalu i na Bijelom i na Crnom moru?", answers: { A: "Ukrajina", B: "Turska", C: "Rusija", D: "Rumunija" }, correct: "A" },
-{ question: "Koji je rod dinosaura nazvan po grčkim riječima za 'tri', 'rog' i 'lice'?", answers: { A: "Stegosaurus", B: "Velociraptor", C: "Triceratops", D: "Brachiosaurus" }, correct: "C" },
-{ question: "Dveri je arhaični naziv za šta?", answers: { A: "Prozor", B: "Vrata", C: "Zid", D: "Krov" }, correct: "B" },
-{ question: "Koji je veliki poluotok najjužniji dio kontinentalne Grčke?", answers: { A: "Peloponez", B: "Apeninski", C: "Iberski", D: "Anatolijski" }, correct: "A" },
-{ question: "U kojoj državi su sahranjeni posmrtni ostaci Che Guevare nakon ekshumacije 1997. godine?", answers: { A: "Kuba", B: "Bolivija", C: "Meksiko", D: "Argentina" }, correct: "A" },
-{ question: "Koji naziv za kupovinu imovine s nadom u rast vrijednosti dolazi od latinske riječi za 'posmatranje'?", answers: { A: "Investicija", B: "Spekulacija", C: "Arbitraža", D: "Depozit" }, correct: "B" },
-{ question: "Kojim slovom je označeno polje na kojem je na početku partije bijela kraljica?", answers: { A: "E", B: "D", C: "C", D: "F" }, correct: "B" },
-{ question: "Koje dvije države spaja Øresundski most?", answers: { A: "Danska i Švedska", B: "Norveška i Švedska", C: "Njemačka i Norveška", D: "Finska i Švedska" }, correct: "A" },
-
-
-
-{ question: "Ludolfov broj je omjer obima i poluprečnika koje krive?", answers: { A: "Elipse", B: "Parabole", C: "Kružnice", D: "Hiperbole" }, correct: "C" },
-{ question: "Koju napravu je izumio David Brewster i nazvao je po grčkom za 'lijep pogled oblika'?", answers: { A: "Teleskop", B: "Mikroskop", C: "Periskop", D: "Kaleidoskop" }, correct: "D" },
-{ question: "Koje ime povezuje fiktivnog kapetana Nautilusa i fiktivnu ribicu iz crtića?", answers: { A: "Nemo", B: "Dory", C: "Marlin", D: "Ariel" }, correct: "A" },
-{ question: "Multipli mijelom je zloćudni tumor kojih stanica?", answers: { A: "Nervnih stanica", B: "Epitelnih stanica", C: "Plazma stanica", D: "Mišićnih stanica" }, correct: "C" },
-{ question: "Koji je četveroslovni decimalni predmetak za 10⁻¹²?", answers: { A: "Nano", B: "Piko", C: "Femto", D: "Atto" }, correct: "B" },
-{ question: "Vlast kojeg svog prethodnika je Hruščov opisao kao vlast 'sjekire i straha'?", answers: { A: "Lenjina", B: "Trockog", C: "Staljina", D: "Brežnjeva" }, correct: "C" },
-{ question: "Svi što je vole, svi je tuku, udaraju nogom i bacaju iz ruku — šta je to?", answers: { A: "Lopta", B: "Knjiga", C: "Vrata", D: "Mačka" }, correct: "A" },
-{ question: "Po kojem pjevaču je nazvana zapadna tribina stadiona NK Sarajevo?", answers: { A: "Dino Merlin", B: "Zdravko Čolić", C: "Kemal Monteno", D: "Halid Bešlić" }, correct: "D" },
-{ question: "Koji po redu Keplerov zakon kaže da se planete gibaju po elipsama?", answers: { A: "Prvi", B: "Drugi", C: "Treći", D: "Četvrti" }, correct: "A" },
-{ question: "Jedanaest — recite to na italijanskom.", answers: { A: "Dieci", B: "Undici", C: "Dodici", D: "Nove" }, correct: "B" },
-{ question: "Na kojem su kontinentu rođeni Claude Simon i Albert Camus, francuski dobitnici Nobelove nagrade za književnost?", answers: { A: "Evropa", B: "Azija", C: "Afrika", D: "Južna Amerika" }, correct: "C" },
-{ question: "Hidridi su spojevi hemijskih elemenata s kojim elementom?", answers: { A: "Kisikom", B: "Azotom", C: "Ugljikom", D: "Vodikom" }, correct: "D" },
-{ question: "Kojeg grčkog boga prate sinovi Phobos i Deimos?", answers: { A: "Ares", B: "Zeus", C: "Posejdon", D: "Had" }, correct: "A" },
-{ question: "Kako se zove nastavak filma '28 dana poslije'?", answers: { A: "28 mjeseci poslije", B: "28 sati poslije", C: "28 sedmica poslije", D: "28 godina poslije" }, correct: "C" },
-{ question: "Koji ugledni sedmični nogometni časopis izlazi u Francuskoj od 1946. godine?", answers: { A: "Kicker", B: "France Football", C: "L'Équipe Magazine", D: "World Soccer" }, correct: "B" },
-{ question: "Jacques I. bio je prvi car koje karipske države?", answers: { A: "Jamajke", B: "Dominikanske Republike", C: "Haitija", D: "Kube" }, correct: "C" },
-{ question: "Grad bratske ljubavi nadimak je kojeg velegrada u američkoj saveznoj državi Pennsylvaniji?", answers: { A: "Pittsburgh", B: "Philadelphia", C: "Baltimore", D: "Boston" }, correct: "B" },
-{ question: "Kako se zove osoba koja zamjenjuje glumca u opasnim scenama?", answers: { A: "Statist", B: "Dubler", C: "Kaskader", D: "Koordinator scena" }, correct: "C" },
-{ question: "Sportska pobjeda dodijeljena administrativnim putem kaže se da je donesena za stolom koje boje?", answers: { A: "Plave", B: "Crvene", C: "Crne", D: "Zelene" }, correct: "D" },
-{ question: "Prema cijeni kojeg hamburgera časopis The Economist procjenjuje precijenjenost ili podcijenjenost valuta?", answers: { A: "Whopper", B: "Quarter Pounder", C: "Big Mac", D: "Big King" }, correct: "C" },
-{ question: "Nadimak 'kivi' odnosi se na stanovnike koje države?", answers: { A: "Australije", B: "Novog Zelanda", C: "Kanade", D: "Irske" }, correct: "B" },
-{ question: "Koliko prirodnih brojeva zadovoljava jednačinu x² = 4?", answers: { A: "Jedan", B: "Dva", C: "Nijedan", D: "Beskonačno mnogo" }, correct: "A" },
-{ question: "Medalja Nobelove nagrade za hemiju istog je dizajna kao medalja Nobelove nagrade iz kojeg drugog područja?", answers: { A: "Medicine", B: "Književnosti", C: "Fizike", D: "Mira" }, correct: "C" },
-{ question: "U čemu je spas, govorimo li o psihičkom stanju u kojem se očekuje da bi se nešto moglo dogoditi?", answers: { A: "Vjera", B: "Nada", C: "Strpljenje", D: "Optimizam" }, correct: "B" },
-{ question: "U kojoj je državi Fulgencio Batista izveo dva vojna udara, 1933. i 1952. godine?", answers: { A: "Kuba", B: "Dominikanska Republika", C: "Meksiko", D: "Nikaragva" }, correct: "A" },
-{ question: "Koji deveterostruki prvak Engleske nosi nadimak 'The Toffees'?", answers: { A: "Aston Villa", B: "Everton", C: "Newcastle United", D: "Leeds United" }, correct: "B" },
-{ question: "U kojoj državi izvire rijeka Rajna?", answers: { A: "Austrija", B: "Njemačka", C: "Švicarska", D: "Francuska" }, correct: "C" },
-{ question: "Koja grana fizike proučava kretanje izbačenih tijela, poput metaka iz vatrenog oružja?", answers: { A: "Aerodinamika", B: "Mehanika", C: "Kinematika", D: "Balistika" }, correct: "D" },
-{ question: "Kojim latinskim nazivom se označava kila ili bruh?", answers: { A: "Hernija", B: "Fibrom", C: "Edem", D: "Aneurizma" }, correct: "A" },
-{ question: "Po kojem je poznatijem imenu poznat fizičar William Thomson?", answers: { A: "Faraday", B: "Kelvin", C: "Maxwell", D: "Bohr" }, correct: "B" },
-{ question: "Šta je, prema filozofu Protagori, mjerilo svih stvari?", answers: { A: "Priroda", B: "Bog", C: "Čovjek", D: "Razum" }, correct: "C" },
-
-
-
-{ question: "Na kojoj se stazi vozi Velika nagrada Velike Britanije u Formuli 1?", answers: { A: "Silverstone", B: "Monza", C: "Spa-Francorchamps", D: "Suzuka" }, correct: "A" },
-{ question: "Koja je američka prva dama, uz Louisu Adams, jedina rođena izvan teritorije SAD-a?", answers: { A: "Michelle Obama", B: "Melania Trump", C: "Hillary Clinton", D: "Nancy Reagan" }, correct: "B" },
-{ question: "Koji pokrivač za glavu dijeli ime s desetim slovom grčkog alfabeta?", answers: { A: "Beretka", B: "Šešir", C: "Kapa", D: "Turban" }, correct: "C" },
-{ question: "Koji je programski jezik razvijen u IBM-u, a ime je dobio po izrazu 'Formula Translation'?", answers: { A: "COBOL", B: "Pascal", C: "ALGOL", D: "Fortran" }, correct: "D" },
-{ question: "U obliku kojeg slova guske lete na dugim migracijama kako bi štedjele energiju?", answers: { A: "V", B: "Y", C: "U", D: "L" }, correct: "A" },
-{ question: "Prilikom ulaska u koju je državu Oscar Wilde izjavio da nema ništa za prijaviti osim vlastitog genija?", answers: { A: "Kanadu", B: "Sjedinjene Američke Države", C: "Francusku", D: "Italiju" }, correct: "B" },
-{ question: "Koja troslovna skraćenica označava Međunarodnu skijašku federaciju?", answers: { A: "FIA", B: "IIHF", C: "FIS", D: "FIFA" }, correct: "C" },
-{ question: "Čija je piramida hiljadama godina bila najviša građevina na svijetu?", answers: { A: "Kefrenova", B: "Mikerinova", C: "Džoserova", D: "Keopsova" }, correct: "D" },
-{ question: "Naziv koje nauke dolazi od grčkih riječi za Zemlju i proučavanje?", answers: { A: "Geologija", B: "Geografija", C: "Geodezija", D: "Geofizika" }, correct: "A" },
-{ question: "Koje zvijeri iz porodice mačaka jedine prirodno žive u čoporima?", answers: { A: "Tigrovi", B: "Lavovi", C: "Leopardi", D: "Risovi" }, correct: "B" },
-{ question: "Kako se zove pravilni heksaedar, poliedar omeđen sa šest kvadratnih strana?", answers: { A: "Kvadar", B: "Kocka", C: "Prizma", D: "Oktaedar" }, correct: "B" },
-{ question: "Koje su dvije boje na zastavi Republike Sjeverne Makedonije?", answers: { A: "Crvena i žuta", B: "Crvena i bijela", C: "Žuta i plava", D: "Crvena i zelena" }, correct: "A" },
-{ question: "Koja je bosanskohercegovačka košarkašica 2017. godine primljena u FIBA-inu Kuću slavnih?", answers: { A: "Mara Lakić", B: "Lejla Bećirović", C: "Razija Mujanović", D: "Slađana Golić" }, correct: "C" },
-{ question: "Kojim slovom počinje ime glavnog grada Madagaskara?", answers: { A: "T", B: "M", C: "N", D: "A" }, correct: "D" },
-{ question: "Na koji dio atoma otpada približno 99,9% njegove mase?", answers: { A: "Elektronski omotač", B: "Proton", C: "Neutron", D: "Jezgro" }, correct: "D" },
-{ question: "U kojoj se američkoj saveznoj državi nalaze gradovi Cleveland, Columbus i Cincinnati?", answers: { A: "Ohio", B: "Indiana", C: "Michigan", D: "Illinois" }, correct: "A" },
-{ question: "Na dan sahrane kojeg je izumitelja 1931. godine širom SAD-a ugašena javna rasvjeta?", answers: { A: "Nikole Tesle", B: "Thomasa Edisona", C: "Alexandra Grahama Bella", D: "Guglielma Marconija" }, correct: "B" },
-{ question: "Koju je tortu šesnaestogodišnji pripravnik prvi put poslužio kancelaru von Metternichu 1832. godine?", answers: { A: "Doboš tortu", B: "Esterházy tortu", C: "Linzer tortu", D: "Sacher tortu" }, correct: "D" },
-{ question: "U kojoj državi se nalaze sjedišta FIFA-e i UEFA-e?", answers: { A: "Francuska", B: "Švicarska", C: "Njemačka", D: "Austrija" }, correct: "B" },
-{ question: "Šta treba imati za ljubav, prema pjesmi Atomskog skloništa?", answers: { A: "Dušu", B: "Srce", C: "Sreću", D: "Hrabrost" }, correct: "A" },
-{ question: "Na kojem ćeš mjestu biti u utrci ako prestigneš takmičara koji je na trećem mjestu?", answers: { A: "Drugom", B: "Prvom", C: "Trećem", D: "Četvrtom" }, correct: "C" },
-{ question: "Koji je najtrofejniji nogometni klub iz belgijskog grada Liègea?", answers: { A: "Antwerp", B: "Brugge", C: "Anderlecht", D: "Standard" }, correct: "D" },
-
-
-
-
-
-
-
+        {
+          question: "Vlast kojeg svog prethodnika je Hruščov opisao kao vlast 'sjekire i straha'?",
+          answers: {
+            A: "Lenjina",
+            B: "Trockog",
+            C: "Staljina",
+            D: "Brežnjeva"
+          },
+          correct: "C"
+        },
+		 {
+    question: "Samo tri svjetske države u bosanskom nazivlju počinju slovom H — Hrvatska, Honduras i koja još?",
+    answers: {
+      A: "Haiti",
+      B: "Hondurija",
+      C: "Hong Kong",
+      D: "Havaji"
+    },
+    correct: "A"
+  },
+  {
+    question: "Kojom engleskom sintagmom nazivamo period dana kada ugostiteljski objekti nude snižene cijene pića?",
+    answers: {
+      A: "Drink time",
+      B: "Happy hour",
+      C: "Golden hour",
+      D: "Free hour"
+    },
+    correct: "B"
+  },
+        {
+          question: "Svi što je vole, svi je tuku, udaraju nogom i bacaju iz ruku — šta je to?",
+          answers: {
+            A: "Lopta",
+            B: "Knjiga",
+            C: "Vrata",
+            D: "Mačka"
+          },
+          correct: "A"
+        },
+        {
+          question: "Po kojem pjevaču je nazvana zapadna tribina stadiona NK Sarajevo?",
+          answers: {
+            A: "Dino Merlin",
+            B: "Zdravko Čolić",
+            C: "Kemal Monteno",
+            D: "Halid Bešlić"
+          },
+          correct: "D"
+        },
+        {
+          question: "Koji po redu Keplerov zakon kaže da se planete gibaju po elipsama?",
+          answers: {
+            A: "Prvi",
+            B: "Drugi",
+            C: "Treći",
+            D: "Četvrti"
+          },
+          correct: "A"
+        },
+        {
+          question: "Jedanaest — recite to na italijanskom.",
+          answers: {
+            A: "Dieci",
+            B: "Undici",
+            C: "Dodici",
+            D: "Nove"
+          },
+          correct: "B"
+        },
+        {
+          question: "Na kojem su kontinentu rođeni Claude Simon i Albert Camus, francuski dobitnici Nobelove nagrade za književnost?",
+          answers: {
+            A: "Evropa",
+            B: "Azija",
+            C: "Afrika",
+            D: "Južna Amerika"
+          },
+          correct: "C"
+        },
+        {
+          question: "Hidridi su spojevi hemijskih elemenata s kojim elementom?",
+          answers: {
+            A: "Kisikom",
+            B: "Azotom",
+            C: "Ugljikom",
+            D: "Vodikom"
+          },
+          correct: "D"
+        },
+        {
+          question: "Kojeg grčkog boga prate sinovi Phobos i Deimos?",
+          answers: {
+            A: "Ares",
+            B: "Zeus",
+            C: "Posejdon",
+            D: "Had"
+          },
+          correct: "A"
+        },
+        {
+          question: "Kako se zove nastavak filma '28 dana poslije'?",
+          answers: {
+            A: "28 mjeseci poslije",
+            B: "28 sati poslije",
+            C: "28 sedmica poslije",
+            D: "28 godina poslije"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koji ugledni sedmični nogometni časopis izlazi u Francuskoj od 1946. godine?",
+          answers: {
+            A: "Kicker",
+            B: "France Football",
+            C: "L'Équipe Magazine",
+            D: "World Soccer"
+          },
+          correct: "B"
+        },
+        {
+          question: "Jacques I. bio je prvi car koje karipske države?",
+          answers: {
+            A: "Jamajke",
+            B: "Dominikanske Republike",
+            C: "Haitija",
+            D: "Kube"
+          },
+          correct: "C"
+        },
+        {
+          question: "Grad bratske ljubavi nadimak je kojeg velegrada u američkoj saveznoj državi Pennsylvaniji?",
+          answers: {
+            A: "Pittsburgh",
+            B: "Philadelphia",
+            C: "Baltimore",
+            D: "Boston"
+          },
+          correct: "B"
+        },
+        {
+          question: "Kako se zove osoba koja zamjenjuje glumca u opasnim scenama?",
+          answers: {
+            A: "Statist",
+            B: "Dubler",
+            C: "Kaskader",
+            D: "Koordinator scena"
+          },
+          correct: "C"
+        },
+        {
+          question: "Sportska pobjeda dodijeljena administrativnim putem kaže se da je donesena za stolom koje boje?",
+          answers: {
+            A: "Plave",
+            B: "Crvene",
+            C: "Crne",
+            D: "Zelene"
+          },
+          correct: "D"
+        },
+        {
+          question: "Prema cijeni kojeg hamburgera časopis The Economist procjenjuje precijenjenost ili podcijenjenost valuta?",
+          answers: {
+            A: "Whopper",
+            B: "Quarter Pounder",
+            C: "Big Mac",
+            D: "Big King"
+          },
+          correct: "C"
+        },
+        {
+          question: "Nadimak 'kivi' odnosi se na stanovnike koje države?",
+          answers: {
+            A: "Australije",
+            B: "Novog Zelanda",
+            C: "Kanade",
+            D: "Irske"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koliko prirodnih brojeva zadovoljava jednačinu x² = 4?",
+          answers: {
+            A: "Jedan",
+            B: "Dva",
+            C: "Nijedan",
+            D: "Beskonačno mnogo"
+          },
+          correct: "A"
+        },
+        {
+          question: "Medalja Nobelove nagrade za hemiju istog je dizajna kao medalja Nobelove nagrade iz kojeg drugog područja?",
+          answers: {
+            A: "Medicine",
+            B: "Književnosti",
+            C: "Fizike",
+            D: "Mira"
+          },
+          correct: "C"
+        },
+        {
+          question: "U čemu je spas, govorimo li o psihičkom stanju u kojem se očekuje da bi se nešto moglo dogoditi?",
+          answers: {
+            A: "Vjera",
+            B: "Nada",
+            C: "Strpljenje",
+            D: "Optimizam"
+          },
+          correct: "B"
+        },
+        {
+          question: "U kojoj je državi Fulgencio Batista izveo dva vojna udara, 1933. i 1952. godine?",
+          answers: {
+            A: "Kuba",
+            B: "Dominikanska Republika",
+            C: "Meksiko",
+            D: "Nikaragva"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koji deveterostruki prvak Engleske nosi nadimak 'The Toffees'?",
+          answers: {
+            A: "Aston Villa",
+            B: "Everton",
+            C: "Newcastle United",
+            D: "Leeds United"
+          },
+          correct: "B"
+        },
+        {
+          question: "U kojoj državi izvire rijeka Rajna?",
+          answers: {
+            A: "Austrija",
+            B: "Njemačka",
+            C: "Švicarska",
+            D: "Francuska"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koja grana fizike proučava kretanje izbačenih tijela, poput metaka iz vatrenog oružja?",
+          answers: {
+            A: "Aerodinamika",
+            B: "Mehanika",
+            C: "Kinematika",
+            D: "Balistika"
+          },
+          correct: "D"
+        },
+        {
+          question: "Kojim latinskim nazivom se označava kila ili bruh?",
+          answers: {
+            A: "Hernija",
+            B: "Fibrom",
+            C: "Edem",
+            D: "Aneurizma"
+          },
+          correct: "A"
+        },
+        {
+          question: "Po kojem je poznatijem imenu poznat fizičar William Thomson?",
+          answers: {
+            A: "Faraday",
+            B: "Kelvin",
+            C: "Maxwell",
+            D: "Bohr"
+          },
+          correct: "B"
+        },
+        {
+          question: "Šta je, prema filozofu Protagori, mjerilo svih stvari?",
+          answers: {
+            A: "Priroda",
+            B: "Bog",
+            C: "Čovjek",
+            D: "Razum"
+          },
+          correct: "C"
+        },
+        {
+          question: "Na kojoj se stazi vozi Velika nagrada Velike Britanije u Formuli 1?",
+          answers: {
+            A: "Silverstone",
+            B: "Monza",
+            C: "Spa-Francorchamps",
+            D: "Suzuka"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koja je američka prva dama, uz Louisu Adams, jedina rođena izvan teritorije SAD-a?",
+          answers: {
+            A: "Michelle Obama",
+            B: "Melania Trump",
+            C: "Hillary Clinton",
+            D: "Nancy Reagan"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koji pokrivač za glavu dijeli ime s desetim slovom grčkog alfabeta?",
+          answers: {
+            A: "Beretka",
+            B: "Šešir",
+            C: "Kapa",
+            D: "Turban"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koji je programski jezik razvijen u IBM-u, a ime je dobio po izrazu 'Formula Translation'?",
+          answers: {
+            A: "COBOL",
+            B: "Pascal",
+            C: "ALGOL",
+            D: "Fortran"
+          },
+          correct: "D"
+        },
+        {
+          question: "U obliku kojeg slova guske lete na dugim migracijama kako bi štedjele energiju?",
+          answers: {
+            A: "V",
+            B: "Y",
+            C: "U",
+            D: "L"
+          },
+          correct: "A"
+        },
+        {
+          question: "Prilikom ulaska u koju je državu Oscar Wilde izjavio da nema ništa za prijaviti osim vlastitog genija?",
+          answers: {
+            A: "Kanadu",
+            B: "Sjedinjene Američke Države",
+            C: "Francusku",
+            D: "Italiju"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koja troslovna skraćenica označava Međunarodnu skijašku federaciju?",
+          answers: {
+            A: "FIA",
+            B: "IHF",
+            C: "FIS",
+            D: "MFS"
+          },
+          correct: "C"
+        },
+        {
+          question: "Čija je piramida hiljadama godina bila najviša građevina na svijetu?",
+          answers: {
+            A: "Kefrenova",
+            B: "Mikerinova",
+            C: "Džoserova",
+            D: "Keopsova"
+          },
+          correct: "D"
+        },
+        {
+          question: "Naziv koje nauke dolazi od grčkih riječi za Zemlju i proučavanje?",
+          answers: {
+            A: "Geologija",
+            B: "Geografija",
+            C: "Geodezija",
+            D: "Geofizika"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koje zvijeri iz porodice mačaka jedine prirodno žive u čoporima?",
+          answers: {
+            A: "Tigrovi",
+            B: "Lavovi",
+            C: "Leopardi",
+            D: "Risovi"
+          },
+          correct: "B"
+        },
+        {
+          question: "Kako se zove pravilni heksaedar, poliedar omeđen sa šest kvadratnih strana?",
+          answers: {
+            A: "Kvadar",
+            B: "Kocka",
+            C: "Prizma",
+            D: "Oktaedar"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koje su dvije boje na zastavi Republike Sjeverne Makedonije?",
+          answers: {
+            A: "Crvena i žuta",
+            B: "Crvena i bijela",
+            C: "Žuta i plava",
+            D: "Crvena i zelena"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koja je bosanskohercegovačka košarkašica 2017. godine primljena u FIBA-inu Kuću slavnih?",
+          answers: {
+            A: "Mara Lakić",
+            B: "Lejla Bećirović",
+            C: "Razija Mujanović",
+            D: "Slađana Golić"
+          },
+          correct: "C"
+        },
+        {
+          question: "Kojim slovom počinje ime glavnog grada Madagaskara?",
+          answers: {
+            A: "T",
+            B: "M",
+            C: "N",
+            D: "A"
+          },
+          correct: "D"
+        },
+        {
+          question: "Na koji dio atoma otpada približno 99,9% njegove mase?",
+          answers: {
+            A: "Elektronski omotač",
+            B: "Proton",
+            C: "Neutron",
+            D: "Jezgro"
+          },
+          correct: "D"
+        },
+        {
+          question: "U kojoj se američkoj saveznoj državi nalaze gradovi Cleveland, Columbus i Cincinnati?",
+          answers: {
+            A: "Ohio",
+            B: "Indiana",
+            C: "Michigan",
+            D: "Illinois"
+          },
+          correct: "A"
+        },
+        {
+          question: "Na dan sahrane kojeg je izumitelja 1931. godine širom SAD-a ugašena javna rasvjeta?",
+          answers: {
+            A: "Nikole Tesle",
+            B: "Thomasa Edisona",
+            C: "Alexandra Grahama Bella",
+            D: "Guglielma Marconija"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koju je tortu šesnaestogodišnji pripravnik prvi put poslužio kancelaru von Metternichu 1832. godine?",
+          answers: {
+            A: "Doboš tortu",
+            B: "Esterházy tortu",
+            C: "Linzer tortu",
+            D: "Sacher tortu"
+          },
+          correct: "D"
+        },
+        {
+          question: "U kojoj državi se nalaze sjedišta FIFA-e i UEFA-e?",
+          answers: {
+            A: "Francuska",
+            B: "Švicarska",
+            C: "Njemačka",
+            D: "Austrija"
+          },
+          correct: "B"
+        },
+        {
+          question: "Šta treba imati za ljubav, prema pjesmi Atomskog skloništa?",
+          answers: {
+            A: "Dušu",
+            B: "Srce",
+            C: "Sreću",
+            D: "Hrabrost"
+          },
+          correct: "A"
+        },
+        {
+          question: "Na kojem ćeš mjestu biti u utrci ako prestigneš takmičara koji je na trećem mjestu?",
+          answers: {
+            A: "Drugom",
+            B: "Prvom",
+            C: "Trećem",
+            D: "Četvrtom"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koji je najtrofejniji nogometni klub iz belgijskog grada Liègea?",
+          answers: {
+            A: "Antwerp",
+            B: "Brugge",
+            C: "Anderlecht",
+            D: "Standard"
+          },
+          correct: "D"
+        },
         {
           question: "Koliko je godina imao Neil Armstrong kad je hodao po Mjesecu?",
           answers: {
@@ -21091,16 +21677,6 @@ correct: "C" }
             D: "3.5"
           },
           correct: "B"
-        },
-        {
-          question: "Koliko sekundi bi svjetlosti trebalo da obiđe oko Zemlje na ekvatoru (sedam i po krugova)?",
-          answers: {
-            A: "0.13",
-            B: "1.5",
-            C: "5.0",
-            D: "10.0"
-          },
-          correct: "A"
         },
         {
           question: "Koliko država u Aziji ima direktan izlaz na more ili okean?",
@@ -21215,10 +21791,10 @@ correct: "C" }
         {
           question: "Koja dvoslovna kratica u Velikoj Britaniji označava vrijeme prije podneva?",
           answers: {
-            A: "GMT",
+            A: "GM",
             B: "PM",
             C: "AM",
-            D: "UTC"
+            D: "PP"
           },
           correct: "C"
         },
@@ -21343,7 +21919,7 @@ correct: "C" }
           correct: "D"
         },
         {
-          question: "Velšanin Ian Rush je, s 346 golova, najbolji strijelac u povijesti-kojeg kluba?",
+          question: "Velšanin Ian Rush je, s 346 golova, najbolji strijelac u historiji kojeg kluba?",
           answers: {
             A: "Liverpoola",
             B: "Manchester Uniteda",
@@ -21483,22 +22059,12 @@ correct: "C" }
           correct: "B"
         },
         {
-          question: "Koji je jedini planet sunčeva sustava čije ime počinje i završava istim slovom?",
-          answers: {
-            A: "Neptun",
-            B: "Uran",
-            C: "Saturn",
-            D: "Venera"
-          },
-          correct: "A"
-        },
-        {
           question: "Peninske alpe se nalaze u Švicarskoj i Italiji, a Peninsko gorje u kojoj državi?",
           answers: {
             A: "Velikoj Britaniji",
-            B: "Irskoj",
+            B: "Danskoj",
             C: "Norveškoj",
-            D: "Škotskoj"
+            D: "Švedskoj"
           },
           correct: "A"
         },
@@ -21545,7 +22111,7 @@ correct: "C" }
         {
           question: "Kroz koliko država protiče rijeka Dunav?",
           answers: {
-            A: "6-7",
+            A: "6",
             B: "8",
             C: "9",
             D: "10"
@@ -21659,16 +22225,6 @@ correct: "C" }
             B: "Šafran",
             C: "Kardamom",
             D: "Biber"
-          },
-          correct: "B"
-        },
-        {
-          question: "Koji film je osvojio Oskara za najbolji film 2024. godine?",
-          answers: {
-            A: "Barbie",
-            B: "Oppenheimer",
-            C: "Poor Things",
-            D: "Dune 2"
           },
           correct: "B"
         },
@@ -22032,6 +22588,36 @@ correct: "C" }
           },
           correct: "A"
         },
+		      {
+          question: "Koju napravu je izumio David Brewster i nazvao je po grčkom za 'lijep pogled oblika'?",
+          answers: {
+            A: "Teleskop",
+            B: "Mikroskop",
+            C: "Periskop",
+            D: "Kaleidoskop"
+          },
+          correct: "D"
+        },
+		  {
+    question: "U koliko država se tradicionalno održavaju svečane ceremonije dodjele Nobelovih nagrada?",
+    answers: {
+      A: "Jednoj",
+      B: "Dvije",
+      C: "Tri",
+      D: "Četiri"
+    },
+    correct: "B"
+  },
+  {
+    question: "Koji je najjužniji grad koji je do sada bio domaćin ljetnih Olimpijskih igara?",
+    answers: {
+      A: "Kairo",
+      B: "Capetown",
+      C: "Melbourne",
+      D: "Rio de Janeiro"
+    },
+    correct: "C"
+  },
         {
           question: "U delti koje rijeke se nalazi ruski grad Astrahan?",
           answers: {
@@ -22043,174 +22629,24 @@ correct: "C" }
           correct: "D"
         }
       ],
-      hard: [
+      hard: [  
         {
-          question: "Pravilan trodimenzionalni raspored građevnih čestica kristala nazivamo kristalna-što?",
+          question: "Koje ime povezuje fiktivnog kapetana Nautilusa i fiktivnu ribicu iz crtića?",
           answers: {
-            A: "Mreža",
-            B: "Rešetka",
-            C: "Struktura",
-            D: "Forma"
-          },
-          correct: "B"
-        },
-        {
-          question: "Na koju se konvenciju poziva kada se govori o pravilnom postupanju s ratnim zarobljenicima?",
-          answers: {
-            A: "Helsinšku",
-            B: "Rimsku",
-            C: "Ženevsku",
-            D: "Parišku"
-          },
-          correct: "C"
-        },
-        {
-          question: "Ono što je u Sloveniji korenje, a u Srbiji šargarepa, u Hrvatskoj je-što?",
-          answers: {
-            A: "Mrkva",
-            B: "Peršun",
-            C: "Celer",
-            D: "Repa"
+            A: "Nemo",
+            B: "Dory",
+            C: "Marlin",
+            D: "Ariel"
           },
           correct: "A"
         },
         {
-          question: "Koja država je 1999. zajedno s Poljskom i Češkom ušla u NATO savez?",
+          question: "Multipli mijelom je zloćudni tumor kojih stanica?",
           answers: {
-            A: "Rumunija",
-            B: "Slovačka",
-            C: "Slovenija",
-            D: "Mađarska"
-          },
-          correct: "D"
-        },
-        {
-          question: "Koju je igraću konzolu i konkurent Sonyjevu PlayStationu tvrtka Microsoft predstavila 2001?",
-          answers: {
-            A: "Sega Dreamcast",
-            B: "Nintendo 64",
-            C: "Xbox",
-            D: "Atari"
-          },
-          correct: "C"
-        },
-        {
-          question: "Koji je grad, po popisu iz 1982 bio treći najveći grad u Jugoslaviji s gotovo pola milijuna stanovnika?",
-          answers: {
-            A: "Beograd",
-            B: "Sarajevo",
-            C: "Zagreb",
-            D: "Skoplje"
-          },
-          correct: "D"
-        },
-        {
-          question: "13-dnevno zaoštravanje odnosa SSSR-a i SAD-a 1962 poznato je kao kakva „kriza“?",
-          answers: {
-            A: "Iranska",
-            B: "Ruska",
-            C: "Kubanska",
-            D: "Vijetnamska"
-          },
-          correct: "C"
-        },
-        {
-          question: "Kako se zove medicinska pretraga mjerenja plućnog volumena i kapaciteta pluća?",
-          answers: {
-            A: "Kardiologija",
-            B: "Bronhoskopija",
-            C: "Elektrokardiografija",
-            D: "Spirometrija"
-          },
-          correct: "D"
-        },
-        {
-          question: "Koji plemeniti plin kojim se pune rasvjetna tijela ima atomski broj 10?",
-          answers: {
-            A: "Helij",
-            B: "Argon",
-            C: "Neon",
-            D: "Azot"
-          },
-          correct: "C"
-        },
-        {
-          question: "Koja se korejska borilačka vještina razvila iz karatea nakon 2. svj. rata?",
-          answers: {
-            A: "Hapkido",
-            B: "Judo",
-            C: "Taekwondo",
-            D: "Kendo"
-          },
-          correct: "C"
-        },
-        {
-          question: "Koji ćemo riblji proizvod dobiti ako ispremiješamo slova u riječi „akvarij“?",
-          answers: {
-            A: "Tuna",
-            B: "Losos",
-            C: "Sardina",
-            D: "Kavijar"
-          },
-          correct: "D"
-        },
-        {
-          question: "Frazom „Miješati kruške i jabuke“ istoznačan je frazemu „Zbrajati babe i“-koga?",
-          answers: {
-            A: "Ptice",
-            B: "Mačke",
-            C: "Žabe",
-            D: "Ribe"
-          },
-          correct: "C"
-        },
-        {
-          question: "Po kojoj je starorimskoj božici plodnosti nazvan sveukupni životinjski svijet?",
-          answers: {
-            A: "Diani",
-            B: "Fauni",
-            C: "Venusi",
-            D: "Minervi"
-          },
-          correct: "B"
-        },
-        {
-          question: "Koliko je Štrumpfova potrebno Gargamelu kako bi napravio napitak koji pretvara metal u zlato?",
-          answers: {
-            A: "67",
-            B: "6",
-            C: "9",
-            D: "11"
-          },
-          correct: "B"
-        },
-        {
-          question: "Plaža s oznakom FKK označava da je riječ o kakvoj plaži?",
-          answers: {
-            A: "Divljoj",
-            B: "Pješčanoj",
-            C: "Privatnoj",
-            D: "Nudističkoj"
-          },
-          correct: "D"
-        },
-        {
-          question: "Koji latinski naziv dijele svemirska maglica i nagrada za najbolju SF-knjigu?",
-          answers: {
-            A: "Stella",
-            B: "Nova",
-            C: "Cosmos",
-            D: "Nebula"
-          },
-          correct: "D"
-        },
-        {
-          question: "Koji je njujorški modni dizajner 1967. pokrenuo liniju odjeće Polo?",
-          answers: {
-            A: "Emporio Armani",
-            B: "Calvin Klein",
-            C: "Ralph Lauren",
-            D: "Marc Jacobs"
+            A: "Nervnih stanica",
+            B: "Epitelnih stanica",
+            C: "Plazma stanica",
+            D: "Mišićnih stanica"
           },
           correct: "C"
         },
@@ -22440,7 +22876,7 @@ correct: "C" }
             A: "Legenda",
             B: "Bajka",
             C: "Basna",
-            D: "Saga"
+            D: "Anegdota"
           },
           correct: "C"
         },
@@ -22520,29 +22956,19 @@ correct: "C" }
             A: "1000",
             B: "1024",
             C: "1048",
-            D: "1100"
+            D: "8"
           },
           correct: "B"
         },
         {
           question: "Koja se dužina u km tradicionalno pripisuje rijeci Nil, koja se dugo smatrala najdužom na svijetu?",
           answers: {
-            A: "4.200",
-            B: "6.650",
-            C: "5.100",
-            D: "7.800"
+            A: "4200",
+            B: "6650",
+            C: "5100",
+            D: "7800"
           },
           correct: "B"
-        },
-        {
-          question: "U kojem animiranom filmu nazvanom po provansalskom jelu štakor Remy spašava francuski restoran?",
-          answers: {
-            A: "Ratatouille",
-            B: "Shrek",
-            C: "Madagascar",
-            D: "Cars"
-          },
-          correct: "A"
         },
         {
           question: "U kojoj se državi nalaze poznata turistička odredišta Hurghada i Sharm-el-Sheikh?",
@@ -22645,32 +23071,12 @@ correct: "C" }
           correct: "C"
         },
         {
-          question: "Kojem je oklopnom vozilu u Prvom svjetskom ratu časnik Ernest Swinton dao ime?",
-          answers: {
-            A: "Tenk",
-            B: "BVP",
-            C: "Amfibija",
-            D: "Džip"
-          },
-          correct: "A"
-        },
-        {
           question: "Koliko bodova u američkom nogometu (NFL) donosi touchdown (polaganje)?",
           answers: {
             A: "3",
             B: "7",
             C: "6",
             D: "5"
-          },
-          correct: "C"
-        },
-        {
-          question: "Kako se zove mjerna jedinica za udaljenost koju svjetlost pređe za jednu godinu?",
-          answers: {
-            A: "Kilometar",
-            B: "Nautička milja",
-            C: "Svjetlosna godina",
-            D: "Parsek"
           },
           correct: "C"
         },
@@ -22683,16 +23089,6 @@ correct: "C" }
             D: "Nigerija"
           },
           correct: "D"
-        },
-        {
-          question: "Koji je španski nogometni selektor osvojio i Svjetsko (2010) i Europsko prvenstvo (2012)?",
-          answers: {
-            A: "Luis Aragones",
-            B: "Vicente del Bosque",
-            C: "Pep Guardiola",
-            D: "Luis Enrique"
-          },
-          correct: "B"
         },
         {
           question: "Ko je naslikao čuveni 'Krik' (The Scream)?",
@@ -22714,29 +23110,7 @@ correct: "C" }
           },
           correct: "D"
         },
-        {
-          question: "Koja zmija ima latinski naziv 'Natrix natrix'?",
-          answers: {
-            A: "Poskok",
-            B: "Bjelouška",
-            C: "Kobra",
-            D: "Anakonda"
-          },
-          correct: "B"
-        }
-      ],
-      hardest: [
-        {
-          question: "Koji se filozof krije u anagramu imena „Kratos“, personifikaciji sile u grčkoj mitologiji?",
-          answers: {
-            A: "Sokrat",
-            B: "Platon",
-            C: "Aristotel",
-            D: "Diogen"
-          },
-          correct: "A"
-        },
-        {
+  {
           question: "Kojeg hemijskog elementa u ljudskom tijelu ima dovoljno za proizvodnju oko 900 olovaka?",
           answers: {
             A: "Vodika",
@@ -22757,7 +23131,7 @@ correct: "C" }
           correct: "D"
         },
         {
-          question: "U kojoj se državi nalazi najviše vulkana? 130",
+          question: "U kojoj se državi nalazi najviše vulkana? Čak 130",
           answers: {
             A: "Filipini",
             B: "Indonezija",
@@ -22779,30 +23153,30 @@ correct: "C" }
         {
           question: "Kako se zove glavna nagrada na Kanskom festivalu?",
           answers: {
-            A: "zlatni vuk",
-            B: "zlatni medvjed",
-            C: "zlatni globus",
-            D: "zlatna palma"
+            A: "Zlatni vuk",
+            B: "Zlatni medvjed",
+            C: "Zlatni globus",
+            D: "Zlatna palma"
           },
           correct: "D"
         },
         {
           question: "Ko je imao zakonodavnu vlast u Starom Rimu?",
           answers: {
-            A: "crkva",
-            B: "papa",
-            C: "senat",
-            D: "predsjednik"
+            A: "Crkva",
+            B: "Papa",
+            C: "Senat",
+            D: "Predsjednik"
           },
           correct: "C"
         },
         {
           question: "Ko polaže Hipokratovu zakletvu?",
           answers: {
-            A: "poslanici",
-            B: "ljekari",
-            C: "advokati",
-            D: "premijer"
+            A: "Poslanici",
+            B: "Ljekari",
+            C: "Advokati",
+            D: "Premijer"
           },
           correct: "B"
         },
@@ -22819,10 +23193,10 @@ correct: "C" }
         {
           question: "Mesing je legura koja dva metala?",
           answers: {
-            A: "bakra i cinka",
-            B: "zlata i bakra",
-            C: "zlata i kalaja",
-            D: "kalaja i bakra"
+            A: "Bakra i cinka",
+            B: "Zlata i bakra",
+            C: "Zlata i kalaja",
+            D: "Jalaja i bakra"
           },
           correct: "A"
         },
@@ -22867,22 +23241,12 @@ correct: "C" }
           correct: "B"
         },
         {
-          question: "Kako se zove prva knjiga Starog zavjeta?",
-          answers: {
-            A: "Izlazak",
-            B: "Levitski zakonik",
-            C: "Postanak",
-            D: "Psalmi"
-          },
-          correct: "C"
-        },
-        {
           question: "Dinamometar služi za mjerenje?",
           answers: {
             A: "Sile",
-            B: "brzine",
-            C: "napona",
-            D: "gustine"
+            B: "Brzine",
+            C: "Napona",
+            D: "Gustine"
           },
           correct: "A"
         },
@@ -22899,10 +23263,10 @@ correct: "C" }
         {
           question: "Sva organska jedinjenja sadrže?",
           answers: {
-            A: "azot",
-            B: "kisik",
-            C: "vodik",
-            D: "ugljik"
+            A: "Azot",
+            B: "Kisik",
+            C: "Vodik",
+            D: "Ugljik"
           },
           correct: "D"
         },
@@ -22917,16 +23281,6 @@ correct: "C" }
           correct: "B"
         },
         {
-          question: "Koji igrač drži rekord po broju golova na jednom Svjetskom prvenstvu?",
-          answers: {
-            A: "Miroslav Klose",
-            B: "Just Fontaine",
-            C: "Ronaldo Nazário",
-            D: "Gerd Müller"
-          },
-          correct: "B"
-        },
-        {
           question: "Koji se engleski izraz koristi za napuštenu zgradu koju ljudi bespravno nastanjuju?",
           answers: {
             A: "squat",
@@ -22937,22 +23291,12 @@ correct: "C" }
           correct: "A"
         },
         {
-          question: "Koji engleski moreplovac je 1581. proglašen vitezom nakon oplovljavanja svijeta?",
-          answers: {
-            A: "James Cook",
-            B: "Francis Drake",
-            C: "Walter Raleigh",
-            D: "Henry Hudson"
-          },
-          correct: "B"
-        },
-        {
           question: "Topologija je grana?",
           answers: {
-            A: "geografije",
-            B: "matematike",
-            C: "biologije",
-            D: "lingvistike"
+            A: "Geografije",
+            B: "Matematike",
+            C: "Biologije",
+            D: "Lingvistike"
           },
           correct: "B"
         },
@@ -22997,22 +23341,12 @@ correct: "C" }
           correct: "C"
         },
         {
-          question: "Koji se moreuz nalazi između Tasmanije i kopnenog dijela Australije?",
+          question: "Koje je boje instrument koji snima podatke o letu aviona (tzv. Crna kutija)?",
           answers: {
-            A: "Bassov prolaz",
-            B: "Cookov prolaz",
-            C: "Torresov prolaz",
-            D: "Magelanov prolaz"
-          },
-          correct: "A"
-        },
-        {
-          question: "Koje je boje instrument koji snima podatke o letu aviona?",
-          answers: {
-            A: "žute",
-            B: "naranđaste",
-            C: "crvene",
-            D: "crne"
+            A: "Žute",
+            B: "Naranđaste",
+            C: "Crvene",
+            D: "Crne"
           },
           correct: "B"
         },
@@ -23022,7 +23356,7 @@ correct: "C" }
             A: "4 bita",
             B: "12 bitova",
             C: "32 bitova",
-            D: "128 bitova"
+            D: "1024 bitova"
           },
           correct: "C"
         },
@@ -23157,20 +23491,10 @@ correct: "C" }
           correct: "C"
         },
         {
-          question: "U kojoj zemlji se nalazi najveći vodopad u Evropi?",
-          answers: {
-            A: "Island",
-            B: "Finska",
-            C: "Švedska",
-            D: "Norveška"
-          },
-          correct: "D"
-        },
-        {
           question: "Kako se zove staroslavenska boginja proljeća?",
           answers: {
-            A: "Lada",
-            B: "Lela",
+            A: "Nada",
+            B: "Lala",
             C: "Živna",
             D: "Vesna"
           },
@@ -23205,17 +23529,9 @@ correct: "C" }
             D: "Engleska"
           },
           correct: "A"
-        },
-        {
-          question: "Koji udarac u boksu se izvodi rukom koja je bliža protivniku?",
-          answers: {
-            A: "Krosover",
-            B: "Direkt",
-            C: "Džeb",
-            D: "Aperkat"
-          },
-          correct: "C"
-        },
+        }
+      ],
+      hardest: [
         {
           question: "Koji je jedini glavni grad na svijetu koji direktno graniči sa dvije države?",
           answers: {
@@ -23225,18 +23541,318 @@ correct: "C" }
             D: "Prag"
           },
           correct: "A"
-        }
+        },
+  { 
+    "question": "Koje je godine počeo Prvi svjetski rat?", 
+    "answers": { "A": "1912.", "B": "1914.", "C": "1918.", "D": "1939." }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Koji je jedini kemijski element koji je tekućina na sobnoj temperaturi, a nije živa?", 
+    "answers": { "A": "Brom", "B": "Galij", "C": "Cezij", "D": "Francij" }, 
+    "correct": "A" 
+  },
+  { 
+    "question": "Kako se zove izmišljeni kontinent na kojem se odvija većina radnje u seriji 'Igra prijestolja' (Game of Thrones)?", 
+    "answers": { "A": "Essos", "B": "Tamriel", "C": "Westeros", "D": "Meereen" }, 
+    "correct": "C" 
+  },
+  { 
+    "question": "Koja je planeta u Sunčevom sistemu najtoplija, unatoč tome što nije najbliža Suncu?", 
+    "answers": { "A": "Merkur", "B": "Mars", "C": "Jupiter", "D": "Venera" }, 
+    "correct": "D" 
+  },
+  { 
+    "question": "Koji je slavni slikar odsjekao svoje lijevo uho nakon svađe s Paulom Gauguinom?", 
+    "answers": { "A": "Vincent van Gogh", "B": "Pablo Picasso", "C": "Claude Monet", "D": "Salvador Dali" }, 
+    "correct": "A" 
+  },
+  { 
+    "question": "Koji je sportaš osvojio najviše olimpijskih medalja u historiji?", 
+    "answers": { "A": "Usain Bolt", "B": "Michael Phelps", "C": "Larisa Latinjina", "D": "Roger Federer" }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Kako se u računarstvu zove kratica 'URL'?", 
+    "answers": { "A": "Universal Resource Locator", "B": "Uniform Resource Locator", "C": "Unified Registry Link", "D": "User Resource Link" }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Koja je životinja nacionalni simbol Škotske?", 
+    "answers": { "A": "Lav", "B": "Jednorog", "C": "Orao", "D": "Dabar" }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Tko je napisao tragediju 'Romeo i Julija'?", 
+    "answers": { "A": "Charles Dickens", "B": "William Shakespeare", "C": "Fyodor Dostoevsky", "D": "Oscar Wilde" }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Koji organ u ljudskom tijelu proizvodi inzulin?", 
+    "answers": { "A": "Jetra", "B": "Bubrezi", "C": "Gušterača (pankreas)", "D": "Slezena" }, 
+    "correct": "C" 
+  },
+		        {
+          question: "U kojoj zemlji se nalazi najveći vodopad u Evropi?",
+          answers: {
+            A: "Island",
+            B: "Finska",
+            C: "Švedska",
+            D: "Norveška"
+          },
+          correct: "D"
+        },
       ]
     },
     geography: {
       easy: [
-        {
-          question: "Najdublje jezero na svijetu je?",
+      {
+          question: "Koje je godine, manje od mjesec dana nakon potonuća Titanica, snimljen film 'Spasena s Titanica'?",
           answers: {
-            A: "Kaspijsko",
-            B: "Viktorijino",
-            C: "Bajkajsko",
-            D: "Boračko"
+            A: "1911",
+            B: "1912",
+            C: "1913",
+            D: "1914"
+          },
+          correct: "B"
+        },
+  {
+    question: "Koja je američka savezna država najbliža Kubi i po kojoj je nazvan morski prolaz koji ih razdvaja?",
+    answers: {
+      A: "Florida",
+      B: "Georgia",
+      C: "Alabama",
+      D: "Texas"
+    },
+    correct: "A"
+  },
+  {
+    question: "Koje dvije države dijele najdužu kopnenu granicu u Južnoj Americi?",
+    answers: {
+      A: "Brazil i Argentina",
+      B: "Peru i Brazil",
+      C: "Kolumbija i Venecuela",
+      D: "Čile i Argentina"
+    },
+    correct: "D"
+  },
+  {
+    question: "Kako se zove najveća albanska luka?",
+    answers: {
+      A: "Valona",
+      B: "Drač",
+      C: "Skadar",
+      D: "Saranda"
+    },
+    correct: "B"
+  },
+  {
+    question: "Kako još jednom riječju nazivamo evaporaciju, prelazak tvari iz tečnog u gasovito stanje?",
+    answers: {
+      A: "Kondenzacija",
+      B: "Sublimacija",
+      C: "Isparavanje",
+      D: "Taljenje"
+    },
+    correct: "C"
+  },
+  {
+    question: "U kojem su sportu njemački klubovi Kiel i Flensburg evropske velesile?",
+    answers: {
+      A: "Odbojka",
+      B: "Košarka",
+      C: "Nogomet",
+      D: "Rukomet"
+    },
+    correct: "D"
+  },
+  {
+    question: "Koji je ljudski organ prekomjerno povećan kod makroglosije?",
+    answers: {
+      A: "Jezik",
+      B: "Nos",
+      C: "Jetra",
+      D: "Pluća"
+    },
+    correct: "A"
+  },
+  {
+    question: "Koga je Serena Williams pobijedila čak sedam puta u finalima Grand Slam turnira?",
+    answers: {
+      A: "Mariju Šarapovu",
+      B: "Justine Henin",
+      C: "Venus Williams",
+      D: "Viktoriju Azarenku"
+    },
+    correct: "C"
+  },
+  {
+    question: "Koji njemački nogometni klub gorljivi navijači prate sa Žutog zida na južnoj tribini?",
+    answers: {
+      A: "Bayern München",
+      B: "Borussia Dortmund",
+      C: "Schalke 04",
+      D: "Bayer Leverkusen"
+    },
+    correct: "B"
+  },
+  {
+    question: "Vrlo težak život u nekom zanimanju obično se naziva kruhom s koliko kora?",
+    answers: {
+      A: "Pet",
+      B: "Devet",
+      C: "Šest",
+      D: "Sedam"
+    },
+    correct: "D"
+  },
+		       {
+          question: "Koliko postotaka DNK strukture ljudi dijele jedni s drugima (približno)?",
+          answers: {
+            A: "50%",
+            B: "75%",
+            C: "99.9%",
+            D: "10%"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koja kiselina se nalazi u želucu i pomaže u razgradnji hrane?",
+          answers: {
+            A: "Limunska",
+            B: "Hlorovodonična",
+            C: "Sirćetna",
+            D: "Mliječna"
+          },
+          correct: "B"
+        },
+        {
+          question: "Kremen se sastoji od kisika i kojeg još hemijskog elementa?",
+          answers: {
+            A: "Aluminij",
+            B: "Silicij",
+            C: "Ugljik",
+            D: "Željezo"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koja država je 1. jula 2013. postala članica Evropske unije?",
+          answers: {
+            A: "Rumunija",
+            B: "Bugarska",
+            C: "Hrvatska",
+            D: "Bjelorusija"
+          },
+          correct: "C"
+        },
+        {
+          question: "Brzinu čega je prvi odredio danski astronom Ole Christensen Rømer?",
+          answers: {
+            A: "Svjetlosti",
+            B: "Zvuka",
+            C: "Gravitacije",
+            D: "Rotacije Zemlje"
+          },
+          correct: "A"
+        },
+        {
+          question: "Kako se zove manji hotel uz cestu, namijenjen putnicima motornim vozilima?",
+          answers: {
+            A: "Hostel",
+            B: "Motel",
+            C: "Pansion",
+            D: "Apartman"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koju je državu Henry Kissinger opisao kao 'preveliku za Evropu, ali premalenu za svijet'?",
+          answers: {
+            A: "Rusiju",
+            B: "Njemačku",
+            C: "Francusku",
+            D: "Poljsku"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koja država ima obalu i na Bijelom i na Crnom moru?",
+          answers: {
+            A: "Ukrajina",
+            B: "Turska",
+            C: "Rusija",
+            D: "Rumunija"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koji je rod dinosaura nazvan po grčkim riječima za 'tri', 'rog' i 'lice'?",
+          answers: {
+            A: "Stegosaurus",
+            B: "Velociraptor",
+            C: "Triceratops",
+            D: "Brachiosaurus"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koji je veliki poluotok najjužniji dio kontinentalne Grčke?",
+          answers: {
+            A: "Peloponez",
+            B: "Apeninski",
+            C: "Iberski",
+            D: "Anatolijski"
+          },
+          correct: "A"
+        },
+        {
+          question: "U kojoj državi su sahranjeni posmrtni ostaci Che Guevare nakon ekshumacije 1997. godine?",
+          answers: {
+            A: "Kuba",
+            B: "Bolivija",
+            C: "Meksiko",
+            D: "Argentina"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koji naziv za kupovinu imovine s nadom u rast vrijednosti dolazi od latinske riječi za 'posmatranje'?",
+          answers: {
+            A: "Investicija",
+            B: "Spekulacija",
+            C: "Arbitraža",
+            D: "Depozit"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koje dvije države spaja Øresundski most?",
+          answers: {
+            A: "Danska i Švedska",
+            B: "Norveška i Švedska",
+            C: "Njemačka i Norveška",
+            D: "Finska i Švedska"
+          },
+          correct: "A"
+        },
+        {
+          question: "Ludolfov broj je omjer obima i poluprečnika koje krive?",
+          answers: {
+            A: "Elipse",
+            B: "Parabole",
+            C: "Kružnice",
+            D: "Hiperbole"
+          },
+          correct: "C"
+        },
+        {
+          question: "Ime koje najmanje srednjoameričke države se prevodi kao 'spasitelj'?",
+          answers: {
+            A: "Honduras",
+            B: "Nikaragva",
+            C: "El Salvador",
+            D: "Panama"
           },
           correct: "C"
         },
@@ -23266,7 +23882,7 @@ correct: "C" }
             A: "0.8 sekundi",
             B: "1.5 sekundi",
             C: "2.2 sekunde",
-            D: "3.0 sekunde"
+            D: "1.2 sekunde"
           },
           correct: "A"
         },
@@ -23323,7 +23939,7 @@ correct: "C" }
         {
           question: "Koliko rundi traje profesionalni bokserski meč za svjetsku titulu (muškarci, moderno pravilo)?",
           answers: {
-            A: "5",
+            A: "3",
             B: "10",
             C: "11",
             D: "12"
@@ -23463,10 +24079,10 @@ correct: "C" }
         {
           question: "Šta je modni komad espadrila?",
           answers: {
-            A: "šešir",
-            B: "haljina",
-            C: "kaput",
-            D: "cipele"
+            A: "Šešir",
+            B: "Haljina",
+            C: "Kaput",
+            D: "Cipele"
           },
           correct: "D"
         },
@@ -23494,9 +24110,9 @@ correct: "C" }
           question: "Od kojih se orašastih plodova pravi marcipan?",
           answers: {
             A: "Bademi",
-            B: "orasi",
-            C: "lješnjci",
-            D: "kikiriki"
+            B: "Orasi",
+            C: "Lješnjci",
+            D: "Kikiriki"
           },
           correct: "A"
         },
@@ -24242,6 +24858,36 @@ correct: "C" }
           },
           correct: "D"
         },
+		 {
+          question: "Pravilan trodimenzionalni raspored građevnih čestica kristala nazivamo kristalna-što?",
+          answers: {
+            A: "Mreža",
+            B: "Rešetka",
+            C: "Struktura",
+            D: "Forma"
+          },
+          correct: "B"
+        },
+        {
+          question: "Na koju se konvenciju poziva kada se govori o pravilnom postupanju s ratnim zarobljenicima?",
+          answers: {
+            A: "Helsinšku",
+            B: "Rimsku",
+            C: "Ženevsku",
+            D: "Parišku"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koja država je 1999. zajedno s Poljskom i Češkom ušla u NATO savez?",
+          answers: {
+            A: "Rumunija",
+            B: "Slovačka",
+            C: "Slovenija",
+            D: "Mađarska"
+          },
+          correct: "D"
+        },
         {
           question: "Ko je rekao “Veni, vidi, vici” (Dođoh, vidjeh, pobjedih)?",
           answers: {
@@ -24279,16 +24925,6 @@ correct: "C" }
             B: "6–7 miliona",
             C: "10-15 miliona",
             D: "1–2 miliona"
-          },
-          correct: "A"
-        },
-        {
-          question: "Koliko bijelih polja ima na šahovskoj tabli?",
-          answers: {
-            A: "32",
-            B: "64",
-            C: "8",
-            D: "16"
           },
           correct: "A"
         },
@@ -24333,26 +24969,6 @@ correct: "C" }
           correct: "B"
         },
         {
-          question: "Kroz koji se drevni mikenski grad može ući kroz čuvena 'Lavlja vrata'?",
-          answers: {
-            A: "Troja",
-            B: "Mikena",
-            C: "Knosos",
-            D: "Sparta"
-          },
-          correct: "B"
-        },
-        {
-          question: "Jezero Nyasa (Malawi) čini više od petine površine koje afričke države?",
-          answers: {
-            A: "Zambija",
-            B: "Malavi",
-            C: "Tanzanija",
-            D: "Mozambik"
-          },
-          correct: "B"
-        },
-        {
           question: "Kakva je tjelesna temperatura kod dijagnoze 'status febrilis'?",
           answers: {
             A: "Snižena",
@@ -24363,16 +24979,6 @@ correct: "C" }
           correct: "C"
         },
         {
-          question: "Kako se zove najniži i najživčaniji brat Dalton u Lucky Lukeu?",
-          answers: {
-            A: "William",
-            B: "Jack",
-            C: "Averell",
-            D: "Joe"
-          },
-          correct: "D"
-        },
-        {
           question: "Koja borilačka vještina potiče iz Japana i fokusira se na bacanja i kontrolu protivnika?",
           answers: {
             A: "Kendo",
@@ -24381,16 +24987,6 @@ correct: "C" }
             D: "Aikido"
           },
           correct: "B"
-        },
-        {
-          question: "Na granici Mađarske s kojom državom se nalaze prijelazi Horgoš 1 i Horgoš 2?",
-          answers: {
-            A: "Hrvatska",
-            B: "Rumunija",
-            C: "Srbija",
-            D: "Slovačka"
-          },
-          correct: "C"
         },
         {
           question: "Koji njemački general je imao nadimak 'Wüstenfuchs' (Pustinjska lisica)?",
@@ -24433,26 +25029,6 @@ correct: "C" }
           correct: "D"
         },
         {
-          question: "Koliko postotaka DNK strukture ljudi dijele jedni s drugima (približno)?",
-          answers: {
-            A: "50%",
-            B: "75%",
-            C: "99.9%",
-            D: "10%"
-          },
-          correct: "C"
-        },
-        {
-          question: "Koja kiselina se nalazi u želucu i pomaže u razgradnji hrane?",
-          answers: {
-            A: "Limunska",
-            B: "Hlorovodonična",
-            C: "Sirćetna",
-            D: "Mliječna"
-          },
-          correct: "B"
-        },
-        {
           question: "Koliko sekundi traje prosječan refleksni odgovor čovjeka na bolni stimulus?",
           answers: {
             A: "0.02–0.04",
@@ -24475,10 +25051,10 @@ correct: "C" }
         {
           question: "Kojom brzinom izlazi vazduh iz nas kada kašljemo?",
           answers: {
-            A: "80 km/h",
-            B: "100 km/h",
+            A: "4 km/h",
+            B: "40 km/h",
             C: "140 km/h",
-            D: "200 km/h"
+            D: "240 km/h"
           },
           correct: "C"
         },
@@ -24531,16 +25107,6 @@ correct: "C" }
             D: "Casablanca"
           },
           correct: "A"
-        },
-        {
-          question: "Koji reditelj je režirao filmove 'Psycho', 'Vertigo' i 'Rear Window'?",
-          answers: {
-            A: "Stanley Kubrick",
-            B: "Alfred Hitchcock",
-            C: "Orson Welles",
-            D: "David Lynch"
-          },
-          correct: "B"
         },
         {
           question: "Koji film je prvi dugometražni animirani film u historiji?",
@@ -24722,19 +25288,7 @@ correct: "C" }
           },
           correct: "B"
         },
-        {
-          question: "Koja država je prva uvela opće pravo glasa za žene?",
-          answers: {
-            A: "SAD",
-            B: "Francuska",
-            C: "Novi Zeland",
-            D: "Švicarska"
-          },
-          correct: "C"
-        }
-      ],
-      hardest: [
-        {
+		  {
           question: "Koliko stepeni ima u pola kruga?",
           answers: {
             A: "90°",
@@ -24763,16 +25317,6 @@ correct: "C" }
             D: "Sreća"
           },
           correct: "A"
-        },
-        {
-          question: "Za koju je povrtnu i začinsku biljku drugi naziv selen?",
-          answers: {
-            A: "Celer",
-            B: "Peršun",
-            C: "Ljubičica",
-            D: "Ljubčac"
-          },
-          correct: "D"
         },
         {
           question: "Zemljotres se mjeri kojom skalom?",
@@ -24858,7 +25402,7 @@ correct: "C" }
           question: "Koliko posto ljudi na svijetu su ljevaci?",
           answers: {
             A: "5%",
-            B: "8%",
+            B: "7.5%",
             C: "10%",
             D: "15%"
           },
@@ -25015,7 +25559,7 @@ correct: "C" }
           correct: "A"
         },
         {
-          question: "Koja verzija Schrödingerove jednadžbe opisuje vremensku evoluciju kvantnog sistema?",
+          question: "Koja verzija Schrödingerove jednačibe opisuje vremensku evoluciju kvantnog sistema?",
           answers: {
             A: "Stacionarna forma",
             B: "Relativistička forma",
@@ -25031,26 +25575,6 @@ correct: "C" }
             B: "Stratosfera",
             C: "Mezosfera",
             D: "Termosfera"
-          },
-          correct: "B"
-        },
-        {
-          question: "Koja vrijednost konstante fine strukture α je približno tačna?",
-          answers: {
-            A: "1/137",
-            B: "1/10",
-            C: "1/1000",
-            D: "1/27"
-          },
-          correct: "A"
-        },
-        {
-          question: "Koji od sljedećih brojeva NIJE prost, ali ima tačno dva različita prosta djelitelja?",
-          answers: {
-            A: "4",
-            B: "6",
-            C: "9",
-            D: "12"
           },
           correct: "B"
         },
@@ -25194,27 +25718,7 @@ correct: "C" }
           },
           correct: "C"
         },
-        {
-          question: "Koji je kontroverzni umjetnik napisao svojevrsnu autobiografiju „Dnevnik genija“?",
-          answers: {
-            A: "Pablo Picasso",
-            B: "Salvador Dali",
-            C: "Frida Kahlo",
-            D: "Andy Warhol"
-          },
-          correct: "B"
-        },
-        {
-          question: "U koju državu za božićne praznike putuje porodica McCallister u prvom dijelu serijala „Sam u kući“?",
-          answers: {
-            A: "Italiju",
-            B: "Francusku",
-            C: "Englesku",
-            D: "Njemačku"
-          },
-          correct: "B"
-        },
-        {
+		       {
           question: "Kako se uobičajeno nazivaju narodi bez stalne postojbine koji se se stalno sele?",
           answers: {
             A: "Migranti",
@@ -25233,6 +25737,108 @@ correct: "C" }
             D: "Santa Maria"
           },
           correct: "A"
+        },
+        {
+          question: "U koju državu za božićne praznike putuje porodica McCallister u prvom dijelu serijala „Sam u kući“?",
+          answers: {
+            A: "Italiju",
+            B: "Francusku",
+            C: "Englesku",
+            D: "Njemačku"
+          },
+          correct: "B"
+        }
+      ],
+      hardest: [
+		        {
+          question: "Koja država je prva uvela opće pravo glasa za žene?",
+          answers: {
+            A: "SAD",
+            B: "Francuska",
+            C: "Novi Zeland",
+            D: "Švicarska"
+          },
+          correct: "C"
+        },
+  { 
+    "question": "Kako se zove najveći mjesec u Sunčevom sistem koji kruži oko Jupitera?", 
+    "answers": { "A": "Titan", "B": "Ganimed", "C": "Europa", "D": "Kalisto" }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Koji je njemački kompozitor napisao poznatu 'Devetu simfoniju' iako je u to vrijeme bio potpuno gluh?", 
+    "answers": { "A": "Ludwig van Beethoven", "B": "Johann Sebastian Bach", "C": "Wolfgang Amadeus Mozart", "D": "Richard Wagner" }, 
+    "correct": "A" 
+  },
+  { 
+    "question": "Koja je jedina država na svijetu koja ima zastavu koja nije pravokutnog ili kvadratnog oblika?", 
+    "answers": { "A": "Švicarska", "B": "Vatikan", "C": "Nepal", "D": "Monako" }, 
+    "correct": "C" 
+  },
+  { 
+    "question": "Tko je prema grčkoj mitologiji bio vrhovni bog i vladar Olimpa?", 
+    "answers": { "A": "Posejdon", "B": "Had", "C": "Ares", "D": "Zeus" }, 
+    "correct": "D" 
+  },
+  { 
+    "question": "Koji je film osvojio najviše Oscara u historiji kinematografije (ukupno 11), uz 'Ben-Hura' i 'Gospodara prstenova: Povratak kralja'?", 
+    "answers": { "A": "Titanic", "B": "Avatar", "C": "Kum", "D": "Zameo ih vjetar" }, 
+    "correct": "A" 
+  },
+  { 
+    "question": "Koji je najveći unutrašnji organ u ljudskom tijelu?", 
+    "answers": { "A": "Pluća", "B": "Koža", "C": "Jetra", "D": "Srce" }, 
+    "correct": "C" 
+  },
+  { 
+    "question": "Koji je izumitelj patentirao izmjeničnu struju i transformator visoke frekvencije?", 
+    "answers": { "A": "Thomas Edison", "B": "Nikola Tesla", "C": "Guglielmo Marconi", "D": "Albert Einstein" }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Koja europska država ima najviše otoka (preko 200.000, iako je većina nenaseljena)?", 
+    "answers": { "A": "Grčka", "B": "Norveška", "C": "Švedska", "D": "Hrvatska" }, 
+    "correct": "C" 
+  },
+  { 
+    "question": "Koji je najbrži kopneni sisavac na svijetu?", 
+    "answers": { "A": "Gepard", "B": "Lav", "C": "Antilopa", "D": "Konj" }, 
+    "correct": "A" 
+  },
+  { 
+    "question": "Koje je godine pao Berlinski zid, označivši simboličan kraj Hladnog rata?", 
+    "answers": { "A": "1985.", "B": "1989.", "C": "1991.", "D": "1995." }, 
+    "correct": "B" 
+  },
+        {
+          question: "Kojim slovom je označeno polje na kojem je na početku partije bijela kraljica?",
+          answers: {
+            A: "E",
+            B: "D",
+            C: "C",
+            D: "F"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koji reditelj je režirao filmove 'Psycho', 'Vertigo' i 'Rear Window'?",
+          answers: {
+            A: "Stanley Kubrick",
+            B: "Alfred Hitchcock",
+            C: "Orson Welles",
+            D: "David Lynch"
+          },
+          correct: "B"
+        },
+		        {
+          question: "Koji je kontroverzni umjetnik napisao svojevrsnu autobiografiju „Dnevnik genija“?",
+          answers: {
+            A: "Pablo Picasso",
+            B: "Salvador Dali",
+            C: "Frida Kahlo",
+            D: "Andy Warhol"
+          },
+          correct: "B"
         }
       ]
     },
@@ -25247,6 +25853,256 @@ correct: "C" }
             D: "AK 47"
           },
           correct: "C"
+        },
+  {
+    question: "Prema narodnoj izreci: 'Bolje da propadne selo nego...'?",
+    answers: {
+      A: "imanje",
+      B: "Običaji",
+      C: "Kuća",
+      D: "Stoka"
+    },
+    correct: "B"
+  },
+  {
+    question: "Koja je današnja država bila dio Malezije samo dvije godine, od 1963. do 1965.?",
+    answers: {
+      A: "Singapur",
+      B: "Brunej",
+      C: "Vijetnam",
+      D: "Filipini"
+    },
+    correct: "A"
+  },
+  {
+    question: "U kojoj se državi nalazi veliki konjanički kip Džingis Kana visok oko 40 metara?",
+    answers: {
+      A: "Kirgistan",
+      B: "Mongolija",
+      C: "Kina",
+      D: "Kazahstan"
+    },
+    correct: "B"
+  },
+  {
+    question: "Koje se oružje nalazi na zastavi Saudijske Arabije?",
+    answers: {
+      A: "Koplje",
+      B: "Luk i strijela",
+      C: "Sablja",
+      D: "Puška"
+    },
+    correct: "C"
+  },
+  {
+    question: "Koji nadimak nose nogometaši engleskog kluba Southampton?",
+    answers: {
+      A: "Redsi",
+      B: "Saints",
+      C: "Blues",
+      D: "Roversi"
+    },
+    correct: "B"
+  },
+		    {
+          question: "Koji je grad inspiracija za društvenu igru Monopoly?",
+          answers: {
+            A: "Chicago City",
+            B: "Boston City",
+            C: "Miami City",
+            D: "Atlantic City"
+          },
+          correct: "D"
+        },
+        {
+          question: "U kojoj državi počinje radnja filma 'Olympia'?",
+          answers: {
+            A: "Italija",
+            B: "Grčka",
+            C: "Francuska",
+            D: "Egipat"
+          },
+          correct: "B"
+        },
+        {
+          question: "Kome u Molierovoj komediji sluga kaže da ne vjeruje ni u šta, a želi da ga drže za časna čovjeka?",
+          answers: {
+            A: "Tartuffe",
+            B: "Harpagon",
+            C: "Sganarelle",
+            D: "Don Juan"
+          },
+          correct: "D"
+        },
+        {
+          question: "Kako se naziva bolest definirana kao duševno ili tjelesno preopterećenje koje vodi do iscrpljenosti?",
+          answers: {
+            A: "Stres",
+            B: "Depresija",
+            C: "Anksioznost",
+            D: "Burnout"
+          },
+          correct: "A"
+        },
+        {
+          question: "U kojoj je državi skijaško središte Semmering?",
+          answers: {
+            A: "Švicarska",
+            B: "Austrija",
+            C: "Njemačka",
+            D: "Italija"
+          },
+          correct: "B"
+        },
+        {
+          question: "Na kojoj je stazi održano najviše utrka Formule 1 u povijesti?",
+          answers: {
+            A: "Silverstone",
+            B: "Suzuka",
+            C: "Monza",
+            D: "Monaco"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koliko promila iznosi salinitet Jadranskog mora?",
+          answers: {
+            A: "35‰",
+            B: "48‰",
+            C: "25‰",
+            D: "38‰"
+          },
+          correct: "D"
+        },
+        {
+          question: "U kojoj se franšizi borilačkih igara pojavljuju Scorpion i Sonya Blade?",
+          answers: {
+            A: "Tekken",
+            B: "Street Fighter",
+            C: "Mortal Kombat",
+            D: "Dead or Alive"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koji je Jedi učitelj na planetu Dagobah učio mladog Luka Skywalkera?",
+          answers: {
+            A: "Obi-Wan Kenobi",
+            B: "Yoda",
+            C: "Mace Windu",
+            D: "Qui-Gon Jinn"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koja kobasica dijeli ime sa njemačkom riječi za lovca?",
+          answers: {
+            A: "Bratwurst",
+            B: "Frankfurter",
+            C: "Jägerwurst",
+            D: "Kielbasa"
+          },
+          correct: "C"
+        },
+        {
+          question: "Na kojem je jeziku napisana 'Ljudska komedija' Honoréa de Balzaca?",
+          answers: {
+            A: "Francuskom",
+            B: "Latinskom",
+            C: "Engleskom",
+            D: "Talijanskom"
+          },
+          correct: "A"
+        },
+        {
+          question: "Do čega je sigurno došlo ako se dogodio 'coup d'état'?",
+          answers: {
+            A: "Ekonomska kriza",
+            B: "Državni udar",
+            C: "Revolucija",
+            D: "Izbori"
+          },
+          correct: "B"
+        },
+        {
+          question: "Pod kojim imenom je poznatiji 3. Newtonov zakon?",
+          answers: {
+            A: "Zakon inercije",
+            B: "Zakon gravitacije",
+            C: "Zakon akcije i reakcije",
+            D: "Zakon sile"
+          },
+          correct: "C"
+        },
+        {
+          question: "Island je 1918. stekao nezavisnost, ali je ostao u personalnoj uniji s kojom državom?",
+          answers: {
+            A: "Danskom",
+            B: "Norveškom",
+            C: "Švedskom",
+            D: "Ujedinjenim Kraljevstvom"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koji je najmanji troznamenkasti prosti broj?",
+          answers: {
+            A: "101",
+            B: "103",
+            C: "107",
+            D: "109"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koji jezik se danas najčešće smatra globalnom lingua francom?",
+          answers: {
+            A: "Engleski",
+            B: "Francuski",
+            C: "Španski",
+            D: "Mandarinski kineski"
+          },
+          correct: "A"
+        },
+        {
+          question: "Na valutama koje države se od 2012. nalazi lik Nelsona Mandele?",
+          answers: {
+            A: "Kenija",
+            B: "Namibija",
+            C: "Južna Afrika",
+            D: "Zimbabve"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koliko je kćeri imala tebanska kraljica Nioba uz svojih sedam sinova?",
+          answers: {
+            A: "Sedam",
+            B: "Ni jednu",
+            C: "Devet",
+            D: "Jednu"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koji sastojak daje tiramisuu njegov prepoznatljivi okus?",
+          answers: {
+            A: "Kakao",
+            B: "Kafa",
+            C: "Vanilija",
+            D: "Amaretto"
+          },
+          correct: "B"
+        },
+        {
+          question: "Po kojem mikrobiologu je nazvana stanica pariskog metroa u blizini njegovog instituta?",
+          answers: {
+            A: "Koch",
+            B: "Lister",
+            C: "Fleming",
+            D: "Pasteur"
+          },
+          correct: "D"
         },
         {
           question: "Koji je desni pritok Une nazvan po latinskoj riječi za zdravlje?",
@@ -26237,6 +27093,306 @@ correct: "C" }
             D: "2.43 m"
           },
           correct: "B"
+        },
+        {
+          question: "Koje hladno oružje visi nad glavom onome kome prijeti opasnost?",
+          answers: {
+            A: "Koplje",
+            B: "Mač",
+            C: "Sablja",
+            D: "Nož"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koja organizacija UN-a izrađuje popis svjetske baštine?",
+          answers: {
+            A: "UNICEF",
+            B: "WHO",
+            C: "UNDP",
+            D: "UNESCO"
+          },
+          correct: "D"
+        },
+        {
+          question: "Koje piće slađe od meda grčkim bogovima daje vječnu mladost?",
+          answers: {
+            A: "Medovina",
+            B: "Eliksir",
+            C: "Nektar",
+            D: "Ambrozija"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koji je akronim sistema koji se u nogometu koristi za pregled spornih situacija?",
+          answers: {
+            A: "VAR",
+            B: "UEFA",
+            C: "FIFA",
+            D: "TMO"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koju pjesmu iz mjuzikla Rodgersa i Hammersteina navijači Liverpoola posebno vole?",
+          answers: {
+            A: "Imagine",
+            B: "You'll Never Walk Alone",
+            C: "We Are the Champions",
+            D: "The Winner Takes It All"
+          },
+          correct: "B"
+        },
+        {
+          question: "Kojoj skupini vitamina pripada tiamin?",
+          answers: {
+            A: "Vitaminu K",
+            B: "Vitaminu B",
+            C: "Vitaminima C",
+            D: "Vitaminu D"
+          },
+          correct: "B"
+        },
+        {
+          question: "Kojom se prosječnom brzinom kreće automobil koji je 160 kilometara prešao za četiri sata?",
+          answers: {
+            A: "55 km/h",
+            B: "30 km/h",
+            C: "50 km/h",
+            D: "40 km/h"
+          },
+          correct: "D"
+        },
+        {
+          question: "Kroz koji nacionalni park poznat po velikim vrućinama prolazi granica Kalifornije i Nevade?",
+          answers: {
+            A: "Grand Canyon",
+            B: "Joshua Tree",
+            C: "Dolina smrti",
+            D: "Yosemite"
+          },
+          correct: "C"
+        },
+        {
+          question: "Čije su ljestve pričvršćene za zid u školskim dvoranama?",
+          answers: {
+            A: "Norveške",
+            B: "Švedske",
+            C: "Danske",
+            D: "Finske"
+          },
+          correct: "B"
+        },
+        {
+          question: "Tko pretjerano rasipa novac u izrazu 'troši kao da nema...'?",
+          answers: {
+            A: "Sutra",
+            B: "Kraja",
+            C: "Granice",
+            D: "Mjere"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koja je aritmetička sredina nekog broja i njemu suprotnog broja?",
+          answers: {
+            A: "Taj broj na kvadrat",
+            B: "Taj broj",
+            C: "Jedan",
+            D: "Nula"
+          },
+          correct: "D"
+        },
+        {
+          question: "Za koju nogometnu reprezentaciju igra lijevo krilo Kvaratskhelia?",
+          answers: {
+            A: "Gruzija",
+            B: "Armenija",
+            C: "Ukrajina",
+            D: "Rumunija"
+          },
+          correct: "A"
+        },
+        {
+          question: "Nakon četiri Verstappenova naslova, koji je Britanac osvojio sezonu Formule 1 2025.?",
+          answers: {
+            A: "George Russell",
+            B: "Jenson Button",
+            C: "Lewis Hamilton",
+            D: "Lando Norris"
+          },
+          correct: "D"
+        },
+        {
+          question: "Koja je jedina država s kojom Haiti dijeli kopnenu granicu?",
+          answers: {
+            A: "Bahami",
+            B: "Dominikanska Republika",
+            C: "Kuba",
+            D: "Jamajka"
+          },
+          correct: "B"
+        },
+        {
+          question: "Kod koje skupine bolesti imunološki sistem stvarajući pogrešno protutijelo napada vlastito zdravo tkivo?",
+          answers: {
+            A: "Autoimune",
+            B: "Nasljedne",
+            C: "Virusne",
+            D: "Bakterijske"
+          },
+          correct: "A"
+        },
+        {
+          question: "U kojoj su državi rođeni supermodeli Adriana Lima i Gisele Bündchen?",
+          answers: {
+            A: "Argentini",
+            B: "Portugalu",
+            C: "Brazilu",
+            D: "Kolumbiji"
+          },
+          correct: "C"
+        },
+        {
+          question: "FIFA kao akronim Međunarodnog nogometnog saveza pokraćuje riječi iz kojeg jezika?",
+          answers: {
+            A: "Španskog",
+            B: "Francuskog",
+            C: "Engleskog",
+            D: "Njemačkog"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koji je najmanji cijeli broj čiji je kvadrat jednak 25?",
+          answers: {
+            A: "-25",
+            B: "-5",
+            C: "0",
+            D: "5"
+          },
+          correct: "B"
+        },
+        {
+          question: "Kako prema engleskoj riječi za 'glatko' nazivamo napitak od izmiksanog svježeg voća?",
+          answers: {
+            A: "Frape",
+            B: "Milkshake",
+            C: "Smoothie",
+            D: "Sok"
+          },
+          correct: "C"
+        },
+        {
+          question: "Četiri i po metra visok kip kojeg se superjunaka nalazi u gradu Metropolisu u američkoj saveznoj državi Illinois?",
+          answers: {
+            A: "Batmana",
+            B: "Spidermana",
+            C: "Supermana",
+            D: "Ironmana"
+          },
+          correct: "C"
+        },
+        {
+          question: "Kako se naziva širenje zarazne bolesti na cijeli svijet?",
+          answers: {
+            A: "Epidemija",
+            B: "Endemija",
+            C: "Karantin",
+            D: "Pandemija"
+          },
+          correct: "D"
+        },
+        {
+          question: "Šta znači njemačka riječ 'gelb'?",
+          answers: {
+            A: "Zelena",
+            B: "Plava",
+            C: "Crvena",
+            D: "Žuta"
+          },
+          correct: "D"
+        },
+        {
+          question: "Kojem je prirodnom broju najbliža vrijednost broja π²?",
+          answers: {
+            A: "8",
+            B: "9",
+            C: "10",
+            D: "11"
+          },
+          correct: "C"
+        },
+        {
+          question: "Zbog koje je bolesti pisac Albert Camus morao odustati od igranja nogometa?",
+          answers: {
+            A: "Astme",
+            B: "Upale pluća",
+            C: "Bronhitisa",
+            D: "Tuberkuloze"
+          },
+          correct: "D"
+        },
+        {
+          question: "Ko je Luís Nazário de Lima, poznat i kao 'El Fenómeno'?",
+          answers: {
+            A: "Ronaldo",
+            B: "Ronaldinho",
+            C: "Romário",
+            D: "Rivaldo"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koliki je približno postotak mužjaka među narandžastim mačkama?",
+          answers: {
+            A: "65%",
+            B: "70%",
+            C: "80%",
+            D: "95%"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koju naučnu disciplinu u akronimu STEM predstavlja slovo M?",
+          answers: {
+            A: "Medicinu",
+            B: "Mehaniku",
+            C: "Matematiku",
+            D: "Menadžment"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koje je ime nosio najveći broj francuskih kraljeva?",
+          answers: {
+            A: "Napoleon",
+            B: "Luj",
+            C: "Karlo",
+            D: "Henri"
+          },
+          correct: "B"
+        },
+        {
+          question: "Kojim slovom grčkog alfabeta nazivamo dominantni par u čoporu vukova?",
+          answers: {
+            A: "Alfa",
+            B: "Beta",
+            C: "Sigma",
+            D: "Delta"
+          },
+          correct: "A"
+        },
+        {
+          question: "Riječ 'Dakota' nalazi se u nazivu koliko američkih saveznih država?",
+          answers: {
+            A: "2",
+            B: "3",
+            C: "4",
+            D: "0"
+          },
+          correct: "A"
         }
       ],
       hard: [
@@ -26249,6 +27405,56 @@ correct: "C" }
             D: "Mount Kenya"
           },
           correct: "D"
+        },
+		 {
+          question: "Koju je igraću konzolu i konkurent Sonyjevu PlayStationu tvrtka Microsoft predstavila 2001?",
+          answers: {
+            A: "Sega Dreamcast",
+            B: "Nintendo 64",
+            C: "Xbox",
+            D: "Atari"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koji je grad, po popisu iz 1982 bio treći najveći grad u Jugoslaviji s gotovo pola milijuna stanovnika?",
+          answers: {
+            A: "Beograd",
+            B: "Sarajevo",
+            C: "Zagreb",
+            D: "Skoplje"
+          },
+          correct: "D"
+        },
+        {
+          question: "13-dnevno zaoštravanje odnosa SSSR-a i SAD-a 1962 poznato je kao kakva „kriza“?",
+          answers: {
+            A: "Iranska",
+            B: "Ruska",
+            C: "Kubanska",
+            D: "Vijetnamska"
+          },
+          correct: "C"
+        },
+        {
+          question: "Kako se zove medicinska pretraga mjerenja plućnog volumena i kapaciteta pluća?",
+          answers: {
+            A: "Kardiologija",
+            B: "Bronhoskopija",
+            C: "Elektrokardiografija",
+            D: "Spirometrija"
+          },
+          correct: "D"
+        },
+        {
+          question: "Koji plemeniti plin kojim se pune rasvjetna tijela ima atomski broj 10?",
+          answers: {
+            A: "Helij",
+            B: "Argon",
+            C: "Neon",
+            D: "Azot"
+          },
+          correct: "C"
         },
         {
           question: "Koliko godina ima Harry Potter u prvom romanu u kojem se pojavljuje?",
@@ -26730,19 +27936,7 @@ correct: "C" }
           },
           correct: "C"
         },
-        {
-          question: "Koji je prvi planet na koji je sletjela letjelica poslana sa Zemlje?",
-          answers: {
-            A: "Mars",
-            B: "Venera",
-            C: "Mjesec",
-            D: "Merkur"
-          },
-          correct: "B"
-        }
-      ],
-      hardest: [
-        {
+		{
           question: "Koja je nobelovka bila prva predavačica na pariškoj Sorboni?",
           answers: {
             A: "Rosalind Franklin",
@@ -27223,6 +28417,19 @@ correct: "C" }
           correct: "B"
         },
         {
+          question: "Koji je prvi planet na koji je sletjela letjelica poslana sa Zemlje?",
+          answers: {
+            A: "Mars",
+            B: "Venera",
+            C: "Mjesec",
+            D: "Merkur"
+          },
+          correct: "B"
+        }
+      ],
+      hardest: [
+        
+        {
           question: "Koja NBA ekipa ima najviše osvojenih titula u historiji?",
           answers: {
             A: "Los Angeles Lakers",
@@ -27232,6 +28439,56 @@ correct: "C" }
           },
           correct: "B"
         },
+  { 
+    "question": "Kako se zove operacijski sistem za pametne telefone koji je razvio Google?", 
+    "answers": { "A": "iOS", "B": "Windows", "C": "Android", "D": "Linux" }, 
+    "correct": "C" 
+  },
+  { 
+    "question": "Koja je rijeka najduža na svijetu?", 
+    "answers": { "A": "Amazon", "B": "Nil", "C": "Yangtze", "D": "Mississippi" }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Kako se zove troglavi pas koji prema grčkoj mitologiji čuva ulaz u podzemni svijet?", 
+    "answers": { "A": "Minotaur", "B": "Kerber", "C": "Khimaira", "D": "Sfinga" }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Koji je poljski astronom prvi naučno formulirao heliocentrični sistem, tvrdeći da se Zemlja okreće oko Sunca?", 
+    "answers": { "A": "Galileo Galilei", "B": "Johannes Kepler", "C": "Nikola Kopernik", "D": "Isaac Newton" }, 
+    "correct": "C" 
+  },
+  { 
+    "question": "Koja je država najveći proizvođač kafe na svijetu?", 
+    "answers": { "A": "Kolumbija", "B": "Vijetnam", "C": "Etiopija", "D": "Brazil" }, 
+    "correct": "D" 
+  },
+  { 
+    "question": "Kako se zove epski spjev iz mezopotamske književnosti koji se smatra jednim od najstarijih sačuvanih književnih djela?", 
+    "answers": { "A": "Ep o Gilgamešu", "B": "Odiseja", "C": "Ilijada", "D": "Mahabharata" }, 
+    "correct": "A" 
+  },
+  { 
+    "question": "Koje je godine potonuo legendarni prekooceanski brod Titanic nakon sudara s ledenim brijegom?", 
+    "answers": { "A": "1905.", "B": "1912.", "C": "1920.", "D": "1933." }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Koji je glavni grad Španjolske?", 
+    "answers": { "A": "Barcelona", "B": "Sevilla", "C": "Madrid", "D": "Valencia" }, 
+    "correct": "C" 
+  },
+  { 
+    "question": "Koji sisavac drži rekord kao najveća životinja koja je ikada živjela na Zemlji?", 
+    "answers": { "A": "Afrički slon", "B": "Plavi kit", "C": "Ulješura", "D": "Mamut" }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Koja je najpopularnija društvena mreža za razmjenu kratkih videozapisa, u vlasništvu kineske tvrtke ByteDance?", 
+    "answers": { "A": "Instagram", "B": "Snapchat", "C": "TikTok", "D": "X (Twitter)" }, 
+    "correct": "C" 
+  },
         {
           question: "Koja visina mreže je standardna u muškoj odbojci?",
           answers: {
@@ -27255,6 +28512,156 @@ correct: "C" }
             D: "Sipahi"
           },
           correct: "B"
+        },
+		  {
+          question: "Koja se morska životinja krije iza latinskog naziva *Hippocampus*?",
+          answers: {
+            A: "Morski pas",
+            B: "Morski konjic",
+            C: "Meduza",
+            D: "Morska zvijezda"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koji je najmnogoljudniji grad na Kosovu nakon Prištine?",
+          answers: {
+            A: "Mitrovica",
+            B: "Peć",
+            C: "Gnjilane",
+            D: "Prizren"
+          },
+          correct: "D"
+        },
+        {
+          question: "225 i 256 su kvadrati kojih brojeva?",
+          answers: {
+            A: "15 i 16",
+            B: "14 i 15",
+            C: "13 i 18",
+            D: "16 i 17"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koja je računalna igra iz 80-ih proslavila rusku narodnu pjesmu 'Korobeiniki'?",
+          answers: {
+            A: "Tetris",
+            B: "Pac-Man",
+            C: "Doom",
+            D: "Space Invaders"
+          },
+          correct: "A"
+        },
+        {
+          question: "Po kojem zaljevu je nazvan Zaljevski rat?",
+          answers: {
+            A: "Iranski",
+            B: "Perzijski",
+            C: "Omanski",
+            D: "Bengalski"
+          },
+          correct: "B"
+        },
+        {
+          question: "Koje je boje planet u naslovu dječjeg romana Ante Gardaša?",
+          answers: {
+            A: "Crveni",
+            B: "Zeleni",
+            C: "Ljubičasti",
+            D: "Plavi"
+          },
+          correct: "C"
+        },
+        {
+          question: "Kojem skladatelju je otac bio Francuz koji je emigrirao u Poljsku 1787. godine?",
+          answers: {
+            A: "Mozart",
+            B: "Liszt",
+            C: "Beethoven",
+            D: "Chopin"
+          },
+          correct: "D"
+        },
+        {
+          question: "Na festivalu u kojem gradu je nekada o Zlatnom medvjedu odlučivala publika?",
+          answers: {
+            A: "Venecija",
+            B: "Cannes",
+            C: "Toronto",
+            D: "Berlin"
+          },
+          correct: "D"
+        },
+        {
+          question: "U pjesmi 'Tu noć kad si se udavala' postoje neki drugi — što?",
+          answers: {
+            A: "Ljudi",
+            B: "Gradovi",
+            C: "Svjetovi",
+            D: "Životi"
+          },
+          correct: "C"
+        },
+        {
+          question: "General Tōjō Hideki imao je ključnu ulogu u pripremi Japana za koji rat?",
+          answers: {
+            A: "Prvi svjetski rat",
+            B: "Drugi svjetski rat",
+            C: "Vijetnamski rat",
+            D: "Korejski rat"
+          },
+          correct: "B"
+        },
+        {
+          question: "Kojem prirodnom broju je jednak korijen iz 625?",
+          answers: {
+            A: "35",
+            B: "15",
+            C: "45",
+            D: "25"
+          },
+          correct: "D"
+        },
+        {
+          question: "Na kojem kontinentu se nalaze sve države koje u nazivu počinju slovom Z?",
+          answers: {
+            A: "Evropa",
+            B: "Azija",
+            C: "Afrika",
+            D: "Južna Amerika"
+          },
+          correct: "C"
+        },
+        {
+          question: "Prema Međunarodnoj hokejaškoj federaciji, prva utakmica hokeja na ledu odigrana je u kojem gradu?",
+          answers: {
+            A: "Pariz",
+            B: "Lyon",
+            C: "Brisel",
+            D: "Montreal"
+          },
+          correct: "D"
+        },
+        {
+          question: "U koliko sati se u Bosni i Hercegovini po zakonu otvaraju biračka mjesta na izborima?",
+          answers: {
+            A: "7:00",
+            B: "8:00",
+            C: "6:00",
+            D: "9:00"
+          },
+          correct: "A"
+        },
+        {
+          question: "Tko je sa 12 godina postao najmlađa osoba primljena u društvo američkih mađioničara?",
+          answers: {
+            A: "Harry Houdini",
+            B: "Penn Jillette",
+            C: "Dynamo",
+            D: "David Copperfield"
+          },
+          correct: "D"
         },
         {
           question: "Koja reprezentacija je osvojila Svjetsko prvenstvo 2018. godine?",
@@ -28258,6 +29665,47 @@ correct: "C" }
           },
           correct: "D"
         },
+		
+        {
+          question: "Koja se korejska borilačka vještina razvila iz karatea nakon 2. svj. rata?",
+          answers: {
+            A: "Hapkido",
+            B: "Judo",
+            C: "Taekwondo",
+            D: "Kendo"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koji ćemo riblji proizvod dobiti ako ispremiješamo slova u riječi „akvarij“?",
+          answers: {
+            A: "Tuna",
+            B: "Losos",
+            C: "Sardina",
+            D: "Kavijar"
+          },
+          correct: "D"
+        },
+        {
+          question: "Frazom „Miješati kruške i jabuke“ istoznačan je frazemu „Zbrajati babe i“-koga?",
+          answers: {
+            A: "Ptice",
+            B: "Mačke",
+            C: "Žabe",
+            D: "Ribe"
+          },
+          correct: "C"
+        },
+        {
+          question: "Po kojoj je starorimskoj božici plodnosti nazvan sveukupni životinjski svijet?",
+          answers: {
+            A: "Diani",
+            B: "Fauni",
+            C: "Venusi",
+            D: "Minervi"
+          },
+          correct: "B"
+        },
         {
           question: "Koji germanizam može označavati pobunu i svežanj?",
           answers: {
@@ -28738,19 +30186,7 @@ correct: "C" }
           },
           correct: "C"
         },
-        {
-          question: "Kako se zove prostor oko magneta u kojem djeluju magnetske sile?",
-          answers: {
-            A: "Električno polje",
-            B: "Gravitaciono polje",
-            C: "Magnetsko polje",
-            D: "Polje sile"
-          },
-          correct: "C"
-        }
-      ],
-      hardest: [
-        {
+		 {
           question: "U kojem je škotskom gradu 1768. štampana prva Enciklopedija Britannica?",
           answers: {
             A: "Glasgow",
@@ -29231,6 +30667,19 @@ correct: "C" }
           correct: "B"
         },
         {
+          question: "Kako se zove prostor oko magneta u kojem djeluju magnetske sile?",
+          answers: {
+            A: "Električno polje",
+            B: "Gravitaciono polje",
+            C: "Magnetsko polje",
+            D: "Polje sile"
+          },
+          correct: "C"
+        }
+      ],
+      hardest: [
+       
+        {
           question: "Koji vozač je jedini u modernoj historiji F1 osvojio titulu sa timom koji je debitovao te iste sezone (2009)?",
           answers: {
             A: "Sebastian Vettel",
@@ -29240,6 +30689,56 @@ correct: "C" }
           },
           correct: "B"
         },
+  { 
+    "question": "Koji je kemijski simbol za zlato?", 
+    "answers": { "A": "Ag", "B": "Au", "C": "Fe", "D": "Pb" }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Koja je država prva na svijetu uvela pravo glasa za žene (1893. godine)?", 
+    "answers": { "A": "Novi Zeland", "B": "SAD", "C": "Finska", "D": "Švicarska" }, 
+    "correct": "A" 
+  },
+  { 
+    "question": "Kako se zove prvi dugometražni animirani film u povijesti koji je objavio Walt Disney?", 
+    "answers": { "A": "Pinokio", "B": "Snjeguljica i sedam patuljaka", "C": "Dumbo", "D": "Bambi" }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Koji se tjesnac nalazi između Rusije i Aljaske, spajajući Arktički i Tihi ocean?", 
+    "answers": { "A": "Gibraltarski tjesnac", "B": "Beringov tjesnac", "C": "Magelanov tjesnac", "D": "Malajski tjesnac" }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Tko je napisao poznati znanstveno-fantastični roman 'Frankenstein'?", 
+    "answers": { "A": "Mary Shelley", "B": "Bram Stoker", "C": "Edgar Allan Poe", "D": "H.G. Wells" }, 
+    "correct": "A" 
+  },
+  { 
+    "question": "Koji je planet u našem Sunčevom sustavu poznat po svojim velikim i izrazito vidljivim prstenovima?", 
+    "answers": { "A": "Uran", "B": "Neptun", "C": "Saturn", "D": "Jupiter" }, 
+    "correct": "C" 
+  },
+  { 
+    "question": "Koja je najduža rijeka u Europi?", 
+    "answers": { "A": "Dunav", "B": "Rajna", "C": "Volga", "D": "Dnjepar" }, 
+    "correct": "C" 
+  },
+  { 
+    "question": "U kojoj se državi održalo prvo Svjetsko prvenstvo u nogometu 1930. godine?", 
+    "answers": { "A": "Brazil", "B": "Urugvaj", "C": "Italija", "D": "Argentina" }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Koja je glavna funkcija crvenih krvnih stanica (eritrocita) u ljudskom tijelu?", 
+    "answers": { "A": "Borba protiv infekcija", "B": "Grušanje krvi", "C": "Prijenos kisika", "D": "Proizvodnja hormona" }, 
+    "correct": "C" 
+  },
+  { 
+    "question": "Kako se zove legendarni britanski bend čiji su članovi bili John Lennon, Paul McCartney, George Harrison i Ringo Starr?", 
+    "answers": { "A": "The Rolling Stones", "B": "Led Zeppelin", "C": "Queen", "D": "The Beatles" }, 
+    "correct": "D" 
+  },
         {
           question: "Koja partija je poznata kao 'Partija stoljeća' i odigrana je 1956. godine?",
           answers: {
@@ -29263,6 +30762,136 @@ correct: "C" }
             D: "Mars"
           },
           correct: "C"
+        },
+		     {
+          question: "Najdublje jezero na svijetu je?",
+          answers: {
+            A: "Kaspijsko",
+            B: "Viktorijino",
+            C: "Bajkajsko",
+            D: "Boračko"
+          },
+          correct: "C"
+        },
+		   {
+          question: "Koja američka savezna država ime nosi po španjolskom nazivu za planinu?",
+          answers: {
+            A: "Nevada",
+            B: "Montana",
+            C: "Colorado",
+            D: "Arizona"
+          },
+          correct: "B"
+        },
+        {
+          question: "Tko je napisao 'Crvenkapicu', 'Mačka u čizmama' i 'Pepeljugu'?",
+          answers: {
+            A: "Charles Perrault",
+            B: "Hans Christian Andersen",
+            C: "Braća Grimm",
+            D: "Giambattista Basile"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koji je car u središtu Moskve dobio spomenik visok 98m?",
+          answers: {
+            A: "Ivan Grozni",
+            B: "Petar Veliki",
+            C: "Aleksandar II",
+            D: "Nikola I"
+          },
+          correct: "B"
+        },
+        {
+          question: "Po kojem je akronimu poznata austrijska državna televizija?",
+          answers: {
+            A: "ARD",
+            B: "ZDF",
+            C: "ORF",
+            D: "RTL"
+          },
+          correct: "C"
+        },
+        {
+          question: "Tko na početku Shakespeareovog 'Macbetha' prorekne glavnom liku da će postati kralj?",
+          answers: {
+            A: "Vještice",
+            B: "Kralj Duncan",
+            C: "Banquo",
+            D: "Macduff"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koji je nobelovac osnivač instituta za teoretsku fiziku u Kopenhagenu?",
+          answers: {
+            A: "Albert Einstein",
+            B: "Erwin Schrödinger",
+            C: "Werner Heisenberg",
+            D: "Niels Bohr"
+          },
+          correct: "D"
+        },
+        {
+          question: "U koju pticu u baletu Čajkovskog čarobnjak Rothbart pretvori Odette?",
+          answers: {
+            A: "Orao",
+            B: "Gavran",
+            C: "Labud",
+            D: "Golub"
+          },
+          correct: "C"
+        },
+        {
+          question: "Kako se norveški glavni grad zvao u razdoblju 1600–1860?",
+          answers: {
+            A: "Bergen",
+            B: "Trondheim",
+            C: "Christiania",
+            D: "Stavanger"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koja je najnovija alpska skijaška disciplina?",
+          answers: {
+            A: "Super-G",
+            B: "Slalom",
+            C: "Veleslalom",
+            D: "Spust"
+          },
+          correct: "A"
+        },
+        {
+          question: "U kojem je bosanskohercegovačkom gradu rođen 'trener svih trenera'?",
+          answers: {
+            A: "Zenica",
+            B: "Sarajevo",
+            C: "Mostar",
+            D: "Travnik"
+          },
+          correct: "D"
+        },
+        {
+          question: "Koji se vitamin još naziva kalciferol?",
+          answers: {
+            A: "Vitamin D",
+            B: "Vitamin C",
+            C: "Vitamin B12",
+            D: "Vitamin A"
+          },
+          correct: "A"
+        },
+        {
+          question: "Koja je glumica postala počasni građanin Sarajeva 2012. godine?",
+          answers: {
+            A: "Nicole Kidman",
+            B: "Angelina Jolie",
+            C: "Charlize Theron",
+            D: "Julia Roberts"
+          },
+          correct: "B"
         },
         {
           question: "Koji je prvi video koji je ikad postavljen na YouTube?",
@@ -30266,6 +31895,46 @@ correct: "C" }
           },
           correct: "B"
         },
+		    {
+          question: "Koliko je Štrumpfova potrebno Gargamelu kako bi napravio napitak koji pretvara metal u zlato?",
+          answers: {
+            A: "67",
+            B: "6",
+            C: "9",
+            D: "11"
+          },
+          correct: "B"
+        },
+        {
+          question: "Plaža s oznakom FKK označava da je riječ o kakvoj plaži?",
+          answers: {
+            A: "Divljoj",
+            B: "Pješčanoj",
+            C: "Privatnoj",
+            D: "Nudističkoj"
+          },
+          correct: "D"
+        },
+        {
+          question: "Koji latinski naziv dijele svemirska maglica i nagrada za najbolju SF-knjigu?",
+          answers: {
+            A: "Stella",
+            B: "Nova",
+            C: "Cosmos",
+            D: "Nebula"
+          },
+          correct: "D"
+        },
+        {
+          question: "Koji je njujorški modni dizajner 1967. pokrenuo liniju odjeće Polo?",
+          answers: {
+            A: "Emporio Armani",
+            B: "Calvin Klein",
+            C: "Ralph Lauren",
+            D: "Marc Jacobs"
+          },
+          correct: "C"
+        },
         {
           question: "Što u biologiji označava tekući dio krvi, a u fizici stanje potpuno ionizirane tvari?",
           answers: {
@@ -30646,119 +32315,7 @@ correct: "C" }
           },
           correct: "A"
         },
-        {
-          question: "Koju orijentalnu vrstu pokrivala za glavu nosi Vermeerova „Djevojka s bisernom naušnicom“?",
-          answers: {
-            A: "Kapa",
-            B: "Marama",
-            C: "Šešir",
-            D: "Turban"
-          },
-          correct: "D"
-        },
-        {
-          question: "Šta je u ustima siluete mornara na grbu nogometnog kluba Sampdoria?",
-          answers: {
-            A: "Cigareta",
-            B: "Lula",
-            C: "Nož",
-            D: "Knjiga"
-          },
-          correct: "B"
-        },
-        {
-          question: "U kojem dugovječnom anime-serijalu pratimo avanture snažnog svemirca Gokua?",
-          answers: {
-            A: "Naruto",
-            B: "One Piece",
-            C: "Bleach",
-            D: "Dragon Ball"
-          },
-          correct: "D"
-        },
-        {
-          question: "Koje je godine EU doživjela svoje peto i najveće proširenje kad joj se priključilo 10 država?",
-          answers: {
-            A: "2000",
-            B: "2002",
-            C: "2004",
-            D: "2006"
-          },
-          correct: "C"
-        },
-        {
-          question: "Do kojeg je broja periodni sistem elemenata narastao dodavanjem 4 novih elemenata krajem 2015?",
-          answers: {
-            A: "116",
-            B: "117",
-            C: "118",
-            D: "120"
-          },
-          correct: "C"
-        },
-        {
-          question: "Koji drenažni uređaj omogućuje uvjete poput onih prilikom vožnje automobilom ili avionom?",
-          answers: {
-            A: "Simulator",
-            B: "Generator",
-            C: "Kompresor",
-            D: "Aparat"
-          },
-          correct: "A"
-        },
-        {
-          question: "Kojem borilačkom serijalu video-igara ime u prevodu s japanskog znači „željezna šaka“?",
-          answers: {
-            A: "Street Fighter",
-            B: "Mortal Kombat",
-            C: "Tekken",
-            D: "Dead or Alive"
-          },
-          correct: "C"
-        },
-        {
-          question: "Koje je nacionalnosti najbolji europski strijelac u historiji NBA lige?",
-          answers: {
-            A: "Francuske",
-            B: "Španske",
-            C: "Srpske",
-            D: "Njemačke"
-          },
-          correct: "D"
-        },
-        {
-          question: "Kako se zove druga talijanska nogometna liga?",
-          answers: {
-            A: "Serie A",
-            B: "Serie C",
-            C: "Coppa Italia",
-            D: "Serie B"
-          },
-          correct: "D"
-        },
-        {
-          question: "Koji je prvi Euro na kojem je učestvovalo 24 reprezentacije?",
-          answers: {
-            A: "Euro 2008",
-            B: "Euro 2012",
-            C: "Euro 2016",
-            D: "Euro 2020"
-          },
-          correct: "C"
-        },
-        {
-          question: "Koja kavkaska država na svojoj zastavi ima čak 5 križeva?",
-          answers: {
-            A: "Jermenija",
-            B: "Gruzija",
-            C: "Azerbejdžan",
-            D: "Moldavija"
-          },
-          correct: "B"
-        }
-      ],
-      hardest: [
-        {
+		  {
           question: "Šta se događa s našim perifernim krvnim žilama uslijed hladnoće?",
           answers: {
             A: "Šire se",
@@ -31229,6 +32786,119 @@ correct: "C" }
           correct: "A"
         },
         {
+          question: "Koju orijentalnu vrstu pokrivala za glavu nosi Vermeerova „Djevojka s bisernom naušnicom“?",
+          answers: {
+            A: "Kapa",
+            B: "Marama",
+            C: "Šešir",
+            D: "Turban"
+          },
+          correct: "D"
+        },
+        {
+          question: "Šta je u ustima siluete mornara na grbu nogometnog kluba Sampdoria?",
+          answers: {
+            A: "Cigareta",
+            B: "Lula",
+            C: "Nož",
+            D: "Knjiga"
+          },
+          correct: "B"
+        },
+        {
+          question: "U kojem dugovječnom anime-serijalu pratimo avanture snažnog svemirca Gokua?",
+          answers: {
+            A: "Naruto",
+            B: "One Piece",
+            C: "Bleach",
+            D: "Dragon Ball"
+          },
+          correct: "D"
+        },
+        {
+          question: "Koje je godine EU doživjela svoje peto i najveće proširenje kad joj se priključilo 10 država?",
+          answers: {
+            A: "2000",
+            B: "2002",
+            C: "2004",
+            D: "2006"
+          },
+          correct: "C"
+        },
+        {
+          question: "Do kojeg je broja periodni sistem elemenata narastao dodavanjem 4 novih elemenata krajem 2015?",
+          answers: {
+            A: "116",
+            B: "117",
+            C: "118",
+            D: "120"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koji drenažni uređaj omogućuje uvjete poput onih prilikom vožnje automobilom ili avionom?",
+          answers: {
+            A: "Simulator",
+            B: "Generator",
+            C: "Kompresor",
+            D: "Aparat"
+          },
+          correct: "A"
+        },
+        {
+          question: "Kojem borilačkom serijalu video-igara ime u prevodu s japanskog znači „željezna šaka“?",
+          answers: {
+            A: "Street Fighter",
+            B: "Mortal Kombat",
+            C: "Tekken",
+            D: "Dead or Alive"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koje je nacionalnosti najbolji europski strijelac u historiji NBA lige?",
+          answers: {
+            A: "Francuske",
+            B: "Španske",
+            C: "Srpske",
+            D: "Njemačke"
+          },
+          correct: "D"
+        },
+        {
+          question: "Kako se zove druga talijanska nogometna liga?",
+          answers: {
+            A: "Serie A",
+            B: "Serie C",
+            C: "Coppa Italia",
+            D: "Serie B"
+          },
+          correct: "D"
+        },
+        {
+          question: "Koji je prvi Euro na kojem je učestvovalo 24 reprezentacije?",
+          answers: {
+            A: "Euro 2008",
+            B: "Euro 2012",
+            C: "Euro 2016",
+            D: "Euro 2020"
+          },
+          correct: "C"
+        },
+        {
+          question: "Koja kavkaska država na svojoj zastavi ima čak 5 križeva?",
+          answers: {
+            A: "Jermenija",
+            B: "Gruzija",
+            C: "Azerbejdžan",
+            D: "Moldavija"
+          },
+          correct: "B"
+        }
+      ],
+      hardest: [
+      
+        {
           question: "Koji naučnik je prvi izveo eksperiment sa klatnom kojim je dokazao rotaciju Zemlje?",
           answers: {
             A: "Newton",
@@ -31238,6 +32908,52 @@ correct: "C" }
           },
           correct: "C"
         },
+  { 
+    "question": "Koji je znanstvenik 1905. godine formulirao Posebnu teoriju relativnosti i poznatu jednadžbu E=mc²?", 
+    "answers": { "A": "Isaac Newton", "B": "Albert Einstein", "C": "Niels Bohr", "D": "Stephen Hawking" }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Iz koje države potječe popularno jelo sushi?", 
+    "answers": { "A": "Kina", "B": "Koreja", "C": "Japan", "D": "Tajland" }, 
+    "correct": "C" 
+  },
+  { 
+    "question": "Koji je drevni grad bio poznat po Visećim vrtovima, jednom od sedam svjetskih čuda starog vijeka?", 
+    "answers": { "A": "Babilon", "B": "Atena", "C": "Rim", "D": "Aleksandrija" }, 
+    "correct": "A" 
+  },
+  { 
+    "question": "Koji plin čini najveći postotak (oko 78%) Zemljine atmosfere?", 
+    "answers": { "A": "Kisik", "B": "Ugljikov dioksid", "C": "Dušik", "D": "Argon" }, 
+    "correct": "C" 
+  },
+  { 
+    "question": "Kako se zove glavni grad Kanade?", 
+    "answers": { "A": "Toronto", "B": "Montreal", "C": "Vancouver", "D": "Ottawa" }, 
+    "correct": "D" 
+  },
+  { 
+    "question": "Koji je glumac utjelovio lik Iron Mana (Tonyja Starka) u Marvelovom filmskom svijetu?", 
+    "answers": { "A": "Chris Evans", "B": "Robert Downey Jr.", "C": "Chris Hemsworth", "D": "Tom Holland" }, 
+    "correct": "B" 
+  },
+  { 
+    "question": "Koja je najmanja ptica na svijetu, poznata po tome što može letjeti unatrag?", 
+    "answers": { "A": "Kolibrić", "B": "Vrabac", "C": "Zeba", "D": "Plavetna sjenica" }, 
+    "correct": "A" 
+  },
+  { 
+    "question": "Koji je kontinent ujedno i najveća pustinja na svijetu zbog izrazito niskih padalina?", 
+    "answers": { "A": "Afrika", "B": "Australija", "C": "Azija", "D": "Antarktika" }, 
+    "correct": "D" 
+  },
+  { 
+    "question": "Kako se zove tehnologija koja omogućuje bežično povezivanje uređaja na malim udaljenostima, nazvana po danskom kralju?", 
+    "answers": { "A": "Wi-Fi", "B": "Bluetooth", "C": "NFC", "D": "Infrared" }, 
+    "correct": "B" 
+  },
+
         {
           question: "Koji je najduži nerv u ljudskom tijelu?",
           answers: {

@@ -155,7 +155,7 @@ if(!selectedLevel){
 
 message(
 setupFeedback,
-"Izaberi težinu.",
+"Izaberi težinu igre! ⚠️",
 "warn"
 );
 
@@ -200,9 +200,12 @@ feedback.textContent="";
 
 guessInput.value="";
 
+setTimeout(()=>{
+    guessInput.focus();
+},100);
+
 
 startTimer();
-
 
 
 });
@@ -336,7 +339,7 @@ if(value===target){
 
     showVictory(
 
-        "BRAVO! 🏆",
+        "BRAVO!",
 
         "Pogodili ste tačan broj!",
 
@@ -359,13 +362,24 @@ if(value===target){
         ]
 
     );
+console.log("POZIVAM XP");
 
+// gameCompleted(
+//  "Pogodi broj",
+//    100
+// );
     message(
     feedback,
     "🎉 Bravo! "+attempts+" pokušaja • "+sec+"s",
     "ok"
     );
 
+console.log("POKUŠAJ SPREMANJA", {
+    playerName,
+    selectedLevel,
+    attempts,
+    sec
+});
 
     saveResult(
 	playerName,
@@ -412,7 +426,6 @@ feedback,
 
 
 }
-
 
 
 guessInput.value="";
@@ -552,6 +565,10 @@ localStorage.setItem(
 JSON.stringify(records)
 );
 
+
+console.log("LOCAL STORAGE:", 
+localStorage.getItem("pogodiBrojRezultati")
+);
 
 
 renderLeaderboard();

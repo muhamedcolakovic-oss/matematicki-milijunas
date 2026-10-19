@@ -1,0 +1,2317 @@
+/* =========================================
+   MATEMATIČKI MILIJUNAŠ
+   PREMIUM MATH EVOLUTION CSS
+========================================= */
+
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+    font-family:'DM Sans',sans-serif;
+
+}
+
+
+
+
+body{
+
+    min-height:100vh;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    background:#050814;
+
+}
+
+
+
+
+
+
+
+
+/* ================= SCREEN FLASH ================= */
+
+
+
+#screen-flash{
+
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    z-index:99999;
+
+    opacity:0;
+
+
+}
+
+
+
+
+.green-flash{
+
+
+    animation:
+    greenPulse .45s ease;
+
+
+}
+
+
+
+
+.red-flash{
+
+
+    animation:
+    redPulse .45s ease;
+
+
+}
+
+
+
+
+
+
+@keyframes greenPulse{
+
+
+0%{
+
+    opacity:0;
+
+    background:#22c55e;
+
+}
+
+
+30%{
+
+    opacity:.35;
+
+}
+
+
+
+100%{
+
+    opacity:0;
+
+}
+
+
+}
+
+
+
+
+
+
+@keyframes redPulse{
+
+
+0%{
+
+    opacity:0;
+
+    background:#ef4444;
+
+}
+
+
+30%{
+
+    opacity:.35;
+
+}
+
+
+
+100%{
+
+    opacity:0;
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* ================= BACKGROUND ================= */
+
+
+
+.math-background{
+
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+
+
+    background:
+
+
+    radial-gradient(
+
+    circle at 20% 20%,
+
+    rgba(246,221,140,.25),
+
+    transparent 35%
+
+    ),
+
+
+
+    radial-gradient(
+
+    circle at 80% 80%,
+
+    rgba(37,99,235,.35),
+
+    transparent 40%
+
+    ),
+
+
+
+    linear-gradient(
+
+    135deg,
+
+    #050814,
+
+    #0b1228,
+
+    #020617
+
+    );
+
+
+}
+
+
+
+
+
+
+
+.math-background::after{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:0;
+
+
+
+
+    background-image:
+
+
+    radial-gradient(
+
+    rgba(255,255,255,.08) 1px,
+
+    transparent 1px
+
+    );
+
+
+
+    background-size:
+
+    40px 40px;
+
+
+
+    opacity:.15;
+
+
+}
+
+
+
+
+
+
+
+
+/* ================= SCREENS ================= */
+
+
+
+.screen{
+
+
+    min-height:100vh;
+
+
+    display:none;
+
+
+    flex-direction:column;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+    padding:30px;
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+.screen.active{
+
+
+    display:flex;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ================= TITLE ================= */
+
+
+
+.main-title{
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+.main-title h1{
+
+
+    font-family:Fraunces;
+
+
+    font-size:45px;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    90deg,
+
+    white,
+
+    #F6DD8C
+
+    );
+
+
+
+    -webkit-background-clip:text;
+
+
+    color:transparent;
+
+
+}
+
+
+
+
+
+
+
+.main-title p{
+
+
+    color:#cbd5e1;
+
+
+    font-size:20px;
+
+
+}
+
+
+
+
+
+
+
+.section-title{
+
+
+    font-family:Fraunces;
+
+
+    font-size:40px;
+
+
+    color:#F6DD8C;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ================= CARDS ================= */
+
+
+
+.player-card,
+.question-card,
+.result-card,
+.mode-card,
+.shop-card{
+
+
+    background:
+
+
+    linear-gradient(
+
+    145deg,
+
+    rgba(15,23,42,.95),
+
+    rgba(30,41,59,.85)
+
+    );
+
+
+
+    border:
+
+    1px solid rgba(246,221,140,.25);
+
+
+
+
+    backdrop-filter:blur(20px);
+
+
+
+
+    box-shadow:
+
+
+    0 30px 80px rgba(0,0,0,.5);
+
+
+}
+
+
+
+
+
+
+
+.player-card{
+
+
+    width:360px;
+
+
+    padding:35px;
+
+
+    border-radius:35px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+
+
+
+.avatar{
+
+
+    width:120px;
+
+
+    height:120px;
+
+
+
+    margin:auto;
+
+
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+    border-radius:50%;
+
+
+
+
+    font-size:70px;
+
+
+
+
+
+    border:
+
+
+    3px solid #F6DD8C;
+
+
+
+
+    box-shadow:
+
+
+    0 0 35px rgba(246,221,140,.5);
+
+
+
+}
+
+
+
+/* ================= XP ================= */
+
+
+.xp-box{
+
+    margin-top:25px;
+
+}
+
+
+
+.xp-label{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:8px;
+
+    color:#cbd5e1;
+
+
+}
+
+
+
+
+
+.xp-bar{
+
+
+    width:100%;
+
+    height:14px;
+
+
+    background:#111827;
+
+
+    border-radius:20px;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+#xp-fill{
+
+
+    height:100%;
+
+
+    width:0;
+
+
+    background:
+
+    linear-gradient(
+
+    90deg,
+
+    #D9B95B,
+
+    #F6DD8C
+
+    );
+
+
+    transition:.6s;
+
+
+}
+
+
+
+
+
+
+
+.stats{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:40px;
+
+
+    margin-top:25px;
+
+
+    font-size:22px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ================= BUTTONS ================= */
+
+
+
+button{
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+
+
+.premium-btn{
+
+
+    width:330px;
+
+
+    padding:18px;
+
+
+    border:none;
+
+
+    border-radius:22px;
+
+
+
+    font-size:20px;
+
+
+    font-weight:900;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    135deg,
+
+    #D9B95B,
+
+    #F6DD8C
+
+    );
+
+
+
+    color:#111827;
+
+
+
+
+    box-shadow:
+
+
+    0 20px 50px rgba(246,221,140,.3);
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+
+
+.premium-btn:hover{
+
+
+    transform:
+
+    translateY(-5px)
+    scale(1.03);
+
+
+}
+
+
+
+
+
+
+
+.secondary-btn,
+.back-btn{
+
+
+    padding:15px 30px;
+
+
+
+    border-radius:20px;
+
+
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+
+
+    border:
+
+    1px solid rgba(246,221,140,.3);
+
+
+
+    color:white;
+
+
+
+    font-weight:900;
+
+
+}
+
+
+
+
+
+
+
+
+/* ================= DAILY ================= */
+
+
+
+.daily-card{
+
+
+    cursor:pointer;
+
+
+    transition:.3s;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+.daily-card:hover{
+
+
+    transform:
+
+    translateY(-5px);
+
+
+}
+
+
+
+
+
+
+#daily-days{
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    gap:10px;
+
+
+    margin-top:20px;
+
+
+}
+
+
+
+
+
+
+
+.day{
+
+
+    width:35px;
+
+
+    height:35px;
+
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+
+
+    border-radius:50%;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.08);
+
+
+
+
+    border:
+
+
+    1px solid rgba(246,221,140,.3);
+
+
+
+    font-weight:900;
+
+
+
+}
+
+
+
+
+
+
+.day.active{
+
+
+    background:#F6DD8C;
+
+
+    color:#111827;
+
+
+}
+
+
+
+
+
+
+
+/* DAILY LOCK */
+
+
+
+.daily-card.locked{
+
+
+    filter:brightness(.45);
+
+
+    pointer-events:none;
+
+
+
+}
+
+
+
+
+.daily-card.locked::after{
+
+
+    content:"🔒";
+
+
+
+    position:absolute;
+
+
+
+    inset:0;
+
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+
+    font-size:70px;
+
+
+
+
+    background:
+
+    rgba(0,0,0,.45);
+
+
+
+}
+
+
+
+
+
+
+
+#daily-countdown{
+
+
+    margin-top:15px;
+
+
+    color:#F6DD8C;
+
+
+    font-weight:900;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================
+   MODES
+========================================= */
+
+
+
+.mode-container{
+
+
+    width:min(900px,95%);
+
+
+
+    display:grid;
+
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+.mode-card{
+
+
+    padding:35px 25px;
+
+
+    border-radius:30px;
+
+
+
+    cursor:pointer;
+
+
+    text-align:center;
+
+
+
+    transition:.3s;
+
+
+}
+
+
+
+
+
+.mode-card:hover{
+
+
+    transform:
+
+    translateY(-8px);
+
+
+
+    border-color:#F6DD8C;
+
+
+
+    box-shadow:
+
+
+    0 0 40px rgba(246,221,140,.25);
+
+
+}
+
+
+
+
+
+
+
+.mode-icon{
+
+
+    font-size:55px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+
+
+.mode-card h2{
+
+
+    color:#F6DD8C;
+
+
+    font-size:28px;
+
+
+}
+
+
+
+
+
+
+.mode-card p{
+
+
+    color:#cbd5e1;
+
+
+    margin-top:10px;
+
+
+}
+
+
+
+
+
+
+
+
+/* ================= GAME ================= */
+
+
+
+.game-top{
+
+
+    width:min(500px,95%);
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+
+    font-size:20px;
+
+
+
+    font-weight:900;
+
+
+
+    color:#F6DD8C;
+
+
+}
+
+
+
+
+
+
+.question-card{
+
+
+    width:min(500px,95%);
+
+
+    padding:45px;
+
+
+    border-radius:35px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+#question{
+
+
+    font-size:45px;
+
+
+    font-family:Fraunces;
+
+
+    margin-bottom:30px;
+
+
+}
+
+
+
+
+#answer-form{
+
+
+    display:flex;
+
+
+    gap:10px;
+
+
+}
+
+
+
+
+#answer{
+
+
+    flex:1;
+
+
+    padding:15px;
+
+
+
+    border-radius:18px;
+
+
+    border:none;
+
+
+
+    outline:none;
+
+
+    font-size:22px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+/* ================= ANSWER BUTTON ================= */
+
+
+#answer-form button{
+
+
+    width:60px;
+
+
+    border:none;
+
+
+    border-radius:18px;
+
+
+
+    background:#F6DD8C;
+
+
+    font-size:25px;
+
+
+    font-weight:900;
+
+
+}
+
+
+
+
+
+
+#feedback{
+
+
+    height:30px;
+
+
+    margin-top:20px;
+
+
+    font-weight:900;
+
+
+    color:#F6DD8C;
+
+
+}
+
+
+
+
+
+
+
+.mini-xp{
+
+
+    width:350px;
+
+
+    height:12px;
+
+
+
+    background:#111827;
+
+
+    border-radius:20px;
+
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+#game-xp-fill{
+
+
+    height:100%;
+
+
+    width:0;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    90deg,
+
+    #D9B95B,
+
+    #F6DD8C
+
+    );
+
+
+
+    transition:.5s;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ================= RESULT ================= */
+
+
+
+.result-card{
+
+
+    width:380px;
+
+
+    padding:40px;
+
+
+    border-radius:35px;
+
+
+
+}
+
+
+
+
+
+
+.result-card h1{
+
+
+    text-align:center;
+
+
+
+    font-family:Fraunces;
+
+
+    color:#F6DD8C;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+
+
+.result-row{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+
+    align-items:center;
+
+
+
+    padding:15px;
+
+
+
+    margin-bottom:10px;
+
+
+
+    background:
+
+
+    rgba(255,255,255,.06);
+
+
+
+    border-radius:15px;
+
+
+
+}
+
+
+
+
+
+
+.result-row b{
+
+
+    color:#F6DD8C;
+
+
+}
+
+
+
+
+
+/* dugme sada isto kao blokovi */
+
+
+
+.result-btn{
+
+
+    width:100%;
+
+
+    margin-top:20px;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ================= PROFILE ================= */
+
+
+
+.profile{
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+
+.profile-stats{
+
+
+    margin-top:25px;
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:15px;
+
+
+}
+
+
+
+
+
+
+.profile-stats div{
+
+
+    display:flex;
+
+
+    justify-content:space-between;
+
+
+
+    padding:15px;
+
+
+    border-radius:18px;
+
+
+
+
+    background:
+
+
+    rgba(255,255,255,.06);
+
+
+}
+
+
+
+
+
+
+.profile-stats b{
+
+
+    color:#F6DD8C;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ================= SHOP ================= */
+
+
+
+.shop-container{
+
+
+    width:min(900px,95%);
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(3,1fr);
+
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+
+.shop-card{
+
+
+    padding:30px;
+
+
+    border-radius:30px;
+
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+
+.shop-card h2{
+
+
+    color:#F6DD8C;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+
+
+.shop-card p{
+
+
+    color:#cbd5e1;
+
+
+    min-height:45px;
+
+
+}
+
+
+
+
+
+
+.shop-card button{
+
+
+    margin-top:20px;
+
+
+    padding:12px 25px;
+
+
+    border-radius:15px;
+
+
+    border:none;
+
+
+    background:#F6DD8C;
+
+
+    color:#111827;
+
+
+    font-weight:900;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* ================= LEVEL UP ================= */
+
+
+
+#evolution-overlay{
+
+
+    position:fixed;
+
+
+
+    inset:0;
+
+
+
+    display:none;
+
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+
+
+    background:
+
+
+    rgba(2,6,23,.85);
+
+
+
+    backdrop-filter:blur(20px);
+
+
+
+    z-index:9999;
+
+
+
+}
+
+
+
+
+
+
+.evolution-box{
+
+
+    position:relative;
+
+
+
+    padding:45px;
+
+
+    width:350px;
+
+
+
+    text-align:center;
+
+
+    border-radius:35px;
+
+
+
+    background:
+
+
+    linear-gradient(
+
+    145deg,
+
+    #081735,
+
+    #020617
+
+    );
+
+
+
+    border:2px solid #F6DD8C;
+
+
+
+    box-shadow:
+
+
+    0 0 100px rgba(246,221,140,.8);
+
+
+
+    animation:
+
+
+    levelPop .8s ease;
+
+
+
+}
+
+
+
+
+
+
+.evolution-box h1{
+
+
+    color:#F6DD8C;
+
+
+    font-family:Fraunces;
+
+
+    animation:
+
+    glow 1s infinite alternate;
+
+
+}
+
+
+
+
+
+
+#evolution-avatar{
+
+
+    font-size:100px;
+
+
+    margin:25px;
+
+
+
+    animation:
+
+
+    avatarSpin 2s infinite;
+
+
+}
+
+
+
+
+
+
+
+@keyframes levelPop{
+
+
+0%{
+
+
+    transform:scale(.3) rotate(-15deg);
+
+
+    opacity:0;
+
+
+}
+
+
+100%{
+
+
+    transform:scale(1) rotate(0);
+
+
+    opacity:1;
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+@keyframes avatarSpin{
+
+
+0%{
+
+
+    transform:scale(1);
+
+
+}
+
+
+50%{
+
+
+    transform:scale(1.15) rotate(10deg);
+
+
+}
+
+
+
+100%{
+
+
+    transform:scale(1);
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+@keyframes glow{
+
+
+from{
+
+
+    text-shadow:
+
+    0 0 10px #F6DD8C;
+
+
+}
+
+
+to{
+
+
+    text-shadow:
+
+    0 0 40px #F6DD8C;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+/* ================= TOAST ================= */
+
+
+
+#toast{
+
+
+    position:fixed;
+
+
+
+    top:30px;
+
+
+    left:50%;
+
+
+
+    transform:
+
+    translateX(-50%);
+
+
+
+    padding:15px 30px;
+
+
+
+    border-radius:20px;
+
+
+
+    background:#F6DD8C;
+
+
+    color:#111827;
+
+
+
+    font-weight:900;
+
+
+
+    opacity:0;
+
+
+
+    pointer-events:none;
+
+
+
+    transition:.3s;
+
+
+
+    z-index:99999;
+
+
+
+}
+
+
+
+
+
+#toast.show{
+
+
+    opacity:1;
+
+
+}
+
+
+
+
+
+
+
+
+/* ================= MOBILE ================= */
+
+
+
+@media(max-width:900px){
+
+
+
+.mode-container,
+.shop-container{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+
+.main-title h1{
+
+
+    font-size:32px;
+
+
+}
+
+
+
+
+.player-card{
+
+
+    width:95%;
+
+
+}
+
+
+
+.question-card{
+
+
+    padding:30px;
+
+
+}
+
+
+
+
+#question{
+
+
+    font-size:35px;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+@media(max-width:500px){
+
+
+
+.screen{
+
+
+    padding:20px;
+
+
+}
+
+
+
+.premium-btn{
+
+
+    width:95%;
+
+
+}
+
+
+
+.question-card{
+
+
+    width:100%;
+
+
+}
+
+
+
+#answer-form{
+
+
+    flex-direction:column;
+
+
+}
+
+
+
+#answer-form button{
+
+
+    width:100%;
+
+
+}
+
+
+
+.result-card{
+
+
+    width:100%;
+
+
+}
+
+
+
+.game-top{
+
+
+    font-size:15px;
+
+
+}
+
+
+}
+
+.home-actions{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:25px;
+
+    width:min(850px,95%);
+
+}
+
+
+
+.home-actions .premium-btn{
+
+    width:330px;
+
+}
+
+
+
+.home-actions .daily-card{
+
+    width:330px;
+
+    padding:25px;
+
+}
+
+.home-layout{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:80px;
+
+    width:100%;
+
+}
+
+
+
+.home-left{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+
+
+.home-right{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+
+.home-right .daily-card{
+
+    width:330px;
+
+}
+
+.game-nav{
+
+    position:fixed;
+
+    top:20px;
+
+    left:20px;
+
+    z-index:1000;
+
+}
+
+
+.game-nav button{
+
+    padding:12px 25px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(246,221,140,.3);
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-weight:900;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+.game-nav button:hover{
+
+    box-shadow:0 0 25px rgba(246,221,140,.4);
+
+}
+.home-right{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:25px;
+}
+
+
+.profile-home-btn{
+    width:100%;
+    max-width:320px;
+}

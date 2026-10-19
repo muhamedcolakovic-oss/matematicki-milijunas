@@ -2,7 +2,6 @@
 <html lang="bs">
 <head>
 <meta charset="UTF-8"/>
-<title>MathGPT</title>
 <link rel="icon" type="image/png" href="logo.png">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>AI Math Tutor Pro</title>
@@ -105,12 +104,13 @@ header p{
 /* INPUT */
 .input-wrap{
   position:fixed;
-  bottom:18px;
+  bottom:50px;
   left:0;
   width:100%;
   display:flex;
   justify-content:center;
-  padding:0 12px;
+  padding:0 14px;
+  z-index:100;
 }
 
 .input-box{
@@ -228,12 +228,54 @@ button:hover{
         padding:20px 15px;
     }
 
-    .home-btn{
-        position:static;
-        transform:none;
-        margin-bottom:15px;
-        align-self:flex-start;
-    }
+.home-btn{
+
+position:absolute;
+
+left:20px;
+
+top:50%;
+
+transform:translateY(-50%);
+
+
+width:44px;
+height:44px;
+
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+
+border-radius:50%;
+
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+
+color:white;
+
+font-size:22px;
+
+
+backdrop-filter:blur(15px);
+
+
+transition:.3s;
+
+}
+
+
+
+border-color:#60a5fa;
+
+box-shadow:
+0 0 25px rgba(96,165,250,.4);
+
+}
 
     .header-content{
         text-align:center;
@@ -254,7 +296,9 @@ button:hover{
 <body>
 
 <header class="top-header">
-    <a href="index.html" class="home-btn">🏠 Početna</a>
+<button class="home-btn" onclick="window.location.href='index.html'">
+ ←
+</button>
 
     <div class="header-content">
         <h1>📚 AI Matematički Tutor PRO</h1>
@@ -321,17 +365,45 @@ function typing() {
 
 async function ai(question){
 
-  const res = await fetch("http://localhost:3000/search",{
-    method:"POST",
-    headers:{
-      "Content-Type":"application/json"
-    },
-    body:JSON.stringify({ q: question })
-  });
+try{
 
-  const data = await res.json();
+const res = await fetch(
+"http://localhost:3000/search",
+{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({
+q:question
+})
+});
 
-  return data.answer;
+
+if(!res.ok){
+
+throw new Error("Server error");
+
+}
+
+
+const data = await res.json();
+
+
+return data.answer || "Nisam dobio odgovor.";
+
+
+}
+
+catch(error){
+
+console.error(error);
+
+
+return "⚠️ AI servis trenutno nije dostupan.  ";
+
+}
+
 }
 
 async function send() {
@@ -354,7 +426,6 @@ input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") send();
 });
 
-</script>
 </script>
 
 </body>

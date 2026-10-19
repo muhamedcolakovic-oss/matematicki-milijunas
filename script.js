@@ -1,42 +1,150 @@
-const igre=[
+// =======================================
+// MINI GAMES PLATFORM SCRIPT
+// =======================================
+
+
+// LANGUAGE
+
+let currentLanguage =
+localStorage.getItem("language") || "bs";
+
+
+
+
+// =======================================
+// GAMES DATABASE
+// =======================================
+
+
+const igre = [
 
 {
-naziv:"Pogodi broj",
+naziv:{
+bs:"Pogodi broj",
+en:"Guess The Number"
+},
+
+opis:{
+bs:"Logička igra pogađanja skrivenog broja",
+en:"Logic game where you guess the hidden number"
+},
+
 link:"pogodibroj.html",
+
 slika:"pogodi-broj.png"
+
 },
 
+
+
 {
-naziv:"Sudoku",
+naziv:{
+bs:"Sudoku",
+en:"Sudoku"
+},
+
+opis:{
+bs:"Klasična matematička mozgalica",
+en:"Classic mathematical puzzle"
+},
+
 link:"sudoku.html",
+
 slika:"sudoku.png"
+
+
+},
+{
+naziv:{
+    bs:"Matematički heroj",
+    en:"Math Hero"
+},
+
+    opis:{
+        bs:"Postani matematički šampion, rješavaj zadatke, skupljaj XP i razvijaj svoj nivo",
+        en:"Become a math champion, solve challenges, earn XP and level up"
+    },
+
+link:"math.html",
+
+slika:"math.png"
+
 },
 
 {
-naziv:"Math Rush",
+naziv:{
+    bs:"Točak sreće",
+    en:"Spin the Wheel"
+},
+
+opis:{
+    bs:"Zavrti točak, testiraj sreću i osvoji nagrade",
+    en:"Spin the wheel, test your luck and win rewards"
+},
+
+link:"spin.html",
+
+slika:"spin.png"
+
+},
+
+
+{
+naziv:{
+bs:"Brzi račun",
+en:"Math Rush"
+},
+
+opis:{
+bs:"Testiraj brzinu računanja",
+en:"Test your calculation speed"
+},
+
 link:"mathrush.html",
+
 slika:"mathrush.png"
-}
+
+},
+
 ];
 
 
 
 
-const container=document.getElementById("games");
+
+// =======================================
+// LOAD GAMES
+// =======================================
+
+
+function loadGames(){
+
+
+const container =
+document.getElementById("games");
+
+
+if(!container)
+return;
+
+
+
+container.innerHTML="";
 
 
 
 igre.forEach((igra,index)=>{
 
 
-let card=document.createElement("div");
+const card =
+document.createElement("div");
 
 
 card.className="card";
 
 
 card.style.animationDelay =
-`${index*0.08}s`;
+`${index*0.1}s`;
 
 
 
@@ -44,14 +152,25 @@ card.innerHTML=`
 
 <div class="icon-box">
 
-<img src="${igra.slika}">
+<img 
+src="${igra.slika}"
+loading="lazy"
+onerror="this.src='minigames1.png'"
+>
+
 </div>
 
 
 <div class="card-text">
 
-<h2>${igra.naziv}</h2>
+<h2>
+${igra.naziv[currentLanguage]}
+</h2>
 
+
+<p>
+${igra.opis[currentLanguage]}
+</p>
 
 </div>
 
@@ -60,14 +179,50 @@ card.innerHTML=`
 →
 </div>
 
-
 `;
+
 
 
 
 card.onclick=()=>{
 
-window.location.href=igra.link;
+
+card.style.transform="scale(.96)";
+
+
+
+localStorage.setItem(
+"currentGame",
+
+JSON.stringify({
+
+name:
+igra.naziv[currentLanguage],
+
+xp:
+igra.xp,
+
+coins:
+igra.coins,
+
+time:
+Date.now()
+
+})
+
+);
+
+
+
+setTimeout(()=>{
+
+window.location.href =
+igra.link;
+
+
+},150);
+
+
 
 };
 
@@ -76,124 +231,191 @@ window.location.href=igra.link;
 container.appendChild(card);
 
 
+
 });
 
 
+
+}
+
+
+
+
+// =======================================
+// LANGUAGE CHANGE
+// =======================================
+
+
+function changeLanguage(lang){
+
+
+currentLanguage=lang;
+
+
+localStorage.setItem(
+"language",
+lang
+);
+
+
+updateTexts();
+
+
+loadGames();
+
+
+}
+
+
+
+
+// =======================================
+// TEXT
+// =======================================
+
+
+function updateTexts(){
+
+
+
+const title =
+document.getElementById("page-title");
+
+
+const subtitle =
+document.getElementById("page-subtitle");
+
+
+
+if(!title || !subtitle)
+return;
+
+
+
+
+if(currentLanguage==="bs"){
+
+
+title.textContent =
+"Mini Games";
+
+
+subtitle.textContent =
+"Matematičke igre, logički izazovi i zabavne mozgalice";
+
+
+}
+
+else{
+
+
+title.textContent =
+"Mini Games";
+
+
+subtitle.textContent =
+"Mathematical games, logic challenges and fun puzzles";
+
+
+}
+
+
+
+}
+
+
+
+
+
+// =======================================
+// INIT
+// =======================================
+
+
+updateTexts();
+
+loadGames();
+
+// =======================================
+// HOME BUTTON
+// =======================================
 
 
 function goHome(){
 
-window.location.href="index.html";
-
-
-}
-// ===============================
-// BACKGROUND MUSIC
-// ===============================
-
-
-const music =
-document.getElementById("bg-music");
-
-
-const musicBtn =
-document.getElementById("music-btn");
-
-
-
-let musicEnabled =
-localStorage.getItem("miniMusic");
-
-
-
-if(musicEnabled === "off"){
-
-    musicBtn.textContent="🔇";
-
-}
-else{
-
-    musicBtn.textContent="🔊";
+    window.location.href = "index.html";
 
 }
 
 
 
 
-document.addEventListener(
-"click",
-()=>{
+// =======================================
+// MUSIC CONTROL
+// =======================================
 
 
-if(
-localStorage.getItem("miniMusic") !== "off"
-){
+const musicBtn = document.getElementById("music-btn");
+const bgMusic = document.getElementById("bg-music");
 
 
-music.volume=0.25;
-
-
-music.play()
-.catch(()=>{});
-
-
-}
-
-
-},
-{
-once:true
-});
+let musicPlaying = false;
 
 
 
+if(musicBtn && bgMusic){
+
+
+    musicBtn.addEventListener("click",()=>{
+
+
+        if(!musicPlaying){
+
+
+            bgMusic.play()
+            .then(()=>{
+
+                musicPlaying=true;
+
+                musicBtn.textContent="🔊";
+
+                musicBtn.classList.add("playing");
+
+
+            })
+            .catch(error=>{
+
+                console.log("Audio nije pokrenut:",error);
+
+            });
 
 
 
-musicBtn.onclick=(e)=>{
+        }
 
 
-e.stopPropagation();
+        else{
 
 
-
-if(
-localStorage.getItem("miniMusic")==="off"
-){
+            bgMusic.pause();
 
 
-localStorage.setItem(
-"miniMusic",
-"on"
-);
+            musicPlaying=false;
 
 
-musicBtn.textContent="🔊";
+            musicBtn.textContent="🔇";
 
 
-music.play();
+            musicBtn.classList.remove("playing");
 
 
 
-}
-
-else{
+        }
 
 
-localStorage.setItem(
-"miniMusic",
-"off"
-);
 
-
-musicBtn.textContent="🔇";
-
-
-music.pause();
+    });
 
 
 
 }
-
-
-};

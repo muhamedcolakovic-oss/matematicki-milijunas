@@ -46,17 +46,53 @@
 <audio id="askAudienceSound" src="publika.mp3"></audio>
 <audio id="fiftyFiftySound" src="50-50.mp3" preload="auto"></audio>
 
-<div class="fixed top-4 right-4 z-50 hidden lg:flex gap-2">
-<!-- Dark/Light Mode Toggle --> 
-<button id="themeToggle" class="theme-btn bg-opacity-70 rounded-lg">🌙</button>
-<!-- Admin Panel Button --> <button onclick="showAdminLogin()" class="w-12 h-12 bg-purple-700 hover:bg-purple-600 rounded-lg border-2 border-purple-500 transition-all transform hover:scale-105 text-2xl bg-opacity-90 backdrop-blur-sm flex items-center justify-center"> 🔐 </button> 
-<!-- Music Controls -->
-   <div id="musicControls" class="bg-black bg-opacity-70 rounded-lg border border-yellow-500 shadow-lg backdrop-blur-sm">
-    <div class="flex items-center gap-2 p-1">
-<button id="musicToggle" class="w-10 h-10 flex items-center justify-center text-2xl transition-transform hover:scale-110"> 🔊 </button> <input type="range" id="volumeSlider" min="0" max="100" value="50" class="w-24 h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-yellow-500 hidden">
+<div class="top-controls absolute top-4 right-4 z-50 hidden lg:flex">
+
+    <div class="control-glass">
+
+
+        <!-- THEME -->
+        <button id="themeToggle"
+        class="control-btn"
+        title="Promijeni temu">
+            🌙
+        </button>
+
+
+
+        <!-- ADMIN -->
+        <button onclick="showAdminLogin()"
+        class="control-btn admin-btn"
+        title="Admin panel">
+            🔐
+        </button>
+
+
+
+        <!-- MUSIC -->
+
+        <div id="musicControls" class="music-box">
+
+            <button id="musicToggle"
+            class="control-btn"
+            title="Zvuk">
+                🔊
+            </button>
+
+
+            <input 
+            type="range"
+            id="volumeSlider"
+            min="0"
+            max="100"
+            value="50">
+
+        </div>
+
+
     </div>
-   </div>
-  </div>
+
+</div>
   
   
   <!-- Language Selection Screen -->
@@ -69,11 +105,11 @@
 <p class="text-sm md:text-base font-light tracking-[0.35em] text-center mb-6 uppercase">
 
   <span class="block md:inline text-yellow-300 font-semibold drop-shadow-[0_0_10px_rgba(255,215,0,0.4)]">
-    Odaberite kategoriju
+    Matematika 
   </span>
 
   <span class="block md:inline text-white/40 md:ml-2 tracking-[0.3em]">
-    / Select category
+    / Opće znanje
   </span>
 
 </p>
@@ -85,6 +121,13 @@
     <div class="title">Matematički milijunaš</div>
   </div>
 </button>
+
+<button class="card language-card" data-lang="en">
+  <div class="bg" style="background-image:url('gb.png')"></div>
+  <div class="overlay">
+    <div class="title">Maths Millionaire</div>
+  </div>
+</button>
   
 <button class="card language-card" data-lang="ge">
     <div class="bg" style="background-image:url('milijunas.jpg')"></div>
@@ -93,18 +136,11 @@
   </div>
   </button>
   
-<button class="card language-card" data-lang="en">
-  <div class="bg" style="background-image:url('gb.png')"></div>
-  <div class="overlay">
-    <div class="title">Maths Millionaire</div>
-  </div>
-</button>
-
 <button class="card language-card" data-lang="gk">
     <div class="bg" style="background-image:url('milijunas.png')"></div>
 
 	 <div class="overlay">
-    <div class="title">Ko želi biti milijunaš</div>
+    <div class="title">Who wants to be a millionare</div>
   </div>
   </button>
   
@@ -196,7 +232,7 @@
 </footer>
 
         <p class="text-[10px] text-white/30 mt-4">
-          © <span id="year"></span> Matematički Milijunaš v 7.1
+          © <span id="year"></span> Matematički Milijunaš v 8.0
         </p>
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
@@ -278,11 +314,13 @@ shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
 	 
 	 <!-- Lifelines -->
 		<div class="lifeline-container flex-shrink-0">
-      <div id="fiftyFifty" class="lifeline-icon fifty-fifty" title="50:50"><span>50:50</span>
+      <div id="fiftyFifty" class="lifeline-icon fifty-fifty" title="50:50"><span>
+	          <img src="50.png">
+</span>
       </div>
-      <div id="phoneAFriend" class="lifeline-icon phone" title="Phone a Friend"><span>📞</span>
+      <div id="phoneAFriend" class="lifeline-icon phone" title="Phone a Friend"><span>  <img src="call.png"></span>
       </div>
-      <div id="askAudience" class="lifeline-icon audience" title="Ask the Audience"><span>👥</span>
+      <div id="askAudience" class="lifeline-icon audience" title="Ask the Audience"><span>  <img src="publika.png"></span>
       </div>
 	  
 	  
@@ -294,19 +332,19 @@ shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
      <div class="bg-black bg-opacity-50 rounded-lg p-1 mb-1 border-2 border-yellow-600">
       <div class="flex justify-around items-center gap-1">
        <div id="joker1" class="flex flex-col items-center opacity-100 transition-opacity duration-500">
-        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-yellow-600 to-yellow-800 flex items-center justify-center border-2 border-yellow-400 text-white font-bold text-xs">
-         50:50
-        </div>
+       <div class="joker-small">
+    <img src="50.png">
+</div>
        </div>
        <div id="joker2" class="flex flex-col items-center opacity-100 transition-opacity duration-500">
-        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-green-700 flex items-center justify-center border-2 border-green-300 text-lg">
-         📞
-        </div>
+       <div class="joker-small">
+    <img src="call.png">
+</div>
        </div>
        <div id="joker3" class="flex flex-col items-center opacity-100 transition-opacity duration-500">
-        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center border-2 border-purple-300 text-lg">
-         👥
-        </div>
+       <div class="joker-small">
+    <img src="publika.png">
+</div>
        </div>
       </div>
      </div>
@@ -315,269 +353,3953 @@ shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
       </div>
      </div>
     </div>
-   </main><!-- Game Over Modal -->
-   <div id="gameOverModal" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-6 z-50">
-    <div class="bg-gradient-to-br from-blue-900 to-purple-900 rounded-lg p-8 max-w-2xl w-full border-4 border-yellow-500 text-center max-h-[90vh] overflow-y-auto">
-     <h2 id="gameOverTitle" class="text-4xl font-bold text-yellow-400 mb-4">Čestitamo!</h2>
-     <p id="gameOverMessage" class="text-2xl mb-6">Osvojili ste: <span id="finalPrize" class="text-green-400 font-bold">$1,000,000</span>	 </p><!-- Explanation Section -->
+   </main>
+   
+
+<!-- GAME OVER MODAL -->
+<div id="gameOverModal"
+class="
+hidden
+fixed
+inset-0
+bg-black/90
+backdrop-blur-2xl
+flex
+items-center
+justify-center
+p-6
+z-50
+">
 
 
+<div
+class="
+relative
+overflow-y-auto
+bg-gradient-to-br
+from-[#050816]
+via-[#0b1228]
+to-[#111827]
 
-<div class="flex flex-col gap-3 mt-8 pt-4">  <!-- 3 dugmeta u istom stilu -->
-  <button id="playAgain"
-    class="bg-yellow-600 hover:bg-yellow-500 px-8 py-3 rounded-full font-bold text-xl border-4 border-yellow-400 transition-all transform hover:scale-105">
-    Igraj Ponovo
-  </button>
+rounded-[42px]
 
-  <button id="shareScore"
-    class="bg-blue-600 hover:bg-blue-500 px-8 py-3 rounded-full font-bold text-xl border-4 border-blue-400 transition-all transform hover:scale-105">
-    📤 <span id="shareLabel">Podijeli</span>
-  </button>
+p-10
 
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLt1zMRZoXCMKqoaeBQujvo2KnBD8tGIA3x-ylatTv-lggCw/viewform?usp=dialog"
-     target="_blank"
-     class="bg-purple-600 hover:bg-purple-500 px-8 py-3 rounded-full font-bold text-xl border-4 border-purple-400 transition-all transform hover:scale-105 flex items-center justify-center gap-2">
-     📝 Ispuni anketu
-  </a>
+max-w-4xl
+w-full
+
+border
+border-[#F6DD8C]/40
+
+shadow-[0_0_120px_rgba(246,221,140,.25)]
+
+text-center
+
+max-h-[92vh]
+
+overflow-y-auto
+
+">
+
+
+<!-- GOLD TOP LIGHT -->
+
+<div
+class="
+absolute
+top-0
+left-16
+right-16
+h-[3px]
+
+bg-gradient-to-r
+from-transparent
+via-[#F6DD8C]
+to-transparent
+
+shadow-[0_0_40px_#F6DD8C]
+">
 </div>
-	 
-	 
 
-<div id="explanationSection" class="hidden bg-black bg-opacity-50 rounded-lg p-6 mt-10 text-left border-t border-white/10">
-      <h3 class="text-2xl font-bold text-yellow-400 mb-3">📖 <span id="explanationTitle">Objašnjenje</span></h3>
-      <div id="wrongQuestionDisplay" class="mb-4 p-4 bg-red-900 bg-opacity-30 rounded-lg border-2 border-red-500">
-       <p class="text-xl font-bold mb-2" id="wrongQuestionText"></p>
-       <div class="grid grid-cols-2 gap-2 text-sm mb-2"><span class="text-gray-300" id="wrongAnswerA"></span> <span class="text-gray-300" id="wrongAnswerB"></span> <span class="text-gray-300" id="wrongAnswerC"></span> <span class="text-gray-300" id="wrongAnswerD"></span>
-       </div>
-       <p class="text-green-400 font-bold mt-2">✓ <span id="correctAnswerLabel">Tačan odgovor</span>: <span id="correctAnswerDisplay"></span></p>
-      </div>
-      <div class="bg-blue-900 bg-opacity-30 rounded-lg p-4 border-2 border-blue-500">
-       <p class="text-lg mb-2">   <strong id="explanationLabel">Objašnjenje:</strong></p>
-       <p id="explanationText" class="text-base leading-relaxed"></p>
-      </div>
-      <div class="bg-orange-900 bg-opacity-30 rounded-lg p-4 mt-4 border-2 border-orange-500">
-       <p class="text-lg mb-2">      <strong id="commonMistakeLabel">Najčešća greška:</strong></p>
-       <p id="commonMistakeText" class="text-base leading-relaxed"></p>
-      </div>
-     </div><!-- Statistics Section -->
-     <div class="bg-black bg-opacity-50 rounded-lg p-6 mb-6">
-      <h3 class="text-2xl font-bold text-yellow-400 mb-4">📊 <span id="statsTitle">Statistika</span></h3>
-      <div class="grid grid-cols-2 gap-4">
-       <div class="bg-blue-900 bg-opacity-50 rounded-lg p-4">
-        <p class="text-sm text-gray-300" id="totalGamesLabel">Ukupno igara</p>
-        <p class="text-3xl font-bold text-blue-400" id="totalGames">0</p>
-       </div>
-       <div class="bg-green-900 bg-opacity-50 rounded-lg p-4">
-        <p class="text-sm text-gray-300" id="avgScoreLabel">Prosječan rezultat</p>
-        <p class="text-3xl font-bold text-green-400" id="avgScore">0</p>
-       </div>
-       <div class="bg-purple-900 bg-opacity-50 rounded-lg p-4">
-        <p class="text-sm text-gray-300" id="bestScoreLabel">Najbolji rezultat</p>
-        <p class="text-3xl font-bold text-purple-400" id="bestScore">0</p>
-       </div>
-       <div class="bg-orange-900 bg-opacity-50 rounded-lg p-4">
-        <p class="text-sm text-gray-300" id="currentStreakLabel">Trenutni niz</p>
-        <p class="text-3xl font-bold text-orange-400" id="currentStreak">0</p>
-       </div>
-      </div><!-- Badges -->
-      <div id="badgesContainer" class="mt-6">
-       <h4 class="text-xl font-bold text-yellow-400 mb-3">🏆 <span id="badgesLabel">Bedževi</span></h4>
-       <div id="badgesList" class="flex flex-wrap gap-2 justify-center"><!-- Badges will be added here -->
-       </div>
-      </div>
-     </div>
-     </div>
-    </div>
-   </div><!-- Lifeline Modal -->
-   <div id="lifelineModal" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-6 z-50">
-    <div class="bg-gradient-to-br from-blue-900 to-purple-900 rounded-lg p-8 max-w-2xl w-full border-4 border-blue-500">
-     <h2 id="lifelineTitle" class="text-3xl font-bold text-yellow-400 mb-6 text-center">Phone a Friend</h2><!-- Timer Circle -->
-     <div id="timerCircle" class="timer-circle hidden"><span id="timerValue">30</span>
-     </div>
-     <div id="lifelineMessage" class="text-xl mb-6 text-center"></div><!-- Audience Graph -->
-     <div id="audienceGraph" class="hidden mb-6">
-      <div class="flex items-end justify-around h-64 bg-black bg-opacity-50 rounded-lg p-4 border-2 border-yellow-600">
-       <div class="flex flex-col items-center flex-1">
-        <div class="w-full flex items-end justify-center mb-2" style="height: 200px;">
-         <div id="barA" class="audience-bar w-3/4 rounded-t-lg" style="height: 0%;"></div>
-        </div>
-        <div class="text-2xl font-bold text-yellow-400">
-         A
-        </div>
-        <div id="percentA" class="text-xl font-bold text-white">
-         0%
-        </div>
-       </div>
-       <div class="flex flex-col items-center flex-1">
-        <div class="w-full flex items-end justify-center mb-2" style="height: 200px;">
-         <div id="barB" class="audience-bar w-3/4 rounded-t-lg" style="height: 0%;"></div>
-        </div>
-        <div class="text-2xl font-bold text-yellow-400">
-         B
-        </div>
-        <div id="percentB" class="text-xl font-bold text-white">
-         0%
-        </div>
-       </div>
-       <div class="flex flex-col items-center flex-1">
-        <div class="w-full flex items-end justify-center mb-2" style="height: 200px;">
-         <div id="barC" class="audience-bar w-3/4 rounded-t-lg" style="height: 0%;"></div>
-        </div>
-        <div class="text-2xl font-bold text-yellow-400">
-         C
-        </div>
-        <div id="percentC" class="text-xl font-bold text-white">
-         0%
-        </div>
-       </div>
-       <div class="flex flex-col items-center flex-1">
-        <div class="w-full flex items-end justify-center mb-2" style="height: 200px;">
-         <div id="barD" class="audience-bar w-3/4 rounded-t-lg" style="height: 0%;"></div>
-        </div>
-        <div class="text-2xl font-bold text-yellow-400">
-         D
-        </div>
-        <div id="percentD" class="text-xl font-bold text-white">
-         0%
-        </div>
-       </div>
-      </div>
-     </div>
-     <div class="text-center"><button id="closeLifeline" class="bg-blue-600 hover:bg-blue-500 px-8 py-3 rounded-full font-bold text-lg border-4 border-blue-400"> <span class="close-text">Zatvori</span> </button>
-     </div>
-    </div>
-   </div>
-  </div><!-- Admin Login Modal -->
-  <div id="adminLoginModal" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-6 z-50">
-   <div class="bg-gradient-to-br from-purple-900 to-blue-900 rounded-lg p-8 max-w-md w-full border-4 border-purple-500">
-    <h2 class="text-3xl font-bold text-yellow-400 mb-6 text-center">🔐 Admin Login</h2>
-    <div class="mb-4"><label class="block text-white mb-2 font-bold">Username:</label> <input type="text" id="adminUsername" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none">
-    </div>
-    <div class="mb-6"><label class="block text-white mb-2 font-bold">Password:</label> <input type="password" id="adminPassword" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none">
-    </div>
-    <div id="loginError" class="hidden bg-red-600 text-white px-4 py-2 rounded mb-4 text-center font-bold">
-     ❌ Wrong username or password!
-    </div>
-    <div class="flex gap-4"><button onclick="adminLogin()" class="flex-1 bg-green-600 hover:bg-green-500 px-6 py-3 rounded-lg font-bold border-2 border-green-400"> Login </button> <button onclick="closeAdminLogin()" class="flex-1 bg-gray-600 hover:bg-gray-500 px-6 py-3 rounded-lg font-bold border-2 border-gray-400"> Cancel </button>
-    </div>
-   </div>
-  </div><!-- Admin Panel Screen -->
-  <div id="adminPanel" class="hidden w-full min-h-full bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 p-6">
-   <div class="max-w-7xl mx-auto"><!-- Header -->
-    <div class="bg-black bg-opacity-50 rounded-lg p-6 mb-6 border-4 border-yellow-500">
-     <div class="flex justify-between items-center">
-      <h1 class="text-4xl font-bold text-yellow-400">📚 Admin Panel </h1>
-	  <!-- Add New Question Button -->
-<div class="mb-6 text-center flex justify-center gap-4 flex-wrap">
 
-    <button onclick="showAddQuestion()"
-        class="bg-green-600 hover:bg-green-500 px-8 py-4 rounded-lg font-bold text-xl border-4 border-green-400 transition-all transform hover:scale-105">
-        ➕ Dodaj novo pitanje
-    </button>
 
-    <button onclick="exportQuestionBank()"
-        class="bg-blue-600 hover:bg-blue-500 px-8 py-4 rounded-lg font-bold text-xl border-4 border-blue-400 transition-all transform hover:scale-105">
-        💾 Ažuriraj bazu podataka pitanja
-    </button>
-	  <button onclick="logoutAdmin()" class="bg-red-600 hover:bg-red-500 px-6 py-3 rounded-lg font-bold border-2 border-red-400"> Odjavi se </button>
-     </div
-     </div>
-    </div><!-- Language Selection -->
-    <div class="bg-black bg-opacity-50 rounded-lg p-6 mb-6 border-2 border-blue-500">
-     <h2 class="text-2xl font-bold text-yellow-400 mb-4">Odaberite kviz:</h2>
-     <div class="flex gap-4"> 
-	<button id="adminLangBs" onclick="setAdminLanguage('bs')" class="bg-blue-600 hover:bg-blue-500 px-8 py-3 rounded-lg font-bold border-2 border-blue-400"> Matematički milijunaš </button>
-	<button id="adminLangEn" onclick="setAdminLanguage('en')" class="bg-gray-600 hover:bg-gray-500 px-8 py-3 rounded-lg font-bold border-2 border-gray-400"> Maths millionare </button>
-	<button id="adminLangGe" onclick="setAdminLanguage('ge')" class="bg-gray-600 hover:bg-gray-500 px-8 py-3 rounded-lg font-bold border-2 border-gray-400"> Ko želi biti milijunaš?</button>
-	<button id="adminLangGe" onclick="setAdminLanguage('gk')" class="bg-gray-600 hover:bg-gray-500 px-8 py-3 rounded-lg font-bold border-2 border-gray-400"> Who Wants to Be a Millionare?</button>
-    </div>
-    </div><!-- Category Tabs -->
-    <div class="bg-black bg-opacity-50 rounded-lg p-6 mb-6 border-2 border-green-500">
-     <h2 class="text-2xl font-bold text-yellow-400 mb-4">Kategorije pitanja:</h2>
-     <div class="flex flex-wrap gap-3">
-	 <button class="category-tab bg-green-600 hover:bg-green-500 px-4 py-2 rounded-lg font-bold border-2 border-green-400"
-onclick="showCategory('history'); setActiveCategory('history')">
+
+
+
+
+
+<!-- TITLE -->
+
+<div class="relative pt-5">
+
+
+<div
+class="
+inline-flex
+items-center
+
+px-7
+py-3
+
+rounded-full
+
+bg-gradient-to-r
+
+from-[#F6DD8C]/20
+
+to-white/5
+
+border
+
+border-[#F6DD8C]/40
+
+text-xs
+
+tracking-[0.45em]
+
+uppercase
+
+text-[#F6DD8C]
+
+font-black
+
+shadow-[0_0_30px_rgba(246,221,140,.2)]
+">
+
+🏆 GAME COMPLETE
+
+</div>
+
+
+
+
+<h2 id="gameOverTitle"
+
+class="
+mt-8
+
+text-6xl
+
+font-black
+
+tracking-tight
+
+text-white
+
+drop-shadow-[0_0_35px_rgba(255,255,255,.15)]
+
+">
+
+Čestitamo!
+
+</h2>
+
+
+
+
+
+<p id="gameOverMessage"
+
+class="
+mt-6
+
+text-xl
+
+text-slate-300
+
+">
+
+
+Osvojili ste:
+
+
+<span id="finalPrize"
+
+class="
+block
+
+mt-4
+
+text-7xl
+
+font-black
+
+
+bg-gradient-to-r
+
+from-[#D9B95B]
+
+via-[#F6DD8C]
+
+to-white
+
+
+bg-clip-text
+
+text-transparent
+
+
+drop-shadow-[0_0_40px_rgba(246,221,140,.7)]
+">
+
+$1,000,000
+
+</span>
+
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- BUTTONS -->
+
+<div
+class="
+relative
+
+grid
+
+md:grid-cols-3
+
+gap-5
+
+mt-14
+">
+
+
+
+
+
+<!-- PLAY AGAIN -->
+
+<button id="playAgain"
+
+class="
+group
+
+relative
+
+overflow-hidden
+
+rounded-3xl
+
+px-6
+
+py-7
+
+text-white
+
+
+border
+
+border-[#F6DD8C]/70
+
+
+bg-gradient-to-br
+
+from-[#F6DD8C]/35
+
+via-[#D9B95B]/20
+
+to-[#050816]
+
+
+shadow-[0_0_45px_rgba(246,221,140,.25)]
+
+
+transition-all
+
+duration-300
+
+will-change-transform
+hover:-translate-y-2
+
+hover:scale-[1.04]
+
+
+hover:shadow-[0_0_80px_rgba(246,221,140,.55)]
+">
+
+
+
+<div
+class="
+absolute
+
+inset-0
+
+
+bg-gradient-to-r
+
+from-transparent
+
+via-white/40
+
+to-transparent
+
+
+translate-x-[-150%]
+
+
+group-hover:translate-x-[150%]
+
+
+transition-transform
+
+duration-700
+">
+</div>
+
+
+
+
+<div
+class="
+relative
+
+font-black
+
+text-xl
+">
+
+🎮 Igraj Ponovo
+
+</div>
+
+
+
+<div
+class="
+relative
+
+text-xs
+
+mt-2
+
+text-yellow-100
+">
+
+Start new challenge
+
+</div>
+
+
+</button>
+
+
+
+
+
+
+
+
+<!-- SHARE -->
+
+
+<button id="shareScore"
+
+class="
+group
+
+relative
+
+overflow-hidden
+
+rounded-3xl
+
+px-6
+
+py-7
+
+text-white
+
+
+border
+
+border-cyan-300/40
+
+
+bg-gradient-to-br
+
+from-cyan-400/30
+
+via-blue-500/20
+
+to-[#050816]
+
+
+shadow-[0_0_45px_rgba(34,211,238,.25)]
+
+
+transition-all
+
+duration-300
+
+
+hover:-translate-y-2
+
+hover:scale-[1.04]
+
+will-change-transform
+hover:shadow-[0_0_80px_rgba(34,211,238,.45)]
+">
+
+
+
+<div
+class="
+absolute
+
+inset-0
+
+
+bg-gradient-to-r
+
+from-transparent
+
+via-white/30
+
+to-transparent
+
+
+translate-x-[-150%]
+
+
+group-hover:translate-x-[150%]
+
+
+transition-transform
+
+duration-700
+">
+</div>
+
+
+
+
+<div
+class="
+relative
+
+font-black
+
+text-xl
+">
+
+📤
+
+<span id="shareLabel">
+Podijeli
+</span>
+
+
+</div>
+
+
+
+
+<div
+class="
+relative
+
+text-xs
+
+mt-2
+
+text-cyan-100
+">
+
+Share your result
+
+</div>
+
+
+</button>
+
+
+
+
+
+
+
+
+<!-- SURVEY -->
+
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSdLt1zMRZoXCMKqoaeBQujvo2KnBD8tGIA3x-ylatTv-lggCw/viewform?usp=dialog"
+
+target="_blank"
+
+
+class="
+group
+
+relative
+
+overflow-hidden
+
+rounded-3xl
+
+px-6
+
+py-7
+
+text-white
+
+
+border
+
+border-violet-300/40
+
+
+bg-gradient-to-br
+
+from-violet-400/25
+
+via-indigo-500/20
+
+to-[#050816]
+
+
+shadow-[0_0_45px_rgba(139,92,246,.25)]
+
+
+transition-all
+
+duration-300
+
+
+hover:-translate-y-2
+
+hover:scale-[1.04]
+
+will-change-transform
+hover:shadow-[0_0_80px_rgba(139,92,246,.45)]
+">
+
+
+
+<div
+class="
+absolute
+
+inset-0
+
+
+bg-gradient-to-r
+
+from-transparent
+
+via-white/30
+
+to-transparent
+
+
+translate-x-[-150%]
+
+
+group-hover:translate-x-[150%]
+
+
+transition-transform
+
+duration-700
+">
+</div>
+
+
+
+
+<div
+class="
+relative
+
+font-black
+
+text-xl
+">
+
+📝 Ispuni anketu
+
+</div>
+
+
+
+
+<div
+class="
+relative
+
+text-xs
+
+mt-2
+
+text-violet-100
+">
+
+Improve the game
+
+</div>
+
+
+</a>
+
+
+
+</div>
+
+<!-- EXPLANATION SECTION -->
+
+<div id="explanationSection"
+
+class="
+hidden
+relative
+text-left
+mt-12
+">
+
+
+
+<h3
+
+class="
+text-4xl
+font-black
+text-white
+
+mb-8
+
+flex
+items-center
+gap-4
+">
+
+
+<div
+
+class="
+w-14
+h-14
+
+rounded-2xl
+
+bg-gradient-to-br
+
+from-[#F6DD8C]
+
+via-[#D9B95B]
+
+to-[#8b6b20]
+
+
+flex
+items-center
+justify-center
+
+text-2xl
+
+
+shadow-[0_0_40px_rgba(246,221,140,.45)]
+">
+
+💡
+
+</div>
+
+
+
+<span id="explanationTitle">
+Objašnjenje
+</span>
+
+
+</h3>
+
+
+
+
+
+
+
+
+<!-- WRONG QUESTION -->
+
+<div id="wrongQuestionDisplay"
+
+class="
+
+rounded-[36px]
+
+p-8
+
+mb-8
+
+
+bg-gradient-to-br
+
+from-white/[0.08]
+
+via-white/[0.03]
+
+to-black/20
+
+
+border
+
+border-white/10
+
+
+shadow-[0_0_45px_rgba(255,255,255,.08)]
+
+">
+
+
+
+
+
+<div
+
+class="
+flex
+
+items-center
+
+gap-4
+
+mb-6
+">
+
+
+
+<div
+
+class="
+w-12
+h-12
+
+rounded-2xl
+
+
+bg-white/10
+
+
+border
+
+border-white/20
+
+
+flex
+
+items-center
+
+justify-center
+
+
+text-xl
+">
+
+❌
+
+</div>
+
+
+
+
+
+<div>
+
+
+<p
+
+class="
+text-xs
+
+uppercase
+
+tracking-[0.35em]
+
+text-slate-300
+
+font-black
+">
+
+YOUR ANSWER
+
+</p>
+
+
+
+<p
+
+class="
+text-sm
+
+text-slate-500
+">
+
+Question review
+
+</p>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<p id="wrongQuestionText"
+
+class="
+
+text-2xl
+
+font-black
+
+leading-relaxed
+
+text-white
+
+mb-8
+
+">
+
+</p>
+
+
+
+
+
+
+
+
+<div
+
+class="
+grid
+
+md:grid-cols-2
+
+gap-4
+">
+
+
+
+
+
+
+<span id="wrongAnswerA"
+
+class="
+
+rounded-2xl
+
+p-5
+
+
+bg-white/[0.04]
+
+
+border
+
+border-white/10
+
+
+text-slate-200
+
+
+transition-all
+
+
+hover:bg-white/[0.08]
+
+hover:border-white/20
+
+">
+
+</span>
+
+
+
+
+
+
+<span id="wrongAnswerB"
+
+class="
+
+rounded-2xl
+
+p-5
+
+
+bg-white/[0.04]
+
+
+border
+
+border-white/10
+
+
+text-slate-200
+
+
+transition-all
+
+
+hover:bg-white/[0.08]
+
+hover:border-white/20
+
+">
+
+</span>
+
+
+
+
+
+
+<span id="wrongAnswerC"
+
+class="
+
+rounded-2xl
+
+p-5
+
+
+bg-white/[0.04]
+
+
+border
+
+border-white/10
+
+
+text-slate-200
+
+
+transition-all
+
+
+hover:bg-white/[0.08]
+
+hover:border-white/20
+
+">
+
+</span>
+
+
+
+
+
+
+<span id="wrongAnswerD"
+
+class="
+
+rounded-2xl
+
+p-5
+
+
+bg-white/[0.04]
+
+
+border
+
+border-white/10
+
+
+text-slate-200
+
+
+transition-all
+
+
+hover:bg-white/[0.08]
+
+hover:border-white/20
+
+">
+
+</span>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- CORRECT ANSWER -->
+
+
+<div
+
+class="
+
+mt-8
+
+
+rounded-3xl
+
+
+p-6
+
+
+
+bg-gradient-to-r
+
+from-emerald-500/15
+
+via-green-500/10
+
+to-black/20
+
+
+
+border
+
+border-emerald-300/30
+
+
+
+shadow-[0_0_45px_rgba(34,197,94,.15)]
+
+">
+
+
+
+
+
+<div
+
+class="
+
+flex
+
+items-center
+
+gap-4
+
+
+text-emerald-300
+
+font-black
+
+text-lg
+
+">
+
+
+
+<div
+
+class="
+
+w-12
+
+h-12
+
+
+rounded-full
+
+
+bg-emerald-400/20
+
+
+flex
+
+items-center
+
+justify-center
+
+
+text-2xl
+
+
+shadow-[0_0_25px_rgba(34,197,94,.3)]
+
+">
+
+✓
+
+</div>
+
+
+
+
+
+
+<span id="correctAnswerLabel">
+
+Tačan odgovor
+
+</span>
+
+
+
+</div>
+
+
+
+
+
+
+<div id="correctAnswerDisplay"
+
+class="
+
+mt-4
+
+ml-16
+
+text-xl
+
+font-black
+
+text-white
+
+">
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- EXPLANATION TEXT -->
+
+
+<div
+
+class="
+
+mt-8
+
+rounded-[36px]
+
+p-8
+
+
+
+bg-gradient-to-br
+
+from-cyan-500/10
+
+via-blue-500/10
+
+to-black/20
+
+
+
+border
+
+border-cyan-300/20
+
+
+
+shadow-[0_0_45px_rgba(34,211,238,.12)]
+
+">
+
+
+
+
+
+<div
+
+class="
+
+flex
+
+items-center
+
+gap-4
+
+mb-5
+
+">
+
+
+
+<div
+
+class="
+
+w-12
+
+h-12
+
+
+rounded-2xl
+
+
+bg-cyan-400/20
+
+
+flex
+
+items-center
+
+justify-center
+
+
+text-xl
+
+">
+
+🧠
+
+</div>
+
+
+
+
+<p
+
+class="
+
+text-xs
+
+uppercase
+
+tracking-[0.35em]
+
+text-cyan-300
+
+font-black
+
+">
+
+
+<span id="explanationLabel">
+
+Objašnjenje
+
+</span>
+
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<p id="explanationText"
+
+class="
+
+text-xl
+
+leading-relaxed
+
+text-slate-200
+
+">
+
+</p>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- COMMON MISTAKE -->
+
+
+<div
+
+class="
+
+mt-8
+
+rounded-[36px]
+
+p-8
+
+
+bg-gradient-to-br
+
+from-amber-500/10
+
+via-yellow-500/5
+
+to-black/20
+
+
+
+border
+
+border-amber-300/20
+
+
+
+shadow-[0_0_45px_rgba(245,158,11,.12)]
+
+">
+
+
+
+
+
+<div
+
+class="
+
+flex
+
+items-center
+
+gap-4
+
+mb-5
+
+">
+
+
+
+<div
+
+class="
+
+w-12
+
+h-12
+
+
+rounded-2xl
+
+
+bg-amber-400/20
+
+
+flex
+
+items-center
+
+justify-center
+
+
+text-xl
+
+">
+
+⚠️
+
+</div>
+
+
+
+
+
+
+<p
+
+class="
+
+text-xs
+
+uppercase
+
+tracking-[0.35em]
+
+text-amber-300
+
+font-black
+
+">
+
+
+<span id="commonMistakeLabel">
+
+Najčešća greška
+
+</span>
+
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<p id="commonMistakeText"
+
+class="
+
+text-xl
+
+leading-relaxed
+
+text-slate-200
+
+">
+
+</p>
+
+
+
+</div>
+
+
+
+</div>
+
+<!-- STATISTICS -->
+
+<div class="
+relative
+mt-14
+text-left
+">
+
+
+
+<div class="
+flex
+items-center
+gap-4
+mb-10
+">
+
+
+<div class="
+w-14
+h-14
+rounded-2xl
+bg-gradient-to-br
+from-[#F6DD8C]
+via-[#D9B95B]
+to-[#8b6b20]
+flex
+items-center
+justify-center
+text-2xl
+shadow-[0_0_40px_rgba(246,221,140,.45)]
+">
+
+📊
+
+</div>
+
+
+
+
+<div>
+
+
+<p class="
+text-xs
+uppercase
+tracking-[0.4em]
+text-[#F6DD8C]
+font-black
+">
+
+PLAYER STATISTICS
+
+</p>
+
+
+
+<h3 class="
+text-4xl
+font-black
+text-white
+mt-1
+">
+
+
+<span id="statsTitle">
+Statistika
+</span>
+
+
+</h3>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="
+grid
+md:grid-cols-2
+gap-6
+">
+
+
+
+
+
+
+
+<!-- TOTAL GAMES -->
+
+
+<div class="
+group
+rounded-[32px]
+p-7
+
+
+bg-gradient-to-br
+from-blue-400/10
+via-blue-900/20
+to-black/30
+
+
+border
+border-blue-300/20
+
+
+shadow-[0_0_45px_rgba(59,130,246,.12)]
+
+
+transition-all
+duration-300
+
+hover:-translate-y-2
+
+hover:shadow-[0_0_60px_rgba(59,130,246,.3)]
+">
+
+
+<p id="totalGamesLabel"
+
+class="
+text-xs
+uppercase
+tracking-[0.3em]
+text-blue-300
+font-black
+">
+
+Ukupno igara
+
+</p>
+
+
+
+<p id="totalGames"
+
+class="
+mt-4
+text-6xl
+font-black
+text-white
+">
+
+0
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- AVERAGE -->
+
+
+<div class="
+group
+rounded-[32px]
+p-7
+
+
+bg-gradient-to-br
+from-emerald-400/10
+via-green-900/20
+to-black/30
+
+
+border
+border-emerald-300/20
+
+
+shadow-[0_0_45px_rgba(34,197,94,.12)]
+
+
+transition-all
+duration-300
+
+
+hover:-translate-y-2
+
+
+hover:shadow-[0_0_60px_rgba(34,197,94,.3)]
+">
+
+
+
+<p id="avgScoreLabel"
+
+class="
+text-xs
+uppercase
+tracking-[0.3em]
+text-emerald-300
+font-black
+">
+
+Prosječan rezultat
+
+</p>
+
+
+
+<p id="avgScore"
+
+class="
+mt-4
+text-6xl
+font-black
+text-white
+">
+
+0
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- BEST SCORE -->
+
+<div class="
+group
+rounded-[32px]
+p-7
+
+bg-gradient-to-br
+from-[#F6DD8C]/10
+via-[#D9B95B]/10
+to-black/30
+
+border
+border-[#F6DD8C]/20
+
+shadow-[0_0_45px_rgba(246,221,140,.12)]
+
+transition-all
+duration-300
+
+hover:-translate-y-2
+
+hover:shadow-[0_0_60px_rgba(246,221,140,.3)]
+">
+
+
+<p id="bestScoreLabel"
+
+class="
+text-xs
+uppercase
+tracking-[0.3em]
+text-[#F6DD8C]
+font-black
+">
+
+Najbolji rezultat
+
+</p>
+
+
+
+<p id="bestScore"
+
+class="
+mt-4
+text-6xl
+font-black
+text-white
+">
+
+0
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- STREAK -->
+
+
+<div class="
+group
+rounded-[32px]
+p-7
+
+
+bg-gradient-to-br
+from-orange-400/10
+via-orange-900/20
+to-black/30
+
+
+border
+border-orange-300/20
+
+
+shadow-[0_0_45px_rgba(249,115,22,.12)]
+
+
+transition-all
+duration-300
+
+
+hover:-translate-y-2
+
+
+hover:shadow-[0_0_60px_rgba(249,115,22,.3)]
+">
+
+
+
+<p id="currentStreakLabel"
+
+class="
+text-xs
+uppercase
+tracking-[0.3em]
+text-orange-300
+font-black
+">
+
+Trenutni niz
+
+</p>
+
+
+
+<p id="currentStreak"
+
+class="
+mt-4
+text-6xl
+font-black
+text-white
+">
+
+0
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- ACHIEVEMENTS -->
+
+
+<div id="badgesContainer"
+
+class="
+mt-16
+">
+
+
+
+
+
+<div class="
+flex
+items-center
+gap-4
+mb-8
+">
+
+
+
+<div class="
+w-14
+h-14
+rounded-2xl
+bg-gradient-to-br
+
+from-yellow-300
+via-[#F6DD8C]
+to-[#8b6b20]
+
+
+flex
+items-center
+justify-center
+
+
+text-2xl
+
+
+shadow-[0_0_40px_rgba(246,221,140,.45)]
+
+">
+
+🏆
+
+</div>
+
+
+
+
+
+<div>
+
+
+
+<p class="
+text-xs
+uppercase
+tracking-[0.4em]
+text-yellow-300
+font-black
+">
+
+ACHIEVEMENTS
+
+</p>
+
+
+
+
+<h4 class="
+text-4xl
+font-black
+text-white
+">
+
+
+<span id="badgesLabel">
+
+Bedževi
+
+</span>
+
+
+
+</h4>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<div id="badgesList"
+
+class="
+flex
+flex-wrap
+gap-4
+justify-center
+">
+
+
+<!-- JS GENERATES BADGES -->
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ======================================
+ PREMIUM MILLIONAIRE LIFELINE MODAL
+====================================== -->
+
+<div id="lifelineModal"
+class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+
+
+<!-- BACKDROP -->
+
+<div class="
+absolute inset-0
+bg-[#020617]/80
+backdrop-blur-xl">
+</div>
+
+
+
+<!-- WINDOW -->
+
+<div class="
+
+relative
+
+w-full
+
+max-w-[460px]
+
+
+rounded-[28px]
+
+
+bg-gradient-to-br
+
+from-[#081735]/95
+
+via-[#111c46]/95
+
+to-[#050b22]/95
+
+
+
+border
+
+border-[#D9B95B]/40
+
+
+
+shadow-[0_0_80px_rgba(217,185,91,.18)]
+
+
+overflow-hidden
+
+">
+
+
+
+<!-- GOLD TOP LIGHT -->
+
+<div class="
+
+h-[3px]
+
+bg-gradient-to-r
+
+from-transparent
+
+via-[#F6DD8C]
+
+to-transparent">
+
+</div>
+
+
+
+
+
+<div class="p-6">
+
+
+
+
+
+<!-- HEADER -->
+
+<div class="text-center">
+
+
+<div id="lifelineType"
+
+class="
+
+uppercase
+
+tracking-[0.45em]
+
+text-xs
+
+text-[#D9B95B]">
+
+POMOĆ
+
+</div>
+
+
+
+
+<h2 id="lifelineTitle"
+
+class="
+
+mt-3
+
+text-3xl
+
+font-black
+
+text-white">
+
+Pozovi prijatelja
+
+</h2>
+
+
+
+<div class="
+
+mx-auto
+
+mt-4
+
+w-20
+
+h-[2px]
+
+bg-gradient-to-r
+
+from-[#D9B95B]
+
+to-[#F6DD8C]">
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- TIMER -->
+
+<div class="flex justify-center mt-6">
+
+
+<div id="timerCircle"
+
+class="timer-circle hidden
+
+w-24
+
+h-24
+
+rounded-full
+
+
+flex
+
+items-center
+
+justify-center
+
+
+bg-[#050b22]
+
+border-2
+
+border-[#F6DD8C]
+
+
+shadow-[0_0_35px_rgba(246,221,140,.35)]">
+
+
+<span id="timerValue"
+
+class="
+
+text-4xl
+
+font-black
+
+text-[#F6DD8C]">
+
+30
+
+</span>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- FRIEND MESSAGE -->
+
+<div id="lifelineMessage"
+
+class="
+
+mt-6
+
+
+rounded-2xl
+
+
+bg-white/[0.06]
+
+
+border
+
+border-white/10
+
+
+
+px-6
+
+py-5
+
+
+
+text-center
+
+
+
+text-xl
+
+
+font-semibold
+
+
+
+leading-relaxed
+
+
+
+text-white
+
+
+
+shadow-inner">
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- AUDIENCE -->
+
+<div id="audienceGraph"
+
+class="hidden mt-7">
+
+
+<div class="
+
+
+rounded-2xl
+
+
+bg-black/20
+
+
+border
+
+border-[#D9B95B]/30
+
+
+p-6
+
+
+">
+
+
+
+<div class="
+
+text-center
+
+text-lg
+
+font-black
+
+text-[#F6DD8C]
+
+mb-6">
+
+Pitaj publiku
+
+</div>
+
+
+
+
+
+<div class="
+
+flex
+
+justify-center
+
+items-end
+
+gap-6
+
+h-56">
+
+
+
+
+
+<!-- BAR A -->
+
+<div class="flex flex-col items-center">
+
+
+<span id="percentA"
+
+class="text-sm font-bold text-[#F6DD8C] mb-2">
+
+0%
+
+</span>
+
+
+
+<div class="
+
+w-14
+
+h-44
+
+rounded-t-xl
+
+bg-[#020617]
+
+
+border
+
+border-[#D9B95B]/30
+
+
+overflow-hidden
+
+flex
+
+items-end">
+
+
+<div id="barA"
+
+class="
+
+w-full
+
+bg-gradient-to-t
+
+from-blue-900
+
+via-blue-500
+
+to-[#F6DD8C]
+
+
+shadow-[0_0_20px_rgba(246,221,140,.5)]
+
+
+transition-all
+
+duration-1000"
+
+style="height:0%">
+
+</div>
+
+
+</div>
+
+
+
+<span class="
+
+mt-3
+
+text-xl
+
+font-black
+
+text-white">
+
+A
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- BAR B -->
+
+
+<div class="flex flex-col items-center">
+
+
+<span id="percentB"
+
+class="text-sm font-bold text-[#F6DD8C] mb-2">
+
+0%
+
+</span>
+
+
+
+<div class="
+
+w-14
+
+h-44
+
+rounded-t-xl
+
+bg-[#020617]
+
+
+border
+
+border-[#D9B95B]/30
+
+
+overflow-hidden
+
+flex
+
+items-end">
+
+
+<div id="barB"
+
+class="
+
+w-full
+
+bg-gradient-to-t
+
+from-blue-900
+
+via-blue-500
+
+to-[#F6DD8C]
+
+
+shadow-[0_0_20px_rgba(246,221,140,.5)]
+
+
+transition-all
+
+duration-1000"
+
+style="height:0%">
+
+</div>
+
+
+</div>
+
+
+
+<span class="
+
+mt-3
+
+text-xl
+
+font-black
+
+text-white">
+
+B
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- BAR C -->
+
+
+<div class="flex flex-col items-center">
+
+
+<span id="percentC"
+
+class="text-sm font-bold text-[#F6DD8C] mb-2">
+
+0%
+
+</span>
+
+
+
+<div class="
+
+w-14
+
+h-44
+
+rounded-t-xl
+
+bg-[#020617]
+
+
+border
+
+border-[#D9B95B]/30
+
+
+overflow-hidden
+
+flex
+
+items-end">
+
+
+<div id="barC"
+
+class="
+
+w-full
+
+bg-gradient-to-t
+
+from-blue-900
+
+via-blue-500
+
+to-[#F6DD8C]
+
+
+shadow-[0_0_20px_rgba(246,221,140,.5)]
+
+
+transition-all
+
+duration-1000"
+
+style="height:0%">
+
+</div>
+
+
+</div>
+
+
+
+<span class="
+
+mt-3
+
+text-xl
+
+font-black
+
+text-white">
+
+C
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- BAR D -->
+
+
+<div class="flex flex-col items-center">
+
+
+<span id="percentD"
+
+class="text-sm font-bold text-[#F6DD8C] mb-2">
+
+0%
+
+</span>
+
+
+
+<div class="
+
+w-14
+
+h-44
+
+rounded-t-xl
+
+bg-[#020617]
+
+
+border
+
+border-[#D9B95B]/30
+
+
+overflow-hidden
+
+flex
+
+items-end">
+
+
+<div id="barD"
+
+class="
+
+w-full
+
+bg-gradient-to-t
+
+from-blue-900
+
+via-blue-500
+
+to-[#F6DD8C]
+
+
+shadow-[0_0_20px_rgba(246,221,140,.5)]
+
+
+transition-all
+
+duration-1000"
+
+style="height:0%">
+
+</div>
+
+
+</div>
+
+
+
+<span class="
+
+mt-3
+
+text-xl
+
+font-black
+
+text-white">
+
+D
+
+</span>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- CLOSE -->
+
+<button id="closeLifeline"
+
+class="
+
+mt-7
+
+w-full
+
+
+py-3.5
+
+
+rounded-xl
+
+
+
+font-black
+
+
+text-lg
+
+
+
+bg-gradient-to-r
+
+from-[#D9B95B]
+
+to-[#F6DD8C]
+
+
+text-[#111827]
+
+
+
+shadow-[0_10px_35px_rgba(217,185,91,.25)]
+
+
+hover:scale-105
+
+
+transition">
+
+
+<span class="close-text">
+
+Zatvori
+
+</span>
+
+
+</button>
+
+
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+<!-- =========================
+     PREMIUM ADMIN LOGIN
+========================= -->
+
+<div id="adminLoginModal"
+
+class="
+hidden
+fixed
+inset-0
+z-[9999]
+flex
+items-center
+justify-center
+p-6
+"
+
+style="
+background:
+radial-gradient(
+circle at center,
+rgba(217,185,91,.15),
+rgba(0,0,0,.92)
+);
+
+backdrop-filter:blur(16px);
+-webkit-backdrop-filter:blur(16px);
+">
+
+
+<div 
+class="
+relative
+w-full
+max-w-md
+rounded-3xl
+p-8
+overflow-hidden
+"
+
+style="
+
+background:
+linear-gradient(
+145deg,
+rgba(15,23,42,.96),
+rgba(30,41,59,.96)
+);
+
+
+border:
+1px solid rgba(217,185,91,.45);
+
+
+box-shadow:
+
+0 35px 90px rgba(0,0,0,.85),
+
+0 0 80px rgba(217,185,91,.20);
+
+">
+
+
+
+<!-- GOLD LIGHT EFFECT -->
+
+<div
+
+style="
+position:absolute;
+top:0;
+left:0;
+
+width:100%;
+height:3px;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+#D9B95B,
+#F6DD8C,
+#D9B95B,
+transparent
+);
+
+">
+</div>
+
+
+
+
+<!-- TITLE -->
+
+<h2
+
+class="
+text-3xl
+font-extrabold
+text-center
+mb-8
+"
+
+style="
+
+background:
+linear-gradient(
+90deg,
+#D9B95B,
+#F6DD8C
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+">
+
+🔐 Admin Access
+
+</h2>
+
+
+
+
+
+<!-- USERNAME -->
+
+<label
+for="adminUsername"
+
+class="
+block
+text-gray-200
+font-semibold
+mb-2
+">
+
+Username
+
+</label>
+
+
+
+<input
+
+id="adminUsername"
+
+type="text"
+
+
+class="
+w-full
+
+px-5
+py-3
+
+rounded-xl
+
+mb-5
+
+
+bg-white/10
+
+
+border
+border-yellow-200/20
+
+
+text-white
+
+
+outline-none
+
+
+focus:border-yellow-400
+
+
+focus:ring-1
+
+
+focus:ring-yellow-400
+
+
+transition
+
+"
+
+>
+
+
+
+
+<!-- PASSWORD -->
+
+
+<label
+for="adminPassword"
+
+class="
+block
+text-gray-200
+font-semibold
+mb-2
+">
+
+Password
+
+</label>
+
+
+
+<input
+
+id="adminPassword"
+
+type="password"
+
+
+class="
+w-full
+
+px-5
+py-3
+
+rounded-xl
+
+mb-5
+
+
+bg-white/10
+
+
+border
+border-yellow-200/20
+
+
+text-white
+
+
+outline-none
+
+
+focus:border-yellow-400
+
+
+focus:ring-1
+
+
+focus:ring-yellow-400
+
+
+transition
+
+"
+
+>
+
+
+
+
+
+
+<!-- ERROR -->
+
+<div
+
+id="loginError"
+
+
+class="
+hidden
+
+bg-red-500/20
+
+border
+border-red-400/40
+
+
+text-red-300
+
+
+rounded-xl
+
+
+px-4
+py-3
+
+
+mb-5
+
+
+text-center
+
+font-semibold
+
+">
+
+❌ Wrong username or password!
+
+</div>
+
+
+
+
+
+
+
+<!-- BUTTONS -->
+
+
+<div
+
+class="
+flex
+gap-4
+">
+
+
+
+
+
+<!-- LOGIN -->
+
+
+<button
+
+onclick="adminLogin()"
+
+
+class="
+flex-1
+
+py-3
+
+rounded-xl
+
+font-bold
+
+text-[#111827]
+
+shadow-lg
+
+hover:scale-105
+
+transition
+
+"
+
+style="
+
+background:
+
+linear-gradient(
+135deg,
+#D9B95B,
+#F6DD8C
+);
+
+"
+
+>
+
+🔐 Login
+
+</button>
+
+
+
+
+
+
+
+<!-- CANCEL -->
+
+
+<button
+
+onclick="closeAdminLogin()"
+
+
+class="
+flex-1
+
+py-3
+
+rounded-xl
+
+font-bold
+
+
+text-white
+
+
+bg-white/10
+
+
+border
+
+border-white/20
+
+
+hover:bg-white/20
+
+
+transition
+
+"
+
+>
+
+✕ Cancel
+
+</button>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- =========================
+        ADMIN PANEL
+========================= -->
+
+
+<div id="adminPanel"
+class="
+hidden
+w-full
+min-h-screen
+p-6
+"
+
+style="
+background:
+radial-gradient(
+circle at top,
+#172554,
+#050814 70%
+);
+">
+
+
+<div class="
+max-w-7xl
+mx-auto
+">
+
+
+
+<!-- HEADER -->
+
+<div
+class="
+rounded-3xl
+p-6
+mb-6
+"
+
+style="
+background:
+rgba(11,18,38,.78);
+
+backdrop-filter:
+blur(22px);
+
+-webkit-backdrop-filter:
+blur(22px);
+
+border:
+1px solid rgba(255,216,106,.25);
+
+box-shadow:
+0 25px 70px rgba(0,0,0,.55);
+">
+
+
+<div class="
+flex
+justify-between
+items-center
+flex-wrap
+gap-5
+">
+
+
+<h2 class="
+text-3xl
+font-extrabold
+text-center
+mb-8
+"
+style="
+background:linear-gradient(90deg,#FFD86A,#FFF2B0);
+-webkit-background-clip:text;
+color:transparent;
+">
+🔐 Admin Access
+</h2>
+
+
+
+
+<div class="
+flex
+gap-4
+flex-wrap
+justify-center
+">
+
+
+<button
+onclick="showAddQuestion()"
+
+class="
+px-8
+py-4
+
+rounded-xl
+
+font-bold
+
+text-black
+
+bg-gradient-to-r
+from-emerald-400
+to-emerald-600
+
+shadow-lg
+
+hover:scale-105
+
+transition
+">
+
+➕ Dodaj pitanje
+
+</button>
+
+
+
+<button
+onclick="exportQuestionBank()"
+
+class="
+px-8
+py-4
+
+rounded-xl
+
+font-bold
+
+text-white
+
+bg-gradient-to-r
+from-blue-500
+to-blue-700
+
+shadow-lg
+
+hover:scale-105
+
+transition
+">
+
+💾 Ažuriraj bazu
+
+</button>
+
+
+
+
+<button
+onclick="logoutAdmin()"
+
+class="
+px-6
+py-4
+
+rounded-xl
+
+font-bold
+
+text-red-300
+
+bg-red-500/20
+
+border
+border-red-400/40
+
+hover:bg-red-500/30
+
+transition
+">
+
+🚪 Odjavi se
+
+</button>
+
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+<!-- =========================
+       QUIZ SELECTION
+========================= -->
+
+<div class="rounded-3xl p-6 mb-6"
+style="
+background:rgba(11,18,38,.75);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.08);
+box-shadow:0 20px 60px rgba(0,0,0,.45);
+">
+
+<h2 class="text-2xl font-extrabold text-yellow-300 mb-5">
+🎮 Odaberite kviz
+</h2>
+
+
+<div class="flex flex-wrap gap-4">
+
+
+<button id="adminLangBs"
+onclick="setAdminLanguage('bs')"
+class="quiz-btn active">
+🇧🇦 Matematički milijunaš
+</button>
+
+
+<button id="adminLangEn"
+onclick="setAdminLanguage('en')"
+class="quiz-btn">
+🇬🇧 Maths Millionaire
+</button>
+
+
+<button id="adminLangGe"
+onclick="setAdminLanguage('ge')"
+class="quiz-btn">
+🌍 Ko želi biti milijunaš?
+</button>
+
+
+<button
+onclick="setAdminLanguage('gk')"
+class="quiz-btn">
+🌍 Who Wants To Be A Millionaire?
+</button>
+
+
+</div>
+</div>
+
+
+
+<!-- =========================
+       CATEGORY
+========================= -->
+
+<div class="rounded-3xl p-6 mb-6"
+style="
+background:rgba(11,18,38,.75);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,255,255,.08);
+">
+
+
+<h2 class="text-2xl font-extrabold text-yellow-300 mb-5">
+📂 Kategorije pitanja
+</h2>
+
+
+<div class="flex flex-wrap gap-3">
+
+
+<button class="category-tab active"
+onclick="showCategory('history',event)">
 📜 Kategorija 1
 </button>
 
-<button class="category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400"
-onclick="showCategory('geography'); setActiveCategory('geography')">
+
+<button class="category-tab"
+onclick="showCategory('geography',event)">
 🌍 Kategorija 2
 </button>
 
-<button class="category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400"
-onclick="showCategory('funFacts'); setActiveCategory('funFacts')">
+<button class="category-tab"
+onclick="showCategory('funFacts',event)">
 🎉 Kategorija 3
 </button>
 
-<button class="category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400"
-onclick="showCategory('interestingFacts'); setActiveCategory('interestingFacts')">
+
+<button class="category-tab"
+onclick="showCategory('interestingFacts',event)">
 💡 Kategorija 4
 </button>
 
-<button class="category-tab bg-purple-600 hover:bg-purple-500 px-4 py-2 rounded-lg font-bold border-2 border-purple-400"
-onclick="showCategory('numbers'); setActiveCategory('numbers')">
+
+<button class="category-tab"
+onclick="showCategory('numbers',event)">
 🔢 Kategorija 5
 </button>
-     </div>
 
-    </div>
 
-    </div><!-- Questions List -->
-	
-    <div id="questionsList" class="bg-black bg-opacity-50 rounded-lg p-6 border-2 border-yellow-500"><!-- Questions will be loaded here -->
-    </div>
-   </div>
-  </div><!-- Edit/Add Question Modal -->
-  <div id="editQuestionModal" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-6 z-50 overflow-y-auto">
-   <div class="bg-gradient-to-br from-purple-900 to-blue-900 rounded-lg p-8 max-w-3xl w-full border-4 border-purple-500 my-8">
-    <h2 id="editModalTitle" class="text-3xl font-bold text-yellow-400 mb-6 text-center"> Dodaj novo pitanje </h2>
-	<div class="mb-4">
-  <label class="block text-white mb-2 font-bold">Kviz:</label>
-
-  <select id="editLanguage"
-    class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none">
-
-    <option value="en">Maths Millionaire</option>
-    <option value="bs">Matematički milijunaš</option>
-    <option value="ge">Ko želi biti milijunaš?</option>
-    <option value="gk">Who Wants to Be a Millionaire?</option>
-
-  </select>
 </div>
-    <div class="grid grid-cols-2 gap-4 mb-4">
-     <div><label class="block text-white mb-2 font-bold">Kategorija:</label> <select id="editCategory" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none"> <option value="history">Kategorija 1</option> <option value="geography">Kategorija 2</option> <option value="funFacts">Kategorija 3</option> <option value="interestingFacts">Kategorija 4</option> <option value="numbers">Kategorija 5</option> </select>
-     </div>
-     <div><label class="block text-white mb-2 font-bold">Težina:</label> <select id="editDifficulty" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none"> <option value="easy">Lako</option> <option value="hard">Srednje</option> <option value="hardest">Teško</option> </select>
-     </div>
-    </div>
-    <div class="mb-4"><label class="block text-white mb-2 font-bold">Pitanje:</label> <textarea id="editQuestion" rows="3" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none" placeholder="Unesite pitanje..."></textarea>
-    </div>
-    <div class="grid grid-cols-2 gap-4 mb-4">
-     <div><label class="block text-white mb-2 font-bold">Odgovor A:</label> <input type="text" id="editAnswerA" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none" placeholder="Odgovor A">
-     </div>
-     <div><label class="block text-white mb-2 font-bold">Odgovor B:</label> <input type="text" id="editAnswerB" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none" placeholder="Odgovor B">
-     </div>
-     <div><label class="block text-white mb-2 font-bold">Odgovor C:</label> <input type="text" id="editAnswerC" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none" placeholder="Odgovor C">
-     </div>
-     <div><label class="block text-white mb-2 font-bold">Odgovor D:</label> <input type="text" id="editAnswerD" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:outline-none" placeholder="Odgovor D">
-     </div>
-    </div>
-    <div class="mb-6"><label class="block text-white mb-2 font-bold">Tačan Odgovor:</label> <select id="editCorrect" class="w-full px-4 py-2 rounded bg-gray-800 text-white border-2 border-gray-600 focus:border-blue-400 focus:outline-none"> <option value="A">A</option> <option value="B">B</option> <option value="C">C</option> <option value="D">D</option> </select>
-    </div>
-    <div class="flex gap-4"><button onclick="saveQuestion()" class="flex-1 bg-green-600 hover:bg-green-500 px-6 py-3 rounded-lg font-bold border-2 border-green-400"> 💾 Spremi </button> <button onclick="closeEditModal()" class="flex-1 bg-gray-600 hover:bg-gray-500 px-6 py-3 rounded-lg font-bold border-2 border-gray-400"> Poništi </button>
-    </div>
-   </div>
-  </div>
- 
-<script>
-(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b23a12737ad5a7e',t:'MTc2NjQ0ODU1OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();
-</script>
+
+</div>
+
+
+
+
+<!-- =========================
+       QUESTIONS LIST
+========================= -->
+
+
+<div id="questionsList"
+class="rounded-3xl p-6"
+style="
+background:rgba(11,18,38,.78);
+backdrop-filter:blur(20px);
+border:1px solid rgba(255,216,106,.22);
+box-shadow:0 25px 70px rgba(0,0,0,.55);
+">
+
+</div>
+
+
+
+
+
+
+<!-- =========================
+ PREMIUM ADD / EDIT MODAL
+========================= -->
+
+
+<div id="editQuestionModal"
+
+class="
+hidden
+fixed
+inset-0
+z-[9999]
+flex
+items-center
+justify-center
+p-4
+overflow-y-auto
+"
+
+style="
+background:rgba(0,0,0,.75);
+backdrop-filter:blur(12px);
+">
+
+
+<div
+
+class="
+relative
+w-full
+max-w-2xl
+rounded-3xl
+p-6
+my-6
+max-h-[90vh]
+overflow-y-auto
+"
+
+style="
+background:
+linear-gradient(
+145deg,
+rgba(15,23,42,.98),
+rgba(30,41,59,.98)
+);
+
+border:1px solid rgba(217,185,91,.45);
+
+box-shadow:
+0 30px 80px rgba(0,0,0,.8),
+0 0 50px rgba(217,185,91,.2);
+">
+
+
+<div style="
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:3px;
+background:linear-gradient(
+90deg,
+transparent,
+#D9B95B,
+#F6DD8C,
+transparent
+);
+"></div>
+
+
+
+<h2 id="editModalTitle"
+
+class="
+text-2xl
+font-extrabold
+text-center
+mb-5
+"
+
+style="
+background:linear-gradient(
+90deg,
+#D9B95B,
+#F6DD8C
+);
+
+-webkit-background-clip:text;
+color:transparent;
+">
+
+➕ Dodaj novo pitanje
+
+</h2>
+
+
+
+
+
+<div class="label-admin">
+🎮 Kviz
+</div>
+
+<select id="editLanguage"
+class="admin-select">
+
+<option value="bs">
+🇧🇦 Matematički milijunaš
+</option>
+
+<option value="en">
+🇬🇧 Maths Millionaire
+</option>
+
+<option value="ge">
+🌍 Ko želi biti milijunaš?
+</option>
+
+<option value="gk">
+🌍 Who Wants To Be A Millionaire?
+</option>
+
+</select>
+
+
+
+
+<div class="grid md:grid-cols-2 gap-4 mt-4">
+
+
+<div>
+
+<label for="editCategory" class="label-admin">
+📂 Kategorija
+</label>
+
+<select id="editCategory"
+class="admin-select">
+
+<option value="history">📜 Kategorija 1</option>
+<option value="geography">🌍 Kategorija 2</option>
+<option value="funFacts">🎉 Kategorija 3</option>
+<option value="interestingFacts">💡 Kategorija 4</option>
+<option value="numbers">🔢 Kategorija 5</option>
+
+</select>
+
+</div>
+
+
+
+<div>
+
+<label for="editDifficulty" class="label-admin">
+🔥 Težina
+</label>
+
+
+<select id="editDifficulty"
+class="admin-select">
+
+<option value="easy">🟢 Lako</option>
+<option value="hard">🟡 Srednje</option>
+<option value="hardest">🔴 Teško</option>
+
+</select>
+
+
+</div>
+
+</div>
+
+
+
+
+<label for="editQuestion" class="label-admin mt-4">
+❓ Pitanje
+</label>
+
+
+<textarea
+id="editQuestion"
+rows="3"
+class="admin-input"
+placeholder="Unesite pitanje..."></textarea>
+
+
+
+
+<div class="grid md:grid-cols-2 gap-4 mt-4">
+
+
+<input id="editAnswerA"
+class="admin-input"
+placeholder="Odgovor A">
+
+
+<input id="editAnswerB"
+class="admin-input"
+placeholder="Odgovor B">
+
+
+<input id="editAnswerC"
+class="admin-input"
+placeholder="Odgovor C">
+
+
+<input id="editAnswerD"
+class="admin-input"
+placeholder="Odgovor D">
+
+
+</div>
+
+
+
+
+<label for="editCorrect" class="label-admin mt-4">
+✅ Tačan odgovor
+</label>
+
+
+<select id="editCorrect"
+class="admin-select">
+
+<option>A</option>
+<option>B</option>
+<option>C</option>
+<option>D</option>
+
+</select>
+
+
+
+
+
+<div class="flex gap-3 mt-6">
+
+
+<button
+onclick="saveQuestion()"
+
+class="
+flex-1
+py-3
+rounded-xl
+font-bold
+text-black
+hover:scale-105
+transition
+"
+
+style="
+background:linear-gradient(
+135deg,
+#D9B95B,
+#F6DD8C
+);
+">
+
+💾 Spremi
+
+</button>
+
+
+
+
+<button
+onclick="closeEditModal()"
+
+class="
+flex-1
+py-3
+rounded-xl
+font-bold
+text-white
+bg-white/10
+border border-white/20
+">
+
+✕ Poništi
+
+</button>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<style>
+
+.quiz-btn{
+
+padding:12px 28px;
+border-radius:14px;
+font-weight:700;
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.12);
+color:white;
+transition:.3s;
+
+}
+
+
+.quiz-btn:hover,
+.quiz-btn.active{
+
+background:linear-gradient(
+135deg,
+#2563eb,
+#1d4ed8
+);
+
+transform:scale(1.05);
+
+}
+
+
+
+.category-tab{
+
+padding:12px 20px;
+border-radius:12px;
+font-weight:700;
+background:rgba(255,255,255,.08);
+color:white;
+border:1px solid rgba(255,255,255,.1);
+
+}
+
+
+
+.category-tab.active{
+
+background:rgba(34,197,94,.25);
+color:#86efac;
+border-color:#4ade80;
+
+}
+
+
+
+.label-admin{
+
+display:block;
+color:#d1d5db;
+font-weight:700;
+margin-bottom:8px;
+margin-top:12px;
+
+}
+
+
+
+.admin-input,
+.admin-select{
+
+width:100%;
+padding:12px 16px;
+border-radius:12px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.15);
+
+color:white;
+
+outline:none;
+
+}
+
+
+
+.admin-select{
+
+background:#111827;
+
+}
+
+
+</style>
+   
 
    <script src="questions.js"></script>
   <script defer src="app.js"></script>  
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
-  <script src="/_sdk/element_sdk.js" type="text/javascript"></script>
   <!-- Floating Chat Button -->
 <a href="home.html" class="chat-fab" target="_blank" aria-label="Chat pomoć">
   <svg viewBox="0 0 24 24">

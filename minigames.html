@@ -4,10 +4,13 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <link rel="icon" type="image/png" href="minigames1.png">
 
 <title>Mini Games</title>
+
 <link rel="stylesheet" href="style1.css">
 
 </head>
@@ -16,40 +19,115 @@
 <body>
 
 
-<div class="bg"></div>
+<div class="million-bg"></div>
 
 
+
+<!-- ================= NAVIGATION ================= -->
 
 <nav class="home-nav">
 
-<button onclick="goHome()">
+<button onclick="goHome()" id="home-btn">
+
 ← Početna
+
 </button>
 
 </nav>
 
 
 
-<header>
 
-    <h1>
-        Mini Games
-    </h1>
+<!-- ================= HEADER ================= -->
+
+<header class="mini-header">
+
+
+<div class="language-switch">
+
+
+<button id="bs-btn" onclick="changeLanguage('bs')" title="Bosanski">
+
+<img src="bs.png">
+
+</button>
+
+
+
+<button id="en-btn" onclick="changeLanguage('en')" title="English">
+
+<img src="eng.png">
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<h1 id="page-title">
+
+Mini Games
+
+</h1>
+
+
+
+<p id="page-subtitle" class="subtitle">
+
+Matematičke igre, logički izazovi i zabavne mozgalice
+
+</p>
+
+
+
+<div class="gold-line"></div>
+
 
 </header>
 
 
-<main id="games"></main>
+
+
+
+
+
+<!-- ================= GAMES ================= -->
+
+
+<main id="games" class="games-container"></main>
+
+
+
+
+
+
+
+<!-- ================= MUSIC ================= -->
 
 
 <button id="music-btn" class="music-toggle">
+
 🔊
+
 </button>
 
 
+
 <audio id="bg-music" loop>
-    <source src="minigames.mp3" type="audio/mpeg">
+
+<source src="minigames.mp3" type="audio/mpeg">
+
 </audio>
+
+
+
+
+
 
 
 <script src="script.js"></script>
