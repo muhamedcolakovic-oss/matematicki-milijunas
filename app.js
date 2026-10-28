@@ -595,7 +595,145 @@ function exportQuestionBank() {
   URL.revokeObjectURL(url);
 }
 
+// =========================
+// ADAPTIVNO UČENJE: operativni pragovi 50% i 80%
+// =========================
+
+const ADAPTIVE_CONFIG = {
+  LOW_ACCURACY: 0.50,
+  HIGH_ACCURACY: 0.80,
+  FAST_ANSWER_MS: 10000,
+  SLOW_ANSWER_MS: 20000,
+  STORAGE_KEY: 'millionaireAdaptiveHistory'
+};
+
+let adaptiveQuestionPools = { easy: [], hard: [], hardest: [] };
+let adaptiveUsedThisGame = new Set();
+let questionStartedAt = 0;
 let selectedQuestions = [];
+
+function getAdaptiveHistory() {
+  try {
+    const saved = JSON.parse(
+      localStorage.getItem(ADAPTIVE_CONFIG.STORAGE_KEY) || '[]'
+    );
+
+    return Array.isArray(saved) ? saved : [];
+  } catch (error) {
+    console.warn(
+      'Historija adaptivnog učenja nije mogla biti učitana:',
+      error
+    );
+    return [];
+  }
+}
+
+function recordAdaptiveAnswer(question, isCorrect, responseTimeMs) {
+  const history = getAdaptiveHistory();
+
+  history.push({
+    correct: Boolean(isCorrect),
+    responseTimeMs: Math.max(
+      0,
+      Number(responseTimeMs) || 0
+    ),
+    difficulty: question && question._difficulty
+      ? question._difficulty
+      : 'easy',
+    questionId: question ? makeQuestionId(question) : null,
+    timestamp: Date.now()
+  });
+
+  try {
+    localStorage.setItem(
+      ADAPTIVE_CONFIG.STORAGE_KEY,
+      JSON.stringify(history)
+    );
+  } catch (error) {
+    console.warn(
+      'Historija adaptivnog učenja nije mogla biti sačuvana:',
+      error
+    );
+  }
+}
+function getAdaptiveRecommendation() {
+  const history = getAdaptiveHistory();
+
+  if (history.length === 0) {
+    return {
+      difficulty: 'easy',
+      accuracy: null,
+      averageTimeMs: null,
+      totalAnswers: 0,
+      reason: 'Nema prethodnih odgovora; početni nivo je easy.'
+    };
+  }
+
+  const correctAnswers = history.filter(
+    item => item.correct
+  ).length;
+
+  const accuracy = correctAnswers / history.length;
+
+  const averageTimeMs = history.reduce(
+    (sum, item) =>
+      sum + (Number(item.responseTimeMs) || 0),
+    0
+  ) / history.length;
+
+  if (
+    accuracy < ADAPTIVE_CONFIG.LOW_ACCURACY ||
+    averageTimeMs > ADAPTIVE_CONFIG.SLOW_ANSWER_MS
+  ) {
+    return {
+      difficulty: 'easy',
+      accuracy,
+      averageTimeMs,
+      totalAnswers: history.length,
+      reason: 'Potrebno je dodatno uvježbavanje.'
+    };
+  }
+
+  if (
+    accuracy >= ADAPTIVE_CONFIG.HIGH_ACCURACY &&
+    averageTimeMs <= ADAPTIVE_CONFIG.FAST_ANSWER_MS
+  ) {
+    return {
+      difficulty: 'hardest',
+      accuracy,
+      averageTimeMs,
+      totalAnswers: history.length,
+      reason: 'Visoka uspješnost i brzo rješavanje.'
+    };
+  }
+
+  return {
+    difficulty: 'hard',
+    accuracy,
+    averageTimeMs,
+    totalAnswers: history.length,
+    reason: 'Zadržavanje srednjeg nivoa težine.'
+  };
+}
+
+function getAdaptiveLearningStatus() {
+  const recommendation = getAdaptiveRecommendation();
+
+  return {
+    totalAnswers: recommendation.totalAnswers,
+    accuracyPercent: recommendation.accuracy === null
+      ? null
+      : Math.round(recommendation.accuracy * 100),
+    averageResponseTimeSeconds:
+      recommendation.averageTimeMs === null
+        ? null
+        : Math.round(
+            recommendation.averageTimeMs / 1000 * 10
+          ) / 10,
+    recommendedDifficulty: recommendation.difficulty,
+    explanation: recommendation.reason
+  };
+}
 
 const prizes = [
   "100", "200", "300", "500", "1,000",
@@ -623,49 +761,84 @@ function shuffleArray(array) {
 
 function selectRandomQuestions() {
   const lang = currentLanguage;
-  const bank = questionBank[lang];
+  const bank = questionBank[lang] || {};
 
-  let seen = new Set(getSeenQuestions());
-
-  const easy = [];
-  const hard = [];
-  const hardest = [];
+  adaptiveQuestionPools = { easy: [], hard: [], hardest: [] };
+  adaptiveUsedThisGame = new Set();
 
   Object.keys(bank).forEach(category => {
-    ["easy", "hard", "hardest"].forEach(diff => {
-      if (bank[category][diff]) {
-        bank[category][diff].forEach(q => {
-          q._category = category;
-          q._difficulty = diff;
-        });
-
-        if (diff === "easy") easy.push(...bank[category][diff]);
-        if (diff === "hard") hard.push(...bank[category][diff]);
-        if (diff === "hardest") hardest.push(...bank[category][diff]);
-      }
+    const categoryData = bank[category] || {};
+    ['easy', 'hard', 'hardest'].forEach(diff => {
+      const questions = Array.isArray(categoryData[diff]) ? categoryData[diff] : [];
+      questions.forEach(q => {
+        q._category = category;
+        q._difficulty = diff;
+      });
+      adaptiveQuestionPools[diff].push(...questions);
     });
   });
 
-  const filterSeen = (arr) => {
-    let filtered = arr.filter(q => !seen.has(makeQuestionId(q)));
-
-    // 🔥 FIX: ako je sve potrošeno → reset
-    if (filtered.length === 0) {
-      localStorage.removeItem("seenQuestions");
-      seen = new Set();
-      filtered = arr;
-    }
-
-    return filtered;
-  };
-
-  selectedQuestions = [
-    ...shuffleArray(filterSeen(easy)).slice(0, 5),
-    ...shuffleArray(filterSeen(hard)).slice(0, 5),
-    ...shuffleArray(filterSeen(hardest)).slice(0, 5)
-  ];
+  // Zadržavamo postojeći kviz od 15 pitanja, ali se svako pitanje bira
+  // neposredno prije prikaza prema posljednjim rezultatima učenika.
+  selectedQuestions = new Array(15);
 }
 
+function pickAdaptiveQuestion() {
+  const recommendation = getAdaptiveRecommendation();
+  const preferred = recommendation.difficulty;
+  const fallbackOrder = preferred === 'easy'
+    ? ['easy', 'hard', 'hardest']
+    : preferred === 'hard'
+      ? ['hard', 'easy', 'hardest']
+      : ['hardest', 'hard', 'easy'];
+
+  const seen = new Set(getSeenQuestions());
+  let candidates = [];
+
+  for (const difficulty of fallbackOrder) {
+    candidates = (adaptiveQuestionPools[difficulty] || []).filter(q => {
+      const id = makeQuestionId(q);
+      return !adaptiveUsedThisGame.has(id) && !seen.has(id);
+    });
+    if (candidates.length) break;
+  }
+
+  // Ako su sva pitanja već viđena u ranijim igrama, očistimo samo listu viđenih.
+  if (!candidates.length) {
+    localStorage.removeItem('seenQuestions');
+    for (const difficulty of fallbackOrder) {
+      candidates = (adaptiveQuestionPools[difficulty] || []).filter(q =>
+        !adaptiveUsedThisGame.has(makeQuestionId(q))
+      );
+      if (candidates.length) break;
+    }
+  }
+
+  // Krajnja rezerva za malu banku pitanja.
+  if (!candidates.length) {
+    candidates = fallbackOrder.flatMap(difficulty => adaptiveQuestionPools[difficulty] || []);
+  }
+
+  if (!candidates.length) {
+    console.error('Adaptivni sistem: nema pitanja u banci za jezik', currentLanguage);
+    return null;
+  }
+
+  const question = candidates[Math.floor(Math.random() * candidates.length)];
+  adaptiveUsedThisGame.add(makeQuestionId(question));
+
+  console.info('[Adaptivno učenje]', {
+    pragovi: 'ispod 50% → easy; 50–79% → hard/medium; najmanje 80% uz brz odgovor → hardest',
+    nivoOdabran: question._difficulty,
+    uspješnostPosljednjihOdgovora: recommendation.accuracy === null
+      ? 'nema podataka' : Math.round(recommendation.accuracy * 100) + '%',
+    prosječnoVrijemeSekunde: recommendation.averageTimeMs === null
+      ? 'nema podataka' : Math.round(recommendation.averageTimeMs / 1000 * 10) / 10,
+    razlog: recommendation.reason
+  });
+
+  return question;
+}
 function initGame() {
   currentQuestion = 0;
   lifelines = {
@@ -734,13 +907,19 @@ function renderPrizeLadder() {
 
 
 function loadQuestion() {
-  if (currentQuestion >= selectedQuestions.length) {
+  if (currentQuestion >= 15) {
     endGame(true);
     return;
   }
 
-  const q = selectedQuestions[currentQuestion];
-saveSeenQuestion(makeQuestionId(q));
+  const q = pickAdaptiveQuestion();
+  if (!q) {
+    alert('Nema dostupnih pitanja za odabrani jezik. Provjerite banku pitanja.');
+    return;
+  }
+  selectedQuestions[currentQuestion] = q;
+  questionStartedAt = Date.now();
+  saveSeenQuestion(makeQuestionId(q));
 
   document.getElementById('questionNumber').textContent = currentQuestion + 1;
 
@@ -786,6 +965,12 @@ btn.style.cursor = 'pointer'; //
 }
 function checkAnswer(selectedAnswer) {
   const q = selectedQuestions[currentQuestion];
+  if (!q) return;
+
+  // Evidentiramo tačnost i vrijeme odgovora za narednu adaptivnu odluku.
+  const responseTimeMs = questionStartedAt ? Date.now() - questionStartedAt : 0;
+  recordAdaptiveAnswer(q, selectedAnswer === q.correct, responseTimeMs);
+
   const answerButtons = document.querySelectorAll('.answer-btn');
 
   // lock input
@@ -1000,111 +1185,119 @@ playEffect("fiftyFiftySound");
   document.getElementById('joker1').style.opacity = '0.3';
   document.getElementById('joker1').classList.add('joker-crossed');
 }
+
 function usePhoneAFriend() {
   if (!lifelines.phoneAFriend) return;
 
-  // 📞 SOUND START
   const phoneSound = document.getElementById("phoneFriendSound");
-  phoneSound.currentTime = 0;
-playEffect("phoneFriendSound");
+  const message = document.getElementById("lifelineMessage");
+  const title = document.getElementById("lifelineTitle");
+  const timerCircle = document.getElementById("timerCircle");
+  const audienceGraph = document.getElementById("audienceGraph");
+  const modal = document.getElementById("lifelineModal");
+
   const t = translations[currentLanguage];
-  document.getElementById('lifelineTitle').textContent = t.phoneTitle;
-  document.getElementById('lifelineMessage').textContent = t.calling;
-  document.getElementById('timerCircle').classList.remove('hidden');
-  document.getElementById('audienceGraph').classList.add('hidden');
-  document.getElementById('lifelineModal').classList.remove('hidden');
+
+  if (phoneTimer) {
+    clearInterval(phoneTimer);
+    phoneTimer = null;
+  }
+
+  // Reset prikaza nakon korištenja Publike
+  audienceGraph.classList.add("hidden");
+  message.classList.remove("hidden");
+  message.style.display = "";
+  timerCircle.classList.remove("hidden");
+
+  title.textContent = t.phoneTitle;
+  message.textContent = t.calling;
+  modal.classList.remove("hidden");
+
+  if (phoneSound) {
+    phoneSound.currentTime = 0;
+    playEffect("phoneFriendSound");
+  }
 
   let timeLeft = 25;
-  document.getElementById('timerValue').textContent = timeLeft;
+  document.getElementById("timerValue").textContent = timeLeft;
 
   phoneTimer = setInterval(() => {
     timeLeft--;
-    document.getElementById('timerValue').textContent = timeLeft;
+    document.getElementById("timerValue").textContent = timeLeft;
 
-  // 🎯 KAD “PRIJATELJ JAVI”
-// 🎯 KAD “PRIJATELJ JAVI”
-if (timeLeft === 21) {
-  const q = selectedQuestions[currentQuestion];
-  const rand = Math.random();
+    if (timeLeft === 21) {
+      const q = selectedQuestions[currentQuestion];
 
-  let friendAnswer = "";
-  let friendMessage = "";
+      if (q) {
+        let accuracy = 0.65;
 
-  // 🎯 REALISTIČNA TAČNOST PO TEŽINI
-  let accuracy = 0.65;
+        if (q._difficulty === "easy") accuracy = 0.78;
+        if (q._difficulty === "hard") accuracy = 0.55;
+        if (q._difficulty === "hardest") accuracy = 0.40;
 
-  if (q._difficulty === "easy") accuracy = 0.78;
-  if (q._difficulty === "hard") accuracy = 0.55;
-  if (q._difficulty === "hardest") accuracy = 0.40;
+        accuracy += (Math.random() - 0.5) * 0.10;
+        accuracy = Math.max(0.25, Math.min(0.90, accuracy));
 
-  // malo ljudske greške (ne predvidivo)
-  accuracy += (Math.random() - 0.5) * 0.10;
+        let friendAnswer;
+        let friendMessage;
 
-  // clamp (da ne ode ispod ili iznad granica)
-  if (accuracy < 0.25) accuracy = 0.25;
-  if (accuracy > 0.90) accuracy = 0.90;
+        if (Math.random() < accuracy) {
+          friendAnswer = q.correct;
 
-  // 🟢 odluka TAČAN / NETAČAN (odvojeno od teksta)
-  let isCorrect = Math.random() < accuracy;
+          const lines = [
+            "Mislim da je tačan odgovor pod: " + friendAnswer,
+            "Ovo mi izgleda kao da je tačan odgovor pod: " + friendAnswer,
+            "Prilično sam siguran da je odgovor pod: " + friendAnswer,
+            friendAnswer + " — to mi djeluje najlogičnije"
+          ];
 
-  if (isCorrect) {
-    friendAnswer = q.correct;
+          friendMessage = lines[
+            Math.floor(Math.random() * lines.length)
+          ];
+        } else {
+          const wrongOptions = ["A", "B", "C", "D"]
+            .filter(a => a !== q.correct);
 
-    const correctLines = [
-      "Mislim da je tačan odgovor pod: " + friendAnswer,
-      "Ovo mi izgleda kao da je tačan odgovor pod: " + friendAnswer,
-      "Prilično sam siguran da je odgovor pod: " + friendAnswer,
-      friendAnswer + " to mi djeluje najlogičnije"
-    ];
+          friendAnswer = wrongOptions[
+            Math.floor(Math.random() * wrongOptions.length)
+          ];
 
-    friendMessage = correctLines[Math.floor(Math.random() * correctLines.length)];
+          const lines = [
+            "Nisam siguran, ali rekao bih da je odgovor pod: " + friendAnswer,
+            "Možda je odgovor pod: " + friendAnswer + ", ali nemoj rizikovati",
+            "Žao mi je, ne znam odgovor na to pitanje",
+            "Ne znam stvarno, baš je teško pitanje",
+            "Ovo je teško... Mislim da je odgovor pod: " + friendAnswer
+          ];
 
-  } else {
-    const wrongOptions = ['A', 'B', 'C', 'D'].filter(a => a !== q.correct);
-    friendAnswer = wrongOptions[Math.floor(Math.random() * wrongOptions.length)];
+          friendMessage = lines[
+            Math.floor(Math.random() * lines.length)
+          ];
+        }
 
-    const wrongLines = [
-      "Nisam siguran, ali rekao bih da je tačan odgovor pod: " + friendAnswer,
-      "Možda je odgovor pod: " + friendAnswer + ", ali nemoj rizikovati",
-	  "Žao mi je, ne znam odgovor na to pitanje",
-	  "Ne znam stvarno, baš je teško pitanje",
-      "Ovo je teško... Mislim da je tačan odgovor pod: " + friendAnswer,
-      friendAnswer + " to mi djeluje kao tačan odgovor"
-    ];
+        message.classList.remove("hidden");
+        message.style.display = "";
+        message.textContent = `${t.friendSays} ${friendMessage}`;
+      }
+    }
 
-    friendMessage = wrongLines[Math.floor(Math.random() * wrongLines.length)];
-  }
-
-  // 🤡 RARE TROLL (ne otkriva ništa sigurno)
-  if (Math.random() > 0.94) {
-    const troll = [
-      "Brate klikni šta hoćeš, ja bih bježao 😭",
-      "Ovo ni Google ne zna 😂",
-      "Tačan odgovor je pod: A. Ako pogriješiš, ja nisam ništa rekao 😏",
-      "Zovi 112, možda oni znaju 😂"
-    ];
-
-    friendMessage = troll[Math.floor(Math.random() * troll.length)];
-  }
-
-  document.getElementById('lifelineMessage').textContent =
-    `${t.friendSays} ${friendMessage}`;
-}
-
-    // ⏱ STOP
     if (timeLeft <= 0) {
       clearInterval(phoneTimer);
-      document.getElementById('timerCircle').classList.add('hidden');
-      phoneSound.pause();
+      phoneTimer = null;
+      timerCircle.classList.add("hidden");
+
+      if (phoneSound) {
+        phoneSound.pause();
+      }
     }
   }, 1000);
 
-  // 🚫 disable lifeline
   lifelines.phoneAFriend = false;
-  document.getElementById('phoneAFriend').classList.add('lifeline-used');
-  document.getElementById('joker2').style.opacity = '0.3';
-  document.getElementById('joker2').classList.add('joker-crossed');
+  document.getElementById("phoneAFriend").classList.add("lifeline-used");
+  document.getElementById("joker2").style.opacity = "0.3";
+  document.getElementById("joker2").classList.add("joker-crossed");
 }
+
 
 function updateMobileProgress() {
   const wrapper = document.getElementById("stepsWrapper");
