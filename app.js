@@ -1681,7 +1681,7 @@ document.addEventListener('click', () => {
       const username = document.getElementById('adminUsername').value;
       const password = document.getElementById('adminPassword').value;
       
-      if (username === '' && password === '') {
+      if (username === 'profesor' && password === '041123') {
         document.getElementById('adminLoginModal').classList.add('hidden');
         document.getElementById('languageScreen').classList.add('hidden');
         document.getElementById('adminPanel').classList.remove('hidden');
